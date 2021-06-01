@@ -24,7 +24,7 @@ country_event =
         }
 
         every_owned_province = {
-           add_local_autonomy = 90
+           add_local_autonomy = 75
         }
     }
 
