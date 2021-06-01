@@ -732,7 +732,7 @@ quantity_ideas = {
 	}
 	mass_army = {
 		manpower_recovery_speed = 0.1
-		land_forcelimit = 8
+		land_forcelimit = 5
 		land_forcelimit_modifier = 0.1
 	}
 	garrison_conscription = {
