@@ -20,7 +20,7 @@ country_event =
 
         add_country_modifier = {
         name = GT_Rebel_Control
-        duration = 15
+        duration = 5475
         }
 
         every_owned_province = {

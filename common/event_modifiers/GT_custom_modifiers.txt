@@ -9,7 +9,7 @@ global_unrest = -10
 }
 
 GT_Rebel_Control = {
-global_unrest = -100
-max_absolutism = -40
-max_revolutionary_zeal= -40
+global_unrest = -50
+max_absolutism = -50
+max_revolutionary_zeal= -50
 }
