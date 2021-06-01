@@ -1811,6 +1811,7 @@ hostile0 = {
 			ruler_has_personality = cruel_personality
 			ruler_has_personality = sinner_personality
 			}
+			primitives = no
 			}
 	
 	hostile1 = {
@@ -2048,31 +2049,25 @@ indigenous_ideas = {
 
 	indigenous_bountiful_land = {
 		tribal_development_growth = 0.05
-		hostile_attrition = 2
+		development_cost = -0.05
 	}
 	indigenous_irregular_warfare = {
-		movement_speed = 0.10
-		state_maintenance_modifier = -0.05
+		hostile_attrition = 1
 	}
 	indigenous_constitution = {
-		yearly_corruption = -0.2
-		state_maintenance_modifier = -0.05
+		monthly_reform_progress_modifier = 0.25
 	}
 	indigenous_braves = {
-		leader_land_manuever = 1
-		state_maintenance_modifier = -0.05
+		land_morale = 0.10
 	}
 	indigenous_controlled_burns = {
-		army_tradition_decay = -0.01
-		state_maintenance_modifier = -0.05
+		global_manpower_modifier = 0.2
 	}
 	indigenous_trade_with_foreigners = {
-		defensiveness = 0.15
-		state_maintenance_modifier = -0.05
+		idea_cost = -0.1
 	}
 	indigenous_treaties = {
-		tribal_development_growth = 0.05
-		global_manpower_modifier = 0.25
+		province_warscore_cost = -0.2
 	}
 
 	ai_will_do = {
