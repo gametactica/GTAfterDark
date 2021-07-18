@@ -1243,7 +1243,7 @@ Tengri0 = {
 	
 	Tengri1 = {
 		global_missionary_strength = 0.03
-		tolerance_own = 2
+		tolerance_own = 1
 	}
 	Tengri2 = {
 	tolerance_heathen = 2
@@ -1258,16 +1258,17 @@ Tengri0 = {
 
 	Tengri4 = {
 	leader_land_manuever = 1
-	land_morale = 0.05
+	land_morale = 0.1
 	missionary_maintenance_cost = -0.1
 	}
 
 	Tengri5 = {
 	hostile_attrition = 1
+	war_exhaustion = -0.10
 	missionary_maintenance_cost = -0.1
 	}
 	Tengri6 = {
-	missionaries = 1
+	raze_power_gain = 0.10
 	global_manpower = 10
 	missionary_maintenance_cost = -0.1
 	
@@ -1300,7 +1301,7 @@ Hindu0 = {
 	
 	Hindu1 = {
 		global_missionary_strength = 0.03
-		tolerance_own = 2
+		tolerance_own = 1
 	}
 	Hindu2 = {
 		missionaries = 1
@@ -1309,12 +1310,14 @@ Hindu0 = {
 	}
 	Hindu3 = {
 		num_accepted_cultures = 1
+		garrison_size = 0.15
 		brahmins_hindu_loyalty_modifier = 0.1
 		missionary_maintenance_cost = -0.1
 	}
 
 	Hindu4 = {
-		diplomatic_reputation = 2
+		diplomatic_reputation = 1
+		war_exhaustion = -0.05
 		missionary_maintenance_cost = -0.1
 	}
 
@@ -1355,11 +1358,11 @@ Sikh0 = {
 	
 	Sikh1 = {
 		global_missionary_strength = 0.03
-		tolerance_own = 2
+		tolerance_own = 1
 	}
 	Sikh2 = {
-		religious_unity = 0.1
-		improve_relation_modifier = 0.2
+		religious_unity = 0.15
+		improve_relation_modifier = 0.25
 		missionary_maintenance_cost = -0.1
 	}
 	Sikh3 = {
@@ -1378,7 +1381,7 @@ Sikh0 = {
 
 	Sikh5 = {
 		enemy_core_creation = 0.2
-		land_morale = 0.05
+		land_morale = 0.1
 		missionary_maintenance_cost = -0.1
 	}
 	Sikh6 = {
@@ -1417,24 +1420,24 @@ Confucian0 = {
 		tolerance_own = 1
 	}
 	Confucian2 = {
-		global_autonomy = -0.05
+		global_autonomy = -0.03
 		yearly_harmony = 0.5
 		missionary_maintenance_cost = -0.1
 	}
 	Confucian3 = {
-		num_accepted_cultures = 1
+		num_accepted_cultures = 2
 		church_loyalty_modifier = 0.1
 		missionary_maintenance_cost = -0.1
 	}
 
 	Confucian4 = {
-		advisor_cost = -0.1
+		advisor_cost = -0.15
 		missionary_maintenance_cost = -0.1
 	}
 
 	Confucian5 = {
 		imperial_mandate = 0.1
-		governing_capacity = 50
+		governing_capacity = 150
 		missionary_maintenance_cost = -0.1
 	}
 	Confucian6 = {
@@ -1490,7 +1493,8 @@ Buddhist0 = {
 	}
 
 	Buddhist4 = {
-		global_unrest = -2
+		global_unrest = -1
+		harsh_treatment_cost = -0.1
 		missionary_maintenance_cost = -0.1
 	}
 
@@ -1533,7 +1537,7 @@ Shinto0 = {
 	
 	Shinto1 = {
 		global_missionary_strength = 0.03
-		tolerance_own = 2
+		tolerance_own = 1
 	}
 	Shinto2 = {
 		development_cost = -0.05
@@ -1592,7 +1596,7 @@ Jewish0 = {
 	
 	Jewish1 = {
 		global_missionary_strength = 0.03
-		tolerance_own = 2
+		tolerance_own = 1
 	}
 	Jewish2 = {
 		missionaries = 1
@@ -1610,7 +1614,7 @@ Jewish0 = {
 	}
 
 	Jewish5 = {
-		inflation_reduction = 0.05
+		inflation_reduction = 0.1
 		missionary_maintenance_cost = -0.1
 		
 	}
@@ -1650,10 +1654,10 @@ Pagan0 = {
 	
 	Pagan1 = {
 		global_missionary_strength = 0.03
-		tolerance_own = 2
+		tolerance_own = 1
 	}
 	Pagan2 = {
-		missionaries = 1
+		harsh_treatment_cost = -0.15
 		global_unrest = -1
 		missionary_maintenance_cost = -0.1
 	}
@@ -1677,7 +1681,7 @@ Pagan0 = {
 		missionary_maintenance_cost = -0.1
 	}
 	Pagan6 = {
-		shock_damage = 0.1
+		shock_damage = 0.15
 		missionary_maintenance_cost = -0.1
 	}
 	Pagan7 = {
@@ -1709,21 +1713,22 @@ Zor0 = {
 	
 	Zor1 = {
 		global_missionary_strength = 0.03
-		tolerance_own = 2
+		tolerance_own = 1
 	}
 	Zor2 = {
-		missionaries = 1
+		missionaries = 2
 		missionary_maintenance_cost = -0.1
 	}
 	Zor3 = {
-		governing_capacity = 50
+		governing_capacity = 100
 		church_loyalty_modifier = 0.1
 		missionary_maintenance_cost = -0.1
 	}
 
 	Zor4 = {
 		prestige = 1
-		yearly_absolutism = 0.1 
+		yearly_absolutism = 0.1
+		yearly_revolutionary_zeal = 0.1
 		missionary_maintenance_cost = -0.1
 	}
 
@@ -1732,7 +1737,7 @@ Zor0 = {
 		missionary_maintenance_cost = -0.1
 	}
 	Zor6 = {
-		adm_advisor_cost = -0.1
+		adm_advisor_cost = -0.2
 		missionary_maintenance_cost = -0.1
 	}
 	Zor7 = {
@@ -2050,24 +2055,36 @@ indigenous_ideas = {
 	indigenous_bountiful_land = {
 		tribal_development_growth = 0.05
 		development_cost = -0.05
+		monthly_splendor = 1
 	}
 	indigenous_irregular_warfare = {
 		hostile_attrition = 1
+		war_exhaustion_cost = -0.25
+		monthly_reform_progress_modifier = 0.05
 	}
 	indigenous_constitution = {
-		monthly_reform_progress_modifier = 0.25
+		yearly_tribal_allegiance = 0.05
+		native_advancement_cost = -0.1
+		monthly_reform_progress_modifier = 0.05
 	}
 	indigenous_braves = {
+	 	mil_tech_cost_modifier = -0.1
 		land_morale = 0.10
+		monthly_reform_progress_modifier = 0.05
 	}
 	indigenous_controlled_burns = {
 		global_manpower_modifier = 0.2
+		vassal_income = 0.2
+		monthly_reform_progress_modifier = 0.05
 	}
 	indigenous_trade_with_foreigners = {
-		idea_cost = -0.1
+		embracement_cost = -0.2
+		caravan_power = 0.2
+		monthly_reform_progress_modifier = 0.05
 	}
 	indigenous_treaties = {
 		province_warscore_cost = -0.2
+		ae_impact = -0.2
 	}
 
 	ai_will_do = {
