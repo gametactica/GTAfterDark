@@ -541,6 +541,7 @@ the_tenures_abolition_act = {
 		has_idea_group = guer0   
 		has_idea_group = holy0
 		has_idea_group = horde0
+		has_idea_group = indigenous_ideas
 		}
 	}
 	
@@ -552,6 +553,7 @@ the_tenures_abolition_act = {
 		full_idea_group = guer0   
 		full_idea_group = holy0
 		full_idea_group = horde0
+		full_idea_group = indigenous_ideas
 		}
 	}
 
@@ -712,6 +714,7 @@ autonomous_estates = {
 		has_idea_group = guer0   
 		has_idea_group = holy0
 		has_idea_group = horde0
+		has_idea_group = indigenous_ideas
 		}
 	}
 	
@@ -723,6 +726,7 @@ autonomous_estates = {
 		full_idea_group = guer0   
 		full_idea_group = holy0
 		full_idea_group = horde0
+		full_idea_group = indigenous_ideas
 		}
 	}	
 	
@@ -944,6 +948,7 @@ noble_loyalty_act = {
 		has_idea_group = guer0   
 		has_idea_group = holy0
 		has_idea_group = horde0
+		has_idea_group = indigenous_ideas
 		}
 	}
 	
@@ -955,6 +960,7 @@ noble_loyalty_act = {
 		full_idea_group = guer0   
 		full_idea_group = holy0
 		full_idea_group = horde0
+		full_idea_group = indigenous_ideas
 		}
 	}
 
@@ -991,6 +997,7 @@ the_colonial_nobility_act = {
 		has_idea_group = guer0   
 		has_idea_group = holy0
 		has_idea_group = horde0
+		has_idea_group = indigenous_ideas
 		}
 	}
 	
@@ -1002,6 +1009,7 @@ the_colonial_nobility_act = {
 		full_idea_group = guer0   
 		full_idea_group = holy0
 		full_idea_group = horde0
+		full_idea_group = indigenous_ideas
 		}
 	}
 
@@ -1022,6 +1030,7 @@ nobles_in_navy_act = {
 		has_idea_group = guer0   
 		has_idea_group = holy0
 		has_idea_group = horde0
+		has_idea_group = indigenous_ideas
 		}
 	}
 	
@@ -1033,6 +1042,7 @@ nobles_in_navy_act = {
 		full_idea_group = guer0   
 		full_idea_group = holy0
 		full_idea_group = horde0
+		full_idea_group = indigenous_ideas
 		}
 	}
 

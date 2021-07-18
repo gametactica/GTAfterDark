@@ -376,6 +376,7 @@ trade_connection_policy = {
 		has_idea_group = guer0   
 		has_idea_group = holy0
 		has_idea_group = horde0
+		has_idea_group = indigenous_ideas
 		}
 	}
 	
@@ -387,6 +388,7 @@ trade_connection_policy = {
 		full_idea_group = guer0   
 		full_idea_group = holy0
 		full_idea_group = horde0
+		full_idea_group = indigenous_ideas
 		}
 	}
 

@@ -182,6 +182,7 @@ Anarchy = {
 		has_idea_group = holy0
 		has_idea_group = horde0
 		has_idea_group = plutocracy_ideas
+		has_idea_group = indigenous_ideas
 		}
 	}
 		
@@ -194,6 +195,7 @@ Anarchy = {
 		full_idea_group = holy0
 		full_idea_group = horde0
 		full_idea_group = plutocracy_ideas
+		full_idea_group = indigenous_ideas
 		}
 	}
 	
