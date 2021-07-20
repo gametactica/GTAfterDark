@@ -774,7 +774,7 @@ country_event = {
 	option = {		# The King must heed the Council
 		name = "flavor_swe.EVTOPTB3232"
 		ai_chance = { factor = 10 }
-		add_stability = 3
+		add_stability = 2
 	}
 }
 	
@@ -1096,7 +1096,7 @@ country_event = {
 	option = {		# Comply with the King's Will
 		name = "flavor_swe.EVTOPTB3240"
 		ai_chance = { factor = 25 }
-		add_stability = -2
+		add_stability = -1
 	}
 }
 
@@ -1230,7 +1230,7 @@ country_event = {
 	option = {		# Maintain present system
 		name = "flavor_swe.EVTOPTB3244"
 		ai_chance = { factor = 10 }
-		add_stability = 2		
+		add_stability = 1		
 	}
 }
 
@@ -1851,7 +1851,7 @@ country_event = {
 				stability = 2
 			}
 		}
-		add_stability = 3
+		add_stability = 2
 		if = {
 			limit = {
 				has_country_modifier = the_absolutism
@@ -1873,7 +1873,7 @@ country_event = {
 				NOT = { stability = 1 }
 			}
 		}
-		add_stability = -3
+		add_stability = -2
 	}
 }
 

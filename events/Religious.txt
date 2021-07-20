@@ -2479,7 +2479,7 @@ country_event = {
 				change_statists_vs_orangists = 1
 			}
 		}
-		add_stability = 2 #One is for placating the aristocrats and clergy the other to counteract the -1 stab on monarch death
+		add_stability = 1 #One is for placating the aristocrats and clergy the other to counteract the -1 stab on monarch death
 		if = {
 			limit = {
 				has_estate = estate_nobles
@@ -2647,49 +2647,49 @@ country_event = {
 		ai_chance = { factor = 100 }
 		trigger = { any_owned_province = { religion = catholic } }
 		change_religion = catholic
-		add_stability = -4
+		add_stability = -2
 	}
 	option = {
 		name = "religious_events.18.b" #
 		ai_chance = { factor = 100 }
 		trigger = { any_owned_province = { religion = orthodox } }
 		change_religion = orthodox
-		add_stability = -4
+		add_stability = -2
 	}
 	option = {
 		name = "religious_events.18.c" #
 		ai_chance = { factor = 100 }
 		trigger = { any_owned_province = { religion = coptic } }
 		change_religion = coptic
-		add_stability = -4
+		add_stability = -2
 	}
 	option = {
 		name = "religious_events.18.dd" #
 		ai_chance = { factor = 100 }
 		trigger = { any_owned_province = { religion = reformed } }
 		change_religion = reformed
-		add_stability = -4
+		add_stability = -2
 	}
 	option = {
 		name = "religious_events.18.e" #
 		ai_chance = { factor = 100 }
 		trigger = { any_owned_province = { religion = protestant } }
 		change_religion = protestant
-		add_stability = -4
+		add_stability = -2
 	}
 	option = {
 		name = "religious_events.18.g" #
 		ai_chance = { factor = 100 }
 		trigger = { any_owned_province = { religion = anglican } }
 		change_religion = anglican
-		add_stability = -4
+		add_stability = -2
 	}
 	option = {
 		name = "religious_events.18.h" #
 		ai_chance = { factor = 100 }
 		trigger = { any_owned_province = { religion = hussite } }
 		change_religion = hussite
-		add_stability = -4
+		add_stability = -2
 	}
 	option = {
 		name = "religious_events.18.f" #
@@ -2711,21 +2711,21 @@ country_event = {
 		ai_chance = { factor = 100 }
 		trigger = { any_owned_province = { religion = sunni } }
 		change_religion = sunni
-		add_stability = -4
+		add_stability = -2
 	}
 	option = {
 		name = "religious_events.19.b" #
 		ai_chance = { factor = 100 }
 		trigger = { any_owned_province = { religion = shiite } }
 		change_religion = shiite
-		add_stability = -4
+		add_stability = -2
 	}
 	option = {
 		name = "religious_events.19.c" #
 		ai_chance = { factor = 100 }
 		trigger = { any_owned_province = { religion = ibadi } }
 		change_religion = ibadi
-		add_stability = -4
+		add_stability = -2
 	}
 	option = {
 		name = "religious_events.18.f" #
@@ -2747,35 +2747,35 @@ country_event = {
 		ai_chance = { factor = 100 }
 		trigger = { any_owned_province = { religion = buddhism } }
 		change_religion = buddhism
-		add_stability = -4
+		add_stability = -2
 	}
 	option = {
 		name = "religious_events.20.b" #
 		ai_chance = { factor = 100 }
 		trigger = { any_owned_province = { religion = vajrayana } }
 		change_religion = vajrayana
-		add_stability = -4
+		add_stability = -2
 	}
 	option = {
 		name = "religious_events.20.b2" #
 		ai_chance = { factor = 100 }
 		trigger = { any_owned_province = { religion = mahayana } }
 		change_religion = mahayana
-		add_stability = -4
+		add_stability = -2
 	}
 	option = {
 		name = "religious_events.20.c" #
 		ai_chance = { factor = 100 }
 		trigger = { any_owned_province = { religion = confucianism } }
 		change_religion = confucianism
-		add_stability = -4
+		add_stability = -2
 	}
 	option = {
 		name = "religious_events.20.dd" #
 		ai_chance = { factor = 100 }
 		trigger = { any_owned_province = { religion = shinto } }
 		change_religion = shinto
-		add_stability = -4
+		add_stability = -2
 	}
 	option = {
 		name = "religious_events.18.f" #
@@ -2797,14 +2797,14 @@ country_event = {
 		ai_chance = { factor = 100 }
 		trigger = { any_owned_province = { religion = hinduism } }
 		change_religion = hinduism
-		add_stability = -4
+		add_stability = -2
 	}
 	option = {
 		name = "religious_events.21.b" #
 		ai_chance = { factor = 100 }
 		trigger = { any_owned_province = { religion = sikhism } }
 		change_religion = sikhism
-		add_stability = -4
+		add_stability = -2
 	}
 	option = {
 		name = "religious_events.18.f" #
@@ -2826,7 +2826,7 @@ country_event = {
 		ai_chance = { factor = 100 }
 		trigger = { any_owned_province = { religion = zoroastrian } }
 		change_religion = zoroastrian
-		add_stability = -4
+		add_stability = -2
 	}
 	option = {
 		name = "religious_events.18.f" #
@@ -2848,7 +2848,7 @@ country_event = {
 		ai_chance = { factor = 100 }
 		trigger = { any_owned_province = { religion = jewish } }
 		change_religion = jewish
-		add_stability = -4
+		add_stability = -2
 	}
 	option = {
 		name = "religious_events.18.f" #

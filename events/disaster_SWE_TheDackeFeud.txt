@@ -15,7 +15,7 @@ country_event = {
 	}
 
 	immediate = {
-		add_stability = -3
+		add_stability = -2
 		hidden_effect = {
 			set_country_flag = had_the_dacke_feud
 			if = {

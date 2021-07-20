@@ -3707,7 +3707,7 @@ country_event = {
 			}
 		}
 		change_religion = new_variable:ruler_religion
-		add_stability = -4
+		add_stability = -2
 		add_legitimacy = -30
 	}
 	option = {
@@ -3778,11 +3778,11 @@ country_event = {
 				NOT = { accepted_culture = new_variable:ruler_culture }
 				NOT = { culture_group = new_variable:ruler_culture }
 			}
-			add_stability = -3
+			add_stability = -2
 			add_legitimacy = -30
 		}
 		else = {
-			add_stability = -2
+			add_stability = -1
 			add_legitimacy = -15
 		}
 		change_primary_culture = new_variable:ruler_culture

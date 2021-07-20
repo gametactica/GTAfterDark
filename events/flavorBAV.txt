@@ -1727,7 +1727,7 @@ country_event = {
 		change_government_to_theocracy = yes
 		add_government_reform = leading_clergy_reform
 
-		add_stability = -3
+		add_stability = -2
 		add_prestige = -100
 
 		HAB = {
@@ -1917,7 +1917,7 @@ country_event = {
 				change_government_to_theocracy = yes
 				add_government_reform = leading_clergy_reform
 		
-				add_stability = -3
+				add_stability = -2
 				add_prestige = -100
 			}
 		}
@@ -1940,7 +1940,7 @@ country_event = {
 				change_government_to_theocracy = yes
 				add_government_reform = leading_clergy_reform
 		
-				add_stability = -3
+				add_stability = -2
 				add_prestige = -100
 			}
 		}

@@ -922,7 +922,7 @@ country_event = {
 	}
 	option = {
 		name = flavor_hol.10.c #Dissolve the VoC (this is not a very attractive option at this point)
-		add_stability = -3
+		add_stability = -2
 		add_inflation = 5
 		remove_country_modifier = dutch_india_trade_co
 	}
@@ -978,7 +978,7 @@ country_event = {
 	option = {
 		name = flavor_hol.11.b #Dissolve the VoC
 		set_country_flag = VoC_nationalized
-		add_stability = -2
+		add_stability = -1
 		add_inflation = 8
 		remove_country_modifier = dutch_india_trade_co
 	}

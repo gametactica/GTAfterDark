@@ -148,7 +148,7 @@ country_event = {
 			}
 			change_statists_vs_orangists = 1
 		}
-		add_stability = -5
+		add_stability = -3
 		swap_free_idea_group = yes		#keep progress
 	}
 	option = {

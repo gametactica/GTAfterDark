@@ -17,7 +17,7 @@ country_decisions = {
 		}
 		effect = {
 			change_religion = hussite
-			add_stability = -3
+			add_stability = -2
 			add_prestige = -100
 			remove_country_modifier = counter_reformation
 			remove_country_modifier = the_statue_in_restraint_of_appeals

@@ -90,6 +90,6 @@ country_event = {
 		ai_chance = {
 			factor = 1
 		}
-		add_stability = -3
+		add_stability = -2
 	}
 }

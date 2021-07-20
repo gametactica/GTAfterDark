@@ -614,7 +614,7 @@ country_event = {
 		ai_chance = { factor = 0 }
 		#set_legacy_government = bureaucratic_despotism
 		kill_ruler = yes
-		add_stability = -6
+		add_stability = -3
 	}
 }
 
@@ -711,11 +711,11 @@ country_event = {
 			}
 			change_statists_vs_orangists = 1
 		}
-		add_stability = -1
+		add_adm_power = -100
 	}
 	option = {
 		name = "EVTOPTB9468"
-		add_stability = -2
+		add_stability = -1
 		add_heir_claim = 30
 	}
 }
@@ -1281,14 +1281,14 @@ country_event = {
 			}
 			random_list = {
 				10 = {
-					add_stability = 1
+					add_adm_power = 100
 				}
 				10 = {
-					add_stability = 2
+					add_stability = 1
 				}
 				
 				10 = { 
-					add_stability = 3
+					add_stability = 2
 				}
 			}
 		}
@@ -1314,7 +1314,7 @@ country_event = {
 				kill_ruler = yes
 			}
 			10 = {
-				add_stability = -2
+				add_stability = -1
 			}
 		}
 	}
@@ -1419,7 +1419,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTA9483"
-		add_stability = -3
+		add_stability = -2
 		add_prestige = -20
 		clr_country_flag = contained_insanity
 	}

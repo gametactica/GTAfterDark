@@ -17,7 +17,7 @@ country_event = {
 	
 	immediate = {
 		set_country_flag = had_peasant_war
-		add_stability = -6
+		add_stability = -3
 		add_prestige = -10
 		random_owned_province = { 
 			spawn_rebels = {

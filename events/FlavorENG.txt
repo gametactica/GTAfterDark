@@ -507,7 +507,7 @@ country_event = {
 		ai_chance = { factor = 75 }
 		change_religion = protestant
 		add_years_of_income = 2
-		add_stability = -2
+		add_stability = -1
 	}
 	option = {		# Accept Rome's Supremacy, but ignore it on a personal level
 		name = "flavor_eng.EVTOPTB9109"
@@ -733,7 +733,7 @@ country_event = {
 				modifier = accepted_supremacy_of_rome
 			}
 		}
-		add_stability = -3
+		add_stability = -2
 		add_country_modifier = {
 			name = the_heresy_act
 			duration = 3650
@@ -1320,7 +1320,7 @@ country_event = {
 	option = {			# Sign it
 		name = "flavor_eng.EVTOPTA9123"
 		ai_chance = { factor = 75 }
-		add_stability = -1
+		add_adm_power = -100
 		add_country_modifier = {
 			name = the_petition_of_rights
 			duration = 7300
@@ -1329,7 +1329,7 @@ country_event = {
 	option = {			# Refuse to sign it
 		name = "flavor_eng.EVTOPTB9123"
 		ai_chance = { factor = 25 }
-		add_stability = -2
+		add_stability = -1
 		set_country_flag = refusal_of_petition_of_rights
 		every_owned_province = {
 			limit = {
@@ -1422,7 +1422,7 @@ country_event = {
 	option = {			# Combat the Parliament
 		name = "flavor_eng.EVTOPTA9124"
 		ai_chance = { factor = 75 }
-		add_stability = -2
+		add_stability = -1
 		every_owned_province = {
 			limit = {
 				has_province_flag = refusal_of_petition_of_rights
@@ -1439,7 +1439,7 @@ country_event = {
 		name = "flavor_eng.EVTOPTB9124"
 		ai_chance = { factor = 25 }
 		clr_country_flag = refusal_of_petition_of_rights
-		add_stability = -1
+		add_adm_power = -100
 		add_country_modifier = {
 			name = the_petition_of_rights
 			duration = 7300
@@ -1536,7 +1536,7 @@ country_event = {
 		name = "flavor_eng.EVTOPTC9129"
 		ai_chance = { factor = 0 }
 		change_religion = catholic
-		add_stability = -3
+		add_stability = -2
 	}
 }
 
@@ -2177,7 +2177,7 @@ country_event = {
 	option = {		# Punish conspirators
 		name = "flavor_eng.EVTOPTB9182"
 		ai_chance = { factor = 25 }
-		add_stability = -2
+		add_stability = -1
 	}
 }
 

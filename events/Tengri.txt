@@ -480,7 +480,7 @@ country_event = {
 		ai_chance = {
 			factor = 10
 		}
-		add_stability = -3
+		add_stability = -2
 	}
 }
 
@@ -1032,7 +1032,7 @@ country_event = {
 			change_government_to_theocracy = yes
 			#set_legacy_government = theocratic_government
 		}
-		add_stability = -5
+		add_stability = -3
 		kill_heir = yes
 		change_religion = sunni
 		if = {
@@ -1059,7 +1059,7 @@ country_event = {
 		ai_chance = {
 			factor = 5
 		}
-		add_stability = -3
+		add_stability = -2
 		random_owned_province = {
 			limit = { is_capital = no }
 			spawn_rebels = {

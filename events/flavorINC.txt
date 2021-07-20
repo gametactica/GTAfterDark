@@ -585,7 +585,7 @@ country_event = {
 	option = { #Support Atahualpa
 		name = flavor_inc.11.a
 		set_country_flag = inc_civil_war_support_atahualpa
-		add_stability = -2 #Unexpected death of king, civil war and epidemics
+		add_stability = -1 #Unexpected death of king, civil war and epidemics
 		add_legitimacy = -40 #Not rightful heir
 		kill_heir = yes
 		define_ruler = {
@@ -626,7 +626,7 @@ country_event = {
 	option = { #Support Huascar
 		name = flavor_inc.11.b
 		set_country_flag = inc_civil_war_support_huascar
-		add_stability = -2 #Unexpected death of king, civil war and epidemics
+		add_stability = -1 #Unexpected death of king, civil war and epidemics
 		add_legitimacy = -40 #Not a strong claim and most prefer Atahualpa.
 		kill_heir = yes
 		define_ruler = {
@@ -735,7 +735,7 @@ country_event = {
 	option = { #Let it be known what happens to those who would defy us.
 		name = flavor_inc.13.a
 		add_legitimacy = 25 #Those that did not support this candidate to start with are crushed.
-		add_stability = -2 #Unusually harsh response, burning of mummified ancestor.
+		add_stability = -1 #Unusually harsh response, burning of mummified ancestor.
 	}
 	option = { #Let us exact more moderate retribution.
 		name = flavor_inc.13.b
@@ -781,7 +781,7 @@ country_event = {
 		tooltip = {
 			INC = {
 				kill_ruler = yes
-				add_stability = -3
+				add_stability = -2
 				add_years_of_income = -1
 			}
 		}
@@ -799,7 +799,7 @@ country_event = {
 		custom_tooltip = flavor_inc.14.b.tt
 		tooltip = {
 			INC = {
-				add_stability = -3
+				add_stability = -2
 				add_years_of_income = -1
 				add_dip_power = -50
 				add_mil_power = -50
@@ -828,7 +828,7 @@ country_event = {
 	
 	option = { #We will not bow!
 		name = flavor_inc.15.a
-		add_stability = -3
+		add_stability = -2
 		add_years_of_income = -1
 		kill_ruler = yes
 		random_owned_province = {
@@ -909,7 +909,7 @@ country_event = {
 		name = flavor_inc.16.a
 		trigger = { has_heir = yes }
 		kill_ruler = yes
-		add_stability = -3
+		add_stability = -2
 		add_years_of_income = -1
 		add_dip_power = -50 #Up until this point the ruler is locked up and can't rule.
 		add_mil_power = -50 #Up until this point the ruler is locked up and can't rule.
@@ -938,7 +938,7 @@ country_event = {
 			}
 			change_statists_vs_orangists = 1
 		}
-		add_stability = -3
+		add_stability = -2
 		add_years_of_income = -1
 		add_dip_power = -50 #Up until this point the ruler is locked up and can't rule.
 		add_mil_power = -50 #Up until this point the ruler is locked up and can't rule.

@@ -154,7 +154,7 @@ country_event = {
 	
 	option = {
 		name = majapahit.3.a
-		add_stability = -5
+		add_stability = -3
 		add_legitimacy = -50
 		add_heir_claim = -50
 		set_country_flag = majapahit_disaster_flag

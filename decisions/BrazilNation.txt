@@ -222,7 +222,7 @@ country_decisions = {
 					}
 				}
 			}
-			add_stability = -2
+			add_stability = -1
 			add_prestige = -25
 			if = {
                 limit = { has_custom_ideas = no }

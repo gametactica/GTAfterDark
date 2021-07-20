@@ -88,7 +88,7 @@ country_event = {
 				}
 			}
 		}
-		add_stability = -3
+		add_stability = -2
 	
 		set_country_flag = had_revolution
 		if = {
@@ -1110,7 +1110,7 @@ country_event = {
 
 	option = {
 		name = "EVTNAME6605"
-		add_stability = 6
+		add_stability = 3
 		add_prestige = 200
 	}
 }
@@ -1722,7 +1722,7 @@ country_event = {
 
 	option = {		# Italy will be an empire!
 		name = revolution.36.A
-		add_stability = -2
+		add_stability = -1
 		if = {
 			limit = { NOT = { government = monarchy } }
 			change_government_to_monarchy = yes

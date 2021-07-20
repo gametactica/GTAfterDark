@@ -27,7 +27,7 @@ country_decisions = {
 			}
 		}
 		effect = {
-			add_stability = -3
+			add_stability = -2
 			add_prestige = -25
 			if = {
 				limit = {
@@ -113,7 +113,7 @@ country_decisions = {
 			}
 		}
 		effect = {
-			add_stability = -3
+			add_stability = -2
 			add_piety = -0.5
 			add_karma = -25
 			add_patriarch_authority = -0.25
@@ -143,7 +143,7 @@ country_decisions = {
 			}
 		}
 		effect = {
-			add_stability = -3
+			add_stability = -2
 			add_piety = -0.5
 			add_karma = -25
 			add_patriarch_authority = -0.25
@@ -173,7 +173,7 @@ country_decisions = {
 			}
 		}
 		effect = {
-			add_stability = -3
+			add_stability = -2
 			capital_scope = {
 				add_base_tax = -1
 				add_base_production = -1
@@ -201,7 +201,7 @@ country_decisions = {
 			}
 		}
 		effect = {
-			add_stability = -3
+			add_stability = -2
 			capital_scope = {
 				add_base_tax = -1
 				add_base_production = -1
@@ -229,7 +229,7 @@ country_decisions = {
 			}
 		}
 		effect = {
-			add_stability = -3
+			add_stability = -2
 			capital_scope = {
 				add_base_tax = -1
 				add_base_production = -1
@@ -257,7 +257,7 @@ country_decisions = {
 			}
 		}
 		effect = {
-			add_stability = -3
+			add_stability = -2
 			capital_scope = {
 				add_base_tax = -1
 				add_base_production = -1

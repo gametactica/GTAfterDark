@@ -94,7 +94,7 @@ country_decisions = {
 		
 		effect = {
 			change_religion = catholic
-			add_stability = -4
+			add_stability = -2
 		}
 	}
 	
