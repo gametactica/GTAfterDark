@@ -133,27 +133,27 @@ country_event = {
 				religious_unity = 0.5
 				NOT = { religious_unity = 0.75 }
 			}
-			add_stability = -2
+			add_stability = -1
 		}
 		if = {
 			limit = {
 				religious_unity = 0.25
 				NOT = { religious_unity = 0.5 }
 			}
-			add_stability = -3
+			add_stability = -2
 		}
 		if = {
 			limit = {
 				religious_unity = 0.1
 				NOT = { religious_unity = 0.25 }
 			}
-			add_stability = -4
+			add_stability = -2
 		}
 		if = {
 			limit = {
 				NOT = { religious_unity = 0.1 }
 			}
-			add_stability = -5
+			add_stability = -3
 		}
 	}
 }

@@ -541,7 +541,7 @@ country_decisions = {
 			piety = 1.0 #100 Legalism
 		}
 		effect = {
-			add_stability = -3
+			add_stability = -2
 			add_legitimacy = 30
 			set_religious_school = {
 				group = muslim
@@ -639,7 +639,7 @@ country_decisions = {
 		}
 		effect = {
 			change_religion = vajrayana
-			add_stability = -4
+			add_stability = -2
 		}
 		ai_will_do = {
 			factor = 1
@@ -1745,7 +1745,7 @@ country_decisions = {
 		}
 		effect = {
 			add_prestige = -100
-			add_stability = -2
+			add_stability = -1
 			change_religion = sikhism
 			if = {
 				limit = {
@@ -1851,7 +1851,7 @@ country_decisions = {
 			}
 		}
 		effect = {
-			add_stability = -2
+			add_stability = -1
 			add_legitimacy = 10
 			set_ruler_religion = ROOT
 			if = {
