@@ -11,12 +11,13 @@ country_decisions =
         
         allow = 
         {
-            custom_trigger_tooltip = 
-            {
-                tooltip = GT_RebelControl_decision_tooltip
+			average_unrest = 3
+				custom_trigger_tooltip = 
+				{
+					tooltip = GT_RebelControl_decision_tooltip
                 
 
-            }
+				}
         }
         
         effect = 
