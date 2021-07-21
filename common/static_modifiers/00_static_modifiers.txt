@@ -2,12 +2,7 @@
 #
 # Effects are fully scriptable here.
 
-# These names can NOT be removed or changes, as the code uses them....
-
-################
-null_modifier = {
-}
-################
+# Missing static modifiers expected by code will print to the errorlog
 
 ##########################################################################
 # Handicap Modifiers for human player
@@ -110,6 +105,7 @@ city = {
 	allowed_num_of_buildings = 2
 	local_sailors_modifier = 0.25
 	garrison_growth = 0.05
+	allowed_num_of_manufactories = 1
 }
 
 port = {
@@ -142,7 +138,7 @@ non_coastal = {
 }
 
 coastal_sea = {
-	local_naval_engagement_modifier = 0.50
+	local_naval_engagement_modifier = -0.20
 }
 
 tropical = {
@@ -606,7 +602,7 @@ negative_stability = {
 	global_unrest = -2					#-1% EXTRA revolt risk each step
 	legitimacy = 1
 	interest = -1
-	migration_cooldown = 0.1
+	migration_cost = 0.1
 	devotion = 1
 	caravan_power = 0.05
 }
