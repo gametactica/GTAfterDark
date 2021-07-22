@@ -16,10 +16,10 @@ native_basic_reform = {
 		reform_progress_growth = -1.0
 		#monthly_reform_progress = 0.5
 		land_maintenance_modifier = -0.25
+		merchants = -1
 		global_institution_spread = -0.5
 		global_regiment_cost = -0.5
 		province_warscore_cost = 4
-		merchants = -1
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
