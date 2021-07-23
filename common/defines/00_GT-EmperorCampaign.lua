@@ -9,7 +9,7 @@ NDefines.NDiplomacy.TRADE_LEAGUE_BREAK_OPINION = -15				-- AI will leave a Trade
 NDefines.NDiplomacy.DISHONORABLE_PEACE_MONTHS = 36					-- See DISHONORABLE_PEACE_WARSCORE. Set to 0 to entirely disable the feature.
 NDefines.NDiplomacy.VASSALIZE_BASE_DEVELOPMENT_CAP = 1000 			-- Countries with more total development than this cannot be vassalized
 NDefines.NDiplomacy.MARCH_BASE_DEVELOPMENT_CAP = 250 				-- Countries with more total development than this cannot be made into a march
-NDefines.NDiplomacy.AUTONOMY_WARSCORE_COST_MODIFIER = 0.1			-- How much autonomy reduces score by (at 1, 50% autonomy = 50% reduction)
+NDefines.NDiplomacy.GREAT_PROJECT_WARSCORE_COST_MODIFIER = 0.1
 NDefines.NDiplomacy.RIVAL_PRESTIGE_BONUS = 0.3
 NDefines.NDiplomacy.RIVAL_SPY_OFFENCE = 0.3
 NDefines.NDiplomacy.WARNING_YEARS = 5								-- Years before warning expire
@@ -24,10 +24,9 @@ NDefines.NDiplomacy.CORRUPT_OFFICIALS_COST = 30
 NDefines.NDiplomacy.AE_OTHER_CONTINENT = 15
 NDefines.NDiplomacy.AE_DIFFERENT_RELIGION = -0.25
 NDefines.NDiplomacy.AE_SAME_OVERLORD = 0.1
-NDefines.NDiplomacy.AE_PROVINCE_CAP = 50				-- Province development above this will not count for AE (also used for warscore cost cap)
 NDefines.NDiplomacy.PO_DEMAND_PROVINCES_AE = 1 				-- _DDEF_PO_DEMAND_PROVINCES_AE = 10, (Per development)
 NDefines.NDiplomacy.PO_RETURN_CORES_AE = 0.2 					-- (Per core, only applied if returning cores to vassals of winner)
-NDefines.NDiplomacy.PO_FORM_PU_AE = 0.1 							-- _DDEF_PO_FORM_PU_AE = 10, (Per development)
+NDefines.NDiplomacy.PO_FORM_PU_AE = 0.2 							-- _DDEF_PO_FORM_PU_AE = 10, (Per development)
 NDefines.NDiplomacy.PEACE_COST_DEMAND_PROVINCE = 2					-- Demand a province (scales by province wealth, also used for annex)
 NDefines.NDiplomacy.PEACE_COST_CONCEDE_PROVINCE = 2				-- Demand colonial area province concession.
 NDefines.NDiplomacy.PEACE_COST_RELEASE_ANNEXED = 0.8					-- Release annexed nation (scales by province wealth)
