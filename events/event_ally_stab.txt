@@ -1,0 +1,88 @@
+namespace = event_ally_stab
+
+country_event =
+{
+    id = event_ally_stab.1
+    title = event_ally_stab.1.t
+    desc = event_ally_stab.1.d
+    picture = ANGLICAN_SERMON_eventPicture
+
+    mean_time_to_happen = {years = 15}
+
+    trigger =
+    {
+        ironman = no
+
+    }
+
+    option =
+    {
+        name = event_ally_stab.1.a
+
+        trigger = {
+            AND = {
+                ai = no
+                NOT = {num_of_allies = 1}
+                num_of_allies = 0
+                total_development = 100
+            }
+        }
+        add_stability = 1
+    }
+
+    option =
+    {
+        name = event_ally_stab.1.b
+
+        trigger = {
+            AND = {
+                ai = no
+                num_of_allies = 1
+                total_development = 100
+            }
+        }
+        add_stability = -1
+    }
+
+    option =
+    {
+        name = event_ally_stab.1.c
+
+        trigger = {
+            AND = {
+                ai = no
+                NOT = {num_of_allies = 1}
+                num_of_allies = 0
+                NOT = { total_development = 100 }
+            }
+        }
+        add_dip_power = 100  
+    }
+
+    option =
+    {
+        name = event_ally_stab.1.d
+
+        trigger = {
+            ai = yes
+        }
+        add_adm_power = 900
+        add_stability = 1
+    }
+
+    option =
+    {
+        name = event_ally_stab.1.e
+        highlight = yes
+
+        trigger = {
+            AND = {
+                ai = no
+                num_of_allies = 1
+                total_development = 100
+                full_idea_group = diplomatic_ideas
+            }
+        }
+    }
+
+}
