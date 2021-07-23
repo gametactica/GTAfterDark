@@ -67,7 +67,7 @@ difficulty_normal_ai = {
 
 difficulty_hard_ai = {
 	manpower_recovery_speed = 0.50
-	global_unrest = -5
+	global_unrest = -4
 	war_exhaustion = -0.05
 	interest = -1
 	ae_impact = -0.33
@@ -443,7 +443,7 @@ tolerance = {
 
 # Multiplied with negative religious tolerance
 intolerance = {
-	local_unrest = -1.5
+	local_unrest = -1.25
 	local_tax_modifier = 0.1
 	trade_goods_size_modifier = 0.10
 }
@@ -572,7 +572,7 @@ ai_nation = {
 	diplomats = 1 							# ai has to reserve a diplomat for short term action so it gets an extra to put it on equal footing with player
 	free_leader_pool = 1					# ai needs to have enough pool for 1 general & 1 admiral
 	sailors_recovery_speed = 0.25
-	global_unrest = -3
+	global_unrest = -2
 	war_exhaustion = -0.02
 	stability_cost_modifier = -0.5
 }
@@ -698,7 +698,7 @@ war = {
 }
 
 peace = {
-	war_exhaustion = -0.1
+	war_exhaustion = -0.15
 	monthly_fervor_increase = 1
 	global_autonomy = -0.05
 	global_institution_spread = 0.1
@@ -707,7 +707,7 @@ peace = {
 }
 
 unconditional_surrender = {
-	war_exhaustion = -0.2
+	war_exhaustion = -0.15
 	global_autonomy = -0.1
 	global_institution_spread = 0.1
 }
@@ -892,7 +892,7 @@ legitimacy = {
 	global_unrest = -4
 	tolerance_heretic = 2
 	diplomatic_reputation = 2
-	vassal_income = 0.15
+	vassal_income = 0.2
 	monthly_militarized_society = 0.05
 	max_absolutism = 20
 	nobles_loyalty_modifier = 0.1
@@ -1281,9 +1281,9 @@ all_nations = {
 }
 
 subject_nation = {
-	global_tax_income = -3
-	land_forcelimit	= -3
-	naval_forcelimit = -3
+	global_tax_income = -2
+	land_forcelimit	= -2
+	naval_forcelimit = -2
 }
 
 vassal_nation = {
