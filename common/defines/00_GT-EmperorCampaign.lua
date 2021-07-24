@@ -40,7 +40,6 @@ NDefines.NDiplomacy.PEACE_COST_END_RIVALRY = 20
 NDefines.NDiplomacy.MAX_PEACE_COST_TRIBUTARY_STATE = 70
 NDefines.NDiplomacy.MAX_PEACE_TREATY_AE = 200
 NDefines.NDiplomacy.PEACE_COST_DEMAND_NON_OCCUPIED_PROVINCE_MULT = 1.5
-NDefines.NDiplomacy.PEACE_COST_DEMAND_CAPITAL_MULT = 1.25
 NDefines.NDiplomacy.ALLY_PEACE_COST_MULT = 4						-- Taking things from allies that are not fully called into the war costs this much more
 NDefines.NDiplomacy.ALLY_AE_MULT = 3								-- Taking things from allies that are not fully called into the war generates this much more AE
 NDefines.NDiplomacy.ANNEX_DIP_COST_PER_DEVELOPMENT = 12			-- per development
