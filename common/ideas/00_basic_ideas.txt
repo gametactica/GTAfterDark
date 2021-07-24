@@ -206,7 +206,7 @@ theocracy_gov_ideas = {
 		army_tradition_from_battle = 0.02
 	}
 	GT_theo7 = {
-		global_tax_income = 72
+		global_tax_income = 36
 	}
 	ai_will_do = {
 		factor = 0.9
