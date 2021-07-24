@@ -21,7 +21,6 @@ country_event = {
 		OR = {
 			AND = {
 				owns_core_province = 482
-				is_subject = no
 				num_of_cities = 2
 			}
 			any_subject_country = {
@@ -311,7 +310,6 @@ country_event = {
 			swap_non_generic_missions = yes
 			set_ruler_flag = historical_pirate
 		}
-		create_march = LIB
 	}
 
 	after = { # Trigger an event, which will swap the national ideas of pirate tag with correct ideas
@@ -626,7 +624,6 @@ country_event = {
 		OR = {
 			AND = {
 				owns_core_province = 487
-				is_subject = no
 				num_of_cities = 2
 			}
 			any_subject_country = {
@@ -808,7 +805,6 @@ country_event = {
 		OR = {
 			AND = {
 				owns_core_province = 489
-				is_subject = no
 				num_of_cities = 2
 			}
 			any_subject_country = {
