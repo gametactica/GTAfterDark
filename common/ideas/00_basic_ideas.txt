@@ -1441,6 +1441,13 @@ GT_pirate0 = {
 				has_reform = pirate_kingdom
 				has_reform = war_against_the_world_government
 				has_reform = black_market_consortium_government
+				TAG = MOR
+				TAG = ALG
+				TAG = TUN
+				TAG = TLC
+				TAG = KNI
+				TAG = TRP
+				TAG = JAJ
 			}
 			primitives = no
 			}
