@@ -574,9 +574,13 @@ defensive_ideas = {
 
 trade_ideas = {
 	category = DIP
-
+	
 	bonus = {
 		diplomatic_upkeep = 1
+	}
+	
+	trigger = {
+			NOT = { has_idea_group = GT_pirate0 }
 	}
 
 	GT_trade1 = {
@@ -1364,6 +1368,137 @@ naval_ideas = {
 				has_reform = war_against_the_world_government
 				has_reform = black_market_consortium_government
 			}
+		}
+	}
+}
+
+GT_dynamic0 = {
+	category = DIP
+
+	bonus = {
+		diplomatic_upkeep = -1
+	}
+	
+	trigger = {
+			ironman = yes
+			}
+	
+	dynamic1 = {
+		reduced_stab_impacts = yes
+		privateer_efficiency = 0.75
+	}
+
+	dynamic2 = {
+		sailors_recovery_speed = 0.25
+		global_sailors = 5000
+		capture_ship_chance = 0.05
+	}
+
+	dynamic3 = {
+		naval_maintenance_modifier = -0.2
+		naval_morale = 0.1
+		capture_ship_chance = 0.05
+	}
+
+	dynamic4 = {
+		loot_amount = 0.2
+		siege_blockade_progress = 1
+		capture_ship_chance = 0.05
+	}
+	
+	dynamic5 = {
+		light_ship_power = 0.3
+		transport_power = 0.2
+		capture_ship_chance = 0.05
+	}
+	
+	dynamic6 = {
+		admiral_cost = -0.3
+		admiral_skill_gain_modifier = 0.25
+		capture_ship_chance = 0.05
+	}
+	dynamic7 = {
+		leader_siege = 2
+		movement_speed_onto_off_boat_modifier = 0.25
+	}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+GT_pirate0 = {
+	category = DIP
+
+	bonus = {
+		diplomatic_upkeep = 1
+	}
+	
+	trigger = {
+			NOT = { has_idea_group = trade_ideas }
+			OR = {
+				has_reform = pirate_republic_reform
+				has_reform = pirate_kingdom
+				has_reform = war_against_the_world_government
+				has_reform = black_market_consortium_government
+			}
+			primitives = no
+			}
+	
+	GT_pirate1 = {
+		reduced_stab_impacts = yes
+		privateer_efficiency = 0.66
+	}
+
+	GT_pirate2 = {
+		sailors_recovery_speed = 0.25
+		global_sailors = 5000
+		capture_ship_chance = 0.05
+	}
+
+	GT_pirate3 = {
+		naval_maintenance_modifier = -0.2
+		naval_morale = 0.1
+		capture_ship_chance = 0.05
+	}
+
+	GT_pirate4 = {
+		loot_amount = 0.2
+		siege_blockade_progress = 1
+		capture_ship_chance = 0.05
+	}
+	
+	GT_pirate5 = {
+		light_ship_power = 0.5
+		transport_power = 0.2
+		capture_ship_chance = 0.05
+	}
+	
+	GT_pirate6 = {
+		admiral_cost = -0.5
+		admiral_skill_gain_modifier = 0.25
+		capture_ship_chance = 0.05
+	}
+	GT_pirate7 = {
+		leader_siege = 2
+		movement_speed_onto_off_boat_modifier = 0.5
+	}
+	
+	ai_will_do = {
+		factor = 0
+		modifier = {
+			factor = 10
+			OR = {
+				has_reform = pirate_republic_reform
+				has_reform = pirate_kingdom
+				has_reform = war_against_the_world_government
+				has_reform = black_market_consortium_government
+			}
+		}
+		
+		modifier = {
+			factor = 2
+			ruler_has_personality = navigator_personality
 		}
 	}
 }

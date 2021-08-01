@@ -690,12 +690,24 @@ exchange_of_ideas = {
 	
 	potential = {
 		has_idea_group = humanist_ideas
-		has_idea_group = trade_ideas
+		
+		OR = { 
+			has_idea_group = GT_dynamic0
+			has_idea_group = trade_ideas
+			has_idea_group = GT_pirate0 
+		}
+		
 	}
 	
 	allow = {
 		full_idea_group = humanist_ideas
-		full_idea_group = trade_ideas
+		
+		OR = {
+			full_idea_group = GT_dynamic0
+			full_idea_group = trade_ideas
+			full_idea_group = GT_pirate0 
+		}
+		
 	}	
 	
 	idea_cost = -0.1
@@ -1205,13 +1217,25 @@ the_statute_of_monopolies = {
 	monarch_power = ADM
 
 	potential = {
-		has_idea_group = trade_ideas
 		has_idea_group = economic_ideas
+		
+		OR = {
+			has_idea_group = GT_dynamic0
+			has_idea_group = trade_ideas
+			has_idea_group = GT_pirate0 
+		}
+		
 	}
 	
 	allow = {
-		full_idea_group = trade_ideas
 		full_idea_group = economic_ideas
+		
+		OR = {
+			full_idea_group = GT_dynamic0
+			full_idea_group = trade_ideas
+			full_idea_group = GT_pirate0 
+		}
+		
 	}
 
 	production_efficiency = 0.1
@@ -1397,12 +1421,24 @@ the_banking_system = {
 
 	potential = {
 		has_idea_group = innovativeness_ideas
-		has_idea_group = trade_ideas
+		
+		OR = {
+			has_idea_group = GT_dynamic0
+			has_idea_group = trade_ideas
+			has_idea_group = GT_pirate0 
+		}
+		
 	}
 	
 	allow = {
 		full_idea_group = innovativeness_ideas
-		full_idea_group = trade_ideas
+		
+		OR = {
+			full_idea_group = GT_dynamic0
+			full_idea_group = trade_ideas
+			full_idea_group = GT_pirate0 
+		}
+		
 	}
 
 	interest = -0.25
@@ -1436,12 +1472,24 @@ church_sponsored_guilds = {
 
 	potential = {
 		has_idea_group = religious_ideas
-		has_idea_group = trade_ideas
+		
+		OR = {
+			has_idea_group = GT_dynamic0
+			has_idea_group = trade_ideas
+			has_idea_group = GT_pirate0 
+		}
+		
 	}
 	
 	allow = {
 		full_idea_group = religious_ideas
-		full_idea_group = trade_ideas
+		
+		OR = {
+			full_idea_group = GT_dynamic0
+			full_idea_group = trade_ideas
+			full_idea_group = GT_pirate0 
+		}
+		
 	}
 	
 	global_trade_goods_size_modifier = 0.1
