@@ -3366,8 +3366,8 @@ share_advanced_neighbor = {
 
 #Mare Nostrum
 slaves_raided = {
-	opinion = -25
-	yearly_decay = 1
+	opinion = -30
+	yearly_decay = 10
 	min = -100
 }
 

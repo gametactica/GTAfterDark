@@ -748,7 +748,7 @@ exploration_ideas = {
 			is_tribal = yes
 		}
 		modifier = {
-			factor = 0
+			factor = 0.9
 			is_subject = yes
 		}		
 		modifier = {

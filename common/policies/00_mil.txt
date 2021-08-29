@@ -835,6 +835,7 @@ weapon_quality_standards = {
 		full_idea_group = quality_ideas
 	}
 	
+	monthly_splendor = 1
 	yearly_absolutism = 0.2
 	yearly_revolutionary_zeal = 0.2
 	
