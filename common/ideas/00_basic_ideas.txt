@@ -99,7 +99,7 @@ plutocracy_ideas = {
 		reelection_cost = -0.02
 	}
 	GT_pluto5 = {
-		navy_tradition_decay = -0.1
+		navy_tradition_decay = -0.01
 		global_trade_goods_size_modifier = 0.1
 		reelection_cost = -0.02
 	}
