@@ -33,6 +33,9 @@ marketplace = {
 
 	modifier = {
 		province_trade_power_modifier = 0.5
+		local_culture_conversion_cost = -0.1
+		local_governing_cost = 0.1
+		local_state_maintenance_modifier = 0.1
 	}
 
 	ai_will_do = {
@@ -45,6 +48,9 @@ workshop = {
 	time = 12
 	modifier = {
 		local_production_efficiency = 0.5
+		local_build_cost = -0.1
+		local_governing_cost = 0.1
+		local_state_maintenance_modifier = 0.1
 	}
 
 	allow_in_gold_provinces = no
@@ -58,7 +64,10 @@ temple = {
 	cost = 100
 	time = 12
 	modifier = {
-		local_tax_modifier = 0.4
+		local_tax_modifier = 0.5
+		local_missionary_strength = 0.01
+		local_governing_cost = 0.1
+		local_state_maintenance_modifier = 0.1
 	}
 	on_built = {
 		if = {
@@ -126,6 +135,9 @@ barracks = {
 	time = 12
 	modifier = {
 		local_manpower_modifier = 0.5
+		garrison_growth = 0.15
+		local_governing_cost = 0.1
+		local_state_maintenance_modifier = 0.1
 	}
 	on_built = {
 		if = {
@@ -188,8 +200,9 @@ shipyard = {
 	}
 	modifier = {
 		naval_forcelimit = 2
-		ship_recruit_speed = -0.25
 		local_ship_repair = 0.25
+		local_governing_cost = 0.1
+		local_state_maintenance_modifier = 0.1
 	}
 
 	ai_will_do = {
@@ -210,6 +223,8 @@ fort_15th = {
 	time = 30
 	modifier = {
 		fort_level = 2
+		local_autonomy = 0.05
+		local_years_of_nationalism = -2
 	}
 
 #	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
@@ -254,6 +269,8 @@ coastal_defence = {
 		blockade_force_required = 0.5
 		hostile_disembark_speed = 1.0
 		block_slave_raid = yes
+		local_naval_engagement_modifier = 0.25
+		local_autonomy = 0.01
 	}
 
 	ai_will_do = {
@@ -270,7 +287,7 @@ courthouse = {
 	time = 12
 	modifier = {
 		local_unrest = -1
-		local_governing_cost = -0.15
+		local_governing_cost = -0.25
 		local_state_maintenance_modifier = 0.25
 	}
 
@@ -345,6 +362,9 @@ dock = {
 	}
 	modifier = {
 		local_sailors_modifier = 0.5
+		ship_recruit_speed = -0.25
+		local_governing_cost = 0.1
+		local_state_maintenance_modifier = 0.1
 	}
 	
 	on_built = {
@@ -386,6 +406,9 @@ regimental_camp = {
 	time = 12
 	modifier = {
 		land_forcelimit = 1
+		local_defensiveness = 0.1
+		local_governing_cost = 0.1
+		local_state_maintenance_modifier = 0.1
 	}
 
 #	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
@@ -430,6 +453,8 @@ fort_16th = {
 	make_obsolete = fort_15th
 	modifier = {
 		fort_level = 4
+		local_autonomy = 0.1
+		local_years_of_nationalism = -4
 	}
 
 #	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
@@ -477,6 +502,8 @@ naval_battery = {
 		hostile_disembark_speed = 2.0
 		hostile_fleet_attrition = 5
 		block_slave_raid = yes
+		local_naval_engagement_modifier = 0.5
+		local_autonomy = 0.02
 	}
 
 	ai_will_do = {
@@ -493,8 +520,10 @@ cathedral = {
 	cost = 300
 	time = 12
 	modifier = {
-		local_missionary_strength = 0.03
-		local_tax_modifier = 0.6
+		local_tax_modifier = 1
+		local_missionary_strength = 0.02
+		local_governing_cost = 0.3
+		local_state_maintenance_modifier = 0.3
 	}
 	on_built = {
 		if = {
@@ -563,8 +592,10 @@ university = {
 	cost = 300
 	time = 12
 	modifier = {
-		local_development_cost = -0.20
-		allowed_num_of_buildings = 1
+		local_development_cost = -0.2
+		institution_growth = 1
+		local_governing_cost = 0.2
+		local_state_maintenance_modifier = 0.2
 	}
 
 	ai_will_do = {
@@ -609,6 +640,9 @@ trade_depot = {
 
 	modifier = {
 		province_trade_power_modifier = 1
+		local_culture_conversion_cost = -0.2
+		local_governing_cost = 0.3
+		local_state_maintenance_modifier = 0.3
 	}
 
 	ai_will_do = {
@@ -627,8 +661,9 @@ grand_shipyard = {
 	}
 	modifier = {
 		naval_forcelimit = 4
-		ship_recruit_speed = -0.50
 		local_ship_repair = 0.50
+		local_governing_cost = 0.3
+		local_state_maintenance_modifier = 0.3
 	}
 
 	ai_will_do = {
@@ -675,6 +710,9 @@ training_fields = {
 
 	modifier = {
 		local_manpower_modifier = 1
+		garrison_growth = 0.3
+		local_governing_cost = 0.3
+		local_state_maintenance_modifier = 0.3
 	}
 	
 	on_built = {
@@ -716,6 +754,8 @@ fort_17th = {
 
 	modifier = {
 		fort_level = 6
+		local_autonomy = 0.15
+		local_years_of_nationalism = -6
 	}
 
 #	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
@@ -763,6 +803,9 @@ stock_exchange = {
 
 	modifier = {
 		province_trade_power_modifier = 1.25
+		local_culture_conversion_cost = -0.3
+		local_governing_cost = 0.5
+		local_state_maintenance_modifier = 0.5
 	}
 
 	ai_will_do = {
@@ -777,6 +820,9 @@ counting_house = {
 	make_obsolete = workshop
 	modifier = {
 		local_production_efficiency = 1
+		local_build_cost = -0.2
+		local_governing_cost = 0.3
+		local_state_maintenance_modifier = 0.3
 	}
 
 	allow_in_gold_provinces = no
@@ -797,7 +843,7 @@ town_hall = {
 
 	modifier = {
 		local_unrest = -2
-		local_governing_cost = -0.3
+		local_governing_cost = -0.5
 		local_state_maintenance_modifier = 0.5
 	}
 
@@ -880,6 +926,9 @@ drydock = {
 
 	modifier = {
 		local_sailors_modifier = 1.0
+		ship_recruit_speed = -0.50
+		local_governing_cost = 0.3
+		local_state_maintenance_modifier = 0.3
 	}
 	
 	on_built = {
@@ -945,6 +994,9 @@ conscription_center = {
 
 	modifier = {
 		land_forcelimit = 2
+		local_defensiveness = 0.2
+		local_governing_cost = 0.3
+		local_state_maintenance_modifier = 0.3
 	}
 
 	ai_will_do = {
@@ -971,6 +1023,8 @@ fort_18th = {
 
 	modifier = {
 		fort_level = 8
+		local_autonomy = 0.2
+		local_years_of_nationalism = -8
 	}
 
 #	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
@@ -1014,6 +1068,10 @@ manufactory = {
 	time = 60
 	modifier = {
 		trade_goods_size = 1.0
+		local_unrest = 2
+		local_governing_cost = 0.2
+		local_state_maintenance_modifier = 0.2
+		
 	}
 }
 
@@ -1154,6 +1212,9 @@ furnace = {
 
 	modifier = {
 		global_trade_goods_size_modifier = 0.05 #National Bonus
+		local_unrest = 2
+		local_governing_cost = 0.3
+		local_state_maintenance_modifier = 0.3
 	}
 	onmap = yes
 	show_separate = yes # Means as a manufactory it will be shown according to the old way
@@ -1168,8 +1229,9 @@ ramparts = {
 		all
 	}
 	modifier = {
-		local_hostile_attrition = 1
-		local_defensiveness = 0.15
+		local_hostile_attrition = 2
+		local_defensiveness = 0.25
+		local_autonomy = 0.01
 	}
 	onmap = no
 	show_separate = yes # Means as a manufactory it will be shown according to the old way
@@ -1193,6 +1255,9 @@ soldier_households = {
 
 	modifier = {
 		local_manpower = 0.75
+		regiment_recruit_speed = -0.25
+		local_governing_cost = 0.3
+		local_state_maintenance_modifier = 0.3
 	}
 	bonus_modifier = {
 		local_manpower = 0.75
@@ -1223,12 +1288,14 @@ impressment_offices = {
 
 	modifier = {
 		local_sailors = 250
-		ship_recruit_speed = -0.1
+		ship_recruit_speed = -0.15
 		local_ship_cost = -0.05
+		local_governing_cost = 0.3
+		local_state_maintenance_modifier = 0.3
 	}
 	bonus_modifier = {
 		local_sailors = 250
-		ship_recruit_speed = -0.1
+		ship_recruit_speed = -0.15
 		local_ship_cost = -0.05
 	}
 	onmap = no
@@ -1281,8 +1348,9 @@ state_house = {
 	}
 
 	modifier = {
-		statewide_governing_cost = -0.2
-		min_local_autonomy = -5
+		min_local_autonomy = -10
+		statewide_governing_cost = -0.3
+		local_state_maintenance_modifier = 0.3
 	}
 	bonus_modifier = {
 		statewide_governing_cost = -0.2
