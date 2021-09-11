@@ -565,7 +565,7 @@ base_values = {
 	artillery_bonus_vs_fort = 5
 	cav_to_inf_ratio = 0.5
 	merc_maintenance_modifier = 0.5
-	monthly_heir_claim_increase = 0.2
+	monthly_heir_claim_increase = 0.05
 		
 
 }
@@ -960,18 +960,20 @@ corruption = {
 	liberty_desire = 10
 	years_of_nationalism = 20
 	min_autonomy = 50
-	global_unrest = -10
+	global_unrest = -20
 	horde_unity = 2
 	yearly_army_professionalism = -0.05
 	merc_maintenance_modifier = -0.50
+	mercenary_manpower= 0.50
 	imperial_mandate = -1
-	imperial_authority = -0.1
+	imperial_authority_value = -1
 	diplomatic_reputation = -3
 	envoy_travel_time = 2
 	diplomatic_annexation_cost = 2
 	stability_cost_modifier = -0.5
 	max_absolutism = -10
 	max_revolutionary_zeal = -10
+	inflation_reduction = -1
 	
 	brahmins_hindu_loyalty_modifier = 0.1
 	brahmins_muslim_loyalty_modifier = 0.1
@@ -987,18 +989,17 @@ corruption = {
 	jains_loyalty_modifier = 0.1
 	rajput_loyalty_modifier = 0.1
 
-	monthly_heir_claim_increase = 0.025
 }
 
 root_out_corruption = {
 	yearly_corruption = -1.0
-	legitimacy = -1
-	republican_tradition = -0.5
-	devotion = -1
-	horde_unity = -1
-	meritocracy = -1
-	yearly_absolutism = 0.5
-	yearly_revolutionary_zeal = 0.5
+	legitimacy = -2
+	republican_tradition = -1
+	devotion = -2
+	horde_unity = -2
+	meritocracy = -2
+	yearly_absolutism = 1
+	yearly_revolutionary_zeal = 1
 }
 
 recovery_motivation = {
@@ -1071,7 +1072,7 @@ prestige = {
 	improve_relation_modifier = 0.5
 	diplomatic_reputation = 2
 	power_projection_from_insults = 1
-	monthly_heir_claim_increase = 0.05
+	monthly_heir_claim_increase = 0.25
 	global_tariffs = 0.25
 	brahmins_hindu_loyalty_modifier = 0.05
 	brahmins_muslim_loyalty_modifier = 0.05
@@ -1132,18 +1133,35 @@ bought_indulgence = {
 }
 
 religious_unity = {
-	monthly_fervor_increase = 1
-	max_absolutism = 5
+	papal_influence = 0.25
+	monthly_fervor_increase = 0.5
+	yearly_patriarch_authority = 0.1
+	church_power_modifier = 0.5
+	monthly_piety = 0.2
+	monthly_karma = 0.2
+	harmonization_speed = 0.2
 	church_loyalty_modifier = 0.05
 	brahmins_hindu_loyalty_modifier = 0.05
+	enforce_religion_cost = -0.2
+	establish_order_cost = -0.15
+	devotion = 1
+	relation_with_heretics = -30
 }
 
 inverse_religious_unity = {
-	stability_cost_modifier = 1.0		#more expensive to recover stability
-	global_unrest = 3
-	church_power_modifier = -1
+	papal_influence = -0.25
+	monthly_fervor_increase = -0.5
+	yearly_patriarch_authority = -0.1
+	church_power_modifier = -0.5
+	monthly_piety = -0.2		
+	monthly_karma = -0.2
+	harmonization_speed = -0.2
+	church_loyalty_modifier = -0.05
+	brahmins_hindu_loyalty_modifier = -0.05
+	enforce_religion_cost = 0.2
+	establish_order_cost = 0.15
 	devotion = -1
-	yearly_corruption = 0.1
+	global_unrest = 3
 }
 
 total_occupation = {
@@ -1208,18 +1226,26 @@ liberty_desire = {
 
 is_great_power = {						#Only works with Rights of Man DLC enabled
 	prestige_decay = -0.01
-	embracement_cost = -0.1
 	max_absolutism = 10
 	max_revolutionary_zeal = 10
+	free_leader_pool = 1
+	stability_cost_modifier = -0.1
+	diplomatic_upkeep = 1
 }
 
 in_golden_era = {
-	all_power_cost = -0.1
-	global_trade_goods_size_modifier = 0.1
+	range = 0.3
+	imperial_authority_value = 0.1
+	imperial_mandate = 0.1
+	colonist_placement_chance = 0.3
+	global_autonomy = -0.01
 	land_morale = 0.1
 	naval_morale = 0.1
-	max_absolutism = 5
-	max_revolutionary_zeal = 5
+	free_leader_pool = 1
+	stability_cost_modifier = -0.1
+	diplomatic_upkeep = 1
+	yearly_absolutism = 0.1
+	yearly_revolutionary_zeal = 0.1
 }
 
 absolutism = {
@@ -1231,6 +1257,7 @@ absolutism = {
 low_army_professionalism = {
 	mercenary_cost = -0.15
 	mercenary_manpower = 0.15
+	mercenary_discipline = 0.05
 }
 
 high_army_professionalism = {
@@ -1246,7 +1273,7 @@ streltsy_modifier = {
 
 power_projection = {
 	ae_impact = 0.5
-	liberty_desire = 10
+	liberty_desire = -10
 	imperial_mandate = 0.15
 	imperial_authority_value = 0.15
 	unjustified_demands = -0.5
@@ -1397,12 +1424,15 @@ gov_rank_10 = {
 # For autonomy mechanics
 autonomy_increased = {
 	local_unrest = -10
-	
+	local_missionary_strength = -0.01
+	local_religious_unity_contribution = -0.1
 	picture="autonomy_increased"
 }
 
 autonomy_decreased = {
 	local_unrest = 10
+	local_religious_unity_contribution = 0.1
+	local_missionary_strength = 0.01
 }
 
 revolution_target = {
@@ -1419,6 +1449,8 @@ revolution_target = {
 
 dishonoured_alliance =  {
 	diplomatic_reputation = -2
+	army_tradition = -1
+	navy_tradition = -1
 }
 
 drilling_armies = { # Multiplied by percentage of forcelimit currently drilling
@@ -1440,7 +1472,7 @@ merchants_slandered = {
 discontent_sowed = {
 	global_unrest = 3
 	legitimacy = -1
-	republican_tradition = -0.2
+	republican_tradition = -0.25
 	devotion = -1
 	horde_unity = -1
 	meritocracy = -0.5
@@ -1451,7 +1483,7 @@ reputation_sabotaged = {
 }
 
 corrupt_officials = {
-	yearly_corruption = 0.1
+	yearly_corruption = 0.50
 }
 
 scaled_trade_league_leader = { #scaled by number of members
