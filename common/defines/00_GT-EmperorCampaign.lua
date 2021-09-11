@@ -6,7 +6,7 @@
 NDefines.NDiplomacy.TRADE_LEAGUE_MIN_PRESTIGE_OLD_LEADER = -25		-- Minimum required prestige to stay leader of a Trade League.
 NDefines.NDiplomacy.TRADE_LEAGUE_MIN_PRESTIGE_NEW_LEADER = 25		-- Minimum required prestige to become the new leader of a Trade League when the old one is resigned.
 NDefines.NDiplomacy.TRADE_LEAGUE_BREAK_OPINION = -15				-- AI will leave a Trade League if their opinion of you falls below this value.
-NDefines.NDiplomacy.DISHONORABLE_PEACE_MONTHS = 36					-- See DISHONORABLE_PEACE_WARSCORE. Set to 0 to entirely disable the feature.
+NDefines.NDiplomacy.DISHONORABLE_PEACE_MONTHS = 60					-- See DISHONORABLE_PEACE_WARSCORE. Set to 0 to entirely disable the feature.
 NDefines.NDiplomacy.VASSALIZE_BASE_DEVELOPMENT_CAP = 1000 			-- Countries with more total development than this cannot be vassalized
 NDefines.NDiplomacy.MARCH_BASE_DEVELOPMENT_CAP = 250 				-- Countries with more total development than this cannot be made into a march
 NDefines.NDiplomacy.GREAT_PROJECT_WARSCORE_COST_MODIFIER = 0.1
@@ -26,7 +26,7 @@ NDefines.NDiplomacy.AE_DIFFERENT_RELIGION = -0.25
 NDefines.NDiplomacy.AE_SAME_OVERLORD = 0.1
 NDefines.NDiplomacy.PO_DEMAND_PROVINCES_AE = 1 				-- _DDEF_PO_DEMAND_PROVINCES_AE = 10, (Per development)
 NDefines.NDiplomacy.PO_RETURN_CORES_AE = 0.2 					-- (Per core, only applied if returning cores to vassals of winner)
-NDefines.NDiplomacy.PO_FORM_PU_AE = 0.2 							-- _DDEF_PO_FORM_PU_AE = 10, (Per development)
+NDefines.NDiplomacy.PO_FORM_PU_AE = 0.05 							-- _DDEF_PO_FORM_PU_AE = 10, (Per development)
 NDefines.NDiplomacy.PEACE_COST_DEMAND_PROVINCE = 2					-- Demand a province (scales by province wealth, also used for annex)
 NDefines.NDiplomacy.PEACE_COST_CONCEDE_PROVINCE = 2				-- Demand colonial area province concession.
 NDefines.NDiplomacy.PEACE_COST_RELEASE_ANNEXED = 0.8					-- Release annexed nation (scales by province wealth)
@@ -39,7 +39,7 @@ NDefines.NDiplomacy.PEACE_COST_ENFORCE_REBEL_DEMANDS = 30
 NDefines.NDiplomacy.PEACE_COST_END_RIVALRY = 20
 NDefines.NDiplomacy.MAX_PEACE_COST_TRIBUTARY_STATE = 70
 NDefines.NDiplomacy.MAX_PEACE_TREATY_AE = 200
-NDefines.NDiplomacy.PEACE_COST_DEMAND_NON_OCCUPIED_PROVINCE_MULT = 1.5
+NDefines.NDiplomacy.PEACE_COST_DEMAND_NON_OCCUPIED_PROVINCE_MULT = 2
 NDefines.NDiplomacy.ALLY_PEACE_COST_MULT = 4						-- Taking things from allies that are not fully called into the war costs this much more
 NDefines.NDiplomacy.ALLY_AE_MULT = 3								-- Taking things from allies that are not fully called into the war generates this much more AE
 NDefines.NDiplomacy.ANNEX_DIP_COST_PER_DEVELOPMENT = 12			-- per development
@@ -78,7 +78,7 @@ NDefines.NCountry.MINIMUM_POLICY_TIME = 3						-- how many years minimum for a p
 NDefines.NCountry.CULTURE_MIN_DEVELOPMENT_TO_PROMOTE = 25		-- Minimum development required to promote the culture.
 NDefines.NCountry.NAT_FOCUS_YEARS = 20							-- years before you can change focus again
 NDefines.NCountry.PS_BOOST_STABILITY = 500
-NDefines.NCountry.PS_ARTILLERY_BARRAGE = 60
+NDefines.NCountry.PS_ARTILLERY_BARRAGE = 100
 NDefines.NCountry.PS_NAVAL_BARRAGE = 20
 NDefines.NCountry.PS_FORCE_MARCH = 3
 NDefines.NCountry.PS_DEMAND_NON_WARGOAL_PROVINCE = 75
@@ -141,13 +141,40 @@ NDefines.NEconomy.MISSIONARY_MAINTENANCE_DEVELOPMENT_CAP = 50		-- Where dev will
 NDefines.NMilitary.MOVE_LOCK_PERCENTAGE = 0.4						-- Unit movement is locked after this percentage of progress
 NDefines.NMilitary.SIEGE_DISEASE_IMPACT = 0.15						-- Fraction of besieging soldiers lost in a disease outbraek
 NDefines.NMilitary.CAVALRY_COST = 20.0 							-- _MDEF_CAVALRY_COST = 10
-NDefines.NMilitary.DEFAULT_WARGOAL_TICKINGWARSCORE_BONUS = 0.6		-- Amount of warscore per month since attacker/defender started getting the bonus for completing war goal
+NDefines.NMilitary.DEFAULT_WARGOAL_TICKINGWARSCORE_BONUS = 1		-- Amount of warscore per month since attacker/defender started getting the bonus for completing war goal
 NDefines.NMilitary.WARGOAL_MAX_BONUS = 30
 NDefines.NMilitary.CAV_SUPPRESSION = 1						-- The amount of reduction to unrest for each friendly cavalry regiment in a province
 NDefines.NMilitary.FORT_FLIPPING_TIME = 60					-- Number of days it takes an influencing fort to revert the control of a province if left unhindered.
 
 
+--NReligion
+--NDefines.NReligion.
+
+NDefines.NReligion.PIETY_COST = 0.8,
+NDefines.NReligion.PIETY_ABS_THRESHOLD = 0.8,
+
+NDefines.NReligion.ORTHODOX_ICON_DURATION_MONTHS = 180,
+NDefines.NReligion.ORTHODOX_ICON_AUTHORITY_COST = 0.1,
+
+NDefines.NReligion.MIN_CARDINALS = 7,											-- Least amount of cardinals/ Starting cardinals
+NDefines.NReligion.MAX_CARDINALS = 70,											-- Max amount of cardinals
+NDefines.NReligion.MAX_CARDINALS_PER_COUNTRY = 7,								-- Max cardinals in a single country
+
+NDefines.NReligion.KARMA_FOR_OFFENSIVE_WAR = -15,
+NDefines.NReligion.KARMA_FOR_HONORING_CTA = 15,
+NDefines.NReligion.KARMA_RESTORE_ON_RULER_DEATH = 25,
+
+NDefines.NReligion.CHANGE_SECONDARY_PRESTIGE_HIT = -25,
+NDefines.NReligion.MIN_HARMONIZE_DEVELOPMENT = 30,
+NDefines.NReligion.STARTING_HARMONY = 50.0,							-- Confucian countries start with this.
+NDefines.NReligion.YEARLY_HARMONY_INCREASE = 1.0,
+NDefines.NReligion.HARMONY_LOSS_PER_DEV_CONVERTED = 1.0,
+NDefines.NReligion.YEARLY_HARMONY_INCREASE_WHEN_HARMONIZING = -3.0,
+NDefines.NReligion.YEARLY_HARMONIZATION_PROGRESS = 0.03, 			-- 3%
 
 
-
+NDefines.NReligion.NOT_SAME_MUSLIM_SCHOOL_ALLIANCE_ACCEPTANCE = 10,		-- Alliance acceptance value (positive and negative) for different religious schools
+NDefines.NReligion.NOT_SAME_MUSLIM_SCHOOL_ROYAL_MARRIAGE_ACCEPTANCE = 10,	-- Royal marriage acceptance (positive and negative) for different religious schools
+NDefines.NReligion.SAME_MUSLIM_SCHOOL_ALLIANCE_ACCEPTANCE = 10,			-- Alliance acceptance value for same religious schools
+NDefines.NReligion.SAME_MUSLIM_SCHOOL_ROYAL_MARRIAGE_ACCEPTANCE = 10,		-- Royal marriage acceptance for same religious schools
 

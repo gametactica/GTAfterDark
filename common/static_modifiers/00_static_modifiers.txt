@@ -441,12 +441,12 @@ slaves_raided = {
 
 # Multiplied with positive religious tolerance
 tolerance = {
-	local_unrest = -1
+	local_years_of_nationalism = -2
 }
 
 # Multiplied with negative religious tolerance
 intolerance = {
-	local_unrest = -1.25
+	local_years_of_nationalism = -3
 	local_tax_modifier = 0.1
 	trade_goods_size_modifier = 0.10
 }
@@ -550,11 +550,11 @@ base_values = {
 	tolerance_heretic = -2
 	global_missionary_strength = 0.02
 	global_manpower = 10.0
-	advisor_pool = 3
+	advisor_pool = 2
 	colonist_placement_chance = 0.03
 	free_leader_pool = 1
 	republican_tradition = 1
-	monthly_fervor_increase = 1
+	monthly_fervor_increase = 0
 	vassal_income = 0.05
 	horde_unity = -2
 	devotion = -0.5
@@ -702,12 +702,18 @@ bankruptcy = {
 
 war = {
 	rr_girondists_influence = 0.15
+	monthly_piety = -0.005
+	monthly_karma = -0.005
+	global_autonomy = 0.03
+	yearly_corruption = 1
+	global_colonial_growth = -20
 }
 
 peace = {
 	war_exhaustion = -0.15
-	monthly_fervor_increase = 1
-	global_autonomy = -0.05
+	monthly_piety = 0.005
+	monthly_karma = 0.005
+	global_autonomy = -0.03
 	global_institution_spread = 0.1
 	rr_girondists_influence = -0.1
 	pr_smugglers_influence = 0.1
@@ -901,13 +907,26 @@ tribal_allegiance = {
 # Multiplied by current Legitimacy - 50
 legitimacy = {
 	global_unrest = -4
-	accept_vassalization_reasons = 5
+	accept_vassalization_reasons = 10
 	tolerance_heretic = 2
 	heir_chance = 0.50
 	colonist_placement_chance = 0.05
 	monthly_militarized_society = 0.05
 	max_absolutism = 20
+	
+	brahmins_hindu_loyalty_modifier = 0.1
+	brahmins_muslim_loyalty_modifier = 0.1
+	brahmins_other_loyalty_modifier = 0.1
+	church_loyalty_modifier = 0.1
+	maratha_loyalty_modifier = 0.1
 	nobles_loyalty_modifier = 0.1
+	burghers_loyalty_modifier = 0.1
+	vaisyas_loyalty_modifier = 0.1
+	cossacks_loyalty_modifier = 0.1
+	nomadic_tribes_loyalty_modifier = 0.1
+	dhimmi_loyalty_modifier = 0.1
+	jains_loyalty_modifier = 0.1
+	rajput_loyalty_modifier = 0.1
 }
 
 #Multiplied by current Horde Unity - 50
@@ -918,15 +937,15 @@ horde_unity = {
 	vassal_income = 0.25
 	cavalry_power = 0.10
 	tolerance_heathen = 2
-	nomadic_tribes_loyalty_modifier = 0.05
+	nomadic_tribes_loyalty_modifier = 0.1
 }
 
 
 # Multiplied by current Devotion - 50
 devotion = {
 	global_unrest = -4
-	monthly_piety = 0.02
-	monthly_karma = 0.02
+	monthly_piety = 0.005
+	monthly_karma = 0.005
 	yearly_harmony = 1
 	global_heretic_missionary_strength = 0.02
 	yearly_patriarch_authority = 0.1
@@ -935,8 +954,20 @@ devotion = {
 	tolerance_own = 2
 	church_power_modifier = 0.25
 	global_tax_modifier = 0.50
-	church_loyalty_modifier = 0.05
-	brahmins_hindu_loyalty_modifier = 0.05
+	
+	brahmins_hindu_loyalty_modifier = 0.1
+	brahmins_muslim_loyalty_modifier = 0.1
+	brahmins_other_loyalty_modifier = 0.1
+	church_loyalty_modifier = 0.1
+	maratha_loyalty_modifier = 0.1
+	nobles_loyalty_modifier = 0.1
+	burghers_loyalty_modifier = 0.1
+	vaisyas_loyalty_modifier = 0.1
+	cossacks_loyalty_modifier = 0.1
+	nomadic_tribes_loyalty_modifier = 0.1
+	dhimmi_loyalty_modifier = 0.1
+	jains_loyalty_modifier = 0.1
+	rajput_loyalty_modifier = 0.1
 }
 
 # Multiplied by current meritocracy - 50
@@ -945,6 +976,22 @@ meritocracy = {
 	advisor_cost = -0.5
 	stability_cost_modifier = -0.25
 	promote_culture_cost = -0.25
+	yearly_corruption = -0.2
+	
+	
+	brahmins_hindu_loyalty_modifier = 0.1
+	brahmins_muslim_loyalty_modifier = 0.1
+	brahmins_other_loyalty_modifier = 0.1
+	church_loyalty_modifier = 0.1
+	maratha_loyalty_modifier = 0.1
+	nobles_loyalty_modifier = 0.1
+	burghers_loyalty_modifier = 0.1
+	vaisyas_loyalty_modifier = 0.1
+	cossacks_loyalty_modifier = 0.1
+	nomadic_tribes_loyalty_modifier = 0.1
+	dhimmi_loyalty_modifier = 0.1
+	jains_loyalty_modifier = 0.1
+	rajput_loyalty_modifier = 0.1
 }
 
 # Multiplied by 50 - meritocracy
@@ -955,8 +1002,8 @@ low_meritocracy = {
 
 # Scaled, multiplied by current corruption / 100
 corruption = {
-	navy_tradition_decay = -0.10
-	army_tradition_decay = -0.10
+	navy_tradition_decay = 0.10
+	army_tradition_decay = 0.10
 	liberty_desire = 10
 	years_of_nationalism = 20
 	min_autonomy = 50
@@ -1062,7 +1109,9 @@ over_extension = {
 	global_unrest = 5
 	bureaucrats_influence = 0.5
 	mr_guilds_influence = 0.5
-	yearly_corruption = 0.5
+	build_time = 0.5
+	build_cost = 0.5
+	state_maintenance_modifier = 1
 }
 
 prestige = {
@@ -1071,9 +1120,9 @@ prestige = {
 	naval_morale = 0.15
 	improve_relation_modifier = 0.5
 	diplomatic_reputation = 2
-	power_projection_from_insults = 1
 	monthly_heir_claim_increase = 0.25
 	global_tariffs = 0.25
+	
 	brahmins_hindu_loyalty_modifier = 0.05
 	brahmins_muslim_loyalty_modifier = 0.05
 	brahmins_other_loyalty_modifier = 0.05
@@ -1135,33 +1184,35 @@ bought_indulgence = {
 religious_unity = {
 	papal_influence = 0.25
 	monthly_fervor_increase = 0.5
-	yearly_patriarch_authority = 0.1
+	yearly_patriarch_authority = 0.005
 	church_power_modifier = 0.5
-	monthly_piety = 0.03
-	monthly_karma = 0.03
+	monthly_piety = 0.01
+	monthly_karma = 0.01
 	harmonization_speed = 0.2
 	church_loyalty_modifier = 0.05
 	brahmins_hindu_loyalty_modifier = 0.05
 	enforce_religion_cost = -0.2
 	establish_order_cost = -0.15
 	devotion = 1
-	relation_with_heretics = -30
+	relation_with_heretics = -40
+	yearly_corruption = 0.2
 }
 
 inverse_religious_unity = {
 	papal_influence = -0.25
 	monthly_fervor_increase = -0.5
-	yearly_patriarch_authority = -0.1
+	yearly_patriarch_authority = -0.005
 	church_power_modifier = -0.5
-	monthly_piety = -0.03		
-	monthly_karma = -0.03
+	monthly_piety = -0.01		
+	monthly_karma = -0.01
 	harmonization_speed = -0.2
 	church_loyalty_modifier = -0.05
 	brahmins_hindu_loyalty_modifier = -0.05
 	enforce_religion_cost = 0.2
 	establish_order_cost = 0.15
 	devotion = -1
-	global_unrest = 3
+	global_unrest = 4
+	global_spy_defence = 0.2
 }
 
 total_occupation = {
@@ -1276,18 +1327,27 @@ power_projection = {
 	liberty_desire = -10
 	imperial_mandate = 0.15
 	imperial_authority_value = 0.15
-	unjustified_demands = -0.5
-	province_warscore_cost = -0.5
+	global_colonial_growth = 10
+	trade_steering = 0.5
 	rival_border_fort_maintenance = -1
 	accept_vassalization_reasons = 15
 	transfer_trade_power_reasons = 15
-	prestige = 0.5
 	yearly_army_professionalism = 0.01
-	legitimacy = 0.5
-	devotion = 0.5
-	horde_unity = 0.5
-	republican_tradition = 0.2
 	rival_change_cost = -0.75
+	
+	brahmins_hindu_loyalty_modifier = 0.05
+	brahmins_muslim_loyalty_modifier = 0.05
+	brahmins_other_loyalty_modifier = 0.05
+	church_loyalty_modifier = 0.05
+	maratha_loyalty_modifier = 0.05
+	nobles_loyalty_modifier = 0.05
+	burghers_loyalty_modifier = 0.05
+	vaisyas_loyalty_modifier = 0.05
+	cossacks_loyalty_modifier = 0.05
+	nomadic_tribes_loyalty_modifier = 0.05
+	dhimmi_loyalty_modifier = 0.05
+	jains_loyalty_modifier = 0.05
+	rajput_loyalty_modifier = 0.05
 }
 
 power_projection_25 = {
@@ -1337,30 +1397,23 @@ self_governing_colony_subject = {
 }
 
 march_subject = {
-	stability_cost_modifier = -0.25
-	drill_gain_modifier = 0.2
-	war_exhaustion = -0.10
-	army_tradition = 1
-	navy_tradition = 1
-	land_forcelimit = 1
+	land_morale = 0.05
+	naval_morale = 0.05
 }
 
 vassal_subject = {
-	stability_cost_modifier = -0.25
-	build_cost = -0.1
-	technology_cost = -0.1
-	idea_cost = 0.1
-	land_forcelimit = 1
+	advisor_pool = 1
+	development_cost = -0.1
 }
 
 daimyo_subject = {
-	stability_cost_modifier = -0.25
-	rebel_support_efficiency = 0.25
+	accept_vassalization_reasons = 1
+	liberty_desire = -1
 }
 
 union_subject = {
-	stability_cost_modifier = -0.25
-	rebel_support_efficiency = 0.25
+	prestige = 1
+	diplomatic_upkeep = 1
 }
 
 all_nations = {
@@ -1376,7 +1429,11 @@ subject_nation = {
 }
 
 vassal_nation = {
-	development_cost = 0.05
+	stability_cost_modifier = -0.25
+	build_cost = -0.25
+	technology_cost = -0.1
+	idea_cost = 0.1
+	prestige = -0.25
 }
 
 primitive_nation = {
@@ -1387,6 +1444,7 @@ primitive_nation = {
 #scales to amount of up-to-date forts compared to total development
 maintained_forts = {
 	army_tradition = 1
+	global_autonomy = -0.02
 }
 
 gov_rank_1 = {
@@ -1433,6 +1491,7 @@ autonomy_decreased = {
 	local_unrest = 10
 	local_religious_unity_contribution = 0.1
 	local_missionary_strength = 0.01
+	picture="autonomy_decreased"
 }
 
 revolution_target = {
