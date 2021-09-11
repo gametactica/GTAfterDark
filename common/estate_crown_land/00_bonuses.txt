@@ -82,7 +82,7 @@ bonus = {
     range_to = 60.0
     modifier = {
         max_absolutism = 5
-		yearly_absolutism = 0.5
+		yearly_absolutism = 0.05
         global_tax_modifier = 0.05
 		global_autonomy = -0.005
     }
@@ -94,7 +94,7 @@ bonus = {
     range_to = 75.0
     modifier = {
         max_absolutism = 5
-        yearly_absolutism = 1
+        yearly_absolutism = 0.1
         global_tax_modifier = 0.1
 		global_autonomy = -0.01
     }
@@ -106,7 +106,7 @@ bonus = {
     range_to = 100.0
     modifier = {
         max_absolutism = 10
-        yearly_absolutism = 1.5
+        yearly_absolutism = 0.15
         global_tax_modifier = 0.15
         global_autonomy = -0.015
     }
@@ -118,7 +118,7 @@ bonus = {
     range_to = 9001.0
     modifier = {
         max_absolutism = 10
-        yearly_absolutism = 2
+        yearly_absolutism = 0.2
         global_tax_modifier = 0.2
         global_autonomy = -0.02
     }

@@ -376,6 +376,9 @@ religious_ideas = {
 	GT_relig1 = {
 		global_missionary_strength = 0.03
 		legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		republican_tradition = 0.5
 	}
 	GT_relig2 = {
 		state_maintenance_modifier = -0.1
@@ -427,8 +430,7 @@ spy_ideas = {
 
 	GT_espio1 = {
 		spy_offence = 0.5
-		envoy_travel_time = -0.1
-		devotion = 1
+		advisor_pool = 1
 	}	
 	
 	GT_espio2 = {

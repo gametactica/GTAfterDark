@@ -27,8 +27,8 @@
 	years_of_nationalism = 10
 	liberty_desire = 5
 	global_spy_defence = 0.2
-	monthly_piety = -0.2
-	monthly_karma = -0.2
+	monthly_piety = -0.01
+	monthly_karma = 0.01
 	yearly_patriarch_authority = -0.1
 	privateer_efficiency = 0.5
 	promote_culture_cost = 0
@@ -85,8 +85,8 @@
 	years_of_nationalism = 0
 	liberty_desire = -5
 	global_spy_defence = 0
-	monthly_piety = 0.2
-	monthly_karma = 0.2
+	monthly_piety = 0.01
+	monthly_karma = -0.01
 	yearly_patriarch_authority = 0.1
 	privateer_efficiency = 0
 	promote_culture_cost = -0.30
