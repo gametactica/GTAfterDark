@@ -537,14 +537,8 @@ new_world_i = {
 	penalty = 0.5
 
 	bonus = {
-		if = {
-			limit = { ai = no }
-				colonists = 1
-			}
-		else = {
-			global_prov_trade_power_modifier = 0.10
-				}
-				}
+		global_prov_trade_power_modifier = 0.10
+	}
 
 	trade_company_efficiency = 0.6
 
