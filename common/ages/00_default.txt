@@ -87,7 +87,7 @@ age_of_discovery = {
 			allow = {
 				NOT = { religion_group = christian }
 			}
-			vassal = 4
+			vassal = 5
 		}		
 	
 		obj_two_continents = {
@@ -457,7 +457,7 @@ age_of_absolutism = {
 	
 	absolutism = {
 		harsh_treatment = 1
-		stability = 1
+		stability = 3
 		decrease_autonomy_command = 1
 		strengthen_government = 2
 		
@@ -642,7 +642,7 @@ age_of_revolutions = {
 	papacy = 2.0
 	absolutism = {
 		harsh_treatment = 1
-		stability = 1
+		stability = 3
 		decrease_autonomy_command = 1
 		strengthen_government = 2
 		

@@ -1400,6 +1400,7 @@ naval_ideas = {
 	}
 	GT_naval7 = {
 		war_exhaustion = -0.15
+		allowed_marine_fraction = 0.25
 	}
 
 	ai_will_do = {

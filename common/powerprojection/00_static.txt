@@ -11,11 +11,11 @@
 # The one for which x = NUM_OF_GREAT_POWERS will also be applied to all Great Powers that have recently left the top.
 
 great_power_1 = {
-	power = 50
+	power = 40
 }
 
 great_power_2 = {
-	power = 40
+	power = 35
 }
 
 great_power_3 = {

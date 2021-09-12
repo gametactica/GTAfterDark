@@ -123,7 +123,7 @@ NDefines.NCountry.MIN_HARSH_TREATMENT_COST = 5 -- Minimum harsh treatment cost
 --NEconomy
 --NDefines.NEconomy.
 
-NDefines.NEconomy.EDICTS_COST_INCREASE = 0.25				-- % increase on state maintenance.
+NDefines.NEconomy.EDICTS_COST_INCREASE = 0.1				-- % increase on state maintenance.
 NDefines.NEconomy.EDICTS_DURATION_MONTHS = 60				-- months lastin at least.
 NDefines.NEconomy.AUTONOMY_AT_DIPLO_ANNEX = 75					-- Autonomy added when diplo-annexing
 NDefines.NEconomy.AUTONOMY_AT_CONQUEST = 90						-- Autonomy added at conquest
@@ -147,34 +147,5 @@ NDefines.NMilitary.CAV_SUPPRESSION = 1						-- The amount of reduction to unrest
 NDefines.NMilitary.FORT_FLIPPING_TIME = 60					-- Number of days it takes an influencing fort to revert the control of a province if left unhindered.
 
 
---NReligion
---NDefines.NReligion.
 
-NDefines.NReligion.PIETY_COST = 0.8,
-NDefines.NReligion.PIETY_ABS_THRESHOLD = 0.8,
-
-NDefines.NReligion.ORTHODOX_ICON_DURATION_MONTHS = 180,
-NDefines.NReligion.ORTHODOX_ICON_AUTHORITY_COST = 0.1,
-
-NDefines.NReligion.MIN_CARDINALS = 7,											-- Least amount of cardinals/ Starting cardinals
-NDefines.NReligion.MAX_CARDINALS = 70,											-- Max amount of cardinals
-NDefines.NReligion.MAX_CARDINALS_PER_COUNTRY = 7,								-- Max cardinals in a single country
-
-NDefines.NReligion.KARMA_FOR_OFFENSIVE_WAR = -15,
-NDefines.NReligion.KARMA_FOR_HONORING_CTA = 15,
-NDefines.NReligion.KARMA_RESTORE_ON_RULER_DEATH = 25,
-
-NDefines.NReligion.CHANGE_SECONDARY_PRESTIGE_HIT = -25,
-NDefines.NReligion.MIN_HARMONIZE_DEVELOPMENT = 30,
-NDefines.NReligion.STARTING_HARMONY = 50.0,							-- Confucian countries start with this.
-NDefines.NReligion.YEARLY_HARMONY_INCREASE = 1.0,
-NDefines.NReligion.HARMONY_LOSS_PER_DEV_CONVERTED = 1.0,
-NDefines.NReligion.YEARLY_HARMONY_INCREASE_WHEN_HARMONIZING = -3.0,
-NDefines.NReligion.YEARLY_HARMONIZATION_PROGRESS = 0.03, 			-- 3%
-
-
-NDefines.NReligion.NOT_SAME_MUSLIM_SCHOOL_ALLIANCE_ACCEPTANCE = 10,		-- Alliance acceptance value (positive and negative) for different religious schools
-NDefines.NReligion.NOT_SAME_MUSLIM_SCHOOL_ROYAL_MARRIAGE_ACCEPTANCE = 10,	-- Royal marriage acceptance (positive and negative) for different religious schools
-NDefines.NReligion.SAME_MUSLIM_SCHOOL_ALLIANCE_ACCEPTANCE = 10,			-- Alliance acceptance value for same religious schools
-NDefines.NReligion.SAME_MUSLIM_SCHOOL_ROYAL_MARRIAGE_ACCEPTANCE = 10,		-- Royal marriage acceptance for same religious schools
 

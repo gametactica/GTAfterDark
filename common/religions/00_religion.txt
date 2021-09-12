@@ -26,6 +26,8 @@ christian = {
 		country = {
 			tolerance_own = 1
 			tolerance_heretic = -1
+			legitimacy = 1
+			yearly_corruption = 0.5
 		}
 		
 		country_as_secondary = {
@@ -325,8 +327,10 @@ christian = {
 			catholic
 		}
 		country = {
-			development_cost = -0.1
-			innovativeness_gain = 0.5
+			legitimacy = -0.25
+			global_tariffs = 0.25
+			stability_cost_modifier = 0.25
+			heir_chance = 0.25
 		}
 		
 		country_as_secondary = {
@@ -359,6 +363,8 @@ christian = {
 		country = {
 			shock_damage_received = -0.05
 			global_heretic_missionary_strength = 0.02
+			church_loyalty_modifier = -0.1
+			loot_amount = 0.25
 		}
 		
 		country_as_secondary = {
@@ -396,9 +402,10 @@ christian = {
 			catholic
 		}
 		country = {
-			global_tax_modifier = 0.1
+			reform_progress_growth = 0.1
 			improve_relation_modifier = 0.15
-			church_loyalty_modifier = 0.1
+			yearly_corruption = -0.1
+			global_autonomy = 0.01
 		}
 		
 		country_as_secondary = {
@@ -533,8 +540,10 @@ christian = {
 			catholic
 		}
 		country = {
-			tolerance_heretic = 2
+			tolerance_heretic = 1
 			advisor_pool = 1
+			republican_tradition = 0.5
+			max_absolutism = -5
 		}
 		
 		country_as_secondary = {
@@ -645,8 +654,10 @@ christian = {
 		color = { 178 127 0 }
 		icon = 4
 		country = {
-			stability_cost_modifier = -0.1
-			tolerance_own = 1
+			core_creation = -0.2
+			tolerance_heretic = -1
+			warscore_cost_vs_other_religion = -0.2
+			yearly_patriarch_authority = -0.01
 		}
 		country_as_secondary = {
 			global_colonial_growth = 10
@@ -783,8 +794,11 @@ christian = {
 		color = { 178 38 76 }
 		icon = 14
 		country = {
-			defensiveness = 0.1
-			tolerance_own = 1
+			defensiveness = 0.25
+			tolerance_own = 2
+			core_decay_on_your_own = 0.1
+			prestige_decay = 0.01
+			
 		}
 		country_as_secondary = {
 			siege_ability = 0.1
@@ -865,7 +879,7 @@ muslim = {
 			picture = "GFX_icon_muslim_school_hanafi"
 
 			# religion_sub_modifier = no is possible, will hide icon in religious screen
-			adm_tech_cost_modifier = -0.05
+			adm_tech_cost_modifier = -0.10
 		}
 		hanbali_school = {
 			potential_invite_scholar = {
@@ -947,7 +961,7 @@ muslim = {
 
 			picture = "GFX_icon_muslim_school_maliki"
 
-			development_cost = -0.10
+			development_cost = -0.15
 		}
 		shafii_school = {
 			potential_invite_scholar = {
@@ -988,7 +1002,7 @@ muslim = {
 
 			picture = "GFX_icon_muslim_school_shafii"
 
-			merchants = 1
+			trade_steering = 0.2
 		}
 		#Shias
 		ismaili_school = {
@@ -1125,7 +1139,9 @@ muslim = {
 		icon = 5
 		country = {
 			cav_to_inf_ratio = 0.10
-			heir_chance = 1.0
+			heir_chance = 0.5
+			republican_tradition = -0.25
+			religious_unity = -0.15
 		}
 		country_as_secondary = {
 			trade_efficiency = 0.1
@@ -1144,8 +1160,10 @@ muslim = {
 		color = { 0 204 0 }
 		icon = 6
 		country = {
-			heir_chance = 1.0
+			heir_chance = 0.5
+			republican_tradition = -0.25
 			land_morale = 0.05
+			religious_unity = -0.15
 		}
 		country_as_secondary = {
 			land_morale = 0.05
@@ -1164,12 +1182,15 @@ muslim = {
 		color = { 0 102 0 }
 		icon = 16
 		country = {
-			heir_chance = 1.0
+			heir_chance = 0.5
 			global_trade_goods_size_modifier = 0.1
+			religious_unity = -0.15
+			republican_tradition = -0.25
 		}
 		country_as_secondary = {
 			global_ship_cost = -0.1
 			advisor_cost = -0.1
+
 		}
 		province = {
 			local_missionary_strength = -0.02
