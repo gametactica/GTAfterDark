@@ -502,6 +502,7 @@ local_autonomy_trade_company = {
 
 recent_uprising = {
 	local_unrest = -5
+	local_missionary_strength = 0.01
 	picture = "recent_uprising"
 }
 
@@ -512,7 +513,7 @@ friendly_regiments = {
 }
 
 active_missionary = {
-	local_unrest = 3					# 6% revolt risk!
+	local_unrest = 5					# 6% revolt risk!
 	local_institution_spread = -0.10
 	tax_income = 36
 }
@@ -732,8 +733,8 @@ war = {
 
 peace = {
 	war_exhaustion = -0.15
-	monthly_piety = 0.002
-	monthly_karma = 0.002
+	monthly_piety = 0.001
+	monthly_karma = 0.001
 	global_autonomy = -0.01
 	global_institution_spread = 0.1
 	rr_girondists_influence = -0.1
@@ -990,8 +991,8 @@ horde_unity = {
 # Multiplied by current Devotion - 50
 devotion = {
 	global_unrest = -4
-	monthly_piety = 0.005
-	monthly_karma = 0.005
+	monthly_piety = 0.002
+	monthly_karma = 0.002
 	yearly_harmony = 1
 	global_missionary_strength = 0.02
 	yearly_patriarch_authority = 0.01
@@ -1055,8 +1056,8 @@ corruption = {
 	min_autonomy = 50
 	global_unrest = -20
 	horde_unity = 3
-	yearly_patriarch_authority = -0.05
-	yearly_army_professionalism = -0.05
+	yearly_patriarch_authority = -0.1
+	yearly_army_professionalism = -0.1
 	merc_maintenance_modifier = -0.50
 	mercenary_manpower = 5
 	imperial_mandate = -1
@@ -1068,8 +1069,8 @@ corruption = {
 	max_absolutism = -10
 	max_revolutionary_zeal = -10
 	inflation_reduction = -1
-	monthly_piety = -1
-	monthly_karma = -1
+	monthly_piety = -0.01
+	monthly_karma = -0.01
 	
 	brahmins_hindu_influence_modifier = 0.1
 	brahmins_muslim_influence_modifier = 0.1
@@ -1096,9 +1097,9 @@ root_out_corruption = {
 	meritocracy = -2
 	yearly_absolutism = 1
 	yearly_revolutionary_zeal = 1
-	monthly_piety = 0.1
-	monthly_karma = 0.1
-	yearly_patriarch_authority = 0.03
+	monthly_piety = 0.003
+	monthly_karma = 0.003
+	yearly_patriarch_authority = 0.05
 }
 
 recovery_motivation = {
@@ -1242,33 +1243,33 @@ religious_unity = {
 	monthly_fervor_increase = 1
 	yearly_patriarch_authority = 0.005
 	church_power_modifier = 0.5
-	monthly_piety = 0.01
-	monthly_karma = 0.01
-	harmonization_speed = 0.2
-	church_loyalty_modifier = 0.05
-	brahmins_hindu_loyalty_modifier = 0.05
-	enforce_religion_cost = -0.2
-	establish_order_cost = -0.15
+	monthly_piety = 0.001
+	monthly_karma = 0.001
+	church_influence_modifier = 0.1
+	brahmins_hindu_influence_modifier = 0.1
+	dhimmi_influence_modifier = 0.1
+	enforce_religion_cost = -0.25
+	establish_order_cost = -0.25
 	devotion = 1
 	relation_with_heretics = -30
-	yearly_corruption = 0.2
+	imperial_authority = 0.05
+	culture_conversion_cost = -0.1
+	stability_cost_modifier = -0.1
 }
 
 inverse_religious_unity = {
-	papal_influence = -0.25
-	monthly_fervor_increase = -0.5
-	yearly_patriarch_authority = -0.005
-	church_power_modifier = -1
+	mercenary_manpower= 0.3
+	mercenary_cost = -0.3
 	monthly_piety = -0.01		
 	monthly_karma = -0.01
-	harmonization_speed = -0.2
-	church_loyalty_modifier = -0.05
-	brahmins_hindu_loyalty_modifier = -0.05
-	enforce_religion_cost = 0.2
-	establish_order_cost = 0.15
-	devotion = -1
+	harmonization_speed = 0.2
+	church_loyalty_modifier = -0.1
+	brahmins_hindu_loyalty_modifier = -0.1
+	dhimmi_loyalty_modifier = 0.1
 	global_unrest = 3
 	global_institution_spread = 0.2
+	republican_tradition = 0.5
+	promote_culture_cost = -0.25
 }
 
 total_occupation = {
@@ -1342,16 +1343,15 @@ is_great_power = {						#Only works with Rights of Man DLC enabled
 }
 
 in_golden_era = {
-	range = 0.3
 	imperial_authority_value = 0.1
 	imperial_mandate = 0.1
-	colonist_placement_chance = 0.3
+	colonist_placement_chance = 0.5
 	global_autonomy = -0.01
+	prestige = 0.5
+	global_tax_modifier = 0.15
+	reduced_liberty_desire_on_same_continent = 10
 	land_morale = 0.1
 	naval_morale = 0.1
-	free_leader_pool = 1
-	stability_cost_modifier = -0.1
-	diplomatic_upkeep = 1
 	yearly_absolutism = 0.1
 	yearly_revolutionary_zeal = 0.1
 }
@@ -1385,7 +1385,8 @@ streltsy_modifier = {
 
 power_projection = {
 	ae_impact = 0.5
-	liberty_desire = -10
+	range = 0.5
+	liberty_desire_from_subject_development = -0.25
 	imperial_mandate = 0.15
 	imperial_authority_value = 0.15
 	global_colonial_growth = 20
@@ -1464,7 +1465,7 @@ march_subject = {
 
 vassal_subject = {
 	advisor_pool = 1
-	development_cost = -0.1
+	development_cost = -0.05
 }
 
 daimyo_subject = {
