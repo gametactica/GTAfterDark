@@ -23,10 +23,10 @@ NDefines.NDiplomacy.SLANDER_MERCHANTS_COST = 60
 NDefines.NDiplomacy.CORRUPT_OFFICIALS_COST = 30
 NDefines.NDiplomacy.AE_OTHER_CONTINENT = 15
 NDefines.NDiplomacy.AE_DIFFERENT_RELIGION = -0.25
-NDefines.NDiplomacy.AE_SAME_OVERLORD = 0.1
+NDefines.NDiplomacy.AE_SAME_OVERLORD = 0.25
 NDefines.NDiplomacy.PO_DEMAND_PROVINCES_AE = 1 				-- _DDEF_PO_DEMAND_PROVINCES_AE = 10, (Per development)
 NDefines.NDiplomacy.PO_RETURN_CORES_AE = 0.2 					-- (Per core, only applied if returning cores to vassals of winner)
-NDefines.NDiplomacy.PO_FORM_PU_AE = 0.05 							-- _DDEF_PO_FORM_PU_AE = 10, (Per development)
+NDefines.NDiplomacy.PO_FORM_PU_AE = 0.00001 							-- _DDEF_PO_FORM_PU_AE = 10, (Per development)
 NDefines.NDiplomacy.PEACE_COST_DEMAND_PROVINCE = 2					-- Demand a province (scales by province wealth, also used for annex)
 NDefines.NDiplomacy.PEACE_COST_CONCEDE_PROVINCE = 2				-- Demand colonial area province concession.
 NDefines.NDiplomacy.PEACE_COST_RELEASE_ANNEXED = 0.8					-- Release annexed nation (scales by province wealth)
@@ -51,7 +51,7 @@ NDefines.NDiplomacy.MIN_RELATIONS_TO_ALLY = 75						-- Alliances not possible if
 NDefines.NDiplomacy.MIN_RELATIONS_TO_SUPPORT_INDEPENDENCE = 25	-- Support Independence not possible if either country has an opinion of the other lower than this
 NDefines.NDiplomacy.INTEGRATE_VASSAL_MIN_YEARS = 20				-- Number of years before a vassal can be integrated
 NDefines.NDiplomacy.DIPLOANNEX_LIBERTY_THRESHOLD = 35				-- If a vassal has >= this much liberty desire, there will be zero diploannexation progress.
-NDefines.NDiplomacy.ABANDON_UNION_PRESTIGE = -75					-- The change in prestige for the overlord when abandoning a personal union.
+NDefines.NDiplomacy.ABANDON_UNION_PRESTIGE = -100					-- The change in prestige for the overlord when abandoning a personal union.
 NDefines.NDiplomacy.PAY_SUBJECT_DEBT_LIBERTY_DESIRE_REDUCTION = 2	-- Amount of liberty desire the subject loses per paid loan
 NDefines.NDiplomacy.LEAVING_GREAT_POWER_YEARS = 1					-- The number of years a Great Power can remain after being removed from the top (8).
 NDefines.NDiplomacy.GREAT_POWER_SUBJECT_CONTRIBUTION = 0.25
@@ -75,9 +75,14 @@ NDefines.NCountry.MIN_PRESTIGE_FOR_GOV_RANK_3 = 60			-- Required prestige to to 
 NDefines.NCountry.DEVELOPMENT_ON_CONTINENT_FOR_NEW_CAPITAL = 0.5	-- How many percent of your development needs to be on the other continent to move your capital there
 NDefines.NCountry.MAX_ACTIVE_POLICIES = 12						-- how many active policies at once.
 NDefines.NCountry.MINIMUM_POLICY_TIME = 3						-- how many years minimum for a policy
-NDefines.NCountry.CULTURE_MIN_DEVELOPMENT_TO_PROMOTE = 25		-- Minimum development required to promote the culture.
+NDefines.NCountry.CULTURE_COST_DIFF_ORIGINAL = -25,				-- Difference in cost in percent to convert to original culture.
+NDefines.NCountry.CULTURE_COST_DIFF_ADJACENT = 0,				-- Difference in cost in percent to convert to adjacent culture.
+NDefines.NCountry.CULTURE_COST_DIFF_PRIMARY = 25,					-- Difference in cost in percent to convert to primary culture.
+NDefines.NCountry.CULTURE_MIN_DEVELOPMENT_TO_PROMOTE = 20,		-- Minimum development required to promote the culture.
+NDefines.NCountry.MONARCH_DEATH_STABILITY_PENALTY = 0,			-- Stab hit on monarch death
+NDefines.NCountry.MONARCH_DEATH_LEADER_STABILITY_PENALTY = 1,		-- Stab hit on monarch death when a leader
 NDefines.NCountry.NAT_FOCUS_YEARS = 20							-- years before you can change focus again
-NDefines.NCountry.PS_BOOST_STABILITY = 500
+NDefines.NCountry.PS_BOOST_STABILITY = 400
 NDefines.NCountry.PS_ARTILLERY_BARRAGE = 100
 NDefines.NCountry.PS_NAVAL_BARRAGE = 20
 NDefines.NCountry.PS_FORCE_MARCH = 3
@@ -87,11 +92,11 @@ NDefines.NCountry.PS_MAKE_PROVINCE_CORE = 15
 NDefines.NCountry.PS_MOVE_CAPITAL_EXTRA = 100						-- Per 100 country development
 NDefines.NCountry.PS_ATTACK_NATIVES = 10
 NDefines.NCountry.PS_REDUCE_WAREXHAUSTION = 125
-NDefines.NCountry.PS_IMPROVE_PROVINCE_CAPITAL_DISCOUNT = 0.10
 NDefines.NCountry.PS_SET_PRIMARY_CULTURE = 300
 NDefines.NCountry.PS_ADD_ACCEPTED_CULTURE = 600
 NDefines.NCountry.PS_REMOVE_ACCEPTED_CULTURE = 100
 NDefines.NCountry.PS_REMOVE_ACCEPTED_CULTURE_UNREST_DURATION = 10
+NDefines.NCountry.PS_STRENGTHEN_GOVERNMENT = 200
 NDefines.NCountry.PS_BOOST_MILITARIZATION = 100
 NDefines.NCountry.CORE_HAD_CLAIM = 0.2							-- Impacts MODIFIER_CORE_CREATION
 NDefines.NCountry.CORE_HAD_PERMANENT_CLAIM = 0.2						-- Impacts MODIFIER_CORE_CREATION
@@ -100,8 +105,6 @@ NDefines.NCountry.CLAIM_THRONE_PRESTIGE_PENALTY = -10.0			-- Prestige penalty wh
 NDefines.NCountry.BREAK_MARRIAGE_PRESTIGE_PENALTY = -5			-- Prestige penalty when break royal marriage
 NDefines.NCountry.CORE_LOSE = 75 								-- how many years until a core is lost.
 NDefines.NCountry.ABANDON_IDEAGROUP_REFUND = 0.25				-- The part of the idea group spent that will be refunded upon abandonment.
-NDefines.NCountry.LAGGINGTECH_CORRUPTION = 0.15					-- Corruption increase/year. Multiplied by (highest - lowest) tech level
-NDefines.NCountry.LAGGINGTECH_CORRUPTION_MAX = 0.75				-- Max increase/year
 NDefines.NCountry.OVEREXTENSION_FACTOR = 1.25
 NDefines.NCountry.OVEREXTENSION_OVERSEAS_FACTOR = 0.75			-- Modifier to overextension from overseas provinces     
 NDefines.NCountry.REVOLT_SIZE_DEVELOPMENT_MULTIPLIER = 0.2
@@ -113,8 +116,6 @@ NDefines.NCountry.LIBERTY_DESIRE_GREAT_POWER_VASSAL = 30			-- Liberty desire fro
 NDefines.NCountry.LIBERTY_DESIRE_DEVELOPED_IN_SUBJECT = -2   	-- Liberty desire decrease from overlord developing province in subject.
 NDefines.NCountry.RELATIVE_ON_THRONE_LIBERTY = 15
 NDefines.NCountry.RAZE_TECH_POWER_DECREASE_MAX = 0.2
-NDefines.NCountry.DEBT_LIMIT_ADM = -999							-- This is how far you can go into debt on ADM for actions that allow spending power you don't have.
-NDefines.NCountry.DEBT_LIMIT_MIL = -999							-- This is how far you can go into debt on MIL for actions that allow spending power you don't have.
 NDefines.NCountry.BREAK_ALLIANCE_PRESTIGE_LOSS = 1.0			-- This is the amount of Prestige you lose if someone declines your Break Alliance demand.
 NDefines.NCountry.INNOVATIVENESS_FIRST_PICKED_IDEA = 3.0			-- Innovativeness bonus to first country (or countries) to pick an idea.
 NDefines.NCountry.MIN_HARSH_TREATMENT_COST = 5 -- Minimum harsh treatment cost
@@ -125,7 +126,7 @@ NDefines.NCountry.MIN_HARSH_TREATMENT_COST = 5 -- Minimum harsh treatment cost
 
 NDefines.NEconomy.EDICTS_COST_INCREASE = 0.1				-- % increase on state maintenance.
 NDefines.NEconomy.EDICTS_DURATION_MONTHS = 60				-- months lastin at least.
-NDefines.NEconomy.AUTONOMY_AT_DIPLO_ANNEX = 75					-- Autonomy added when diplo-annexing
+NDefines.NEconomy.AUTONOMY_AT_DIPLO_ANNEX = 50					-- Autonomy added when diplo-annexing
 NDefines.NEconomy.AUTONOMY_AT_CONQUEST = 90						-- Autonomy added at conquest
 NDefines.NEconomy.AUTONOMY_AT_CONQUEST_CLAIM = 75				-- Autonomy added at conquest if you have a claim
 NDefines.NEconomy.AUTONOMY_AT_CONQUEST_CORE = 25					-- Autonomy added at conquest if you have a core
@@ -138,7 +139,7 @@ NDefines.NEconomy.MISSIONARY_MAINTENANCE_DEVELOPMENT_CAP = 50		-- Where dev will
 --NMilitary
 --NDefines.NMilitary.
 
-NDefines.NMilitary.MOVE_LOCK_PERCENTAGE = 0.4						-- Unit movement is locked after this percentage of progress
+NDefines.NMilitary.MOVE_LOCK_PERCENTAGE = 0.25						-- Unit movement is locked after this percentage of progress
 NDefines.NMilitary.SIEGE_DISEASE_IMPACT = 0.15						-- Fraction of besieging soldiers lost in a disease outbraek
 NDefines.NMilitary.CAVALRY_COST = 20.0 							-- _MDEF_CAVALRY_COST = 10
 NDefines.NMilitary.DEFAULT_WARGOAL_TICKINGWARSCORE_BONUS = 1		-- Amount of warscore per month since attacker/defender started getting the bonus for completing war goal

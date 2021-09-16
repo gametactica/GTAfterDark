@@ -18,6 +18,9 @@ can_leave_hre_league = {
 }
 
 can_harsh_treatment = {
+		allow = {
+				NOT = { personality = kind_hearted_personality }
+				}
 }
 
 can_reduce_war_exhaustion = {
@@ -41,6 +44,9 @@ can_release_colonial_nation = {
 }
 
 can_claim_defender_of_faith = {
+		allow = {
+				NOT = { personality = sinner_personality }
+				}
 }
 
 can_change_national_focus = {
@@ -94,12 +100,21 @@ can_abandon_state = {
 }
 
 can_improve_tax = {
+		allow = {
+			NOT = { devastation = 5 }
+		}
 }
 
 can_improve_production = {
+		allow = {
+			NOT = { devastation = 5 }
+		}
 }
 
 can_improve_manpower = {
+		allow = {
+			NOT = { devastation = 5 }
+		}
 }
 
 can_exploit_tax = {
@@ -132,15 +147,23 @@ can_move_trade_port = {
 }
 
 can_order_assault = {
+		allow = {
+				NOT = { personality = craven_personality }
+				}
 }
 
 can_order_force_march = {
+		
 }
 
 can_scorch_earth = {
+		allow = {
+				NOT = { obsessive_perfectionist_personality }
+				}
 }
 
-can_garrison_sorties = {
+can_garrison_sorties = { 
+		
 }
 
 can_seize_colony = {

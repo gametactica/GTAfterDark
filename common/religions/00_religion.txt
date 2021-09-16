@@ -24,8 +24,6 @@ christian = {
 			protestant
 		}
 		country = {
-			tolerance_own = 1
-			tolerance_heretic = -1
 			legitimacy = 1
 			yearly_corruption = 0.5
 		}
@@ -328,9 +326,7 @@ christian = {
 		}
 		country = {
 			legitimacy = -0.25
-			global_tariffs = 0.25
-			stability_cost_modifier = 0.25
-			heir_chance = 0.25
+			heir_chance = 0.33
 		}
 		
 		country_as_secondary = {
@@ -361,10 +357,8 @@ christian = {
 			catholic
 		}
 		country = {
-			shock_damage_received = -0.05
 			global_heretic_missionary_strength = 0.02
 			church_loyalty_modifier = -0.1
-			loot_amount = 0.25
 		}
 		
 		country_as_secondary = {
@@ -402,8 +396,6 @@ christian = {
 			catholic
 		}
 		country = {
-			reform_progress_growth = 0.1
-			improve_relation_modifier = 0.15
 			yearly_corruption = -0.1
 			global_autonomy = 0.01
 		}
@@ -541,9 +533,7 @@ christian = {
 		}
 		country = {
 			tolerance_heretic = 1
-			advisor_pool = 1
-			republican_tradition = 0.5
-			max_absolutism = -5
+			max_absolutism = -10
 		}
 		
 		country_as_secondary = {
@@ -655,8 +645,6 @@ christian = {
 		icon = 4
 		country = {
 			core_creation = -0.2
-			tolerance_heretic = -1
-			warscore_cost_vs_other_religion = -0.2
 			yearly_patriarch_authority = -0.01
 		}
 		country_as_secondary = {
@@ -664,7 +652,7 @@ christian = {
 			tolerance_own = 1
 		}
 		province = {
-			
+			 local_missionary_strength = -0.02
 		}
 		
 		
@@ -794,8 +782,7 @@ christian = {
 		color = { 178 38 76 }
 		icon = 14
 		country = {
-			defensiveness = 0.25
-			tolerance_own = 2
+			defensiveness = 0.20
 			prestige_decay = 0.01
 			
 		}
@@ -804,7 +791,7 @@ christian = {
 			defensiveness = 0.1
 		}
 		province = {
-			local_missionary_strength = -0.01
+			local_missionary_strength = -0.02
 		}
 		
 		heretic = { ZAMIKAELITES STEPHANITES EUSTATHIANS }
@@ -1137,9 +1124,7 @@ muslim = {
 		color = { 0 153 0 }
 		icon = 5
 		country = {
-			cav_to_inf_ratio = 0.10
-			heir_chance = 0.5
-			republican_tradition = -0.25
+			legitimacy = 0.25
 			religious_unity = -0.15
 		}
 		country_as_secondary = {
@@ -1147,7 +1132,7 @@ muslim = {
 			heir_chance = 1.0
 		}
 		province = {
-
+			local_missionary_strength = -0.02
 		}
 		
 		heretic = { BEKTASHI AHMADI ZIKRI YAZIDI }
@@ -1159,17 +1144,15 @@ muslim = {
 		color = { 0 204 0 }
 		icon = 6
 		country = {
-			heir_chance = 0.5
-			republican_tradition = -0.25
-			land_morale = 0.05
-			religious_unity = -0.15
+			legitimacy = -0.25
+			religious_unity = 0.15
 		}
 		country_as_secondary = {
 			land_morale = 0.05
 			advisor_cost = -0.1
 		}
 		province = {
-
+			local_missionary_strength = -0.02
 		}
 		
 		heretic = { DRUZE HURUFI ZAIDI }
@@ -1181,9 +1164,8 @@ muslim = {
 		color = { 0 102 0 }
 		icon = 16
 		country = {
-			heir_chance = 0.5
-			global_trade_goods_size_modifier = 0.1
-			religious_unity = -0.15
+			devotion = 1
+			global_missionary_strength = -0.01
 
 		}
 		country_as_secondary = {
@@ -1192,7 +1174,7 @@ muslim = {
 
 		}
 		province = {
-			local_missionary_strength = -0.01
+			local_missionary_strength = -0.02
 		}
 		
 		heretic = { HARURI SUFRI NAJADAT AZRAQI }
@@ -1218,8 +1200,8 @@ eastern = {
 			mahayana
 		}
 		country = {
-			tolerance_heretic = 2
 			advisor_cost = -0.1
+			religious_unity = -0.10
 		}
 		country_as_secondary = {
 			development_cost = -0.1
@@ -1249,8 +1231,8 @@ eastern = {
 			buddhism #Theravada
 		}
 		country = {
-			tolerance_heretic = 1
-			land_morale = 0.05
+			religious_unity = 0.25
+			tolerance_own = -1
 		}
 		country_as_secondary = {
 			horde_unity = 1
@@ -1281,7 +1263,7 @@ eastern = {
 		}
 		country = {
 			tolerance_heretic = 2
-			idea_cost = -0.05
+			global_autonomy = 0.01
 		}
 		country_as_secondary = {
 			global_tax_modifier = 0.1
@@ -1307,8 +1289,8 @@ eastern = {
 		color = { 214 229 140 }
 		icon = 9
 		country = {
-			tolerance_heretic = 2
 			adm_tech_cost_modifier = -0.1
+			religious_unity = -0.15
 		}
 		country_as_secondary = {
 			adm_tech_cost_modifier = -0.1
@@ -1322,13 +1304,14 @@ eastern = {
 		color = { 204 0 0 }
 		icon = 10
 		country = {
-			land_morale = 0.1
+			discipline = 0.03
+			global_missionary_strength = -0.02
 		}
 		province = {
-			local_missionary_strength = -0.02
+			local_missionary_strength = -0.01
 		}
 		country_as_secondary = {
-			discipline = 0.05
+			land_morale = 0.05
 			global_unrest = -1
 		}
 		heretic = { SHUGENDO }
@@ -1387,15 +1370,15 @@ dharmic = {
 			shiite
 		}
 		country = {
-			mil_tech_cost_modifier = -0.1
-			land_morale = 0.1
+			global_manpower_modifier = 0.20
+			promote_culture_cost = 0.15
 		}
 		country_as_secondary = {
 			land_morale = 0.05
 			global_unrest = -1
 		}
 		province = {
-			local_missionary_strength = -0.01
+			local_missionary_strength = -0.02
 		}
 		
 		on_convert = {
@@ -1994,15 +1977,15 @@ pagan = {
 		color = { 127 0 0 }
 		icon = 11
 		country = {
-			tolerance_own = 1
 			global_unrest = -1
+			tolerance_own = -1
 		}
 		country_as_secondary = {
 			tolerance_own = 2
 			loot_amount = 0.25
 		}
 		province = {
-			local_missionary_strength = 0.02
+			local_missionary_strength = 0.01
 		}
 		
 		heretic = { SNAKE_CLAN }
@@ -2011,11 +1994,11 @@ pagan = {
 		color = { 127 76 76 }
 		icon = 12
 		country = {
-			tolerance_heathen = 2
 			diplomatic_reputation = 1
+			religious_unity = -0.15
 		}
 		province = {
-			local_missionary_strength = 0.02
+			local_missionary_strength = 0.01
 		}
 		country_as_secondary = {
 			tolerance_own = 2
@@ -2029,15 +2012,15 @@ pagan = {
 		color = { 127 115 115 }
 		icon = 13
 		country = {
-			tolerance_own = 1
-			global_unrest = -1
+			religious_unity = 0.10
+			governing_capacity_modifier = -0.1
 		}
 		country_as_secondary = {
 			tolerance_own = 2
 			loot_amount = 0.25
 		}
 		province = {
-			local_missionary_strength = 0.02
+			local_missionary_strength = 0.01
 		}
 
 		ancestors = yes
@@ -2049,8 +2032,8 @@ pagan = {
 		color = { 64 115 115 }
 		icon = 18
 		country = {
-			tolerance_own = 1
-			global_autonomy = -0.05
+			global_autonomy = -0.01
+			religious_unity = -0.10
 		}
 
 		country_as_secondary = {
@@ -2059,7 +2042,7 @@ pagan = {
 		}
 		
 		province = {
-			local_missionary_strength = 0.02
+			local_missionary_strength = 0.01
 		}
 		
 		authority = yes
@@ -2074,15 +2057,14 @@ pagan = {
 		icon = 17
 		country = {
 			land_morale = 0.1
-			global_unrest = -2
-			burghers_influence_modifier = -0.05
+			diplomatic_reputation = -1
 		}
 		country_as_secondary = {
 			land_morale = 0.05
 			raze_power_gain = 0.2
 		}
 		province = {
-			local_missionary_strength = 0.02
+			local_missionary_strength = 0.01
 		}
 		
 		doom = yes
@@ -2103,10 +2085,10 @@ pagan = {
 		}
 		country_as_secondary = {
 			advisor_pool = 1
-			stability_cost_modifier = -0.1
+			stability_cost_modifier = 0.1
 		}
 		province = {
-			local_missionary_strength = 0.02
+			local_missionary_strength = 0.01
 		}
 		
 		religious_reforms = yes
@@ -2179,8 +2161,8 @@ jewish_group = {
 			advisor_pool = 1
 		}
 		country_as_secondary = {
-			advisor_pool = 1
-			advisor_cost = -0.1
+			advisor_cost = -0.15
+			reform_progress_growth = -0.1
 		}
 		province = {
 			local_missionary_strength = -0.02
@@ -2206,7 +2188,7 @@ zoroastrian_group = {
 		}
 		country = {
 			tolerance_own = 2
-			trade_efficiency = 0.1
+			monthly_splendor = -1
 		}
 		country_as_secondary = {
 			merchants = 1

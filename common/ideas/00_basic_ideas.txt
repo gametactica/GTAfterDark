@@ -180,7 +180,7 @@ horde_gov_ideas = {
 	}
 	GT_horde7 = {
 		num_accepted_cultures = 1
-		ae_impact = -0.2
+		ae_impact = -0.25
 		reduced_liberty_desire = 10
 	}
 	
@@ -1082,7 +1082,7 @@ quantity_ideas = {
 		land_forcelimit_modifier = 0.25
 	}
 	GT_quan2 = {
-		army_tradition = 0.1
+		army_tradition = 0.25
 		free_mil_policy = 1
 		reserves_organisation = 0.02
 	}
@@ -1091,8 +1091,8 @@ quantity_ideas = {
 		reserves_organisation = 0.02
 	}
 	GT_quan4 = {
-		harsh_treatment_cost = -0.1
-		general_cost = -0.1
+		harsh_treatment_cost = -0.15
+		general_cost = -0.15
 		reserves_organisation = 0.02
 	}
 	GT_quan5 = {
@@ -1101,7 +1101,7 @@ quantity_ideas = {
 		reserves_organisation = 0.02
 	}
 	GT_quan6 = {
-		global_manpower_modifier = 0.2
+		global_manpower_modifier = 0.25
 		reserves_organisation = 0.02
 	}
 	GT_quan7 = {
@@ -1129,25 +1129,25 @@ expansion_ideas = {
 	}
 	GT_expand2 = {
 		merchants = 1
-		governing_capacity = 40
+		governing_capacity = 50
 	}
 	GT_expand3 = {
-		global_colonial_growth = 15
-		governing_capacity = 40
+		global_colonial_growth = 10
+		governing_capacity = 50
 	}
 	GT_expand4 = {
 		missionaries = 1
 		native_assimilation = 0.25
-		governing_capacity = 40
+		governing_capacity = 50
 	}
 	GT_expand5 = {
 		diplomats = 1
 		global_tariffs = 0.1
-		governing_capacity = 40
+		governing_capacity = 50
 	}
 	GT_expand6  = {
-		colonist_placement_chance = 0.1
-		governing_capacity = 40
+		colonist_placement_chance = 0.05
+		governing_capacity = 50
 	}
 	GT_expand7  = {
 		trade_company_investment_cost = -0.25
