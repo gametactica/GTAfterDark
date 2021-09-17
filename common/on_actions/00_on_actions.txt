@@ -768,13 +768,6 @@ on_new_monarch = {
 		}
 		country_event = { id = china_events.32 }	# History of last ruler
 	}
-	
-	if = {
-		limit = {
-			heir_claim = 80
-		}
-		add_stability = 1  #swap to custom GT_event
-	}
 		
 	
 	# ambrosian_republic_effect = yes
@@ -866,6 +859,46 @@ on_monarch_death = {
 		limit = { has_country_modifier = sought_after_bachelor }
 		remove_country_modifier = sought_after_bachelor
 	}
+	
+	if = {
+		limit = {
+			heir_claim = 95
+		}
+		add_stability = 1  #swap to custom GT_event
+	}
+	
+	if = {
+		limit = {
+			heir_claim = 80
+			NOT = { heir_claim = 95 }
+		}
+		add_stability = 0  #swap to custom GT_event
+	}
+	
+	if = {
+		limit = {
+			heir_claim = 60
+			NOT = { heir_claim = 80 }
+		}
+		add_stability = -1  #swap to custom GT_event
+	}
+	
+	if = {
+		limit = {
+			heir_claim = 30
+			NOT = { heir_claim = 60 }
+		}
+		add_stability = -2  #swap to custom GT_event
+	}
+	
+	if = {
+		limit = {
+			heir_claim = 0
+			NOT = { heir_claim = 30 }
+		}
+		add_stability = -3  #swap to custom GT_event
+	}
+	
 	if = {
 		limit = {
 			tag = SAX

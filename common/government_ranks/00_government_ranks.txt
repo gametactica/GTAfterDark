@@ -29,7 +29,7 @@
 }
 
 2 = {
-	governing_capacity = 150
+	governing_capacity = 300
 	diplomatic_reputation = 1
 	vassal_income = 0.2
 	free_mil_policy = 1
@@ -47,7 +47,7 @@
 }
 
 3 = {
-	governing_capacity = 300
+	governing_capacity = 1000
 	global_autonomy = 0.05
 	global_missionary_strength = 0.01
 	fort_maintenance_modifier = 0.25
