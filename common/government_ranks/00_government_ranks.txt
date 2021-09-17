@@ -1,5 +1,5 @@
 1 = {
-	global_autonomy = -0.05
+	global_autonomy = -0.03
 	global_missionary_strength = -0.01
 	fort_maintenance_modifier = -0.25
 	flagship_cost = -0.33
@@ -40,7 +40,7 @@
 	years_of_nationalism = 3
 	global_spy_defence = 0.1
 	privateer_efficiency = 0.25
-	promote_culture_cost = -0.15
+	promote_culture_cost = -0.1
 	global_tax_income = 18
 	diplomats = 1
 	merchants = 1
@@ -48,7 +48,7 @@
 
 3 = {
 	governing_capacity = 1000
-	global_autonomy = 0.05
+	global_autonomy = 0.03
 	global_missionary_strength = 0.01
 	fort_maintenance_modifier = 0.25
 	flagship_cost = 0.33
@@ -74,7 +74,7 @@
 	monthly_piety = 0.002
 	monthly_karma = -0.002
 	yearly_patriarch_authority = 0.005
-	promote_culture_cost = -0.30
+	promote_culture_cost = -0.2
 	yearly_corruption = 0.15
 	global_tax_income = 24
 	diplomats = 1
