@@ -585,7 +585,7 @@ university = {
 	time = 12
 	modifier = {
 		local_development_cost = -0.2
-		institution_growth = 1
+		local_culture_conversion_cost = -0.25
 		local_state_maintenance_modifier = 0.2
 	}
 
@@ -1328,7 +1328,7 @@ state_house = {
 	}
 
 	modifier = {
-		min_local_autonomy = -10
+		local_autonomy = -0.05
 		statewide_governing_cost = -0.3
 		local_state_maintenance_modifier = 0.3
 	}

@@ -31,6 +31,7 @@ aristocracy_ideas = {
 	GT_arist1 = {
 		cavalry_power = 0.15
 		leader_land_shock = 1
+		max_absolutism = 5
 	}
 	GT_arist2 = {
 		mil_tech_cost_modifier = -0.1
@@ -43,7 +44,7 @@ aristocracy_ideas = {
 	}
 	GT_arist4 = {
 		diplomats = 1
-		max_absolutism = 5
+		reduced_liberty_desire = 5
 		cavalry_shock = 0.2
 	}
 	GT_arist5 = {
@@ -149,7 +150,7 @@ horde_gov_ideas = {
 	}
 	
 	GT_horde1 = {
-		cavalry_cost = -0.33
+		cavalry_cost = -0.25
 		raze_power_gain = 0.3
 		war_exhaustion = -0.1
 	}
@@ -160,7 +161,7 @@ horde_gov_ideas = {
 	}
 	GT_horde3 = {
 		religious_unity = 0.25
-		war_exhaustion = -0.05
+		reduced_liberty_desire = 10
 		horde_unity = 0.2
 	}
 	GT_horde4 = {
@@ -179,9 +180,8 @@ horde_gov_ideas = {
 		horde_unity = 0.2
 	}
 	GT_horde7 = {
-		num_accepted_cultures = 1
+		num_accepted_cultures = 2
 		ae_impact = -0.25
-		reduced_liberty_desire = 10
 	}
 	
 	ai_will_do = {
@@ -269,38 +269,39 @@ indigenous_ideas = {
 	}
 
 	GT_native1 = {
-		tribal_development_growth = 0.05
-		development_cost = -0.05
+		enemy_core_creation = 1
+		core_decay_on_your_own = -1
 		monthly_splendor = 1
 	}
 	GT_native2 = {
 		hostile_attrition = 1
-		war_exhaustion_cost = -0.25
-		monthly_reform_progress_modifier = 0.05
+		infantry_power = 0.15
+		fire_damage_received = -0.05
 	}
 	GT_native3 = {
-		reduced_stab_impacts = yes
-		native_advancement_cost = -0.1
-		monthly_reform_progress_modifier = 0.05
+		vassal_income = 0.15
+		land_morale = 0.10
+		fire_damage_received = -0.05
 	}
 	GT_native4 = {
-		mil_tech_cost_modifier = -0.1
-		land_morale = 0.10
-		monthly_reform_progress_modifier = 0.05
+		prestige_from_land = 0.1
+		global_regiment_cost = -0.25
+		fire_damage_received = -0.05
 	}
 	GT_native5 = {
 		global_manpower_modifier = 0.2
-		vassal_income = 0.2
-		monthly_reform_progress_modifier = 0.05
+		production_efficiency = 0.1
+		fire_damage_received = -0.05
 	}
 	GT_native6 = {
 		embracement_cost = -0.2
 		caravan_power = 0.2
-		monthly_reform_progress_modifier = 0.05
+		fire_damage_received = -0.05
 	}
 	GT_native7 = {
 		province_warscore_cost = -0.2
-		ae_impact = -0.2
+		war_exhaustion_cost = -0.25
+		ae_impact = -0.15
 	}
 
 	ai_will_do = {
@@ -335,7 +336,7 @@ innovativeness_ideas = {
 	}
 	GT_innov5 = {
 		global_institution_spread = 0.15
-		reform_progress_growth = 0.15
+		monthly_reform_progress_modifier = 0.15
 		idea_cost = -0.02
 	}
 	GT_innov6 = {
@@ -375,38 +376,38 @@ religious_ideas = {
 
 	GT_relig1 = {
 		global_missionary_strength = 0.03
-		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		republican_tradition = 0.5
+		legitimacy = 0.25
+		devotion = 0.3
+		horde_unity = 0.2
+		republican_tradition = 0.1
 	}
 	GT_relig2 = {
 		state_maintenance_modifier = -0.1
-		missionary_maintenance_cost = -0.1
+		missionary_maintenance_cost = -0.05
 		church_loyalty_modifier = 0.1
 		brahmins_hindu_loyalty_modifier = 0.1
 	}
 	GT_relig3 = {
 		tolerance_own = 1
 		monarch_lifespan = 0.1
-		missionary_maintenance_cost = -0.1
+		missionary_maintenance_cost = -0.05
 	}
 	GT_relig4 = {
-		discipline = 0.3
+		discipline = 0.03
 		range = 0.3
-		missionary_maintenance_cost = -0.1
+		missionary_maintenance_cost = -0.05
 	}
 	GT_relig5 = {
 		missionaries = 1
 		global_manpower_modifier = 0.1
-		missionary_maintenance_cost = -0.1
+		missionary_maintenance_cost = -0.05
 	}
 	GT_relig6 = {
 		build_cost = -0.2
-		missionary_maintenance_cost = -0.1
+		missionary_maintenance_cost = -0.05
 	}
 	GT_relig7 = {
-		enforce_religion_cost = -0.25
+		enforce_religion_cost = -0.3
 		cb_on_religious_enemies = yes
 	}
 
@@ -492,7 +493,7 @@ diplomatic_ideas = {
 		diplomatic_annexation_cost = -0.05
 	}
 	GT_diplo4 = {
-		global_autonomy = -0.03
+		global_autonomy = -0.02
 		diplomatic_annexation_cost = -0.05
 	}
 	GT_diplo5  = {
@@ -1234,7 +1235,7 @@ administrative_ideas = {
 	}
 	GT_admin6 = {
 		expand_administration_cost = -0.25
-		stability_cost = -0.15
+		global_autonomy = -0.02
 		administrative_efficiency = 0.01
 	}
 	GT_admin7 = {
@@ -1312,33 +1313,37 @@ influence_ideas = {
 	
 	GT_influ2 = {
 		diplomatic_reputation = 1
+		transfer_trade_power_reasons = 5
 		ae_impact = -0.04
 	}
 	
 	GT_influ3 = {
 		heir_chance = 0.3
 		monthly_heir_claim_increase = 0.1
+		election_cycle = 1
 		ae_impact = -0.04
 	}
 	GT_influ4 = {
-		imperial_authority_value = 0.1
-		imperial_mandate = 0.1
+		nobles_loyalty_modifier = 0.05
 		monthly_support_heir_gain = 0.1
-		improve_relation_modifier = 0.25
+		max_absolutism = 5
 		ae_impact = -0.04
 	}
 	GT_influ5 = {
+		can_fabricate_for_vassals = yes
 		vassal_forcelimit_bonus = 0.25
 		ae_impact = -0.04
 	}
 	GT_influ6 = {
 		prestige = 0.5
-		unjustified_demands = -0.2
+		unjustified_demands = -0.1
 		ae_impact = -0.04
 	}
 	GT_influ7 = {
-		can_fabricate_for_vassals = yes
-		vassal_income = 0.5
+		accept_vassalization_reasons = 10
+		imperial_authority_value = 0.1
+		imperial_mandate = 0.1
+		vassal_income = 0.33
 	}
 
 	ai_will_do = {
@@ -1401,7 +1406,7 @@ naval_ideas = {
 	}
 	GT_naval7 = {
 		war_exhaustion = -0.15
-		allowed_marine_fraction = 0.25
+		allowed_marine_fraction = 0.2
 	}
 
 	ai_will_do = {
@@ -1524,6 +1529,7 @@ GT_pirate0 = {
 	GT_pirate1 = {
 		reduced_stab_impacts = yes
 		privateer_efficiency = 0.5
+		allowed_marine_fraction = 0.15
 	}
 
 	GT_pirate2 = {
@@ -1545,8 +1551,8 @@ GT_pirate0 = {
 	}
 	
 	GT_pirate5 = {
-		light_ship_power = 0.4
-		transport_power = 0.1
+		light_ship_power = 0.75
+		transport_power = 0.25
 		capture_ship_chance = 0.05
 	}
 	
@@ -1557,6 +1563,7 @@ GT_pirate0 = {
 	}
 	GT_pirate7 = {
 		leader_siege = 1
+		artillery_bonus_vs_fort = 1
 		movement_speed_onto_off_boat_modifier = 0.5
 	}
 	

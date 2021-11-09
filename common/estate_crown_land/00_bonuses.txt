@@ -5,13 +5,10 @@ bonus = {
     range_from = -100.0
     range_to = 1.0
     modifier = {
-        max_absolutism = -25
-		legitimacy = -5
-		devotion = -5
-		horde_unity = -5
+		legitimacy = -2.5
+		devotion = -2.5
+		horde_unity = -2.5
         min_autonomy = 50
-        liberty_desire_from_subject_development = 0.5
-        global_tax_modifier = -0.25
     }
 }
 
@@ -20,13 +17,10 @@ bonus = {
     range_from = 1.0
     range_to = 5.0
     modifier = {
-        max_absolutism = -20
-		legitimacy = -4
-		devotion = -4
-		horde_unity = -4
+		legitimacy = -2
+		devotion = -2
+		horde_unity = -2
         min_autonomy = 40
-        liberty_desire_from_subject_development = 0.4
-        global_tax_modifier = -0.2
     }
 }
 
@@ -35,13 +29,10 @@ bonus = {
     range_from = 5.0
     range_to = 10.0
     modifier = {
-        max_absolutism = -15
-		legitimacy = -3
-		devotion = -3
-		horde_unity = -3
+		legitimacy = -1.5
+		devotion = -1.5
+		horde_unity = -1.5
         min_autonomy = 30
-        liberty_desire_from_subject_development = 0.3
-        global_tax_modifier = -0.15
     }
 }
 
@@ -50,13 +41,10 @@ bonus = {
     range_from = 10.0
     range_to = 20.0
     modifier = {
-        max_absolutism = -10
-		legitimacy = -2
-		devotion = -2
-		horde_unity = -2
+		legitimacy = -1
+		devotion = -1
+		horde_unity = -1
         min_autonomy = 20
-        liberty_desire_from_subject_development = 0.2
-        global_tax_modifier = -0.1
     }
 }
 
@@ -65,13 +53,10 @@ bonus = {
     range_from = 20.0
     range_to = 30.0
     modifier = {
-        max_absolutism = -5
-		legitimacy = -1
-		devotion = -1
-		horde_unity = -1
+		legitimacy = -0.5
+		devotion = -0.5
+		horde_unity = -0.5
 		min_autonomy = 10
-        liberty_desire_from_subject_development = 0.1
-        global_tax_modifier = -0.05
     }
 }
 
@@ -84,7 +69,7 @@ bonus = {
     modifier = {
         max_absolutism = 5
 		yearly_absolutism = 0.05
-        global_tax_modifier = 0.05
+        legitimacy = 0.25
 		global_autonomy = -0.005
     }
 }
@@ -96,7 +81,7 @@ bonus = {
     modifier = {
         max_absolutism = 5
         yearly_absolutism = 0.1
-        global_tax_modifier = 0.1
+        legitimacy = 0.50
 		global_autonomy = -0.01
     }
 }
@@ -108,7 +93,7 @@ bonus = {
     modifier = {
         max_absolutism = 10
         yearly_absolutism = 0.15
-        global_tax_modifier = 0.15
+        legitimacy = 0.75
         global_autonomy = -0.015
     }
 }
@@ -120,7 +105,7 @@ bonus = {
     modifier = {
         max_absolutism = 10
         yearly_absolutism = 0.2
-        global_tax_modifier = 0.2
+        legitimacy = 1
         global_autonomy = -0.02
     }
 }

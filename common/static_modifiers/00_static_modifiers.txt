@@ -9,32 +9,11 @@
 ##########################################################################
 
 difficulty_very_easy_player = {
-	global_manpower_modifier = 0.5
-	manpower_recovery_speed = 0.50
-	land_forcelimit_modifier = 0.5
-	naval_forcelimit_modifier = 0.5
-	global_regiment_cost = -0.33
-	global_ship_cost = -0.33
-	inflation_reduction = 0.05
-	global_unrest = -5
-	war_exhaustion = -0.05
-	core_creation = -0.25
-	advisor_pool = 1
-	diplomatic_upkeep = 1
-	free_leader_pool = 1
-	diplomatic_reputation = 2
-	interest = -2
-	improve_relation_modifier = 0.10
-	ae_impact = -0.33
-	yearly_corruption = -1.0
+	
 }
 
 difficulty_easy_player = {
-	manpower_recovery_speed = 0.50
-	global_unrest = -5
-	interest = -2
-	ae_impact = -0.33
-	yearly_corruption = -1.0
+	
 }
 
 difficulty_normal_player = {
@@ -57,48 +36,15 @@ difficulty_easy_ai = {
 }
 
 difficulty_normal_ai = {
-	governing_capacity = 100
-	stability_cost_modifier = -0.1
-	global_unrest = -3
-	manpower_recovery_speed = 0.30
-	war_exhaustion = -0.03
-	interest = -0.5
-	ae_impact = -0.2
-	missionary_maintenance_cost = -0.1
 }
 
 difficulty_hard_ai = {
-	governing_capacity = 200
-	stability_cost_modifier = -0.15
-	manpower_recovery_speed = 0.40
-	global_unrest = -4
-	war_exhaustion = -0.04
-	interest = -1
-	ae_impact = -0.25
-	missionary_maintenance_cost = -0.15
+	
 
 }
 
 difficulty_very_hard_ai = {
-	governing_capacity = 300
-	stability_cost_modifier = -0.2
-	manpower_recovery_speed = 0.50
-	global_manpower_modifier = 0.25
-	land_forcelimit_modifier = 0.25
-	naval_forcelimit_modifier = 0.25
-	global_regiment_cost = -0.33
-	global_ship_cost = -0.33
-	inflation_reduction = 0.05
-	global_unrest = -5
-	war_exhaustion = -0.05
-	core_creation = -0.25
-	idea_cost = -0.25
-	interest = -1.5
-	improve_relation_modifier = 0.5
-	development_cost = -0.2
-	build_cost = -0.25
-	ae_impact = -0.3
-	missionary_maintenance_cost = -0.2
+	
 }
 
 
@@ -134,11 +80,12 @@ coastal = {
 }
 
 seat_in_parliament = {
-	local_autonomy = 0.03
+	local_autonomy = 0.02
 	local_unrest = -2
 }
 
 non_coastal = {
+	local_colonial_growth = -10
 }
 
 coastal_sea = {
@@ -146,7 +93,7 @@ coastal_sea = {
 }
 
 tropical = {
-	local_colonial_growth = -20
+	local_colonial_growth = -40
 	supply_limit_modifier = -0.3
 	local_hostile_attrition = 2
 
@@ -156,7 +103,7 @@ tropical = {
 }
 
 arctic = {
-	local_colonial_growth = -20
+	local_colonial_growth = -40
 	supply_limit_modifier = -0.4
 	local_hostile_attrition = 1
 
@@ -167,7 +114,7 @@ arctic = {
 }
 
 arid = {
-	local_colonial_growth = -15
+	local_colonial_growth = -40
 	supply_limit_modifier = -0.2
 	local_hostile_attrition = 1
 
@@ -237,7 +184,7 @@ blockaded = {
 }
 
 no_adjacent_controlled = {
-	local_colonial_growth = -5
+	local_colonial_growth = -10
 }
 
 provincial_tax_income = {
@@ -263,7 +210,7 @@ manpower = {
 
 # Caps at 600
 horde_development = {
-	horde_unity = -3
+	horde_unity = -2
 }
 
 province_razed = {
@@ -273,19 +220,19 @@ province_razed = {
 
 development = {
 	allowed_num_of_buildings = 0.1
-	supply_limit_modifier = 0.02
-	local_missionary_strength = -0.001
+	supply_limit_modifier = 0.01
+	local_missionary_strength = -0.0005
 	land_forcelimit	= 0.1			# special case, affected by autonomy
 	naval_forcelimit = 0.1			# special case, affected by autonomy & set to 0 by code if not port
 	local_sailors = 60			# special case, affected by autonomy & set to 0 by code if not port
 	province_trade_power_value = 0.2
 	local_amount_of_banners = 0.066
-	local_governing_cost = 0.1
+	local_unrest = 0.1
+	local_governing_cost = 0.075
 }
 
 development_scaled = {
 	local_development_cost = 0.03
-	local_unrest = 0.02
 }
 
 capital_city = {
@@ -295,8 +242,8 @@ capital_city = {
 
 
 patriarch_state = {
-	local_monthly_devastation = -0.05
-	local_culture_conversion_cost = -0.25
+	local_monthly_devastation = -0.1
+	local_culture_conversion_cost = -0.5
 	local_friendly_movement_speed = 0.15
 	local_development_cost = -0.1
 }
@@ -313,9 +260,7 @@ patriarch_authority_global = {
 	global_missionary_strength = 0.02
 	global_colonial_growth = 15
 	church_influence_modifier = 0.20
-	relation_with_heretics = -30
 	innovativeness_gain = -0.25
-
 }
 
 pasha_state = {
@@ -345,7 +290,8 @@ core = {
 }
 
 non_core = {
-	local_missionary_strength = -0.02
+	local_missionary_strength = -0.04
+	local_culture_conversion_cost = 1.0
 }
 
 colonial_core = {
@@ -353,23 +299,23 @@ colonial_core = {
 	local_manpower_modifier = 0.75			#75% more in a core
 	local_sailors_modifier = 0.75
 	local_missionary_strength = -0.02
+	local_culture_conversion_cost = 0.5
+	min_local_autonomy = 50
+	local_governing_cost = -0.5
+}
+
+territory_core = {
+	local_missionary_strength = -0.08
+	local_culture_conversion_cost = 2
 	min_local_autonomy = 50
 	local_governing_cost = -0.75
 }
 
-territory_core = {
-	local_tax_modifier = 0.75				#90% more in a core
-	local_manpower_modifier = 0.75			#75% more in a core
-	local_sailors_modifier = 0.75
-	local_missionary_strength = -0.02
-	min_local_autonomy = 90
-	local_governing_cost = -0.75
-}
-
 territory_non_core = {
-	local_missionary_strength = -0.02
-	min_local_autonomy = 90
-	local_governing_cost = -0.75
+	local_missionary_strength = -0.1
+	local_culture_conversion_cost = 3
+	min_local_autonomy = 75
+	local_governing_cost = -0.9
 }
 
 march_bonus = {
@@ -384,15 +330,18 @@ march_bonus = {
 }
 
 same_culture_group = {
-	min_local_autonomy = 20
+	min_local_autonomy = 10
 	local_missionary_strength = -0.01
-	local_unrest = 1
+	local_governing_cost = -0.20
+	trade_value = 1
 }
 
 non_accepted_culture = {
-	min_local_autonomy = 40
+	min_local_autonomy = 25
 	local_missionary_strength = -0.02
-	local_unrest = 8					#1% revolt risk!
+	local_unrest = 8					
+	local_governing_cost = -0.40
+	trade_value = 2				
 }
 
 accepted_culture_demoted = {
@@ -439,7 +388,7 @@ devastation = {
 }
 
 prosperity = {
-	local_development_cost = -0.1
+	local_unrest = -2
 	trade_goods_size_modifier = 0.25
 	local_culture_conversion_cost = -0.1
 	local_religious_unity_contribution = 0.1
@@ -454,14 +403,20 @@ slaves_raided = {
 
 # Multiplied with positive religious tolerance
 tolerance = {
-	local_years_of_nationalism = -1
+	local_missionary_strength = -0.015
+	local_governing_cost = -0.05
+	local_core_creation = -0.05
+	local_tax_modifier = 0.05
+	local_institution_spread = 0.05
 }
 
 # Multiplied with negative religious tolerance
 intolerance = {
-	local_years_of_nationalism = -2
-	local_tax_modifier = 0.1
-	trade_goods_size_modifier = 0.10
+	local_unrest = -1.25
+	trade_goods_size = -0.25
+	local_colonial_growth = -5
+	local_autonomy = 0.01
+	local_warscore_cost_modifier = 0.05
 }
 
 unrest = {
@@ -473,7 +428,7 @@ unrest = {
 nationalism = {
 	local_unrest = 0.5					#for each year revolt risk!
 	local_core_creation = 0.01
-	supply_limit_modifier = -0.02
+	local_missionary_strength = -0.003
 }
 
 harsh_treatment = {
@@ -514,7 +469,7 @@ recent_uprising = {
 
 friendly_regiments = {
 	local_unrest = -1.0				#-1% for each friendly regiment in the province.
-	local_autonomy = 0.02
+	local_autonomy = 0.015
 }
 
 active_missionary = {
@@ -526,7 +481,7 @@ active_missionary = {
 
 # Core province of the owner's culture group, while fighting a defensive war
 national_defense = {
-	local_unrest = -3
+	local_unrest = -5
 	garrison_growth = 0.5
 }
 
@@ -571,16 +526,14 @@ base_values = {
 	diplomatic_upkeep = 1
 	tolerance_heathen = -3
 	tolerance_heretic = -2
-	global_missionary_strength = 0.00
+	global_missionary_strength = -0.01
 	global_manpower = 10.0
 	advisor_pool = 2
 	colonist_placement_chance = 0.03
-	free_leader_pool = 1
+	free_leader_pool = 0
 	republican_tradition = 1
 	monthly_fervor_increase = 0
-	vassal_income = 0.05
-	horde_unity = -2
-	devotion = -0.5
+	vassal_income = 0.1
 	meritocracy = -2
 	governing_capacity = 0
 	num_accepted_cultures = 1
@@ -589,7 +542,8 @@ base_values = {
 	cav_to_inf_ratio = 0.5
 	merc_maintenance_modifier = 0.5
 	monthly_heir_claim_increase = 0.01
-	allowed_marine_fraction = 0.15
+	allowed_marine_fraction = 0.2
+	global_autonomy = 0.05
 
 }
 
@@ -599,9 +553,9 @@ ai_nation = {
 	free_leader_pool = 1					# ai needs to have enough pool for 1 general & 1 admiral
 	sailors_recovery_speed = 0.25
 	global_unrest = -2
-	governing_capacity_modifier = 5
 	war_exhaustion = -0.02
-	stability_cost_modifier = -0.15
+	governing_capacity = 250
+	global_autonomy = -0.05
 }
 
 
@@ -611,75 +565,58 @@ war_taxes = {
 	naval_maintenance_modifier = -0.15
 	merc_maintenance_modifier = -0.05
 	fort_maintenance_modifier = -0.15
-	mil_advisor_cost = -0.5
+	mil_advisor_cost = -0.25
 }
 
 stability = {
+	tolerance_own = -0.50
+	tolerance_heretic = 0.50
+	tolerance_heathen = 1
+	global_unrest = -1
+	
+	monthly_reform_progress_modifier = -0.1
+	governing_capacity_modifier = 0.1
+	state_maintenance_modifier = 0.2
+	interest = -0.50
+	
+	
 	temples_influence = 0.01
 
-	stability_cost_modifier = 0.33
-
-	global_missionary_strength = 0.01
-	global_autonomy = -0.01
-	trade_efficiency = 0.05
-	build_time = -0.10
-	war_exhaustion_cost = -0.10
-	state_maintenance_modifier = -0.05
-	development_cost = -0.05
-	yearly_corruption = -0.2
-	
-	monthly_support_heir_gain = 0.1
-	mercenary_discipline = 0.10
-	monarch_lifespan = 0.1
-	
 }
 
 positive_stability = {
-	mr_aristocrats_influence = 0.03
-	
-	inflation_reduction = 0.02
-	possible_condottieri = 0.2
-	manpower_in_true_faith_provinces= 0.20
+	yearly_absolutism = 0.05
 
-	yearly_absolutism = 0.2
 	yearly_harmony = 0.25
-	imperial_mandate = 0.05
-	imperial_authority_value = 0.05
 	
+	mr_aristocrats_influence = 0.03
 }
 
 privateering = {
 	pr_captains_influence = 0.1
-	navy_tradition = 1
+	navy_tradition = 0.5
 }
 
 negative_stability = {
-	rr_jacobins_influence = 0.03
-
-	missionary_maintenance_cost = -0.25
-	interest = -1
-	religious_unity = 0.25
-	global_institution_spread = 0.25
-	diplomatic_annexation_cost = -0.25
-	
-	heir_chance = 0.25
 	yearly_revolutionary_zeal = 0.2
-	missionary_maintenance_cost = -0.25
+	
+	harmonization_speed = 0.2
+
+	rr_jacobins_influence = 0.03
 }
 
 positive_mandate = {	# 100% strength at 100 mandate, 0% at 50 mandate
-	governing_capacity_modifier = 1.5
+	governing_capacity_modifier = 1.0
 }
 
 negative_mandate = { # By default, starts at 50 mandate, 100% strength at 0 mandate
-	governing_capacity_modifier = 0.5
+	min_autonomy = 50
 }
 
 lost_mandate_of_heaven = {
 	stability_cost_modifier = 0.25
 	reduced_liberty_desire = -50
 	legitimacy = -1
-
 }
 
 cancelled_loan = {
@@ -723,36 +660,47 @@ bankruptcy = {
 	technology_cost = 0.5
 	idea_cost = 0.5
 	imperial_mandate = -0.1
+	yearly_corruption = -2
+	inflation_action_cost = -0.75
 }
 
 
 war = {
 	rr_girondists_influence = 0.15
-	monthly_piety = -0.004
-	monthly_karma = -0.004
-	global_autonomy = 0.08
-	yearly_corruption = 1
+	war_exhaustion = 0.025
+	monthly_piety = -0.005
+	monthly_karma = -0.005
+	yearly_corruption = 0.5
 	global_colonial_growth = -20
+	country_military_power = -1
+	legitimacy = 0.75
+	reelection_cost = -0.25
+	devotion = 0.25
+	horde_unity = 1.50
 }
 
 peace = {
 	war_exhaustion = -0.15
-	monthly_piety = 0.001
-	monthly_karma = 0.001
-	global_autonomy = -0.02
+	monthly_piety = 0.003
+	monthly_karma = 0.003
 	global_institution_spread = 0.1
 	rr_girondists_influence = -0.1
 	pr_smugglers_influence = 0.1
+	legitimacy = -1.25
+	reelection_cost = 0.25
+	devotion = -0.75
+	horde_unity = -2
 }
 
 unconditional_surrender = {
 	war_exhaustion = -0.15
 	diplomatic_reputation = 1
+	yearly_corruption = -2
 }
 
 call_for_peace = {
 	war_exhaustion = 0.015
-	prestige = -2
+	prestige = -1
 }
 
 war_exhaustion = {
@@ -785,7 +733,7 @@ authority = {
 regency_council = {
 	stability_cost_modifier = 0.25
 	legitimacy = -1
-	prestige = -1
+	prestige = -0.50
 	monthly_heir_claim_increase = -0.1
 	
 	brahmins_hindu_influence_modifier = 0.1
@@ -870,7 +818,7 @@ negative_piety = { #As of 1.23 Mysticism
 defender_of_faith = {
 	land_morale = 0.10
 	naval_morale = 0.10
-	monthly_fervor_increase = 1
+	monthly_fervor_increase = 2
 	church_power_modifier = 0.5
 	relation_with_heretics = -25
 	technology_cost = 0.05
@@ -879,8 +827,8 @@ defender_of_faith = {
 	prestige = 1							#1% extra prestige yearly
 	missionaries = 1
 	devotion = 0.5
-	legitimacy = 0.5
-	
+	legitimacy = 0.25
+	horde_unity = 0.25
 	
 }
 
@@ -934,7 +882,7 @@ num_of_marriages = {
 	legitimacy = 0.10
 	heir_chance = 0.05
 	improve_relation_modifier = 0.01
-	prestige = 0.25
+	prestige = 0.10
 }
 
 num_of_provinces = {
@@ -949,23 +897,23 @@ country_development = {
 # Multiplied by Tribal Allegiance / 100
 tribal_allegiance = {
 	manpower_recovery_speed = 0.33
-	caravan_power = 0.25
 	global_unrest = -3
 }
 
 # Multiplied by current Legitimacy - 50
 legitimacy = {
-	global_unrest = -2
+	global_unrest = -8
 	
-	accept_vassalization_reasons = 5
-	heir_chance = 0.33
-	monthly_heir_claim_increase = 0.15
+	accept_vassalization_reasons = 10
+	heir_chance = 0.66
+	monthly_heir_claim_increase = 0.20
 	max_absolutism = 20
+	vassal_income = 0.20
 	
-	manpower_recovery_speed = 0.33
-	global_tax_modifier = 0.33
-	caravan_power = 0.33
-	sailors_recovery_speed = 0.33
+	manpower_recovery_speed = 0.66
+	global_tax_modifier = 0.66
+	caravan_power = 0.66
+	sailors_recovery_speed = 0.66
 	
 	brahmins_hindu_loyalty_modifier = 0.1
 	brahmins_muslim_loyalty_modifier = 0.1
@@ -984,19 +932,19 @@ legitimacy = {
 
 #Multiplied by current Horde Unity - 50
 horde_unity = {
-	global_unrest = -2
+	global_unrest = -10
 	
-	accept_vassalization_reasons = 10
-	raze_power_gain = 0.25
+	accept_vassalization_reasons = 20
+	raze_power_gain = 0.40
 	
-	movement_speed = 0.10
-	siege_ability = 0.10
-	vassal_income = 0.25
-	cavalry_power = 0.10
+	movement_speed = 0.20
+	siege_ability = 0.20
+	vassal_income = 0.40
+	cavalry_power = 0.20
 	
-	manpower_recovery_speed = 0.40
-	land_maintenance_modifier = -0.33
-	caravan_power = 0.33
+	manpower_recovery_speed = 0.66
+	land_maintenance_modifier = -0.66
+	caravan_power = 0.66
 	
 	nomadic_tribes_loyalty_modifier = 0.1
 }
@@ -1004,17 +952,17 @@ horde_unity = {
 
 # Multiplied by current Devotion - 50
 devotion = {
-	global_unrest = -2
+	global_unrest = -6
 	
-	monthly_piety = 0.002
-	monthly_karma = 0.002
+	monthly_piety = -0.008
+	monthly_karma = 0.008
 	garrison_size = 0.20
-	global_missionary_strength = 0.03
+	global_missionary_strength = 0.04
 
-	manpower_in_true_faith_provinces = 0.33
-	global_tax_modifier = 0.33
-	caravan_power = 0.33
-	sailors_recovery_speed = 0.33
+	manpower_in_true_faith_provinces = 0.66
+	global_tax_modifier = 0.66
+	caravan_power = 0.66
+	sailors_recovery_speed = 0.66
 	
 	brahmins_hindu_loyalty_modifier = 0.1
 	brahmins_muslim_loyalty_modifier = 0.1
@@ -1036,8 +984,7 @@ meritocracy = {
 	advisor_cost = -0.5
 	stability_cost_modifier = -0.25
 	promote_culture_cost = -0.25
-	yearly_corruption = -0.2
-	imperial_mandate = 0.1
+	imperial_mandate = 0.15
 	
 	brahmins_hindu_loyalty_modifier = 0.1
 	brahmins_muslim_loyalty_modifier = 0.1
@@ -1056,46 +1003,41 @@ meritocracy = {
 
 # Multiplied by 50 - meritocracy
 low_meritocracy = {
-	yearly_corruption = 0.2 #i.e. 0.1 at 0 Meritocracy
-	liberty_desire = 5
+	yearly_corruption = 0.2
+	governing_capacity_modifier = -0.2
 }
 
 # Scaled, multiplied by current corruption / 100
 corruption = {
-	governing_capacity_modifier = 1.0
-	navy_tradition_decay = 0.15
-	army_tradition_decay = 0.15
-	years_of_nationalism = 40
-	global_tax_income = -120
-	global_unrest = -20
-	horde_unity = 3
-	yearly_patriarch_authority = -0.1
-	yearly_army_professionalism = -0.1
-	merc_maintenance_modifier = -1
-	mercenary_manpower = 5
-	privateer_efficiency = 1.5
-	ship_power_propagation = -1.5
+	global_autonomy = 0.1
+	global_unrest = -10
+	privateer_efficiency = 3
 	diplomatic_annexation_cost = 2
-	stability_cost_modifier = -1
+	inflation_reduction = -1
+	improve_relation_modifier = 1
+	
+	yearly_army_professionalism = -0.05
 	max_absolutism = -20
 	max_revolutionary_zeal = -20
-	inflation_reduction = -2
-	monthly_piety = -0.03
-	monthly_karma = -0.03
 	
-	brahmins_hindu_influence_modifier = 0.1
-	brahmins_muslim_influence_modifier = 0.1
-	brahmins_other_influence_modifier = 0.1
-	church_influence_modifier = 0.1
-	maratha_influence_modifier = 0.1
-	nobles_influence_modifier = 0.1
-	burghers_influence_modifier = 0.1
-	vaisyas_influence_modifier = 0.1
-	cossacks_influence_modifier = 0.1
-	nomadic_tribes_influence_modifier = 0.1
-	dhimmi_influence_modifier = 0.1
-	jains_influence_modifier = 0.1
-	rajput_influence_modifier = 0.1
+	yearly_patriarch_authority = -0.05
+	monthly_piety = 0.03
+	monthly_karma = -0.03
+	monthly_heir_claim_increase = -0.25
+	
+	brahmins_hindu_influence_modifier = 0.3
+	brahmins_muslim_influence_modifier = 0.3
+	brahmins_other_influence_modifier = 0.3
+	church_influence_modifier = 0.3
+	maratha_influence_modifier = 0.3
+	nobles_influence_modifier = 0.3
+	burghers_influence_modifier = 0.3
+	vaisyas_influence_modifier = 0.3
+	cossacks_influence_modifier = 0.3
+	nomadic_tribes_influence_modifier = 0.3
+	dhimmi_influence_modifier = 0.3
+	jains_influence_modifier = 0.3
+	rajput_influence_modifier = 0.3
 
 }
 
@@ -1108,15 +1050,15 @@ root_out_corruption = {
 	meritocracy = -2
 	yearly_absolutism = 1
 	yearly_revolutionary_zeal = 1
-	monthly_piety = 0.003
-	monthly_karma = 0.003
-	yearly_patriarch_authority = 0.05
+	monthly_piety = -0.005
+	monthly_karma = 0.005
+	yearly_patriarch_authority = 0.025
 }
 
 recovery_motivation = {
-	global_tax_modifier = 0.5
+	global_tax_modifier = 0.25
 	defensiveness = 0.25
-	manpower_recovery_speed = 0.5
+	manpower_recovery_speed = 0.25
 	army_tradition = 1
 	navy_tradition = 1
 	global_unrest = -5
@@ -1127,6 +1069,7 @@ recovery_motivation = {
 	horde_unity = 10
 	yearly_corruption = -5
 	stability_cost_modifier = -0.25
+	global_autonomy = -0.1
 }
 
 militarized_society = {
@@ -1178,39 +1121,33 @@ over_extension = {
 	global_unrest = 5
 	bureaucrats_influence = 0.5
 	mr_guilds_influence = 0.5
-	build_time = 0.5
-	build_cost = 0.5
-	state_maintenance_modifier = 1
+	yearly_corruption = 0.1
 }
 
 prestige = {
 	land_morale = 0.15
 	naval_morale = 0.15
 	mercenary_manpower = 1
-	capture_ship_chance = 0.25
-	sunk_ship_morale_hit_recieved = -0.25
-	reserves_organisation = 0.25
 	mercenary_cost = -0.15
 	imperial_authority = 0.25
 	years_of_nationalism = -5
-	accept_vassalization_reasons = 5
-	transfer_trade_power_reasons = 5
+	accept_vassalization_reasons = 10
 	diplomatic_reputation = 2
 
 	
-	brahmins_hindu_loyalty_modifier = 0.1
-	brahmins_muslim_loyalty_modifier = 0.1
-	brahmins_other_loyalty_modifier = 0.1
-	church_loyalty_modifier = 0.1
-	maratha_loyalty_modifier = 0.1
-	nobles_loyalty_modifier = 0.1
-	burghers_loyalty_modifier = 0.1
-	vaisyas_loyalty_modifier = 0.1
-	cossacks_loyalty_modifier = 0.1
-	nomadic_tribes_loyalty_modifier = 0.1
-	dhimmi_loyalty_modifier = 0.1
-	jains_loyalty_modifier = 0.1
-	rajput_loyalty_modifier = 0.1
+	brahmins_hindu_loyalty_modifier = 0.2
+	brahmins_muslim_loyalty_modifier = 0.2
+	brahmins_other_loyalty_modifier = 0.2
+	church_loyalty_modifier = 0.2
+	maratha_loyalty_modifier = 0.2
+	nobles_loyalty_modifier = 0.2
+	burghers_loyalty_modifier = 0.2
+	vaisyas_loyalty_modifier = 0.2
+	cossacks_loyalty_modifier = 0.2
+	nomadic_tribes_loyalty_modifier = 0.2
+	dhimmi_loyalty_modifier = 0.2
+	jains_loyalty_modifier = 0.2
+	rajput_loyalty_modifier = 0.2
 
 }
 
@@ -1221,23 +1158,21 @@ no_debate_in_parliament = {
 
 
 republican_tradition = {
-
-	global_unrest = -2
+	stability_cost_modifier = -0.25
 	
-	embracement_cost = -0.2
-	yearly_corruption = -0.2
-	embargo_efficiency = 0.2
+	embracement_cost = -0.25
+	embargo_efficiency = 0.25
 	max_revolutionary_zeal = 20
 	
-	manpower_recovery_speed = 0.2
-	global_tax_modifier = 0.2
-	ship_power_propagation = 0.2
-	sailors_recovery_speed = 0.2
+	manpower_recovery_speed = 0.25
+	global_tax_modifier = 0.25
+	ship_power_propagation = 0.25
+	sailors_recovery_speed = 0.25
 	
 	rr_jacobins_influence = 0.1
-	reform_progress_growth = 1.0
-	burghers_loyalty_modifier = 0.05
-	vaisyas_loyalty_modifier = 0.05
+	monthly_reform_progress_modifier = 0.1
+	burghers_loyalty_modifier = 0.1
+	vaisyas_loyalty_modifier = 0.1
 }
 
 inverse_republican_tradition = {
@@ -1267,35 +1202,37 @@ bought_indulgence = {
 }
 
 religious_unity = {
-	papal_influence = 1
-	monthly_fervor_increase = 4
-	yearly_patriarch_authority = 0.005
-	church_power_modifier = 1
-	monthly_piety = 0.003
-	monthly_karma = 0.003
-	church_influence_modifier = 0.3
-	brahmins_hindu_influence_modifier = 0.3
-	dhimmi_influence_modifier = -0.3
-	yearly_harmony = -0.5
-	relation_with_heretics = -50
-	imperial_authority = 0.25
-	tolerance_own = 1
-	yearly_absolutism = 0.1
-	global_institution_spread = -0.5
+	papal_influence = 1.5
+	monthly_fervor_increase = 3
+	yearly_patriarch_authority = 0.03
+	monthly_piety = -0.007
+	yearly_harmony = 0.50
+	
+	promote_culture_cost = -0.25
+	culture_conversion_cost = 0.25
+	relation_with_heretics = -25
+	stability_cost_modifier = -0.1
+	
+	church_influence_modifier = 0.2
+	brahmins_hindu_influence_modifier = 0.2
+	dhimmi_influence_modifier = 0.2
 }
 
 inverse_religious_unity = {
-	enforce_religion_cost = 1
-	diplomatic_reputation = 5
-	harmonization_speed = 1
-	church_loyalty_modifier = -0.3
-	brahmins_hindu_loyalty_modifier = -0.3
-	dhimmi_loyalty_modifier = 0.3
-	global_unrest = 8
-	republican_tradition = 1
-	yearly_revolutionary_zeal = 0.2
-	promote_culture_cost = -0.5
-	devotion = -1
+	monthly_karma = 0.007
+	church_power_modifier = -1
+	#jewish_placeholder
+	
+	expel_minorities_cost = -0.25
+	manpower_in_true_faith_provinces = 0.5
+	institution_spread_from_true_faith = 0.25
+	
+	devotion = -2
+	republican_tradition = 0.5
+	
+	church_loyalty_modifier = 0.2
+	brahmins_hindu_loyalty_modifier = 0.2
+	dhimmi_loyalty_modifier = 0.2
 }
 
 total_occupation = {
@@ -1360,10 +1297,11 @@ liberty_desire = {
 
 is_great_power = {						#Only works with Rights of Man DLC enabled
 	prestige = 1
-	max_absolutism = 5
-	max_revolutionary_zeal = 5
+	army_tradition = 0.50
+	max_absolutism = 10
+	max_revolutionary_zeal = 10
 	free_leader_pool = 1
-	governing_capacity = 500
+	governing_capacity = 300
 	diplomatic_upkeep = 1
 	accept_vassalization_reasons = 10
 	transfer_trade_power_reasons = 10
@@ -1375,19 +1313,19 @@ in_golden_era = {
 	imperial_mandate = 0.05
 	stability_cost_modifier = -0.2
 	global_institution_spread = 0.2
-	global_autonomy = -0.02
+	global_autonomy = -0.05
 	legitimacy = 1
 	republican_tradition = 0.5
 	horde_unity = 1
 	devotion = 1
-	technology_cost = -0.1
-	
+	technology_cost = -0.05
+	prestige = 1
 	
 }
 
 absolutism = {
-	administrative_efficiency = 0.25
-	discipline = 0.10
+	administrative_efficiency = 0.3
+	discipline = 0.05
 	governing_capacity_modifier = 0.25
 	core_decay_on_your_own = -0.5
 }
@@ -1396,8 +1334,7 @@ low_army_professionalism = {
 	mercenary_cost = -0.15
 	mercenary_manpower = 0.30
 	mercenary_discipline = 0.05
-	land_maintenance_modifier = -0.2
-	war_exhaustion_cost = 0.25
+	land_maintenance_modifier = -0.15
 }
 
 high_army_professionalism = {
@@ -1405,8 +1342,7 @@ high_army_professionalism = {
 	shock_damage = 0.1
 	siege_ability = 0.2
 	drill_decay_modifier = -0.5
-	land_maintenance_modifier = 0.2
-
+	war_exhaustion_cost = -0.25
 }
 
 streltsy_modifier = {
@@ -1417,28 +1353,28 @@ power_projection = {
 	imperial_mandate = 0.15
 	imperial_authority_value = 0.15
 	global_naval_engagement_modifier = 0.15
-	naval_attrition = -0.15
-	land_attrition = -0.15
+	army_tradition = 1
 	global_colonial_growth = 15
 	range = 0.25
-	trade_steering = 0.25
-	garrison_size = 0.25
+	trade_steering = 0.20
+	garrison_size = 0.15
 	spy_offence = 0.25
 	liberty_desire_from_subject_development = -0.25
+	global_autonomy = -0.1
 
-	brahmins_hindu_loyalty_modifier = 0.1
-	brahmins_muslim_loyalty_modifier = 0.1
-	brahmins_other_loyalty_modifier = 0.1
-	church_loyalty_modifier = 0.1
-	maratha_loyalty_modifier = 0.1
-	nobles_loyalty_modifier = 0.1
-	burghers_loyalty_modifier = 0.1
-	vaisyas_loyalty_modifier = 0.1
-	cossacks_loyalty_modifier = 0.1
-	nomadic_tribes_loyalty_modifier = 0.1
-	dhimmi_loyalty_modifier = 0.1
-	jains_loyalty_modifier = 0.1
-	rajput_loyalty_modifier = 0.1
+	brahmins_hindu_influence_modifier = -0.15
+	brahmins_muslim_influence_modifier = -0.15
+	brahmins_other_influence_modifier = -0.15
+	church_influence_modifier = -0.15
+	maratha_influence_modifier = -0.15
+	nobles_influence_modifier = -0.15
+	burghers_influence_modifier = -0.15
+	vaisyas_influence_modifier = -0.15
+	cossacks_influence_modifier = -0.15
+	nomadic_tribes_influence_modifier = -0.15
+	dhimmi_influence_modifier = -0.15
+	jains_influence_modifier = -0.15
+	rajput_influence_modifier = -0.15
 }
 
 power_projection_25 = {
@@ -1488,8 +1424,8 @@ self_governing_colony_subject = {
 }
 
 march_subject = {
-	land_morale = 0.05
-	naval_morale = 0.05
+	army_tradition = 0.25
+	navy_tradition = 0.25
 }
 
 vassal_subject = {
@@ -1499,11 +1435,11 @@ vassal_subject = {
 
 daimyo_subject = {
 	accept_vassalization_reasons = 1
-	liberty_desire = -1
+	reduced_liberty_desire = 1
 }
 
 union_subject = {
-	prestige = 1
+	prestige = 0.50
 	diplomatic_upkeep = 1
 }
 
@@ -1514,17 +1450,21 @@ all_nations = {
 }
 
 subject_nation = {
-	global_tax_income = -1
+	global_tax_income = 12
 	land_forcelimit	= -2
 	naval_forcelimit = -3
 }
 
 vassal_nation = {
-	stability_cost_modifier = -0.25
-	build_cost = -0.25
 	technology_cost = -0.1
 	idea_cost = 0.1
-	prestige = -0.25
+	prestige = -0.50
+	governing_capacity = 50
+	inflation_reduction = 0.15
+	naval_maintenance_modifier = -0.25
+	land_maintenance_modifier = -0.25
+	fort_maintenance_modifier = -0.25
+	state_maintenance_modifier = -0.25
 }
 
 primitive_nation = {
@@ -1534,8 +1474,9 @@ primitive_nation = {
 
 #scales to amount of up-to-date forts compared to total development
 maintained_forts = {
-	army_tradition = 1
-	global_autonomy = -0.02
+	prestige = 0.25
+	army_tradition = 0.50
+	yearly_absolutism = 0.1
 }
 
 gov_rank_1 = {
@@ -1606,7 +1547,7 @@ dishonoured_alliance =  {
 }
 
 drilling_armies = { # Multiplied by percentage of forcelimit currently drilling
-	yearly_army_professionalism = 0.01
+	yearly_army_professionalism = 0.02
 }
 
 ##################################################################################################
@@ -1635,7 +1576,7 @@ reputation_sabotaged = {
 }
 
 corrupt_officials = {
-	yearly_corruption = 0.50
+	yearly_corruption = 1
 }
 
 scaled_trade_league_leader = { #scaled by number of members
@@ -1734,18 +1675,18 @@ invasion_nation = {
 
 native_policy_coexist = {
 	native_uprising_chance = -1.0
-	
+	country_military_power = 1
 }
 
 native_policy_trade = {
 	native_assimilation = 0.5
 	native_uprising_chance = -0.5
-	
+	country_admin_power = 1
 }
 
 native_policy_hostile = {
 	global_colonial_growth = 20
-	
+	country_diplomatic_power = 1
 }
 
 ########################################
@@ -1753,16 +1694,18 @@ native_policy_hostile = {
 ########################################
 
 high_harmony = {
-	tolerance_own = 1
+	tolerance_own = 2
 	imperial_mandate = 0.1
-	stability_cost_modifier = -0.25
+	religious_unity = 0.15
 }
 
 low_harmony = {
-	tolerance_own = -3
-	development_cost = 0.25
+	religious_unity = -0.5
 	legitimacy = -1
 	meritocracy = -2
+	devotion = -1
+	republican_tradition = -1
+	horde_unity = -1
 }
 
 ########################################
@@ -1869,7 +1812,7 @@ hanafi_scholar_modifier = {
 	religion = yes
 	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
-	adm_tech_cost_modifier = -0.10
+	adm_tech_cost_modifier = -0.15
 }
 
 hanbali_scholar_modifier = {
@@ -1877,7 +1820,7 @@ hanbali_scholar_modifier = {
 	religion = yes
 	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
-	ae_impact = -0.1
+	ae_impact = -0.15
 }
 
 maliki_scholar_modifier = {
@@ -1954,17 +1897,17 @@ innovativeness = {
 	great_project_upgrade_cost = -0.50
 	hostile_attrition = 5
 	inflation_reduction = 0.5
-	interest = -2
+	monthly_splendor = 3
 	range = 5
 	global_trade_goods_size_modifier = 1
-	global_institution_spread = 0.5
 	monarch_lifespan = 0.25
 	movement_speed = 0.15
 	special_unit_forcelimit = 0.5
-	shock_damage_received = -0.25
-	fire_damage_received = -0.25
+	shock_damage_received = -0.3
+	fire_damage_received = -0.3
 	light_ship_power = 1.0
 	transport_power = 1.0
+	prestige_decay = -0.05
 }
 
 rajput_regiment = {
@@ -1992,19 +1935,17 @@ cossacks_modifier = {
 
 expand_administation_modifier = {
 	expand_administration_cost = 0.25
-	governing_capacity = 50
+	governing_capacity = 25
 }
 
 # At 100% over capacity, this modifier will be fully used
 over_governing_capacity_modifier = {
-	religious_unity = -0.5
-	stability_cost_modifier = 1.0
-	administrative_efficiency = -0.5
-	advisor_cost = 1.0
+	advisor_cost = 2.0
 	liberty_desire_from_subject_development = 1
+	state_maintenance_modifier = 1.5
 	monthly_militarized_society = -1.0
 	global_unrest = 15
-	min_autonomy = 75
+	ae_impact = 1.0
 	
 	brahmins_hindu_influence_modifier = 0.25
 	brahmins_muslim_influence_modifier = 0.25
@@ -2028,7 +1969,7 @@ lost_hegemony = {
 }
 
 at_peace_revolutionary = { # Applied if at peace while reactionaries are bordering you
-	yearly_revolutionary_zeal = -2
+	yearly_revolutionary_zeal = -3
 }
 
 expanded_infrastructure = {
@@ -2040,7 +1981,6 @@ expanded_infrastructure = {
 
 centralize_state = {
 	state_governing_cost_increase = -20
-	local_autonomy = -0.01
 	picture = "centralize_state"
 }
 

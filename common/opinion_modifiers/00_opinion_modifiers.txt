@@ -4699,6 +4699,8 @@ opinion_trent = {
 	yearly_decay = 2
 }
 
+# GT Mod Additions
+
 GT_Superiority_Complex = {
 	opinion = -25
 	yearly_decay = 3

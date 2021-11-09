@@ -8134,4 +8134,4 @@
  GOTO_HOME:0 "Go to home capital"
  CONNECT_TO_SHIP_LOW_MORALE:0 "Unit has low morale."
  FE_IRONMAN_GAMENOTOK:0 "Ironman mode needs EU4 to be unmodified and validated."
- CANNOT_INCREASE_STABILITY:0 "During a war?  Bruh."
+ CANNOT_INCREASE_STABILITY:0 "The present conditions of our nation run counter to an increase in national stability."
