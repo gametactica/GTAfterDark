@@ -159,6 +159,11 @@ NDefines.NMilitary.FORT_FLIPPING_TIME = 60
 
 NDefines.NAI.MAX_CAV_PERCENTAGE = 30 								-- For modding, actual ratio is dynamically computed but will be no higher than this.
 
+--NReligion
+--NDefines.NReligion.
+
+NDefines.NReligion.CHANGE_SECONDARY_PRESTIGE_HIT = -25
+
 
 
 

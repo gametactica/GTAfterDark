@@ -99,7 +99,7 @@ can_increase_stability = {
 					}
 				AND = {
 					uses_syncretic_faiths = yes
-					has_matching_religion = confucian
+					has_matching_religion = confucianism
 					}
 				AND = {
 					uses_papacy = yes
