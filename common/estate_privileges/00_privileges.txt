@@ -2662,12 +2662,16 @@ estate_church_inwards_perfection = {
 	on_granted = {
 	}
 	modifier_by_land_ownership = {
-		development_cost = -0.15
+		development_cost = -0.1
 	}
 	penalties = {
 		stability_cost_to_declare_war = 1
 	}
 	benefits = {
+		legitimacy = 0.50
+		devotion = 0.50
+		horde_unity = -0.50
+		republican_tradition = 0.25
 	}
 	ai_will_do = {
 		factor = 1

@@ -7,7 +7,7 @@
 	
 	monthly_piety = -0.002
 	monthly_karma = 0.002
-	yearly_patriarch_authority = -0.005
+	yearly_patriarch_authority = -0.003
 }
 
 2 = {
@@ -30,5 +30,5 @@
 	
 	monthly_piety = 0.002
 	monthly_karma = -0.002
-	yearly_patriarch_authority = 0.005
+	yearly_patriarch_authority = 0.003
 }
