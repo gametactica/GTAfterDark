@@ -141,15 +141,14 @@ NDefines.NMilitary.SIEGE_DISEASE_IMPACT = 0.15						-- Fraction of besieging sol
 NDefines.NMilitary.INFANTRY_SPEED = 0.7							-- _MDEF_INFANTRY_SPEED = 10,
 NDefines.NMilitary.CAVALRY_SPEED = 0.9							-- _MDEF_CAVALRY_SPEED = 10,
 NDefines.NMilitary.ARTILLERY_SPEED = 0.5
-NDefines.NMilitary.CAVALRY_COST = 20.0 							-- _MDEF_CAVALRY_COST = 10
 NDefines.NMilitary.FORTRESS_COST = 1
 NDefines.NMilitary.DEFAULT_WARGOAL_TICKINGWARSCORE_BONUS = 1		-- Amount of warscore per month since attacker/defender started getting the bonus for completing war goal
 NDefines.NMilitary.WARGOAL_MAX_BONUS = 30
 NDefines.NMilitary.RIVER_CROSSING_PENALTY = -2					-- Dice roll penalty from river crossing
 NDefines.NMilitary.STRAIT_CROSSING_PENALTY = -3						-- Dice roll penalty from strait crossing
 NDefines.NMilitary.SEA_LANDING_PENALTY = -3
-NDefines.NMilitary.INF_SUPPRESSION = 0.15
-NDefines.NMilitary.CAV_SUPPRESSION = 0.50						
+NDefines.NMilitary.INF_SUPPRESSION = 0.10
+NDefines.NMilitary.CAV_SUPPRESSION = 0.30						
 NDefines.NMilitary.ART_SUPPRESSION = 0.05
 NDefines.NMilitary.FORT_FLIPPING_TIME = 60					
 
