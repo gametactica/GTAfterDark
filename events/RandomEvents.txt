@@ -2667,12 +2667,15 @@ country_event = {
 	option = {
 		name = "EVTOPTG5060"		# If only we had comet sense!
 		
+		trigger = {
+			NOT = { primitives = yes }
+		}	
+		
 		add_legitimacy = -15
 		add_republican_tradition = -10
 		add_devotion = -15
 		add_horde_unity = -15
 		add_meritocracy = -15
-		federation_cohesion = -15
 		
 	}
 	option = {

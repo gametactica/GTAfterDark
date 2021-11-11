@@ -210,7 +210,7 @@ manpower = {
 
 # Caps at 600
 horde_development = {
-	horde_unity = -1
+	horde_unity = -2
 }
 
 province_razed = {
@@ -675,7 +675,7 @@ war = {
 	war_exhaustion = 0.025
 	monthly_piety = -0.005
 	monthly_karma = -0.005
-	yearly_corruption = 0.5
+	yearly_corruption = 0.75
 	global_colonial_growth = -20
 	country_military_power = -1
 	legitimacy = 0.75
@@ -1763,7 +1763,7 @@ overlord_expel_ronin = {
 }
 
 subject_expel_ronin = {
-	liberty_desire = -5
+	liberty_desire = -15
 }
 
 overlord_sword_hunt = { # Unlike the others, this one counts per subject

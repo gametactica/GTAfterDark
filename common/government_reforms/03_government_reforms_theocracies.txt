@@ -12,6 +12,8 @@ theocracy_mechanic = {
 
 	modifiers = {
 		brahmins_hindu_influence_modifier = 0.1
+		brahmins_muslim_influence_modifier = 0.1
+		brahmins_other_influence_modifier = 0.1
 		church_influence_modifier = 0.05
 		tolerance_own = 2
 		tolerance_heathen = -2
@@ -119,6 +121,10 @@ mission_to_civilize_reform = {
 		native_uprising_chance = -0.5
 		expel_minorities_cost = -0.25
 		papal_influence = 0.5
+		maratha_muslim_influence_modifier = 0.05
+		rajput_muslim_influence_modifier = 0.05
+		vaisyas_influence_modifier = 0.05
+		vaisyas_non_muslim_influence_modifier = 0.1
 	}
 }
 
@@ -140,6 +146,10 @@ mission_to_kill_pirates_reform = {
 		naval_forcelimit_modifier = 0.25
 		capture_ship_chance = 0.33
 		flagship_cost = -0.5
+		maratha_muslim_loyalty_modifier = 0.05
+		rajput_muslim_loyalty_modifier = 0.05
+		vaisyas_loyalty_modifier = 0.05
+		vaisyas_non_muslim_loyalty_modifier = 0.1
 	}
 }
 
@@ -162,6 +172,7 @@ combat_heresy_reform = {
 		global_heretic_missionary_strength = 0.02
 		enforce_religion_cost = -0.2
 		tolerance_heretic = -1
+		maratha_muslim_influence_modifier = -0.05
 	}
 }
 
@@ -172,6 +183,7 @@ expel_heathens_reform = {
 		global_heathen_missionary_strength = 0.02
 		warscore_cost_vs_other_religion = -0.2
 		tolerance_heathen = -1
+		rajput_muslim_influence_modifier = -0.05
 	}
 }
 
@@ -214,6 +226,8 @@ religious_administrators_reform = {
 		stability_cost_modifier = -0.2
 		adm_advisor_cost = -0.25
 		brahmins_hindu_influence_modifier = 0.05
+		brahmins_muslim_influence_modifier = 0.05
+		brahmins_other_influence_modifier = 0.05
 		church_influence_modifier = 0.05
 	}
 }
@@ -223,10 +237,9 @@ pious_merchants_reform = {
 	allow_normal_conversion = yes
 	modifiers = {
 		merchants = 1
-		maratha_muslim_influence_modifier = 0.05
-		rajput_muslim_influence_modifier = 0.05
-		burghers_influence_modifier = 0.05
-		vaisyas_non_muslim_influence_modifier = 0.05
+		burghers_influence_modifier = 0.1
+		vaisyas_influence_modifier = 0.05
+		vaisyas_non_muslim_loyalty_modifier = 0.05
 	}
 }
 
@@ -374,6 +387,11 @@ partial_secularisation_reform = {
 		years_of_nationalism = -5
 		church_influence_modifier = -0.05
 		burghers_influence_modifier = 0.05
+		vaisyas_loyalty_modifier = 0.05
+		vaisyas_non_muslim_loyalty_modifier = 0.05
+		brahmins_hindu_loyalty_modifier = -0.05
+		brahmins_muslim_loyalty_modifier = -0.05
+		brahmins_other_loyalty_modifier = -0.05
 	}
 }
 
@@ -388,7 +406,8 @@ battle_pope_reform = {
 
 	modifiers = {
 		manpower_in_true_faith_provinces = 0.10
-		leader_land_fire = 2
+		leader_land_fire = 1
+		nobles_loyalty_modifier = 0.1
 	}
 	ai = {
 		factor = 3
@@ -403,7 +422,8 @@ conciliarism_reform = {
 	}
 	modifiers = {
 		appoint_cardinal_cost = -0.3
-		diplomatic_reputation = 2
+		religious_unity = 0.15
+		diplomatic_reputation = 1
 	}
 	ai = {
 		factor = 3
@@ -491,8 +511,8 @@ divine_guidance_reform = {
 	icon = "divine_guidance_reform"
 	allow_normal_conversion = yes
 	modifiers = {
-		devotion = 0.75
-		administrative_efficiency = 0.1
+		devotion = 0.50
+		administrative_efficiency = 0.05
 		innovativeness_gain = 0.25
 	}
 	
@@ -576,6 +596,9 @@ regionally_elected_commanders = {
 	fixed_rank = 0
 	modifiers = {
 		leader_land_manuever = 1
+		defensiveness = 0.15
+		nobles_loyalty_modifier = 0.05
+		cossacks_influence_modifier = 0.1
 	}
 	
 	potential = {
@@ -638,6 +661,7 @@ monastic_elections_reform = {
 	fixed_rank = 0
 	modifiers = {
 		free_mil_policy = 1
+		church_loyalty_modifier = 0.1
 	}
 	
 	potential = {
@@ -889,7 +913,7 @@ many_fingers_of_god_reform = {
 		tolerance_own = -1
 		tolerance_heretic = 1	
 		tolerance_heathen = 1
-		religious_unity = 0.25
+		religious_unity = 0.1
 		mercenary_manpower= 0.25
 	}
 	ai = {
@@ -909,7 +933,8 @@ priestly_autonomy_reform = {
 	
 	modifiers = {
 		global_unrest = -2
-		church_loyalty_modifier = 0.1
+		nobles_influence_modifier = -0.1
+		church_influence_modifier = 0.1
 	}
 	ai = {
 		factor = 3

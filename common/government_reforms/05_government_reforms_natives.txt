@@ -16,10 +16,11 @@ native_basic_reform = {
 		reform_progress_growth = -1.0
 		#monthly_reform_progress = 0.5
 		land_maintenance_modifier = -0.25
-		diplomatic_upkeep = -2
+		merchants = -1
 		global_institution_spread = -0.5
 		global_regiment_cost = -0.5
-		province_warscore_cost = 4
+		province_warscore_cost = 0.25
+		allowed_marine_fraction = -0.2
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
@@ -50,6 +51,7 @@ native_chiefdom_reform = {
 
 	modifiers = {
 		tribal_development_growth = 0.02
+		build_cost = -0.1
 	}
 }
 
@@ -59,7 +61,9 @@ native_federation_reform = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 20
 	modifiers = {
-		global_manpower_modifier = 0.2
+		global_manpower_modifier = 0.25
+		improve_relation_modifier = 0.25
+		monthly_federation_favor_growth = 0.05
 	}
 }
 
@@ -69,7 +73,9 @@ native_clan_council_reform = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 20
 	modifiers = {
-		diplomatic_upkeep = 1
+		yearly_corruption = -0.1
+		governing_capacity = 30
+		advisor_pool = 1
 	}
 }
 
@@ -79,7 +85,7 @@ native_hereditary_reform = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 20
 	modifiers = {
-		stability_cost_modifier = -0.33
+		prestige_decay = -0.08
 	}
 }
 
@@ -89,6 +95,7 @@ native_martial_tradition_reform = {
 
 	modifiers = {
 		infantry_power = 0.1
+		army_tradition = 1
 	}
 
 	ai = {
@@ -129,6 +136,7 @@ native_oral_tradition_reform = {
 	icon = "native_oral_tradition_reform"
 	modifiers = {
 		monthly_reform_progress_modifier = 0.25
+		stability_cost_modifier = -0.15
 	}
 
 	ai = {
@@ -140,6 +148,7 @@ native_land_tradition_reform = {
 	icon = "native_land_tradition_reform"
 	modifiers = {
 		add_tribal_land_cost = -0.25
+		migration_cost = -0.25
 	}
 
 	ai = {
@@ -215,7 +224,7 @@ native_seasonal_travel_reform = {
 	icon = "native_seasonal_travel_reform"
 	fixed_rank = 0
 	modifiers = {
-		migration_cost = -0.25
+		migration_cooldown = -0.25
 		tribal_development_growth = 0.02
 	}
 	conditional = {
@@ -264,6 +273,7 @@ native_settle_down_reform = {
 	}
 	modifiers = {
 		global_institution_spread = 0.2
+		development_cost = -0.1
 		add_tribal_land_cost = 2.0
 	}
 	conditional = {
@@ -295,7 +305,8 @@ native_codified_power_reform = {
 	icon = "native_codified_power_reform"
 
 	modifiers = {
-		global_unrest = -2
+		global_unrest = -1
+		power_projection_from_insults = 1
 	}
 
 	ai = {
@@ -308,6 +319,7 @@ native_diplomatic_cermonies_reform = {
 
 	modifiers = {
 		diplomatic_upkeep = 1
+		diplomatic_reputation = 1
 	}
 
 	ai = {
@@ -334,6 +346,7 @@ native_trading_with_foreigners_reform = {
 
 	modifiers = {
 		core_creation = -0.1
+		global_trade_goods_size_modifier = 0.1
 	}
 
 	effect = {
@@ -371,7 +384,7 @@ native_becomes_monarchy_reform = {
 		}
 		set_country_flag = populists_in_government
 		change_government = monarchy
-		change_government_reform_progress = -450 # Doing it like this to avoid that migration code triggers
+		change_government_reform_progress = -500 # Doing it like this to avoid that migration code triggers
 	}
 	ai = {
 		factor = 1
@@ -388,7 +401,7 @@ native_becomes_republic_reform = {
 		}
 		set_country_flag = populists_in_government
 		change_government = republic
-		change_government_reform_progress = -250 # Doing it like this to avoid that migration code triggers
+		change_government_reform_progress = -500 # Doing it like this to avoid that migration code triggers
 	}
 	ai = {
 		factor = 1
@@ -420,7 +433,7 @@ native_becomes_theocracy_reform = {
 		}
 		set_country_flag = populists_in_government
 		change_government = theocracy
-		change_government_reform_progress = -250 # Doing it like this to avoid that migration code triggers
+		change_government_reform_progress = -500 # Doing it like this to avoid that migration code triggers
 	}
 	ai = {
 		factor = 1
@@ -449,6 +462,7 @@ native_becomes_horde_reform = {
 		set_country_flag = populists_in_government
 		change_government = tribal
 		add_government_reform = steppe_horde
+		change_government_reform_progress = -500 # Doing it like this to avoid that migration code triggers
 		change_unit_type = nomad_group
 		change_technology_group = nomad_group
 		custom_tooltip = STEPPE_HORDE_BENEFITS
