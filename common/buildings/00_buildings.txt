@@ -33,7 +33,7 @@ marketplace = {
 
 	modifier = {
 		province_trade_power_modifier = 0.5
-		local_culture_conversion_cost = -0.1
+		local_culture_conversion_cost = -0.05
 		local_state_maintenance_modifier = 0.1
 	}
 
@@ -264,7 +264,7 @@ coastal_defence = {
 		blockade_force_required = 0.5
 		hostile_disembark_speed = 1.0
 		block_slave_raid = yes
-		local_naval_engagement_modifier = 0.25
+		local_naval_engagement_modifier = 0.15
 		local_warscore_cost_modifier = 0.05
 	}
 
@@ -631,7 +631,7 @@ trade_depot = {
 
 	modifier = {
 		province_trade_power_modifier = 1
-		local_culture_conversion_cost = -0.2
+		local_culture_conversion_cost = -0.1
 		local_state_maintenance_modifier = 0.3
 	}
 
@@ -791,7 +791,7 @@ stock_exchange = {
 
 	modifier = {
 		province_trade_power_modifier = 1.25
-		local_culture_conversion_cost = -0.3
+		local_culture_conversion_cost = -0.15
 		local_state_maintenance_modifier = 0.5
 	}
 
@@ -1269,8 +1269,7 @@ impressment_offices = {
 
 	modifier = {
 		local_sailors = 250
-		ship_recruit_speed = -0.15
-		local_ship_cost = -0.05
+		local_ship_cost = -0.1
 		local_state_maintenance_modifier = 0.3
 	}
 	bonus_modifier = {

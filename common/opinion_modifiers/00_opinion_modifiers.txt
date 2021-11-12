@@ -101,7 +101,7 @@ at_war = {
 }
 
 same_dynasty = {
-	opinion = 20
+	opinion = 25
 }
 royal_marriage = {
 	opinion = 20
@@ -399,7 +399,7 @@ vassal_broke_free = {
 }
 
 vassal_abandoned = {
-	opinion = -200
+	opinion = -50
 	yearly_decay = 5
 	min = -200
 }
@@ -541,7 +541,7 @@ dishonoured_alliance = {
 }
 
 declared_war_on_us = {
-	opinion = -40
+	opinion = -100
 	yearly_decay = 1
 }
 

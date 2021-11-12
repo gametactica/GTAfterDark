@@ -71,7 +71,7 @@ establish_communities =
 		}
 	}
 	countries_with_merchant_modifier = {
-		improve_relation_modifier = 0.25
+		improve_relation_modifier = 0.2
 		transfer_trade_power_reasons = 5
 	}
 	

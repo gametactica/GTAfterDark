@@ -8367,7 +8367,7 @@ estate_nobles_command_of_the_military = {
 	icon = privilege_promote_purbias
 	land_share = 10
 	max_absolutism = -10
-	influence = 0.2
+	influence = 0.2 #GT
 	is_valid = {
 	}
 	can_select = {
