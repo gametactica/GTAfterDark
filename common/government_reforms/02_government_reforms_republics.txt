@@ -406,10 +406,8 @@ noble_elite_reform = {
 	}
 	modifiers = {
 		army_tradition = 0.25
+		cavalry_power = 0.10
 		max_absolutism = -20
-		nobles_influence_modifier = 0.05
-		maratha_exclusive_influence_modifier = 0.05
-		rajput_exclusive_influence_modifier = 0.05
 	}
 	duration = 8
 
@@ -1995,7 +1993,7 @@ landholders_reform = {
 	modifiers = {
 		manpower_recovery_speed = 0.1
 		build_cost = -0.1
-		governing_capacity = 100
+		enemy_core_creation = 0.2
 	}
 	ai = {
 		factor = 1
