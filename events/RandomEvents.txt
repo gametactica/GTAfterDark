@@ -971,7 +971,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		has_idea = quest_for_the_new_world
+		has_idea_group = exploration_ideas
 		num_of_ports = 1
 		NOT =  { has_country_modifier = monetary_benefits }
 		NOT =  { has_country_modifier = colonial_enthusiasm }
@@ -983,7 +983,7 @@ country_event = {
 		
 		modifier = {
 			factor = 2.0
-			has_idea = colonial_ventures
+			has_idea_group = exploration_ideas
 		}
 		modifier = {
 			factor = 2.0
@@ -4394,7 +4394,7 @@ country_event = {
 		
 		modifier = {
 			factor = 2.0
-			has_idea = merchant_adventures
+			has_idea_group = trade_ideas
 			has_government_attribute = is_merchant_republic
 		}
 		modifier = {
@@ -5304,7 +5304,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.66
-			has_idea = grand_army
+			has_idea_group = offensive_ideas
 		}
 	}
 
@@ -8690,7 +8690,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea = quest_for_the_new_world
+		has_idea_group = exploration_ideas
 		capital_scope = { continent = europe }
 		any_owned_province = {
 			is_colony = yes
@@ -9968,7 +9968,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea = quest_for_the_new_world
+		has_idea_group = exploration_ideas
 		num_of_ports = 1
 		num_of_merchants = 2
 		any_active_trade_node = {
@@ -11975,7 +11975,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 2
-			has_idea = naval_fighting_instruction
+			has_idea_group = naval_ideas
 		}
 	}
 	

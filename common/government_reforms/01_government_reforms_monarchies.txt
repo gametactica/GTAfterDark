@@ -233,6 +233,7 @@ shogunate = {
 	allow_vassal_war = yes
 	allow_vassal_alliance = yes
 	lock_level_when_selected = yes
+	can_change_primary_culture = no
 
 	modifiers = {
 		diplomats = 1
@@ -358,7 +359,7 @@ celestial_empire = {
 	}
 
 	fixed_rank = 3
-	start_territory_to_estates = 0.9
+	start_territory_to_estates = 0.5
 
 	modifiers = {
 		prestige_decay = -0.05

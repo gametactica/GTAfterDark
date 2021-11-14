@@ -22,7 +22,6 @@ NDefines.NDiplomacy.AE_DIFFERENT_RELIGION = -0.25
 NDefines.NDiplomacy.AE_SAME_OVERLORD = 0.25
 NDefines.NDiplomacy.PO_DEMAND_PROVINCES_AE = 1 				-- _DDEF_PO_DEMAND_PROVINCES_AE = 10, (Per development)
 NDefines.NDiplomacy.PO_RETURN_CORES_AE = 0.2 					-- (Per core, only applied if returning cores to vassals of winner)
-NDefines.NDiplomacy.PO_FORM_PU_AE = 0.01 							-- _DDEF_PO_FORM_PU_AE = 10, (Per development)
 NDefines.NDiplomacy.PEACE_COST_DEMAND_PROVINCE = 2					-- Demand a province (scales by province wealth, also used for annex)
 NDefines.NDiplomacy.PEACE_COST_CONCEDE_PROVINCE = 2				-- Demand colonial area province concession.
 NDefines.NDiplomacy.PEACE_COST_INDEPENDANCE = 40 					-- Peace cost for breaking free of union
