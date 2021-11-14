@@ -8,7 +8,7 @@ bonus = {
 		legitimacy = -2.5
 		devotion = -2.5
 		horde_unity = -2.5
-        min_autonomy = 50
+        republican_tradition = -1.5
     }
 }
 
@@ -20,7 +20,7 @@ bonus = {
 		legitimacy = -2
 		devotion = -2
 		horde_unity = -2
-        min_autonomy = 40
+        republican_tradition = -1.2
     }
 }
 
@@ -32,7 +32,7 @@ bonus = {
 		legitimacy = -1.5
 		devotion = -1.5
 		horde_unity = -1.5
-        min_autonomy = 30
+        republican_tradition = -0.9
     }
 }
 
@@ -44,7 +44,7 @@ bonus = {
 		legitimacy = -1
 		devotion = -1
 		horde_unity = -1
-        min_autonomy = 20
+        republican_tradition = -0.6
     }
 }
 
@@ -56,7 +56,7 @@ bonus = {
 		legitimacy = -0.5
 		devotion = -0.5
 		horde_unity = -0.5
-		min_autonomy = 10
+		republican_tradition = -0.3
     }
 }
 
@@ -69,7 +69,7 @@ bonus = {
     modifier = {
         max_absolutism = 5
 		yearly_absolutism = 0.05
-        legitimacy = 0.25
+        prestige = 0.25
 		global_autonomy = -0.005
     }
 }
@@ -81,7 +81,7 @@ bonus = {
     modifier = {
         max_absolutism = 5
         yearly_absolutism = 0.1
-        legitimacy = 0.50
+        prestige = 0.5
 		global_autonomy = -0.01
     }
 }
@@ -93,7 +93,7 @@ bonus = {
     modifier = {
         max_absolutism = 10
         yearly_absolutism = 0.15
-        legitimacy = 0.75
+        prestige = 0.75
         global_autonomy = -0.015
     }
 }
@@ -105,7 +105,7 @@ bonus = {
     modifier = {
         max_absolutism = 10
         yearly_absolutism = 0.2
-        legitimacy = 1
+        prestige = 1
         global_autonomy = -0.02
     }
 }

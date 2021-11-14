@@ -240,7 +240,7 @@ march = {
 	pays_overlord = 0.0
 	military_focus = 1.5
 	base_liberty_desire = -15.0
-	can_have_subjects_of_other_types = yes
+	can_have_subjects_of_other_types = no
 	can_be_annexed = no
 	forcelimit_to_overlord = 0.2
 	is_march = yes
@@ -282,6 +282,7 @@ daimyo_vassal = {
 	has_power_projection = yes
 	takes_diplo_slot = no
 	gives_daimyo_bonuses = yes
+	can_have_subjects_of_other_types = no
 	gets_help_with_rebels = no
 	separatists_become_subjects = yes
 	allows_taking_land_without_independence = yes
@@ -402,7 +403,7 @@ client_vassal = {
 
 	# Properties:
 	created_by_overlord = yes
-
+	can_have_subjects_of_other_types = no
 	base_liberty_desire = -25.0
 	liberty_desire_revolution = 0
 
@@ -420,7 +421,7 @@ client_march = {
 
 	# Properties:
 	created_by_overlord = yes
-
+	can_have_subjects_of_other_types = no
 	base_liberty_desire = -40.0
 	liberty_desire_revolution = 0
 
@@ -443,6 +444,7 @@ colony = {
 	eats_overlords_colonies = yes
 	has_colonial_parent = yes
 	overlord_can_attack = no
+	can_have_subjects_of_other_types = no
 	overlord_can_be_subject = yes
 	takes_diplo_slot = no
 	can_release_in_peace = no
