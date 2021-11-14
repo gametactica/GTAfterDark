@@ -115,7 +115,6 @@ propagate_religion = {
 				}
 			}
 		}
-	}
 
 	can_maintain = {
 		OR = {
@@ -129,7 +128,7 @@ propagate_religion = {
 				religious_unity = 0.75
 				}
 			}
-
+		}
 		dominant_religion = ROOT
 		if = {
 			limit = {

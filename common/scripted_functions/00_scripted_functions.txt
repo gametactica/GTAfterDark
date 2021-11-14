@@ -91,7 +91,12 @@ can_increase_stability = {
 					}
 				AND = {
 					uses_cults = yes
-					num_of_unlocked_cults = 5
+					OR = {
+					has_adopted_cult = zanahary_cult
+					has_adopted_cult = Cwezi_cult
+					has_adopted_cult = Nyame_cult
+					has_adopted_cult = The_Ancestors_cult
+						}
 					}
 				AND = {
 					religion = confucianism	
