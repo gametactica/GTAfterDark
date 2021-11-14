@@ -255,13 +255,9 @@ particularist_rebels = {
 			limit = {
 				has_rebel_faction = REB
 			}
-			add_local_autonomy = 2
+			add_local_autonomy = 3
 		}	
-		change_estate_land_share = {
-				estate = estate_burghers
-				share = 10
-			}
-		reinstate_parliament = yes
+		add_prestige = -5
 		if = {
 			limit = {
 				has_estate = estate_burghers

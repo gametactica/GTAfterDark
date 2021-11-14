@@ -231,11 +231,9 @@ noble_rebels = {
 			}
 			add_local_autonomy = 2
 		}	
-		change_estate_land_share = {
-					estate = estate_nobles
-					share = 10
-				}
-		dissolve_parliament = yes
+		add_prestige = -2
+		add_legitimacy = -2
+		add_horde_unity = -2
 		if = {
 			limit = { has_disaster = counts_feud }
 			end_disaster = counts_feud

@@ -43,8 +43,8 @@ great_power_8 = {
 }
 
 subsidies_to_enemy_of_rival = {
-	power = 25		# multiplied with percentage of income given.
-	max = 25
+	power = 50		# multiplied with percentage of income given.
+	max = 50
 }
 
 embargoing_rival = {
@@ -58,12 +58,12 @@ privateering_rival = {
 }
 
 supporting_rebels_in_rival = {
-	power = 20	 	# multiplied with percentage of income used.
-	max = 20
+	power = 50	 	# multiplied with percentage of income used.
+	max = 50
 }
 
 warned_rival = {
-	power = 5
+	power = 3
 }
 
 guarantee_neighbour_of_rival = {
@@ -71,8 +71,8 @@ guarantee_neighbour_of_rival = {
 }
 
 current_age_power_projection = {
-	power = 1
-	max = 5
+	power = 2
+	max = 10
 }
 
 is_hegemon = {
@@ -88,20 +88,14 @@ allied_to_hegemon = {
 # DYNAMIC, ADDED AND THEN DECAYED
 ##################################
 last_age_power_projection = {
-	power = 3
+	power = 1
 	yearly_decay = 1
-	max = 21
+	max = 5
 }
 
 
 insulted_rival = {
 	power = 5
-	yearly_decay = 1
-	max = 5
-}
-
-scornfully_insulted_rival = {
-	power = 10
 	yearly_decay = 1
 	max = 10
 }
@@ -148,14 +142,20 @@ vassalized_rival = {
 	max = 100
 }
 
+forced_rival_into_union = {
+	power = 0.5			# multiplied with basetax
+	yearly_decay = 1
+	max = 100
+}
+
 took_province_from_rival = {
-	power = 0.1		# multiplied with basetax
+	power = 0.5		# multiplied with basetax
 	yearly_decay = 1
 	max = 100
 }
 
 lost_province_to_rival = {
-	power = -0.1			# multiplied with basetax
+	power = -0.5			# multiplied with basetax
 	yearly_decay = 1
 	min = -100
 }
@@ -173,7 +173,7 @@ pillaged_rival_capital_state = {
 }
 
 rival_lost_province = {
-	power = 0.1			# multiplied with basetax
+	power = 0.5			# multiplied with basetax
 	yearly_decay = 1
 	max = 100
 }
@@ -209,4 +209,13 @@ lacking_rival = {
 has_rival = {
 	power = 1
 	max = 15
+}
+
+##################################
+# CUSTOM PERMANENT PP
+##################################
+
+zim_african_great_power = {
+	min = 25
+	power = 1
 }

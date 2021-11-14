@@ -254,6 +254,7 @@ nationalist_rebels = {
 				limit = {
 					has_rebel_faction = REB
 					culture = REB
+					NOT = { has_province_flag = gt_player_capital }
 				}
 				if = {
 					limit = { NOT = { is_core = REB } }
@@ -272,6 +273,7 @@ nationalist_rebels = {
 					culture = REB
 					NOT = { is_core = REB }
 					culture = REB
+					NOT = { has_province_flag = gt_player_capital }
 				}
 				add_core = REB
 			}

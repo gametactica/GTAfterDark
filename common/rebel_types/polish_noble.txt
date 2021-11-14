@@ -153,9 +153,9 @@ polish_noble_rebels = {
 			limit = {
 				has_rebel_faction = REB
 			}
-			add_local_autonomy = 25
+			add_local_autonomy = 5
 		}	
-		add_legitimacy = -50
+		add_legitimacy = -10
 		if = {
 			limit = { NOT = { government = monarchy } }
 			change_government_to_monarchy = yes

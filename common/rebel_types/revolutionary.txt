@@ -153,7 +153,7 @@ revolutionary_rebels = {
 				hidden = yes
 			}
 		}
-		add_prestige = -50
+		add_prestige = -25
 		if = {
 			limit = {
 				has_disaster = revolution

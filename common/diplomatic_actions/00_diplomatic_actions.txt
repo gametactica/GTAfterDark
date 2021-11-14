@@ -100,22 +100,6 @@ royal_marriage = {
 	effect = { add_truce_with = FROM }
 }
 
-#embargoaction = {
-#	condition = {
-#		tooltip = AE+GP_NEEDED_on_TARGET
-#		potential = {
-#			FROM =  has_global_modifier_value = {
-#						which = ae_impact
-#						value = 0.25
-#					}
-#		}
-#		allow = {
-#			FROM = { is_great_power = yes }
-#		}
-#	}
-#	effect = { collapse_nation = yes }
-#}
-
 annexationaction = {
 	condition = {
 		tooltip = ANNEX_TOO_LOW

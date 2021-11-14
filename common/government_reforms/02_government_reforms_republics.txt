@@ -408,6 +408,9 @@ noble_elite_reform = {
 		army_tradition = 0.25
 		cavalry_power = 0.10
 		max_absolutism = -20
+		nobles_influence_modifier = 0.05
+		maratha_exclusive_influence_modifier = 0.05
+		rajput_exclusive_influence_modifier = 0.05
 	}
 	duration = 8
 
@@ -1210,6 +1213,13 @@ cossacks_reform = {
 	government_abilities = {
 		cossacks_mechanic
 	}
+
+	conditional = {
+		allow = { has_dlc = "Origins" }
+		custom_attributes = {
+			has_itinerant_capital = yes
+		}
+	}
 	valid_for_new_country = yes
 
 	nation_designer_trigger = {
@@ -1725,6 +1735,7 @@ municipal_self_defense_reform = {
 	modifiers = {
 		land_forcelimit_modifier = 0.25
 		mercenary_manpower= 0.25
+	}
 	ai = {
 		factor = 1.5
 	}
@@ -1775,7 +1786,7 @@ two_chamber_reform = {
 	}
 	modifiers = {
 		stability_cost_modifier = -0.1
-		republican_tradition = 0.15
+		republican_tradition = 0.2
 	}
 	
 	ai = {
@@ -1791,7 +1802,7 @@ broaden_executive_powers_reform = {
 	allow_normal_conversion = yes
 	modifiers = {
 		max_absolutism = 10
-		harsh_treatment_cost = -0.25
+		harsh_treatment_cost = -0.3
 	}
 	ai = {
 		factor = 1
@@ -1803,7 +1814,7 @@ devolution_of_powers_reform = {
 	allow_normal_conversion = yes
 	modifiers = {
 		yearly_corruption = -0.1
-		global_spy_defence = 0.1
+		global_spy_defence = 0.15
 	}
 	ai = {
 		factor = 1.5
