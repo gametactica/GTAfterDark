@@ -32,6 +32,7 @@ on_startup = {
 		muslim_school_events.20 #Pick School
 		event_01.1 #GT
 #		flavor_fra.15000 #Make the French Revolution happen if starting in 1789
+		GT_FIX.1
 	}
 	if = {
 		limit = {
@@ -1298,6 +1299,11 @@ on_successive_emperor = {
 # FROM = Previous Emperor
 # ROOT = New Emperor 
 on_emperor_elected = {
+
+	events = {
+		GT_Scoring_HRE.1 #GT
+	}
+
 	every_elector = {
 		if = {
 			limit = {
@@ -1319,8 +1325,6 @@ on_emperor_elected = {
 	emperor = {
 		save_global_event_target_as = Emperor
 	}
-	
-	events = { GT_scoring_HRE.1 } #GT
 	
 	FROM = {
 		if = {

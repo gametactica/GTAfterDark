@@ -4873,3 +4873,8 @@ GT_GP_Emperor = {
 	opinion = 50
 	yearly_decay = 50
 }
+
+GT_FIX = {
+	opinion = 200
+	yearly_decay = 5
+}

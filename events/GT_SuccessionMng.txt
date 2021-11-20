@@ -15,13 +15,23 @@ country_event =
 		is_emperor_of_china = yes
     }
 	
+	immediate = {
+		hidden_effect = {
+			every_country = {	
+				country_event = {
+					id = GT_Scoring.1 
+					}
+				}
+			}
+		}
+		
 	option = {
 		name = "GT_SuccessionMng.1.a"
 		trigger = {
 			 total_development = 1000
-			}
-			add_stability = 1
 		}
+			add_stability = 1
+	}
 	
 	option = {
 		name = "GT_SuccessionMng.1.b"

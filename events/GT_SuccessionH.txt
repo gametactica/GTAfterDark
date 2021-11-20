@@ -12,6 +12,7 @@ country_event =
     trigger =
     {
         has_reform = steppe_horde
+		ruler_age = 15
     }
 	
 	option = {
