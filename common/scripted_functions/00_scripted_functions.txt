@@ -56,12 +56,12 @@ can_increase_stability = {
 				NOT = {stability = -2}
 				has_any_disaster = yes
 				ruler_has_personality = calm_personality
-				innovativeness = 75
+				innovativeness = 90
 				AND = {
 					uses_church_aspects = yes
 					OR = {
 						has_church_aspect = priests_may_marry_aspect
-						has_church_aspect = pacifism
+						has_church_aspect = pacifism_aspect
 						}
 					}
 				AND = {
@@ -72,7 +72,7 @@ can_increase_stability = {
 					uses_blessings = yes
 					num_of_active_blessings = 2
 					}
-				AND = { 
+				AND = {
 					uses_karma = yes
 					karma = -10
 					NOT = { karma = 10 }
@@ -90,12 +90,11 @@ can_increase_stability = {
 					has_personal_deity = ganesha
 					}
 				AND = {
-					uses_cults = yes
+					religion = shamanism
 					OR = {
 					has_adopted_cult = zanahary_cult
-					has_adopted_cult = Cwezi_cult
-					has_adopted_cult = Nyame_cult
-					has_adopted_cult = The_Ancestors_cult
+					has_adopted_cult = cwezi_cult
+					has_adopted_cult = nyame_cult
 						}
 					}
 				AND = {
@@ -115,8 +114,11 @@ can_increase_stability = {
 					piety = -10
 					NOT = { piety = 10 }
 					}
+				AND = {
+					religion = dreamtime	
+					has_adopted_cult = ancestor_story
+					}
 				religion = sikhism
-				religion = jewish_group
 			}
 				is_at_war = no
 		}

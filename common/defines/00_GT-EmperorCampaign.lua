@@ -112,8 +112,8 @@ NDefines.NCountry.MIN_HARSH_TREATMENT_COST = 5 -- Minimum harsh treatment cost
 
 NDefines.NEconomy.EDICTS_COST_INCREASE = 0.1				-- % increase on state maintenance.
 NDefines.NEconomy.EDICTS_DURATION_MONTHS = 60				-- months lastin at least.
-NDefines.NEconomy.AUTONOMY_AT_CONQUEST = 90						-- Autonomy added at conquest
-NDefines.NEconomy.AUTONOMY_AT_CONQUEST_CLAIM = 70				-- Autonomy added at conquest if you have a claim
+NDefines.NEconomy.AUTONOMY_AT_CONQUEST = 60						-- Autonomy added at conquest
+NDefines.NEconomy.AUTONOMY_AT_CONQUEST_CLAIM = 50				-- Autonomy added at conquest if you have a claim
 NDefines.NEconomy.INCREASE_AUTONOMY_MAX = 85
 NDefines.NEconomy.MISSIONARY_MAINTENANCE_DEVELOPMENT_FACTOR = 1.0	-- How much this is ncreased from development
 NDefines.NEconomy.MISSIONARY_MAINTENANCE_AUTONOMY_FACTOR = 1.0		-- How much this is ncreased from local autonomy        

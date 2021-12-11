@@ -12,9 +12,9 @@ aristocracy_ideas = {
 
 	bonus = {
 		free_leader_pool = 1
-		horde_unity = -1
-		devotion = -1
-		republican_tradition = -0.5
+		horde_unity = -0.3
+		devotion = -0.3
+		republican_tradition = -0.15
 	}
 
 	trigger = {
@@ -78,9 +78,9 @@ plutocracy_ideas = {
 
 	bonus = {
 		free_leader_pool = 1
-		legitimacy = -1
-		horde_unity = -1
-		devotion = -1
+		legitimacy = -0.3
+		horde_unity = -0.3
+		devotion = -0.3
 	}
 
 	trigger = {
@@ -136,9 +136,9 @@ horde_gov_ideas = {
 	
 	bonus = {
 		free_leader_pool = 1
-		legitimacy = -1
-		devotion = -1
-		republican_tradition = -0.5
+		legitimacy = -0.3
+		devotion = -0.3
+		republican_tradition = -0.15
 	}
 	
 	trigger = {
@@ -194,9 +194,9 @@ theocracy_gov_ideas = {
 	
 	bonus = {
 		free_leader_pool = 1
-		legitimacy = -1
-		horde_unity = -1
-		republican_tradition = -0.5
+		legitimacy = -0.3
+		horde_unity = -0.3
+		republican_tradition = -0.15
 	}
 	
 	trigger = {
