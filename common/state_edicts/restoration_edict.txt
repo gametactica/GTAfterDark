@@ -8,7 +8,7 @@ edict_restoration_edict = {
 	}
 	
 	modifier = {
-		local_monthly_devastation = -0.2
+		local_monthly_devastation = -0.25
 	}
 	
 	color = {  87 166 12  }

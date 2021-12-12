@@ -111,8 +111,8 @@ can_increase_stability = {
 					}
 				AND = { 
 					uses_piety = yes
-					piety = -10
-					NOT = { piety = 10 }
+					piety = -0.1
+					NOT = { piety = 0.1 }
 					}
 				AND = {
 					religion = dreamtime	

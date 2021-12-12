@@ -27,7 +27,10 @@ propagate_religion_policy = {
 		modifier = {
 			factor = 0
 			owner = {
-				has_country_flag = immunity_against_propogate_religion
+				OR = {
+					has_country_flag = immunity_against_propogate_religion
+					has_idea = GT_relig4
+					}
 			}
 		}
 		modifier = {
@@ -65,7 +68,9 @@ propagate_religion_policy = {
 					NOT = { mission_completed = mnd_maj_porch_of_mecca }
 				}
 				NOT = { has_country_flag = can_propagate_religion_in_abrahamic_provinces }
+				NOT = { has_idea = GT_trade4 }
 			}
+	
 		}
 		modifier = {
 			factor = 0.25

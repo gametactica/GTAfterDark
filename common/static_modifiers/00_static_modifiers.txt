@@ -614,13 +614,21 @@ negative_stability = {
 positive_mandate = {	# 100% strength at 100 mandate, 0% at 50 mandate
 	governing_capacity_modifier = 1.0
 	administrative_efficiency = 0.15
+	manpower_recovery_speed = 0.50
+	war_exhaustion = -0.10
 	ae_impact = -0.15
+	yearly_army_professionalism = 0.025
+	global_unrest = -5
 }
 
 negative_mandate = { # By default, starts at 50 mandate, 100% strength at 0 mandate
-	global_autonomy = 0.05
-	diplomatic_reputation = -5
-	core_creation = 0.5
+	stability_cost_modifier = 1
+	diplomatic_reputation = -3
+	years_of_nationalism = 5
+	garrison_size = -0.15
+	monthly_splendor = -1
+	recover_army_morale_speed = -0.25
+	embracement_cost = 0.25
 }
 
 lost_mandate_of_heaven = {
@@ -988,15 +996,15 @@ devotion = {
 # Multiplied by current meritocracy - 50
 meritocracy = {
 	global_spy_defence = 1.0
-	advisor_cost = -0.5
-	stability_cost_modifier = -0.25
-	promote_culture_cost = -0.25
-	imperial_mandate = 0.15
+	advisor_cost = 0.5
+	global_prosperity_growth = 0.2
+	promote_culture_cost = -0.3
+	imperial_mandate = 0.1
 }
 
 # Multiplied by 50 - meritocracy
 low_meritocracy = {
-	yearly_corruption = 0.2
+	global_heathen_missionary_strength = -0.02
 	all_estate_loyalty_equilibrium = -0.1
 }
 
@@ -1040,7 +1048,7 @@ root_out_corruption = {
 	reelection_cost = 1
 	devotion = -3
 	horde_unity = -1
-	meritocracy = -2
+	meritocracy = 2
 	yearly_absolutism = 1
 	yearly_revolutionary_zeal = 1
 	monthly_piety = -0.005
@@ -1905,15 +1913,15 @@ revolutionary_guard_regiment = {
 innovativeness = {
 	great_project_upgrade_cost = -0.50
 	hostile_attrition = 5
-	inflation_reduction = 0.5
+	inflation_action_cost = -0.5
 	monthly_splendor = 3
 	range = 5
 	global_trade_goods_size_modifier = 1
 	monarch_lifespan = 0.25
 	movement_speed = 0.15
 	special_unit_forcelimit = 0.5
-	shock_damage_received = -0.3
-	fire_damage_received = -0.3
+	shock_damage_received = -0.2
+	fire_damage_received = -0.2
 	light_ship_power = 1.0
 	transport_power = 1.0
 	prestige_decay = -0.05
