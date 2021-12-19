@@ -616,7 +616,7 @@ positive_mandate = {	# 100% strength at 100 mandate, 0% at 50 mandate
 	administrative_efficiency = 0.15
 	war_exhaustion = -0.10
 	ae_impact = -0.15
-	yearly_army_professionalism = 0.025
+	yearly_army_professionalism = 0.02
 	global_unrest = -5
 }
 
@@ -624,7 +624,7 @@ negative_mandate = { # By default, starts at 50 mandate, 100% strength at 0 mand
 	stability_cost_modifier = 1
 	diplomatic_reputation = -3
 	years_of_nationalism = 5
-	garrison_size = -0.25
+	garrison_size = -0.3
 	monthly_splendor = -1
 	embracement_cost = 0.25
 }
@@ -1206,7 +1206,7 @@ religious_unity = {
 	monthly_fervor_increase = 3
 	yearly_patriarch_authority = 0.03
 	monthly_piety = -0.007
-	yearly_harmony = 0.50
+	meritocracy = 1
 	
 	promote_culture_cost = -0.25
 	culture_conversion_cost = 0.25
@@ -1702,7 +1702,8 @@ native_policy_hostile = {
 ########################################
 
 high_harmony = {
-	tolerance_own = 2
+	global_unrest = -2
+	diplomatic_annexation_cost = -0.3
 	imperial_mandate = 0.1
 	religious_unity = 0.15
 }
@@ -1710,7 +1711,7 @@ high_harmony = {
 low_harmony = {
 	religious_unity = -0.5
 	legitimacy = -1
-	meritocracy = -1.50
+	meritocracy = -2
 	devotion = -1
 	republican_tradition = -1
 	horde_unity = -1

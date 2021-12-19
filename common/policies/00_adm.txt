@@ -180,7 +180,7 @@ the_espionage_act = {
 		full_idea_group = spy_ideas
 	}
 
-	liberty_desire = -10
+	reduced_liberty_desire = 10
 	diplomats = 1
 	
 	ai_will_do = {
