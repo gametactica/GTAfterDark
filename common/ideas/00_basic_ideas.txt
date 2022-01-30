@@ -623,7 +623,7 @@ trade_ideas = {
 	
 	bonus = {
 		diplomatic_upkeep = 1
-		yearly_army_professionalism = -0.01
+		yearly_army_professionalism = -0.005
 	}
 	
 	trigger = {

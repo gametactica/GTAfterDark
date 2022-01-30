@@ -30,8 +30,9 @@ propagate_religion_policy = {
 				OR = {
 					has_country_flag = immunity_against_propogate_religion
 					has_idea = GT_relig4
+						}
 					}
-			}
+			has_owner_religion = yes
 		}
 		modifier = {
 			factor = 0
