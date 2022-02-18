@@ -104,6 +104,7 @@ cb_insult = {
 		po_demand_provinces
 		po_become_vassal
 		po_subjugate_vassal
+		po_return_cores
 	}
 	
 }
@@ -322,6 +323,7 @@ cb_humiliate = {
 		po_demand_provinces
 		po_become_vassal
 		po_subjugate_vassal
+		po_return_cores
 	}
 
 	war_goal = humiliate
@@ -1297,6 +1299,7 @@ cb_force_tributary = {
 		po_demand_provinces
 		po_become_vassal
 		po_subjugate_vassal
+		po_return_cores
 	}
 }
 
@@ -1313,6 +1316,7 @@ cb_force_tributary_mission = {
 		po_demand_provinces
 		po_become_vassal
 		po_subjugate_vassal
+		po_return_cores
 	}
 }
 

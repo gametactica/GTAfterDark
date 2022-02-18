@@ -1,10 +1,10 @@
-namespace = GT_Scoring
+namespace = GT_Scoring_MoH
 
 country_event =
 {
-    id = GT_Scoring.1
-    title = GT_Scoring.1.t
-    desc = GT_Scoring.1.d
+    id = GT_Scoring_MoH.1
+    title = GT_Scoring_MoH.1.t
+    desc = GT_Scoring_MoH.1.d
     picture = ECONOMY_eventPicture
 
     is_triggered_only = yes
@@ -16,6 +16,6 @@ country_event =
     
     option =
     {
-        name = GT_Scoring.1.a
+        name = GT_Scoring_MoH.1.a
     }
 }

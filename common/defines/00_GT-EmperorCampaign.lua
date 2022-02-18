@@ -81,6 +81,7 @@ NDefines.NCountry.PS_DEMAND_NON_WARGOAL_PEACE = 5
 NDefines.NCountry.PS_MAKE_PROVINCE_CORE = 15
 NDefines.NCountry.PS_MOVE_CAPITAL_EXTRA = 100						-- Per 100 country development
 NDefines.NCountry.PS_ATTACK_NATIVES = 10
+NDefines.NCountry.PS_CHANGE_CULTURE = 20
 NDefines.NCountry.PS_REDUCE_WAREXHAUSTION = 125
 NDefines.NCountry.PS_SET_PRIMARY_CULTURE = 300
 NDefines.NCountry.PS_ADD_ACCEPTED_CULTURE = 600
@@ -112,8 +113,6 @@ NDefines.NCountry.MIN_HARSH_TREATMENT_COST = 5 -- Minimum harsh treatment cost
 
 NDefines.NEconomy.EDICTS_COST_INCREASE = 0.1				-- % increase on state maintenance.
 NDefines.NEconomy.EDICTS_DURATION_MONTHS = 60				-- months lastin at least.
-NDefines.NEconomy.AUTONOMY_AT_CONQUEST = 60						-- Autonomy added at conquest
-NDefines.NEconomy.AUTONOMY_AT_CONQUEST_CLAIM = 50				-- Autonomy added at conquest if you have a claim
 NDefines.NEconomy.INCREASE_AUTONOMY_MAX = 85
 NDefines.NEconomy.MISSIONARY_MAINTENANCE_DEVELOPMENT_FACTOR = 1.0	-- How much this is ncreased from development
 NDefines.NEconomy.MISSIONARY_MAINTENANCE_AUTONOMY_FACTOR = 1.0		-- How much this is ncreased from local autonomy        
@@ -122,7 +121,8 @@ NDefines.NEconomy.MISSIONARY_MAINTENANCE_DEVELOPMENT_CAP = 50		-- Where dev will
 
 --NMilitary
 --NDefines.NMilitary.
-
+NDefines.NMilitary.SLACKEN_AP_DROP = 0.10
+NDefines.NMilitary.SLACKEN_MANPOWER_INCREASE = 1.0
 NDefines.NMilitary.FORT_DEVASTATION_IMPACT = -1					-- multiplied by fortlevel/max fortlevel in area per year.
 NDefines.NMilitary.MOVE_LOCK_PERCENTAGE = 0.25						-- Unit movement is locked after this percentage of progress
 NDefines.NMilitary.SIEGE_DISEASE_IMPACT = 0.15						-- Fraction of besieging soldiers lost in a disease outbraek

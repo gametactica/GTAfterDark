@@ -824,8 +824,9 @@ hire_privateers = {
 
 counter_reformation = {
 	global_heretic_missionary_strength = 0.03
-	papal_influence = 0.5
-	missionaries = 2
+	papal_influence = 0.25
+	missionaries = 1
+	yearly_corruption = -0.2
 	tolerance_heretic = -2
 	technology_cost = 0.05
 	idea_cost = 0.05
@@ -4076,7 +4077,7 @@ eth_mount_geshen = {
 }
 
 eth_negusa_nagast_issues = {
-	global_autonomy = 0.2
+	global_autonomy = 0.05
 }
 
 #Bahmanis
@@ -9547,7 +9548,7 @@ ghazis_from_abroad = {
 sufi_shrine = {
 	local_unrest = -2
 	tax_income = 2
-	local_autonomy = 0.1
+	local_autonomy = 0.03
 }
 
 sought_sufi_sheikh = {

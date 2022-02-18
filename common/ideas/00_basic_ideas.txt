@@ -31,7 +31,7 @@ aristocracy_ideas = {
 	GT_arist1 = {
 		cavalry_power = 0.15
 		leader_land_shock = 1
-		max_absolutism = 5
+		max_absolutism = 10
 	}
 	GT_arist2 = {
 		mil_tech_cost_modifier = -0.1
@@ -160,7 +160,7 @@ horde_gov_ideas = {
 		horde_unity = 0.2
 	}
 	GT_horde3 = {
-		religious_unity = 0.25
+		religious_unity = 0.1
 		reduced_liberty_desire = 10
 		horde_unity = 0.2
 	}
@@ -700,7 +700,6 @@ economic_ideas = {
 		global_trade_goods_size_modifier = 0.01
 	}
 	GT_econ4 = {
-		build_cost = -0.05
 		build_time = -0.25
 		global_trade_goods_size_modifier = 0.01
 	}
@@ -714,7 +713,7 @@ economic_ideas = {
 		global_trade_goods_size_modifier = 0.01
 	}
 	GT_econ7 = {
-		yearly_corruption = -0.2
+		yearly_corruption = -0.15
  	}
 
 	ai_will_do = {

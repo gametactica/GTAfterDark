@@ -350,7 +350,7 @@ native_trading_with_foreigners_reform = {
 	}
 
 	modifiers = {
-		core_creation = -0.1
+		merchants = 1
 		global_trade_goods_size_modifier = 0.1
 	}
 
