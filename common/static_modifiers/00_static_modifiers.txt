@@ -1329,6 +1329,8 @@ absolutism = {
 	governing_capacity_modifier = 0.25
 	core_decay_on_your_own = -0.5
 	monthly_heir_claim_increase = 0.1
+	global_tax_modifier = 0.15
+	global_unrest = 3
 }
 
 low_army_professionalism = {
@@ -1336,16 +1338,20 @@ low_army_professionalism = {
 	mercenary_manpower = 0.30
 	mercenary_discipline = 0.05
 	land_maintenance_modifier = -0.15
+	war_exhaustion_cost = 0.25
+	land_attrition = 0.10
 }
 
 high_army_professionalism = {
 	fire_damage = 0.1
+	infantry_power = 0.1
 	shock_damage = 0.1
-	siege_ability = 0.2
-	army_tradition_decay = -0.01
-	garrison_size = 0.10
+	siege_ability = 0.1
+	discipline = 0.03
 	drill_decay_modifier = -0.5
-	war_exhaustion_cost = -0.25
+	drill_gain_modifier = 0.5
+	global_manpower_modifier = -0.25
+	land_forcelimit_modifier = -0.25
 }
 
 streltsy_modifier = {
