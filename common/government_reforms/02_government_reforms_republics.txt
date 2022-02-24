@@ -274,6 +274,7 @@ venice_merchants_reform = {
 		merchants = 1
 		galley_power = 0.1
 		max_absolutism = -50
+		num_accepted_cultures = 1
 		transfer_trade_power_reasons = 10
 	}
 	valid_for_nation_designer = yes

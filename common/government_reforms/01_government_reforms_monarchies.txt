@@ -162,6 +162,8 @@ grand_duchy_reform = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 10
 	modifiers = {
+		num_accepted_cultures = 1
+		promote_culture_cost = -0.1
 		governing_capacity = 100
 	}
 }
@@ -463,6 +465,7 @@ english_monarchy = {
 	modifiers = {
 		governing_capacity = 50
 		legitimacy = 0.5
+		num_accepted_cultures = 1
 		global_unrest = -1
 		max_absolutism = -30
 	}
@@ -508,6 +511,7 @@ ottoman_government = {
 	modifiers = {
 		unjustified_demands = -0.1
 		legitimacy = 0.5
+		num_accepted_cultures = 1
 		administrative_efficiency = 0.1
 		governing_capacity_modifier = 0.1
 	}
@@ -707,13 +711,13 @@ mamluk_government = {
 	}
 
 	modifiers = {
-		num_accepted_cultures = 3
+		num_accepted_cultures = 2
 		#-50% cost to promote cultures
 		global_autonomy = -0.025
 		monarch_admin_power = 2
 		same_culture_advisor_cost = -0.25
-		promote_culture_cost = -0.5
-		governing_capacity = 50
+		promote_culture_cost = -0.25
+		governing_capacity = 150
 		nobles_influence_modifier = 0.1
 	}
 

@@ -1217,13 +1217,12 @@ religious_unity = {
 	
 	church_influence_modifier = 0.2
 	brahmins_hindu_influence_modifier = 0.2
-	dhimmi_influence_modifier = 0.2
+	dhimmi_loyalty_modifier = 0.2
 }
 
 inverse_religious_unity = {
 	monthly_karma = 0.007
 	church_power_modifier = -1
-	#jewish_placeholder
 	
 	expel_minorities_cost = -0.5
 	manpower_in_true_faith_provinces = 0.5
@@ -1234,7 +1233,7 @@ inverse_religious_unity = {
 	
 	church_loyalty_modifier = 0.2
 	brahmins_hindu_loyalty_modifier = 0.2
-	dhimmi_loyalty_modifier = 0.2
+	dhimmi_influence_modifier = 0.2
 }
 
 total_occupation = {

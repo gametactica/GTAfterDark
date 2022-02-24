@@ -1691,7 +1691,7 @@ centralization_modifier = {
 }
 
 decentralization_modifier = {
-	global_autonomy = 0.05
+	global_autonomy = 0.1
 	global_unrest = -1
 }
 
