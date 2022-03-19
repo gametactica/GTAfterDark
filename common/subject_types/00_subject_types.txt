@@ -619,10 +619,14 @@ tributary_state = {
 			religion_group = eastern
 			technology_group = chinese
 			technology_group = polynesian_tech
-			government_rank = 3
+			AND = { 
+				government_rank = 3
+				is_part_of_hre = no
+				}
 			AND = {
 				has_idea = GT_influ7
 				government_rank = 2
+				is_part_of_hre = no
 			}
 		}
 	}
