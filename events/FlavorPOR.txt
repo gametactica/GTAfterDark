@@ -230,7 +230,7 @@ country_event = {
 	}
 }
 
-# King Sebastião's Expedition to North Africa
+# King Sebastiï¿½o's Expedition to North Africa
 country_event = {
 	id = flavor_por.3272
 	title = "flavor_por.EVTNAME3272"
@@ -448,7 +448,7 @@ country_event = {
 		add_dip_power = 100
 		define_advisor = {
 			type = statesman
-			name = "Dom Luís de Meneses"
+			name = "Dom Luï¿½s de Meneses"
 			culture = portugese
 			discount = yes
 			skill = 2
@@ -480,6 +480,7 @@ country_event = {
 	option = {		# 
 		name = "flavor_por.EVTOPTA3278"
 		227 = {
+			add_devastation = 100
 			add_province_modifier = {
 				name = earthquake
 				duration = 3650
@@ -488,7 +489,7 @@ country_event = {
 	}
 }
 
-# Marquês de Pombal
+# Marquï¿½s de Pombal
 country_event = {
 	id = flavor_por.3279
 	title = "flavor_por.EVTNAME3279"
@@ -567,7 +568,7 @@ country_event = {
 	}
 }
 
-# The Expulsion of Marquês de Pombal
+# The Expulsion of Marquï¿½s de Pombal
 country_event = {
 	id = flavor_por.3281
 	title = "flavor_por.EVTNAME3281"
@@ -605,7 +606,7 @@ country_event = {
 			duration = -1
 		}
 	}
-	option = {		# Let the 'Great Marquês' rule
+	option = {		# Let the 'Great Marquï¿½s' rule
 		name = "flavor_por.EVTOPTB3281"
 		ai_chance = { factor = 25 }
 		every_owned_province = {
@@ -708,7 +709,7 @@ country_event = {
 		set_global_flag = columbus_happened
 		add_years_of_income = -0.10
 		define_explorer = {
-			name = "Cristóvão Colombo"
+			name = "Cristï¿½vï¿½o Colombo"
 			fire = 2
 			shock = 2
 			manuever = 6
@@ -982,7 +983,7 @@ country_event = {
 	}
 }
 
-# The Tower of Belém
+# The Tower of Belï¿½m
 country_event = {
 	id = flavor_por.9
 	title = "flavor_por.EVTNAME9"
@@ -1048,7 +1049,7 @@ country_event = {
 	}
 }
 
-# Jerónimos Monastery
+# Jerï¿½nimos Monastery
 country_event = {
 	id = flavor_por.10
 	title = "flavor_por.EVTNAME10"

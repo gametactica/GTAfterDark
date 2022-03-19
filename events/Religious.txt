@@ -49,7 +49,7 @@ country_event = {
 	}
 }
 
-# The Counter-Reformation Ends (Liberté, égalité, fraternité)
+# The Counter-Reformation Ends (Libertï¿½, ï¿½galitï¿½, fraternitï¿½)
 country_event = {
 	id = 2052
 	title = "EVTNAME2050"

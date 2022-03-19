@@ -32,6 +32,7 @@ country_event = {
 					is_neighbor_of = ROOT
 					NOT = { is_in_war = { attacker_leader = ARA } }
 					NOT = { is_in_war = { defender_leader = ARA } }
+					NOT = { is_in_war = { casus_belli = cb_independence_war } }
 				}
 				num_of_cities = 25
 			}
@@ -48,6 +49,7 @@ country_event = {
 					is_neighbor_of = ROOT
 					NOT = { is_in_war = { attacker_leader = CAS } }
 					NOT = { is_in_war = { defender_leader = CAS } }
+					NOT = { is_in_war = { casus_belli = cb_independence_war } }
 				}
 				num_of_cities = 16
 			}
@@ -1302,7 +1304,7 @@ country_event = {
 	}
 }
 
-# José Monino
+# Josï¿½ Monino
 country_event = {
 	id = flavor_spa.3094
 	title = "flavor_spa.EVTNAME3094"
@@ -1333,7 +1335,7 @@ country_event = {
 		}
 		define_advisor = {
 			type = statesman
-			name = "José Monino"
+			name = "Josï¿½ Monino"
 			culture = andalucian
 			discount = yes
 			skill = 3
@@ -2048,7 +2050,7 @@ country_event = {
 			}
 			spawn_rebels = {
 				type = nationalist_rebels
-				leader = "Abén Umayyad"
+				leader = "Abï¿½n Umayyad"
 				friend = GRA
 				size = 2
 				win = yes

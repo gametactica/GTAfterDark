@@ -8,7 +8,7 @@ NDefines.NDiplomacy.TRADE_LEAGUE_MIN_PRESTIGE_NEW_LEADER = 25		-- Minimum requir
 NDefines.NDiplomacy.TRADE_LEAGUE_BREAK_OPINION = -15				-- AI will leave a Trade League if their opinion of you falls below this value.
 NDefines.NDiplomacy.DISHONORABLE_PEACE_MONTHS = 36					-- See DISHONORABLE_PEACE_WARSCORE. Set to 0 to entirely disable the feature.
 NDefines.NDiplomacy.VASSALIZE_BASE_DEVELOPMENT_CAP = 1000 			-- Countries with more total development than this cannot be vassalized
-NDefines.NDiplomacy.MARCH_BASE_DEVELOPMENT_CAP = 250 				-- Countries with more total development than this cannot be made into a march
+NDefines.NDiplomacy.MARCH_BASE_DEVELOPMENT_CAP = 300 				-- Countries with more total development than this cannot be made into a march
 NDefines.NDiplomacy.GREAT_PROJECT_WARSCORE_COST_MODIFIER = 0.1
 NDefines.NDiplomacy.WARNING_YEARS = 10								-- Years before warning expire
 NDefines.NDiplomacy.ANNUL_TREATIES_YEARS = 20						-- Years before annul treaties expire
@@ -84,7 +84,7 @@ NDefines.NCountry.PS_ATTACK_NATIVES = 10
 NDefines.NCountry.PS_CHANGE_CULTURE = 20
 NDefines.NCountry.PS_REDUCE_WAREXHAUSTION = 125
 NDefines.NCountry.PS_SET_PRIMARY_CULTURE = 300
-NDefines.NCountry.PS_ADD_ACCEPTED_CULTURE = 600
+NDefines.NCountry.PS_ADD_ACCEPTED_CULTURE = 700
 NDefines.NCountry.PS_REMOVE_ACCEPTED_CULTURE = 100
 NDefines.NCountry.PS_REMOVE_ACCEPTED_CULTURE_UNREST_DURATION = 10
 NDefines.NCountry.PS_STRENGTHEN_GOVERNMENT = 200
@@ -114,6 +114,7 @@ NDefines.NCountry.MIN_HARSH_TREATMENT_COST = 5 -- Minimum harsh treatment cost
 NDefines.NEconomy.EDICTS_COST_INCREASE = 0.1				-- % increase on state maintenance.
 NDefines.NEconomy.EDICTS_DURATION_MONTHS = 60				-- months lastin at least.
 NDefines.NEconomy.INCREASE_AUTONOMY_MAX = 85
+NDefines.NEconomy.MISSIONARY_MAINTENANCE_FACTOR = 0.5
 NDefines.NEconomy.MISSIONARY_MAINTENANCE_DEVELOPMENT_FACTOR = 1.0	-- How much this is ncreased from development
 NDefines.NEconomy.MISSIONARY_MAINTENANCE_AUTONOMY_FACTOR = 1.0		-- How much this is ncreased from local autonomy        
 NDefines.NEconomy.MISSIONARY_MAINTENANCE_DEVELOPMENT_CAP = 50		-- Where dev will get capped by the system for calculations.
@@ -150,6 +151,15 @@ NDefines.NAI.MAX_CAV_PERCENTAGE = 30 								-- For modding, actual ratio is dyn
 --NDefines.NReligion.
 
 NDefines.NReligion.CHANGE_SECONDARY_PRESTIGE_HIT = -25
+
+--NGovernment
+--NDefines.NGovernment.
+
+NDefines.NGovernment.GOVERNMENT_REFORM_COST_CENTRALIZE_STATE = 5.0
+NDefines.NGovernment.CENTRALIZE_STATE_ADM_COST = 200
+NDefines.NGovernment.EXPAND_INFRASTRUCTURE_ADM_COST = 200
+NDefines.NGovernment.CENTRALIZE_STATE_YEARS = 10
+
 
 
 

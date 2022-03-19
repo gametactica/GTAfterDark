@@ -10,11 +10,14 @@ theocracy_mechanic = {
 	can_customise_heir = no
 	basic_reform = yes # = invisible/does not take up a slot
 	valid_for_nation_designer = no
+	custom_attributes = {
+		enables_divine_idea_group = yes
+		enables_aristocratic_idea_group = no
+	}
 
 	modifiers = {
 		brahmins_hindu_influence_modifier = 0.1
-		brahmins_muslim_influence_modifier = 0.1
-		brahmins_other_influence_modifier = 0.1
+		church_loyalty_modifier = 0.1
 		church_influence_modifier = 0.05
 		tolerance_own = 2
 		tolerance_heathen = -2
@@ -200,7 +203,7 @@ kingdom_of_god_reform = {
 	modifiers = {
 		global_manpower_modifier = 0.1
 		missionaries = 1
-		devotion = 1
+		devotion = 0.5
 		appoint_cardinal_cost = -0.3
 		papal_influence_from_cardinals = 1.0
 	}
@@ -487,7 +490,7 @@ clerical_commission_reform = {
 	modifiers = {
 		accept_vassalization_reasons = 5
 		diplomatic_upkeep = 1
-		inflation_reduction = 0.1
+		inflation_reduction = 0.05
 	}
 	
 	potential = {
@@ -512,8 +515,8 @@ divine_guidance_reform = {
 	icon = "divine_guidance_reform"
 	allow_normal_conversion = yes
 	modifiers = {
-		devotion = 0.50
-		administrative_efficiency = 0.05
+		global_spy_defence = 0.15
+		administrative_efficiency = 0.03
 		innovativeness_gain = 0.25
 	}
 	

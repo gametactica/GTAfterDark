@@ -12,14 +12,11 @@ aristocracy_ideas = {
 
 	bonus = {
 		free_leader_pool = 1
-		horde_unity = -0.3
-		devotion = -0.3
-		republican_tradition = -0.15
 	}
 
 	trigger = {
 		has_government_attribute = enables_aristocratic_idea_group
-		primitives = no
+		#primitives = no
 		NOT = { government = theocracy }
 		NOT = { has_reform = steppe_horde }
 		NOT = { has_idea_group = plutocracy_ideas }
@@ -49,7 +46,7 @@ aristocracy_ideas = {
 	}
 	GT_arist5 = {
 		army_tradition_decay = -0.01
-		yearly_absolutism = 1
+		yearly_absolutism = 0.5
 		cavalry_shock = 0.2
 	}
 	GT_arist6 = {
@@ -78,9 +75,6 @@ plutocracy_ideas = {
 
 	bonus = {
 		free_leader_pool = 1
-		legitimacy = -0.3
-		horde_unity = -0.3
-		devotion = -0.3
 	}
 
 	trigger = {
@@ -101,8 +95,8 @@ plutocracy_ideas = {
 		reelection_cost = -0.02
 	}
 	GT_pluto3 = {
-		global_institution_spread = 0.1
-		naval_tradition_from_trade = 0.1
+		global_institution_spread = 0.15
+		naval_tradition_from_trade = 0.25
 		reelection_cost = -0.02
 	}
 	GT_pluto4 = {
@@ -136,13 +130,11 @@ horde_gov_ideas = {
 	
 	bonus = {
 		free_leader_pool = 1
-		legitimacy = -0.3
-		devotion = -0.3
-		republican_tradition = -0.15
 	}
 	
 	trigger = {
-		has_reform = steppe_horde
+		#has_reform = steppe_horde
+		has_government_attribute = enables_horde_idea_group
 		NOT = { has_idea_group = aristocracy_ideas }
 		NOT = { has_idea_group = theocracy_gov_ideas }
 		NOT = { has_idea_group = plutocracy_ideas }
@@ -194,13 +186,11 @@ theocracy_gov_ideas = {
 	
 	bonus = {
 		free_leader_pool = 1
-		legitimacy = -0.3
-		horde_unity = -0.3
-		republican_tradition = -0.15
 	}
 	
 	trigger = {
-		government = theocracy
+		#government = theocracy
+		has_government_attribute = enables_divine_idea_group
 		NOT = { has_idea_group = plutocracy_ideas }
 		NOT = { has_idea_group = indigenous_ideas }
 		NOT = { has_idea_group = horde_gov_ideas }
@@ -249,15 +239,15 @@ indigenous_ideas = {
 
 	bonus = {
 		free_leader_pool = 1
-		global_institution_spread = -0.2
 	}
 
 	trigger = {
 		OR = {
-			primitives = yes
-				AND = {
-					is_tribal = yes
-					is_nomad = no
+			#primitives = yes
+		has_government_attribute = enables_natives_idea_group
+		AND = {
+				is_tribal = yes
+				is_nomad = no
 				}
 		}
 		NOT = { has_idea_group = plutocracy_ideas }
@@ -312,11 +302,10 @@ innovativeness_ideas = {
 
 	bonus = {
 		governing_capacity = 150
-		manpower_in_true_faith_provinces= -0.10
 	}
 
 	GT_innov1 = {
-		innovativeness_gain = 0.5
+		innovativeness_gain = 0.66
 	}
 	GT_innov2 = {
 		prestige_decay = -0.01
@@ -324,7 +313,7 @@ innovativeness_ideas = {
 		idea_cost = -0.02
 	}
 	GT_innov3 = {
-		technology_cost = -0.05
+		technology_cost = -0.10
 		idea_cost = -0.02
 	}
 	GT_innov4 = {
@@ -368,8 +357,6 @@ religious_ideas = {
 
 	bonus = {
 		governing_capacity = 150
-		tolerance_heretic = -1
-		tolerance_heathen = -1
 	}
 
 	GT_relig1 = {
@@ -424,7 +411,6 @@ spy_ideas = {
 
 	bonus = {
 		diplomatic_upkeep = 1
-		diplomatic_reputation = -1
 	}
 
 	GT_espio1 = {
@@ -440,7 +426,7 @@ spy_ideas = {
 
 	GT_espio3 = {
 		yearly_corruption = -0.1
-		global_spy_defence = 0.1
+		global_spy_defence = 0.15
 		claim_duration = 0.1
 	}
 
@@ -475,7 +461,6 @@ diplomatic_ideas = {
 	category = DIP
 	bonus = {
 		diplomatic_upkeep = 1
-		unjustified_demands = 0.3
 	}
 
 	GT_diplo1 = {
@@ -527,7 +512,6 @@ offensive_ideas = {
 
 	bonus = {
 		free_leader_pool = 1
-		war_exhaustion_cost = 0.5
 	}
 
 	GT_offense1 = {
@@ -575,12 +559,11 @@ defensive_ideas = {
 
 	bonus = {
 		free_leader_pool = 1
-		ae_impact = 0.33
 	}
 
 	GT_defense1 = {
-		drill_gain_modifier = 1
-		drill_decay_modifier = -0.2
+		drill_gain_modifier = 0.50
+		drill_decay_modifier = -0.25
 		yearly_army_professionalism = 0.005
 	}
 	GT_defense2 = {
@@ -598,7 +581,7 @@ defensive_ideas = {
 		defensiveness = 0.1
 	}
 	GT_defense5 = {
-		global_spy_defence = 0.25
+		global_spy_defence = 0.10
 		own_coast_naval_combat_bonus = 0.5
 		defensiveness = 0.1
 	}
@@ -623,7 +606,6 @@ trade_ideas = {
 	
 	bonus = {
 		diplomatic_upkeep = 1
-		yearly_army_professionalism = -0.005
 	}
 	
 	trigger = {
@@ -683,7 +665,6 @@ economic_ideas = {
 
 	bonus = {
 		governing_capacity = 150
-		prestige_decay = 0.02
 	}
 
 	GT_econ1 = {
@@ -701,6 +682,7 @@ economic_ideas = {
 	}
 	GT_econ4 = {
 		build_time = -0.25
+		development_cost = -0.05
 		global_trade_goods_size_modifier = 0.01
 	}
 	GT_econ5 = {
@@ -748,7 +730,6 @@ exploration_ideas = {
 
 	bonus = {
 		diplomatic_upkeep = 1
-		global_autonomy = 0.01
 	}
 
 	GT_explore1	= {
@@ -949,36 +930,36 @@ maritime_ideas = {
 
 	bonus = {
 		diplomatic_upkeep = 1
-		caravan_power = -0.15
 	}
 
 	GT_marit1 = {
 		ship_power_propagation = 0.3
-		naval_tradition_from_trade = 1.0
+		naval_tradition_from_trade = 0.75
 	}
 	GT_marit2 = {
-		global_sailors_modifier = 0.15
+		global_sailors_modifier = 0.2
 		merchants = 1
-		sailor_maintenance_modifer = -0.1
+		siege_blockade_progress = 0.2
 	}
 	GT_marit3 = {
 		own_coast_naval_combat_bonus = 1.0
 		center_of_trade_upgrade_cost = -0.25
-		sailor_maintenance_modifer = -0.1
+		siege_blockade_progress = 0.2
 	}
 	GT_marit4 = {
-		naval_forcelimit_modifier = 0.1
-		sailor_maintenance_modifer = -0.1
+		galley_power = 0.15
+		allowed_marine_fraction = 0.05
+		siege_blockade_progress = 0.2
 	}
 	GT_marit5 = {
 		global_ship_recruit_speed = -0.25
 		global_ship_repair = 0.15
-		sailor_maintenance_modifer = -0.1
+		siege_blockade_progress = 0.2
 	}
 	GT_marit6 = {
 		leader_naval_shock = 1
 		improve_relation_modifier = 0.1
-		sailor_maintenance_modifer = -0.1
+		siege_blockade_progress = 0.2
 	}
 	GT_marit7 = {
 		global_ship_cost = -0.15
@@ -1027,7 +1008,6 @@ quality_ideas = {
 
 	bonus = {
 		free_leader_pool = 1
-		land_maintenance_modifier = 0.15
 	}
 
 	GT_qual1 = {
@@ -1049,8 +1029,8 @@ quality_ideas = {
 		reinforce_speed = 0.03
 	}
 	GT_qual5 = {
-		galley_power = 0.1
-		heavy_ship_power = 0.1
+		global_naval_engagement_modifier = 0.1
+		navy_tradition = 0.50
 		reinforce_speed = 0.03
 	}
 	GT_qual6 = {
@@ -1073,7 +1053,6 @@ quantity_ideas = {
 
 	bonus = {
 		free_leader_pool = 1
-		mercenary_manpower= -0.33
 	}
 	GT_quan1 = {
 		land_forcelimit = 5
@@ -1086,6 +1065,7 @@ quantity_ideas = {
 	}
 	GT_quan3 = {
 		loot_amount = 0.5
+		advisor_cost = -0.1
 		reserves_organisation = 0.02
 	}
 	GT_quan4 = {
@@ -1100,6 +1080,7 @@ quantity_ideas = {
 	}
 	GT_quan6 = {
 		global_manpower_modifier = 0.25
+		advisor_pool = 1
 		reserves_organisation = 0.02
 	}
 	GT_quan7 = {
@@ -1118,7 +1099,6 @@ expansion_ideas = {
 
 	bonus = {
  		governing_capacity = 150
-		fabricate_claims_cost = 0.25
 	}
 
 	GT_expand1 = {
@@ -1127,25 +1107,28 @@ expansion_ideas = {
 	}
 	GT_expand2 = {
 		merchants = 1
-		governing_capacity_modifier = 0.03
+		naval_tradition_from_battle = 0.25
+		mercantilism_cost = -0.05
 	}
 	GT_expand3 = {
-		global_colonial_growth = 10
-		governing_capacity_modifier = 0.03
+		global_colonial_growth = 20
+		transport_cost = -0.2
+		mercantilism_cost = -0.05
 	}
 	GT_expand4 = {
 		missionaries = 1
 		native_assimilation = 0.25
-		governing_capacity_modifier = 0.03
+		mercantilism_cost = -0.05
 	}
 	GT_expand5 = {
 		diplomats = 1
 		global_tariffs = 0.1
-		governing_capacity_modifier = 0.03
+		mercantilism_cost = -0.05
 	}
 	GT_expand6  = {
-		colonist_placement_chance = 0.05
-		governing_capacity_modifier = 0.03
+		colonist_placement_chance = 0.10
+		promote_culture_cost = -0.1
+		mercantilism_cost = -0.05
 	}
 	GT_expand7  = {
 		trade_company_investment_cost = -0.25
@@ -1205,7 +1188,6 @@ administrative_ideas = {
 
 	bonus = {
 		governing_capacity = 150
-		harsh_treatment_cost = 0.2
 	}
 
 	GT_admin1 = {
@@ -1253,7 +1235,6 @@ humanist_ideas = {
 
 	bonus = {
 		governing_capacity = 150
-		culture_conversion_cost = 0.33
 	}
 
 	GT_human1 = {
@@ -1266,7 +1247,7 @@ humanist_ideas = {
 		num_accepted_cultures = 1
 	}
 	GT_human3 = {
-		religious_unity = 0.25
+		religious_unity = 0.15
 		yearly_harmony = 0.25
 		num_accepted_cultures = 1
 	}
@@ -1301,7 +1282,6 @@ influence_ideas = {
 
 	bonus = {
 		diplomatic_upkeep = 1
-		diplomatic_annexation_cost = 0.33
 	}
 
 	GT_influ1 = {
@@ -1369,7 +1349,6 @@ naval_ideas = {
 
 	bonus = {
 		free_leader_pool = 1
-		naval_maintenance_modifier = 0.15
 	}
 
 	GT_naval1 = {
@@ -1377,33 +1356,34 @@ naval_ideas = {
 		naval_forcelimit_modifier = 0.2
 	}
 	GT_naval2 = {
-		siege_blockade_progress = 1
+		rebel_support_efficiency = 0.25
 		blockade_efficiency = 0.25
-		global_naval_engagement_modifier = 0.02
+		sailor_maintenance_modifer = -0.03
 	}
 	GT_naval3 = {
 		leader_naval_fire = 1
 		recover_navy_morale_speed = 0.25
-		global_naval_engagement_modifier = 0.02
+		sailor_maintenance_modifer = -0.03
 	}
 	GT_naval4 = {
-		prestige_from_naval = 0.1
-		prestige = 1
-		global_naval_engagement_modifier = 0.02
+		prestige_from_naval = 0.25
+		prestige = 0.50
+		sailor_maintenance_modifer = -0.03
 	}
 	GT_naval5 = {
 		admiral_skill_gain_modifier = 0.25
 		sunk_ship_morale_hit_recieved = -0.15
-		global_naval_engagement_modifier = 0.02
+		sailor_maintenance_modifer = -0.03
 	}
 	GT_naval6 = {
-		ship_durability = 0.1
-		naval_attrition = -0.1
-		global_naval_engagement_modifier = 0.02
+		ship_durability = 0.05
+		naval_morale = 0.05
+		sailor_maintenance_modifer = -0.03
 	}
 	GT_naval7 = {
-		war_exhaustion = -0.15
-		allowed_marine_fraction = 0.2
+		war_exhaustion = -0.05
+		heavy_ship_power = 0.15
+		allowed_marine_fraction = 0.15
 	}
 
 	ai_will_do = {
@@ -1502,7 +1482,6 @@ GT_pirate0 = {
 
 	bonus = {
 		diplomatic_upkeep = 1
-		monarch_lifespan = -0.1
 	}
 	
 	trigger = {
@@ -1526,7 +1505,7 @@ GT_pirate0 = {
 	GT_pirate1 = {
 		reduced_stab_impacts = yes
 		privateer_efficiency = 0.5
-		allowed_marine_fraction = 0.15
+		allowed_marine_fraction = 0.10
 	}
 
 	GT_pirate2 = {

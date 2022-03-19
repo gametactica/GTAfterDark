@@ -70,7 +70,7 @@ can_increase_stability = {
 					}
 				AND = {
 					uses_blessings = yes
-					num_of_active_blessings = 2
+					num_of_active_blessings = 3
 					}
 				AND = {
 					uses_karma = yes
@@ -130,10 +130,13 @@ can_add_province_to_hre = {
 	
 }
 
+#ROOT = province, FROM = country
 can_remove_province_from_hre = {
 	condition = {
 		potential = {
-			ai = yes
+			owner = {
+				ai = yes
+			}
 		}
 		allow = {
 			owner = {
