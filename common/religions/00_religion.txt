@@ -1438,7 +1438,7 @@ muslim = {
 }
 
 eastern = {
-	defender_of_faith = yes
+	defender_of_faith = no
 
 	flags_with_emblem_percentage = 33
 	flag_emblem_index_range = { 58 80 }
@@ -1601,7 +1601,7 @@ eastern = {
 }
 
 dharmic = {
-	defender_of_faith = yes
+	defender_of_faith = no
 
 	flags_with_emblem_percentage = 33
 	flag_emblem_index_range = { 61 82 } #Many shared with Eastern
@@ -2258,6 +2258,7 @@ dharmic = {
 }
 
 pagan = {
+	defender_of_faith = no
 
 	flags_with_emblem_percentage = 10
 	flag_emblem_index_range = { 83 96 }
