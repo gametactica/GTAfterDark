@@ -276,6 +276,8 @@ tributary_state_action = {
 				}
 			}
 			NOT = { FROM = { is_in_trade_league = yes } }
+			NOT = { FROM = { is_great_power = yes } }
+			ROOT = { is_neighbor_of = FROM }
 		}
 	}
 }
@@ -303,6 +305,8 @@ ask_for_tributary_state_action = {
 				}
 			}
 			NOT = { ROOT = { is_in_trade_league = yes } }
+			NOT = { ROOT = { is_great_power = yes } }
+			ROOT = { is_neighbor_of = FROM }
 		}
 	}
 }
