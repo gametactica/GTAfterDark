@@ -622,13 +622,11 @@ tributary_state = {
 			AND = { 
 				government_rank = 3
 				is_part_of_hre = no
-				has_country_flag = gt_was_player
 				}
 			AND = {
 				has_idea = GT_influ7
 				government_rank = 2
 				is_part_of_hre = no
-				has_country_flag = gt_was_player
 			}
 		}
 	}
