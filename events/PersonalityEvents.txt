@@ -97,6 +97,9 @@ country_event = {
 				NOT = { has_discovered = ROOT }
 			}
 			area = {
+				limit = {
+					NOT = { has_discovered = ROOT }
+				}
 				ROOT = {
 					discover_province = PREV
 				}
@@ -2069,7 +2072,10 @@ country_event = {
 	
 	trigger = {
 		has_dlc = "Rights of Man"
-		ruler_has_personality_ancestor = { key = lawgiver }
+		OR = {
+			ruler_has_personality_ancestor = { key = reformist }
+			ruler_has_personality_ancestor = { key = lawgiver }
+		}
 		num_of_cities = 2
 		any_owned_province = {
 			is_state = yes
@@ -2803,7 +2809,7 @@ country_event = {
 	option = {
 		name = "personality_events.43.a"
 		trigger = {
-			NOT = { has_idea = GT_explore1 }
+			NOT = { has_idea = GT_explore1 } #GT
 		}
 		define_admiral = {
 			#name = "Nerus the Gentle"
@@ -2821,7 +2827,7 @@ country_event = {
 			manuever = 3
 		}
 		trigger = {
-			has_idea = GT_explore1
+			has_idea = GT_explore1 #GT
 		}
 	}
 }
