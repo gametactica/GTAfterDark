@@ -46,8 +46,8 @@ can_claim_defender_of_faith = {
 can_change_national_focus = {
 }
 
-can_increase_stability = {
-    condition = {
+can_increase_stability = { #GT
+	condition = {
         tooltip = "CANNOT_INCREASE_STABILITY"
         potential = {
         }

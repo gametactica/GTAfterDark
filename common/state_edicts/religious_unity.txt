@@ -8,7 +8,7 @@ edict_religious_unity = {
 	}
 	
 	modifier = {
-		local_religious_unity_contribution = 0.75
+		local_religious_unity_contribution = 0.75 #GT
 	}
 	
 	color = { 117 38 143 }

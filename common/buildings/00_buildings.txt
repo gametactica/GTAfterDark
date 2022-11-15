@@ -31,12 +31,11 @@ marketplace = {
 	cost = 100
 	time = 12
 
-	modifier = {
+	modifier = { #GT
 		province_trade_power_modifier = 0.5
 		supply_limit = 0.4
 		local_state_maintenance_modifier = 0.1
 	}
-
 	on_built = {
 		add_development_from_building = {
 			building = marketplace
@@ -62,12 +61,11 @@ marketplace = {
 workshop = {
 	cost = 100
 	time = 12
-	modifier = {
+	modifier = { #GT
 		local_production_efficiency = 0.5
 		local_build_cost = -0.1
 		local_state_maintenance_modifier = 0.1
 	}
-
 	on_built = {
 		add_development_from_building = {
 			building = workshop
@@ -95,76 +93,58 @@ workshop = {
 temple = {
 	cost = 100
 	time = 12
-	modifier = {
+	modifier = { #GT
 		local_tax_modifier = 0.5
 		local_missionary_strength = 0.01
 		local_state_maintenance_modifier = 0.1
 	}
 	on_built = {
-		if = {
-			limit = {
-				FROM = {
-					OR = {
-						religion = buddhism
-						religion = mahayana
-						religion = vajrayana
-					}
-					has_estate_privilege = estate_church_karma_temples
-				}
-			}
-			FROM = {
-				add_karma = 3
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					religion = catholic
-					has_estate_privilege = estate_church_influence_temples
-				}
-			}
-			FROM = {
-				add_papal_influence = 3
-			}
-		}
+		on_province_tax_building_built_estate_privileges_effect = yes
 		add_development_from_building = {
 			building = temple
 			type = tax
 			value = 1
 		}
+		if = {
+			limit = {
+				FROM = { has_government_attribute = on_church_built_clergy_loyalty }
+			}
+			FROM = {
+				add_estate_loyalty = {
+					estate = estate_church
+					loyalty = 2
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = { has_government_attribute = temples_modifier }
+			}
+			add_province_modifier = {
+				name = gov_expanded_temple_rights_mod
+				duration = -1
+			}
+		}
 	}
 	on_destroyed = {
-		if = {
-			limit = {
-				FROM = {
-					OR = {
-						religion = buddhism
-						religion = mahayana
-						religion = vajrayana
-					}
-					has_estate_privilege = estate_church_karma_temples
-				}
-			}
-			FROM = {
-				add_karma = -3
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					religion = catholic
-					has_estate_privilege = estate_church_influence_temples
-				}
-			}
-			FROM = {
-				add_papal_influence = -3
-			}
-		}
+		on_province_tax_building_destroyed_estate_privileges_effect = yes
 		remove_development_from_building = {
 			building = temple
 			type = tax
 			value = 1
 		}
+		if = {
+			limit = {
+				FROM = { has_government_attribute = on_church_built_clergy_loyalty }
+			}
+			FROM = {
+				add_estate_loyalty = {
+					estate = estate_church
+					loyalty = -2
+				}
+			}
+		}
+		remove_province_modifier = gov_expanded_temple_rights_mod
 	}
 	on_obsolete = {
 	}
@@ -176,7 +156,7 @@ temple = {
 barracks = {
 	cost = 100
 	time = 12
-	modifier = {
+	modifier = { #GT
 		local_manpower_modifier = 0.5
 		garrison_growth = 0.15
 		local_state_maintenance_modifier = 0.1
@@ -252,7 +232,7 @@ shipyard = {
 	build_trigger = {
 		has_port = yes
 	}
-	modifier = {
+	modifier = { #GT
 		naval_forcelimit = 2
 		local_ship_repair = 0.25
 		local_state_maintenance_modifier = 0.1
@@ -269,6 +249,10 @@ shipyard = {
 			building = shipyard
 			type = production
 			value = 1
+		}
+		if = {
+			limit = { has_province_modifier = sca_swe_danish_shipyard }
+			remove_province_modifier = sca_swe_danish_shipyard
 		}
 	}
 	on_obsolete = {
@@ -290,34 +274,57 @@ shipyard = {
 fort_15th = {
 	cost = 200
 	time = 30
-	modifier = {
+	modifier = { #GT
 		fort_level = 2
 		local_warscore_cost_modifier = 0.05
 		local_years_of_nationalism = -1
 	}
 
-#	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
-#	on_built = {
-#		FROM = {
-#			add_army_professionalism = 0.005
-#		}
-#	}
-#
-#	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
-#	on_destroyed = {
-#		FROM = {
-#			add_army_professionalism = -0.01
-#		}
-#	}
-#
-#	# THIS = Province, FROM = Destroyer, Will not be called on buildings destroyed!
-#	on_obsolete = {
-#		hidden_effect = {
-#			FROM = {
-#				add_army_professionalism = -0.005
-#			}
-#		}
-#	}
+	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
+	on_built = {
+		if = {
+			limit = {
+				FROM = { NOT = { mil_tech = 14 } has_government_attribute = on_fort_built_nobles_loyalty }
+			}
+			FROM = {
+				if = {
+					limit = {
+						has_estate = estate_nobles
+					}
+					add_estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 5
+					}
+				}
+				if = {
+					limit = {
+						has_estate = estate_maratha
+					}
+					add_estate_loyalty = {
+						estate = estate_maratha
+						loyalty = 5
+					}
+				}
+				if = {
+					limit = {
+						has_estate = estate_rajput
+					}
+					add_estate_loyalty = {
+						estate = estate_rajput
+						loyalty = 5
+					}
+				}
+			}
+		}
+	}
+
+	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
+	on_destroyed = {
+	}
+
+	# THIS = Province, FROM = Destroyer, Will not be called on buildings destroyed!
+	on_obsolete = {
+	}
 
 	onmap = yes
 	influencing_fort = yes
@@ -334,7 +341,7 @@ coastal_defence = {
 	build_trigger = {
 		has_port = yes
 	}
-	modifier = {
+	modifier = { #GT
 		blockade_force_required = 0.5
 		hostile_disembark_speed = 1.0
 		block_slave_raid = yes
@@ -354,7 +361,7 @@ coastal_defence = {
 courthouse = {
 	cost = 100
 	time = 12
-	modifier = {
+	modifier = { #GT
 		local_unrest = -2
 		local_governing_cost = -0.25
 		local_state_maintenance_modifier = 0.25
@@ -442,7 +449,7 @@ dock = {
 	build_trigger = {
 		has_port = yes
 	}
-	modifier = {
+	modifier = { #GT
 		local_sailors_modifier = 0.5
 		ship_recruit_speed = -0.25
 		local_state_maintenance_modifier = 0.1
@@ -489,7 +496,48 @@ dock = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
+			current_age = age_of_discovery 
+			owner = { NOT = { navy_size = 25 } }
+			factor = 0.25
+		}
+		modifier = {
+			current_age = age_of_reformation
+			owner = { NOT = { navy_size = 50 } }
+			factor = 0.35
+		}
+		modifier = {
+			current_age = age_of_absolutism
+			owner = { NOT = { navy_size = 75 } }
 			factor = 0.5
+		}
+		modifier = {
+			current_age = age_of_revolutions 
+			owner = { NOT = { navy_size = 100 } }
+			factor = 0.75
+		}
+		modifier = {
+			owner = {
+				OR = {
+					has_idea_group = naval_ideas 
+					has_idea_group = maritime_ideas
+				}
+			}
+			factor = 1.25
+		}
+		modifier = {
+			owner = {
+				capital_scope = { 
+					has_port = yes 
+					is_island = yes 
+				}
+			}
+			factor = 1.35
+		}
+		modifier = {
+			owner = {
+				sailors_percentage = 0.75 
+			}
+			factor = 0
 		}
 	}
 }
@@ -497,7 +545,7 @@ dock = {
 regimental_camp = {
 	cost = 200
 	time = 12
-	modifier = {
+	modifier = { #GT
 		land_forcelimit = 1
 		local_defensiveness = 0.1
 		local_state_maintenance_modifier = 0.1
@@ -559,34 +607,57 @@ fort_16th = {
 	cost = 400
 	time = 30
 	make_obsolete = fort_15th
-	modifier = {
+	modifier = { #GT
 		fort_level = 4
 		local_warscore_cost_modifier = 0.1
 		local_years_of_nationalism = -2
 	}
 
-#	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
-#	on_built = {
-#		FROM = {
-#			add_army_professionalism = 0.01
-#		}
-#	}
-#
-#	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
-#	on_destroyed = {
-#		FROM = {
-#			add_army_professionalism = -0.02
-#		}
-#	}
-#
-#	# THIS = Province, FROM = Destroyer, Will not be called on buildings destroyed!
-#	on_obsolete = {
-#		hidden_effect = {
-#			FROM = {
-#				add_army_professionalism = -0.01
-#			}
-#		}
-#	}
+	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
+	on_built = {
+		if = {
+			limit = {
+				FROM = { NOT = { mil_tech = 19 } has_government_attribute = on_fort_built_nobles_loyalty }
+			}
+			FROM = {
+				if = {
+					limit = {
+						has_estate = estate_nobles
+					}
+					add_estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 5
+					}
+				}
+				if = {
+					limit = {
+						has_estate = estate_maratha
+					}
+					add_estate_loyalty = {
+						estate = estate_maratha
+						loyalty = 5
+					}
+				}
+				if = {
+					limit = {
+						has_estate = estate_rajput
+					}
+					add_estate_loyalty = {
+						estate = estate_rajput
+						loyalty = 5
+					}
+				}
+			}
+		}
+	}
+
+	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
+	on_destroyed = {
+	}
+
+	# THIS = Province, FROM = Destroyer, Will not be called on buildings destroyed!
+	on_obsolete = {
+	}
 
 	onmap = yes
 
@@ -605,7 +676,7 @@ naval_battery = {
 	build_trigger = {
 		has_port = yes
 	}
-	modifier = {
+	modifier = { #GT
 		blockade_force_required = 1.0
 		hostile_disembark_speed = 2.0
 		hostile_fleet_attrition = 5
@@ -627,38 +698,13 @@ cathedral = {
 
 	cost = 300
 	time = 12
-	modifier = {
+	modifier = { #GT
 		local_tax_modifier = 1
 		local_missionary_strength = 0.02
 		local_state_maintenance_modifier = 0.3
 	}
 	on_built = {
-		if = {
-			limit = {
-				FROM = {
-					OR = {
-						religion = buddhism
-						religion = mahayana
-						religion = vajrayana
-					}
-					has_estate_privilege = estate_church_karma_temples
-				}
-			}
-			FROM = {
-				add_karma = 3
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					religion = catholic
-					has_estate_privilege = estate_church_influence_temples
-				}
-			}
-			FROM = {
-				add_papal_influence = 3
-			}
-		}
+		on_province_tax_building_built_estate_privileges_effect = yes
 		add_development_from_upgrading_or_building = {
 			building = cathedral
 			obsolete_building = temple
@@ -666,39 +712,46 @@ cathedral = {
 			value = 2
 			upgrade_value = 1
 		}
+		if = {
+			limit = {
+				FROM = { has_government_attribute = on_church_built_clergy_loyalty }
+			}
+			FROM = {
+				add_estate_loyalty = {
+					estate = estate_church
+					loyalty = 5
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = { has_government_attribute = temples_modifier }
+			}
+			add_province_modifier = {
+				name = gov_expanded_temple_rights_mod
+				duration = -1
+			}
+		}
 	}
 	on_destroyed = {
-		if = {
-			limit = {
-				FROM = {
-					OR = {
-						religion = buddhism
-						religion = mahayana
-						religion = vajrayana
-					}
-					has_estate_privilege = estate_church_karma_temples
-				}
-			}
-			FROM = {
-				add_karma = -3
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					religion = catholic
-					has_estate_privilege = estate_church_influence_temples
-				}
-			}
-			FROM = {
-				add_papal_influence = -3
-			}
-		}
+		on_province_tax_building_destroyed_estate_privileges_effect = yes
 		remove_development_from_building = {
 			building = cathedral
 			type = tax
 			value = 3
 		}
+		if = {
+			limit = {
+				FROM = { has_government_attribute = on_church_built_clergy_loyalty }
+			}
+			FROM = {
+				add_estate_loyalty = {
+					estate = estate_church
+					loyalty = -5
+				}
+			}
+		}
+		remove_province_modifier = gov_expanded_temple_rights_mod
 	}
 	on_obsolete = {
 	}
@@ -712,7 +765,7 @@ cathedral = {
 university = {
 	cost = 300
 	time = 12
-	modifier = {
+	modifier = { #GT
 		local_development_cost = -0.2
 		local_culture_conversion_cost = -0.25
 		local_state_maintenance_modifier = 0.2
@@ -808,7 +861,7 @@ trade_depot = {
 
 	make_obsolete = marketplace
 
-	modifier = {
+	modifier = { #GT
 		province_trade_power_modifier = 1
 		supply_limit = 0.8
 		local_state_maintenance_modifier = 0.3
@@ -847,7 +900,7 @@ grand_shipyard = {
 	build_trigger = {
 		has_port = yes
 	}
-	modifier = {
+	modifier = { #GT
 		naval_forcelimit = 4
 		local_ship_repair = 0.50
 		local_state_maintenance_modifier = 0.3
@@ -867,6 +920,10 @@ grand_shipyard = {
 			building = grand_shipyard
 			type = production
 			value = 2
+		}
+		if = {
+			limit = { has_province_modifier = sca_swe_danish_shipyard }
+			remove_province_modifier = sca_swe_danish_shipyard
 		}
 	}
 	on_obsolete = {
@@ -914,7 +971,7 @@ training_fields = {
 #		}
 #	}
 
-	modifier = {
+	modifier = { #GT
 		local_manpower_modifier = 1
 		garrison_growth = 0.3
 		local_state_maintenance_modifier = 0.3
@@ -971,34 +1028,57 @@ fort_17th = {
 
 	make_obsolete = fort_16th
 
-	modifier = {
+	modifier = { #GT
 		fort_level = 6
 		local_warscore_cost_modifier = 0.15
 		local_years_of_nationalism = -3
 	}
 
-#	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
-#	on_built = {
-#		FROM = {
-#			add_army_professionalism = 0.02
-#		}
-#	}
-#
-#	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
-#	on_destroyed = {
-#		FROM = {
-#			add_army_professionalism = -0.04
-#		}
-#	}
-#
-#	# THIS = Province, FROM = Destroyer, Will not be called on buildings destroyed!
-#	on_obsolete = {
-#		hidden_effect = {
-#			FROM = {
-#				add_army_professionalism = -0.02
-#			}
-#		}
-#	}
+	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
+	on_built = {
+		if = {
+			limit = {
+				FROM = { NOT = { mil_tech = 19 } has_government_attribute = on_fort_built_nobles_loyalty }
+			}
+			FROM = {
+				if = {
+					limit = {
+						has_estate = estate_nobles
+					}
+					add_estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 5
+					}
+				}
+				if = {
+					limit = {
+						has_estate = estate_maratha
+					}
+					add_estate_loyalty = {
+						estate = estate_maratha
+						loyalty = 5
+					}
+				}
+				if = {
+					limit = {
+						has_estate = estate_rajput
+					}
+					add_estate_loyalty = {
+						estate = estate_rajput
+						loyalty = 5
+					}
+				}
+			}
+		}
+	}
+
+	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
+	on_destroyed = {
+	}
+
+	# THIS = Province, FROM = Destroyer, Will not be called on buildings destroyed!
+	on_obsolete = {
+	}
 
 	onmap = yes
 
@@ -1020,10 +1100,9 @@ stock_exchange = {
 
 	make_obsolete = trade_depot
 
-	modifier = {
+	modifier = { #GT
 		province_trade_power_modifier = 1.25
 		supply_limit = 1
-
 		local_state_maintenance_modifier = 0.5
 	}
 
@@ -1076,7 +1155,7 @@ counting_house = {
 	time = 12
 
 	make_obsolete = workshop
-	modifier = {
+	modifier = { #GT
 		local_production_efficiency = 1
 		local_build_cost = -0.2
 		local_state_maintenance_modifier = 0.3
@@ -1117,7 +1196,7 @@ town_hall = {
 
 	make_obsolete = courthouse
 
-	modifier = {
+	modifier = { #GT
 		local_unrest = -4
 		local_governing_cost = -0.5
 		local_state_maintenance_modifier = 0.5
@@ -1216,7 +1295,7 @@ drydock = {
 		has_port = yes
 	}
 
-	modifier = {
+	modifier = { #GT
 		local_sailors_modifier = 1.0
 		ship_recruit_speed = -0.50
 		local_state_maintenance_modifier = 0.3
@@ -1298,7 +1377,7 @@ conscription_center = {
 #		}
 #	}
 
-	modifier = {
+	modifier = { #GT
 		land_forcelimit = 2
 		local_defensiveness = 0.2
 		local_state_maintenance_modifier = 0.3
@@ -1344,34 +1423,57 @@ fort_18th = {
 
 	make_obsolete = fort_17th
 
-	modifier = {
+	modifier = { #GT
 		fort_level = 8
 		local_warscore_cost_modifier = 0.2
 		local_years_of_nationalism = -4
 	}
 
-#	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
-#	on_built = {
-#		FROM = {
-#			add_army_professionalism = 0.04
-#		}
-#	}
-#
-#	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
-#	on_destroyed = {
-#		FROM = {
-#			add_army_professionalism = -0.08
-#		}
-#	}
-#
-#	# THIS = Province, FROM = Destroyer, Will not be called on buildings destroyed!
-#	on_obsolete = {
-#		hidden_effect = {
-#			FROM = {
-#				add_army_professionalism = -0.04
-#			}
-#		}
-#	}
+	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
+	on_built = {
+		if = {
+			limit = {
+				FROM = { has_government_attribute = on_fort_built_nobles_loyalty }
+			}
+			FROM = {
+				if = {
+					limit = {
+						has_estate = estate_nobles
+					}
+					add_estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 5
+					}
+				}
+				if = {
+					limit = {
+						has_estate = estate_maratha
+					}
+					add_estate_loyalty = {
+						estate = estate_maratha
+						loyalty = 5
+					}
+				}
+				if = {
+					limit = {
+						has_estate = estate_rajput
+					}
+					add_estate_loyalty = {
+						estate = estate_rajput
+						loyalty = 5
+					}
+				}
+			}
+		}
+	}
+
+	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
+	on_destroyed = {
+	}
+
+	# THIS = Province, FROM = Destroyer, Will not be called on buildings destroyed!
+	on_obsolete = {
+	}
 
 	onmap = yes
 
@@ -1389,11 +1491,10 @@ fort_18th = {
 manufactory = {
 	cost = 500
 	time = 60
-	modifier = {
+	modifier = { #GT
 		trade_goods_size = 1.0
 		local_unrest = 3
 		local_state_maintenance_modifier = 0.2
-		
 	}
 }
 
@@ -1644,7 +1745,7 @@ furnace = {
 		has_dlc = "Rule Britannia"
 	}
 
-	modifier = {
+	modifier = { #GT
 		global_trade_goods_size_modifier = 0.05 #National Bonus
 		local_unrest = 3
 		local_state_maintenance_modifier = 0.3
@@ -1677,9 +1778,10 @@ ramparts = {
 	manufactory = {
 		all
 	}
-	modifier = {
-		local_hostile_attrition = 2
-		local_defensiveness = 0.25
+	modifier = { #GT
+		local_hostile_attrition = 1
+		local_defensiveness = 0.15
+		local_defender_dice_roll_bonus = 1
 		local_warscore_cost_modifier = 0.1
 	}
 	onmap = no
@@ -1702,12 +1804,12 @@ soldier_households = {
 		wine
 	}
 
-	modifier = {
+	modifier = { #GT
 		local_manpower = 0.75
 		regiment_recruit_speed = -0.15
 		local_state_maintenance_modifier = 0.3
 	}
-	bonus_modifier = {
+	bonus_modifier = { #GT
 		local_manpower = 0.75
 		regiment_recruit_speed = -0.15
 	}
@@ -1751,12 +1853,12 @@ impressment_offices = {
 		has_port = yes
 	}
 
-	modifier = {
+	modifier = { #GT
 		local_sailors = 300
 		local_ship_cost = -0.1
 		local_state_maintenance_modifier = 0.3
 	}
-	bonus_modifier = {
+	bonus_modifier = { #GT
 		local_sailors = 300
 		local_ship_cost = -0.1
 	}
@@ -1825,13 +1927,13 @@ state_house = {
 		}
 	}
 
-	modifier = {
+	modifier = { #GT
 		local_autonomy = -0.05
 		statewide_governing_cost = -0.15
 		local_state_maintenance_modifier = 0.3
 	}
-	bonus_modifier = {
-		local_autonomy = -0.05
+	bonus_modifier = { #GT
+		local_autonomy = -0.03
 		statewide_governing_cost = -0.15
 	}
 	onmap = no

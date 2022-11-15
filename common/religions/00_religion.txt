@@ -23,7 +23,7 @@ christian = {
 			reformed
 			protestant
 		}
-		country = {
+		country = { #GT
 			legitimacy = 0.50
 			republican_tradition = 0.15
 			devotion = 0.3
@@ -31,12 +31,12 @@ christian = {
 			yearly_corruption = 0.25
 		}
 		
-		country_as_secondary = {
+		country_as_secondary = { #GT
 			global_missionary_strength = 0.02
 			tolerance_heretic = -1
 		}
-		
-		province = {
+
+		province = { #GT
 			local_colonial_growth = 5
 		}
 		
@@ -328,7 +328,7 @@ christian = {
 		allowed_center_conversion = {
 			catholic
 		}
-		country = {
+		country = { #GT
 			heir_chance = 0.33
 			legitimacy = -0.25
 			horde_unity = -0.15
@@ -336,12 +336,12 @@ christian = {
 			devotion = -0.3
 		}
 		
-		country_as_secondary = {
+		country_as_secondary = { #GT
 			tolerance_own = 2
 			caravan_power = -0.1
 		}
-		
-		province = {
+
+		province = { #GT
 			local_missionary_maintenance_cost = -0.1
 		}
 		
@@ -353,6 +353,10 @@ christian = {
 			dissolve_monasteries_aspect
 			monopoly_aspect
 			stability_aspect
+			innovativeness_aspect
+			expel_heretics_aspect
+			diplomats_of_the_reformation_aspect
+			icons_of_the_church_aspect
 		}
 		aspects_name = ANGLICAN_ASPECTS
 		
@@ -368,17 +372,17 @@ christian = {
 		allowed_center_conversion = {
 			catholic
 		}
-		country = {
+		country = { #GT
 			global_heretic_missionary_strength = 0.02
 			church_loyalty_modifier = -0.1
 		}
 		
-		country_as_secondary = {
+		country_as_secondary = { #GT
 			shock_damage_received = -0.1
 			diplomatic_reputation = -1
 		}
 		
-		province = {
+		province = { #GT
 			local_religious_conversion_resistance = 0.25
 		}
 		
@@ -412,17 +416,17 @@ christian = {
 		allowed_center_conversion = {
 			catholic
 		}
-		country = {
+		country = { #GT
 			yearly_corruption = -0.1
 			global_unrest = 1
 		}
 		
-		country_as_secondary = {
+		country_as_secondary = { #GT
 			global_colonial_growth = 10
 			accept_vassalization_reasons = -5
 		}
 		
-		province = {
+		province = { #GT
 			local_institution_spread = 0.1
 		}
 		
@@ -440,6 +444,9 @@ christian = {
 			individual_creeds_aspect
 			allow_usury_aspect
 			translated_bibles_aspect
+			justified_religious_war_aspect
+			war_preaches_aspect
+			head_of_the_church_aspect
 		}
 		aspects_name = PROTESTANT_ASPECTS
 		
@@ -553,17 +560,17 @@ christian = {
 		allowed_center_conversion = {
 			catholic
 		}
-		country = {
+		country = { #GT
 			tolerance_heretic = 1
 			max_absolutism = -10
 		}
 		
-		country_as_secondary = {
-			interest = -1
+		country_as_secondary = { #GT
+			interest = -1 
 			ae_impact = 0.05
 		}
 		
-		province = {
+		province = { #GT
 			 	local_colonist_placement_chance = 0.03
 		}
 
@@ -669,15 +676,15 @@ christian = {
 	orthodox = {
 		color = { 178 127 0 }
 		icon = 4
-		country = {
+		country = { #GT
 			governing_capacity_modifier = 0.1
 			yearly_patriarch_authority = -0.01
 		}
-		country_as_secondary = {
+		country_as_secondary = { #GT
 			vassal_forcelimit_bonus = 0.25
 			unjustified_demands = 0.1
 		}
-		province = {
+		province = { #GT
 			 local_state_maintenance_modifier = -0.1
 		}
 		
@@ -697,6 +704,11 @@ christian = {
 				allow = {
 					always = yes
 				}
+
+				visible = {
+					always = yes
+				}
+
 				ai_will_do = {
 					factor = 0.05
 					modifier = {
@@ -717,6 +729,11 @@ christian = {
 				allow = {
 					always = yes
 				}
+
+				visible = {
+					always = yes
+				}
+				
 				ai_will_do = {
 					factor = 0.02
 					modifier = {
@@ -749,6 +766,11 @@ christian = {
 				allow = {
 					always = yes
 				}
+
+				visible = {
+					always = yes
+				}
+				
 				ai_will_do = {
 					factor = 0
 				}
@@ -757,6 +779,11 @@ christian = {
 			icon_nicholas = {
 				improve_relation_modifier = 0.25
 				ae_impact = -0.1
+				
+				visible = {
+					always = yes
+				}
+				
 				allow = {
 					always = yes
 				}
@@ -768,6 +795,11 @@ christian = {
 			icon_climacus = {
 				global_institution_spread = 0.25
 				embracement_cost = -0.2
+
+				visible = {
+					always = yes
+				}
+
 				allow = {
 					always = yes
 				}
@@ -807,15 +839,15 @@ christian = {
 
 		color = { 178 38 76 }
 		icon = 14
-		country = {
+		country = { #GT
 			church_loyalty_modifier = 0.15
 			innovativeness_gain = -0.15	
 		}
-		country_as_secondary = {
+		country_as_secondary = { #GT
 			defensiveness = 0.15
 			fabricate_claims_cost = 0.25
 		}
-		province = {
+		province = { #GT
 			local_governing_cost = -0.15
 		}
 		
@@ -865,7 +897,7 @@ muslim = {
 					limit = {
 						NOT = { has_country_flag = no_scholar_adm_cost }
 					}
-					dip_power_cost = 50
+					dip_power_cost = 50 #GT
 				}
 				if = {
 					limit = {
@@ -902,7 +934,7 @@ muslim = {
 					limit = {
 						NOT = { has_country_flag = no_scholar_adm_cost }
 					}
-					dip_power_cost = 50
+					dip_power_cost = 50 #GT
 				}
 				clear_religious_scholar_modifiers_effect = yes
 				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
@@ -921,7 +953,7 @@ muslim = {
 			picture = "GFX_icon_muslim_school_hanafi"
 
 			# religion_sub_modifier = no is possible, will hide icon in religious screen
-			adm_tech_cost_modifier = -0.05
+			adm_tech_cost_modifier = -0.15 #GT
 		}
 		hanbali_school = {
 			potential_invite_scholar = {
@@ -938,7 +970,7 @@ muslim = {
 					limit = {
 						NOT = { has_country_flag = no_scholar_adm_cost }
 					}
-					dip_power_cost = 50
+					dip_power_cost = 50 #GT
 				}
 				if = {
 					limit = {
@@ -975,7 +1007,7 @@ muslim = {
 					limit = {
 						NOT = { has_country_flag = no_scholar_adm_cost }
 					}
-					dip_power_cost = 50
+					dip_power_cost = 50 #GT
 				}
 				clear_religious_scholar_modifiers_effect = yes
 				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
@@ -1010,7 +1042,7 @@ muslim = {
 					limit = {
 						NOT = { has_country_flag = no_scholar_adm_cost }
 					}
-					dip_power_cost = 50
+					dip_power_cost = 50 #GT
 				}
 				if = {
 					limit = {
@@ -1047,7 +1079,7 @@ muslim = {
 					limit = {
 						NOT = { has_country_flag = no_scholar_adm_cost }
 					}
-					dip_power_cost = 50
+					dip_power_cost = 50 #GT
 				}
 				clear_religious_scholar_modifiers_effect = yes
 				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
@@ -1082,7 +1114,7 @@ muslim = {
 					limit = {
 						NOT = { has_country_flag = no_scholar_adm_cost }
 					}
-					dip_power_cost = 50
+					dip_power_cost = 50 #GT
 				}
 				if = {
 					limit = {
@@ -1119,7 +1151,7 @@ muslim = {
 					limit = {
 						NOT = { has_country_flag = no_scholar_adm_cost }
 					}
-					dip_power_cost = 50
+					dip_power_cost = 50 #GT
 				}
 				clear_religious_scholar_modifiers_effect = yes
 				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
@@ -1137,7 +1169,7 @@ muslim = {
 
 			picture = "GFX_icon_muslim_school_shafii"
 
-			merchants = 1
+			placed_merchant_power = 5 #GT
 		}
 		#Shias
 		ismaili_school = {
@@ -1155,7 +1187,7 @@ muslim = {
 					limit = {
 						NOT = { has_country_flag = no_scholar_adm_cost }
 					}
-					dip_power_cost = 50
+					dip_power_cost = 50 #GT
 				}
 				if = {
 					limit = {
@@ -1192,7 +1224,7 @@ muslim = {
 					limit = {
 						NOT = { has_country_flag = no_scholar_adm_cost }
 					}
-					dip_power_cost = 50
+					dip_power_cost = 50 #GT
 				}
 				clear_religious_scholar_modifiers_effect = yes
 				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
@@ -1210,10 +1242,10 @@ muslim = {
 
 			picture = "GFX_icon_muslim_school_ismaili"
 
-			horde_unity = 1
-			legitimacy = 1
-			republican_tradition = 0.2
-			devotion = 1
+			horde_unity = 0.33 #GT
+			legitimacy = 0.25 #GT
+			republican_tradition = 0.1 #GT
+			devotion = 0.2 #GT
 		}
 		jafari_school = {
 			potential_invite_scholar = {
@@ -1230,7 +1262,7 @@ muslim = {
 					limit = {
 						NOT = { has_country_flag = no_scholar_adm_cost }
 					}
-					dip_power_cost = 50
+					dip_power_cost = 50 #GT
 				}
 				if = {
 					limit = {
@@ -1267,7 +1299,7 @@ muslim = {
 					limit = {
 						NOT = { has_country_flag = no_scholar_adm_cost }
 					}
-					dip_power_cost = 50
+					dip_power_cost = 50 #GT
 				}
 				clear_religious_scholar_modifiers_effect = yes
 				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
@@ -1302,7 +1334,7 @@ muslim = {
 					limit = {
 						NOT = { has_country_flag = no_scholar_adm_cost }
 					}
-					dip_power_cost = 50
+					dip_power_cost = 50 #GT
 				}
 				if = {
 					limit = {
@@ -1339,7 +1371,7 @@ muslim = {
 					limit = {
 						NOT = { has_country_flag = no_scholar_adm_cost }
 					}
-					dip_power_cost = 50
+					dip_power_cost = 50 #GT
 				}
 				clear_religious_scholar_modifiers_effect = yes
 				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
@@ -1365,18 +1397,18 @@ muslim = {
 	sunni = {
 		color = { 0 153 0 }
 		icon = 5
-		country = {
+		country = { #GT
 			legitimacy = 0.25
 			republican_tradition = 0.1
 			devotion = 0.3
 			horde_unity = 0.2
 			religious_unity = -0.15
 		}
-		country_as_secondary = {
+		country_as_secondary = { #GT
 			trade_efficiency = 0.15
 			diplomatic_reputation = -1
 		}
-		province = {
+		province = { #GT
 			local_build_time = -0.2
 		}
 		
@@ -1388,18 +1420,18 @@ muslim = {
 	shiite = {
 		color = { 0 204 0 }
 		icon = 6
-		country = {
+		country = { #GT
 			religious_unity = 0.15
 			legitimacy = -0.25
 			republican_tradition = -0.1
 			devotion = -0.3
 			horde_unity = -0.2
 		}
-		country_as_secondary = {
+		country_as_secondary = { #GT
 			vassal_income = 0.2
 			improve_relation_modifier = -0.1
 		}
-		province = {
+		province = { #GT
 			 local_religious_unity_contribution = 0.1
 		}
 		
@@ -1411,19 +1443,18 @@ muslim = {
 	ibadi = {
 		color = { 0 102 0 }
 		icon = 16
-		
-		country = {
+		country = { #GT
 			naval_attrition = -0.25
 			global_missionary_strength = -0.01
 
 		}
-		country_as_secondary = {
+		country_as_secondary = { #GT
 			global_ship_cost = -0.15
 			global_manpower = -5
 
 		}
 		
-		province = {
+		province = { #GT
 			local_sailors_modifier = 0.1
 		}
 		
@@ -1438,7 +1469,6 @@ muslim = {
 }
 
 eastern = {
-	defender_of_faith = no
 
 	flags_with_emblem_percentage = 33
 	flag_emblem_index_range = { 58 80 }
@@ -1450,19 +1480,18 @@ eastern = {
 			vajrayana
 			mahayana
 		}
-		country = {
+		country = { #GT
 			development_cost = -0.1
 			prestige_decay = 0.01
 		}
-		country_as_secondary = {
+		country_as_secondary = { #GT
 			raze_power_gain = 0.33
 			culture_conversion_cost = 0.15
 		}
 		
-		province = {
+		province = { #GT
 			 local_production_efficiency = 0.1
 		}
-		
 		on_convert = {
 			add_prestige = -100
 			add_stability = -1
@@ -1486,11 +1515,11 @@ eastern = {
 			mahayana
 			buddhism #Theravada
 		}
-		country = {
+		country = { #GT
 			years_of_nationalism = -5
 			war_exhaustion_cost = 0.25
 		}
-		country_as_secondary = {
+		country_as_secondary = { #GT
 			horde_unity = 0.50
 			legitimacy = 0.25
 			republican_tradition = 0.15
@@ -1499,10 +1528,9 @@ eastern = {
 			nomadic_tribes_influence_modifier = 0.2
 		}
 		
-		province = {
+		province = { #GT
 			 local_tax_modifier = 0.1
 		}
-		
 		on_convert = {
 			add_prestige = -100
 			add_stability = -1
@@ -1525,20 +1553,19 @@ eastern = {
 		allowed_conversion = {
 			vajrayana
 			buddhism #Theravada
-		}
-		country = {
+		} 
+		country = { #GT
 			tolerance_heretic = 2
 			global_autonomy = 0.01
 		}
-		country_as_secondary = {
-			idea_cost = -0.15
+		country_as_secondary = { #GT
+			idea_cost = -0.15 
 			technology_cost = 0.05
 		}
 		
-		province = {
+		province = { #GT
 			 local_ship_cost = -0.2
 		}
-		
 		on_convert = {
 			add_prestige = -100
 			add_stability = -1
@@ -1558,19 +1585,18 @@ eastern = {
 	confucianism = {
 		color = { 214 229 140 }
 		icon = 9
-		country = {
+		country = { #GT
 			adm_tech_cost_modifier = -0.1
 			religious_unity = -0.15
 		}
-		country_as_secondary = {
+		country_as_secondary = { #GT
 			num_accepted_cultures = 3
 			cav_to_inf_ratio = -0.20
 		}
 		
-		province = {
+		province = { #GT
 			 	local_core_creation = -0.1
-		}	
-		
+		}
 		heretic = { TAOIST }
 		uses_harmony = yes
 	}
@@ -1578,17 +1604,18 @@ eastern = {
 	shinto = {
 		color = { 204 0 0 }
 		icon = 10
-		country = {
+		country = { #GT
 			discipline = 0.02
 			global_missionary_strength = -0.01
 		}
-		province = {
-			local_monthly_devastation = -0.1
-		}
-		country_as_secondary = {
+		country_as_secondary = { #GT
 			land_morale = 0.075
 			promote_culture_cost = 0.15
 		}
+		province = { #GT
+			local_monthly_devastation = -0.1
+		}
+		
 		heretic = { SHUGENDO }
 		uses_isolationism = yes
 		
@@ -1601,7 +1628,6 @@ eastern = {
 }
 
 dharmic = {
-	defender_of_faith = no
 
 	flags_with_emblem_percentage = 33
 	flag_emblem_index_range = { 61 82 } #Many shared with Eastern
@@ -1612,16 +1638,16 @@ dharmic = {
 		allowed_conversion = {
 			sikhism
 		}
-		country = {
+		country = { #GT
 			tolerance_heathen = 2
 			brahmins_hindu_influence_modifier = 0.15
 		}
-		country_as_secondary = {
+		country_as_secondary = { #GT
 			tolerance_heathen = 2
 			spy_offence = -0.15
 		}
 		
-		province = {
+		province = { #GT
 			 local_autonomy = -0.01
 		}
 		
@@ -1648,15 +1674,15 @@ dharmic = {
 			sunni
 			shiite
 		}
-		country = {
+		country = { #GT
 			global_manpower_modifier = 0.25
 			stability_cost_modifier = 0.25
 		}
-		country_as_secondary = {
+		country_as_secondary = { #GT
 			global_spy_defence = 0.25
 			colonist_placement_chance = -0.02
 		}
-		province = {
+		province = { #GT
 			local_defensiveness = 0.15
 		}
 		
@@ -2258,7 +2284,6 @@ dharmic = {
 }
 
 pagan = {
-	defender_of_faith = no
 
 	flags_with_emblem_percentage = 10
 	flag_emblem_index_range = { 83 96 }
@@ -2266,15 +2291,15 @@ pagan = {
 	animism = {
 		color = { 127 0 0 }
 		icon = 11
-		country = {
+		country = { #GT
 			global_unrest = -2
 			num_accepted_cultures = -1
 		}
-		country_as_secondary = {
+		country_as_secondary = { #GT
 			loot_amount = 0.3
 			placed_merchant_power = -3
 		}
-		province = {
+		province = { #GT
 			 local_hostile_attrition = 3
 		}
 		
@@ -2283,16 +2308,16 @@ pagan = {
 	shamanism = { #Fetishism, tag kept to avoid breaking saves.
 		color = { 127 76 76 }
 		icon = 12
-		country = {
+		country = { #GT
 			monthly_heir_claim_increase = 0.15
 			religious_unity = -0.15
 		}
-		country_as_secondary = {
+		country_as_secondary = { #GT
 			trade_steering = 0.15
 			trade_range_modifier = -0.25
 		}
 		
-		province = {
+		province = { #GT
 			local_years_of_nationalism = 2
 		}
 
@@ -2302,15 +2327,15 @@ pagan = {
 	totemism = {
 		color = { 127 115 115 }
 		icon = 13
-		country = {
+		country = { #GT
 			diplomatic_reputation = 2
 			development_cost = 0.05
 		}
-		country_as_secondary = {
+		country_as_secondary = { #GT
 			diplomatic_upkeep = 1
 			global_trade_power = -0.1
 		}
-		province = {
+		province = { #GT
 			local_warscore_cost_modifier = 0.1
 		}
 
@@ -2322,17 +2347,17 @@ pagan = {
 	inti = {
 		color = { 64 115 115 }
 		icon = 18
-		country = {
+		country = { #GT
 			global_autonomy = -0.02
 			embracement_cost = 0.25
 		}
 
-		country_as_secondary = {
+		country_as_secondary = { #GT
 			ae_impact = -0.2
 			envoy_travel_time = 0.2
 		}
 		
-		province = {
+		province = { #GT
 			institution_growth = 1
 		}
 		
@@ -2346,15 +2371,15 @@ pagan = {
 	nahuatl = {
 		color = { 64 115 64 }
 		icon = 17
-		country = {
+		country = { #GT
 			land_morale = 0.1
 			diplomatic_reputation = -1
 		}
-		country_as_secondary = {
+		country_as_secondary = { #GT
 			claim_duration = 0.5
 			rival_change_cost = 0.3
 		}
-		province = {
+		province = { #GT
 			local_culture_conversion_cost = 0.1
 		}
 		
@@ -2370,15 +2395,15 @@ pagan = {
 		#color = { 76 25 178 }
 		color = { 127 25 178 }
 		icon = 19
-		country = {
+		country = { #GT
 			num_accepted_cultures = 1
 			advisor_pool = -1
 		}
-		country_as_secondary = {
+		country_as_secondary = { #GT
 			advisor_pool = 2
 			war_exhaustion_cost = 0.15
 		}
-		province = {
+		province = { #GT
 			hostile_disembark_speed = 0.5
 		}
 		
@@ -2391,15 +2416,15 @@ pagan = {
 	norse_pagan_reformed = {
 		icon = 21
 		color = { 191 191 191 }
-		country = {
+		country = { #GT
 			land_forcelimit_modifier = 0.10
 			naval_forcelimit_modifier = 0.10
 		}
-		country_as_secondary = {
+		country_as_secondary = { #GT
 			galley_power = 0.2
 			merc_maintenance_modifier = 0.1
 		}
-		province = {
+		province = { #GT
 			ship_recruit_speed = -0.25
 		}
 		
@@ -2411,15 +2436,16 @@ pagan = {
 	tengri_pagan_reformed = {
 		icon = 27
 		color = { 25 76 217 }
-		country = {
+		country = { #GT
 			cavalry_cost = -0.2
 			naval_morale = -0.05
 		}
+
+		#GT (no secondary because Tengri can't be seconadary)
 		
-		province = {
+		province = { #GT
 			local_amount_of_banners = 0.1
 		}
-		
 		can_have_secondary_religion = yes
 		heretic = { OLD_TENGRI }
 	}
@@ -2427,16 +2453,16 @@ pagan = {
 	dreamtime = {
 		icon = 29
 		color = { 197 133 43 }
-		country = {
+		country = { #GT
 			shock_damage_received = -0.1
 			years_of_nationalism = 3
 		}
-		country_as_secondary = {
+		country_as_secondary = { #GT
 			shock_damage = 0.1
 			garrison_size = -0.10
 		}
 		
-		province = {
+		province = { #GT
 			local_build_cost = -0.15
 		}
 		
@@ -2449,7 +2475,7 @@ pagan = {
 }
 
 jewish_group = {
-	defender_of_faith = yes
+	defender_of_faith = yes #GT
 
 	flags_with_emblem_percentage = 33
 	flag_emblem_index_range = { 106 107 }
@@ -2457,15 +2483,15 @@ jewish_group = {
 	jewish = {
 		icon = 20
 		color = { 0 156 231 }
-		country = {
+		country = { #GT
 			dip_tech_cost_modifier = -0.1
 			monthly_reform_progress_modifier = -0.1
 		}
-		country_as_secondary = {
+		country_as_secondary = { #GT
 			advisor_cost = -0.2
 			innovativeness_gain = -0.2
 		}
-		province = {
+		province = { #GT
 			trade_goods_size = 0.5
 		}
 		
@@ -2517,7 +2543,7 @@ jewish_group = {
 					limit = {
 						has_church_aspect = judaism_simchat_torah_aspect
 					}
-					change_government_reform_progress = 20
+					change_government_reform_progress = 25
 					add_legitimacy_equivalent = {
 						amount = 5
 						republican_tradition = 5
@@ -2535,6 +2561,21 @@ jewish_group = {
 					}
 					add_years_of_income = 0.3
 					add_inflation = -1
+				}
+				if = {
+					limit = {
+						has_government_attribute = loyalty_from_celebration
+					}
+					add_estate_loyalty = {
+						estate = estate_church
+						loyalty = 20
+					}
+				}
+				hidden_effect = {
+					if = {
+						limit = { NOT = { has_country_flag = has_celebrated_festival } }
+						set_country_flag = has_celebrated_festival
+					}
 				}
 			}
 			ai_will_do = {
@@ -2566,23 +2607,25 @@ jewish_group = {
 
 
 zoroastrian_group = {
-	defender_of_faith = yes
+	defender_of_faith = yes #GT
 
 	flag_emblem_index_range = { 110 110 }
 	zoroastrian = {
 		icon = 26
 		color = { 127 178 51 }
-
-		country = {
+		province = {
+			local_missionary_strength = -0.02
+		}
+		country = { #GT
 			monthly_splendor = 1
 			monarch_lifespan = -0.1
 		}
-		country_as_secondary = {
+		country_as_secondary = { #GT
 			merchants = 1
 			advisor_cost = 0.1
 		}
 		
-		province = {
+		province = { #GT
 			allowed_num_of_buildings = 1
 		}
 
