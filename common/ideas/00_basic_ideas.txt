@@ -37,6 +37,7 @@ aristocracy_ideas = {
 	GT_arist3 = {
 		global_autonomy = -0.02
 		nobles_loyalty_modifier = 0.1
+		rajput_loyalty_modifier = 0.1
 		cavalry_shock = 0.2
 	}
 	GT_arist4 = {
@@ -600,7 +601,6 @@ defensive_ideas = {
 	}
 }
 
-
 trade_ideas = {
 	category = DIP
 	
@@ -656,8 +656,6 @@ trade_ideas = {
 		}
 	}
 }
-
-
 
 
 economic_ideas = {
@@ -1001,7 +999,6 @@ maritime_ideas = {
 		}
 	}
 }
-
 
 quality_ideas = {
 	category = MIL
@@ -1421,6 +1418,7 @@ naval_ideas = {
 		}
 	}
 }
+
 
 GT_dynamic0 = {
 	category = DIP

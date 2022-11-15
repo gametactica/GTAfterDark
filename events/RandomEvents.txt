@@ -971,7 +971,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		has_idea = GT_explore1
+		has_idea = GT_explore1 #GT
 		num_of_ports = 1
 		NOT =  { has_country_modifier = monetary_benefits }
 		NOT =  { has_country_modifier = colonial_enthusiasm }
@@ -983,7 +983,7 @@ country_event = {
 		
 		modifier = {
 			factor = 2.0
-			has_idea = GT_explore3
+			has_idea = GT_explore2 #GT
 		}
 		modifier = {
 			factor = 2.0
@@ -1611,6 +1611,12 @@ country_event = {
 		trigger = { ruler_has_personality = naive_personality }
 		add_prestige = -10
 	}
+	option = {
+		name = "personality_options.5045.b"		# Overhaul the governmental policies.
+		highlight = yes
+		trigger = { ruler_has_personality = reformist_personality }
+		add_adm_power = -15
+	}
 }
 
 #########################################################
@@ -2007,6 +2013,12 @@ country_event = {
 				no_defined_leader = yes
 			}
 		}
+	}
+	option = {
+		name = "personality_options.5051.d"		# Establish new reforms for the peasants
+		highlight = yes
+		trigger = { ruler_has_personality = reformist_personality }
+		add_adm_power = -25
 	}
 }
 
@@ -2569,7 +2581,7 @@ country_event = {
 }
 
 #########################################################
-#			Meteor sighted							  	#
+#			Meteor sighted							  	#        #GT
 #########################################################
 country_event = {
 	id = 5060
@@ -3575,7 +3587,7 @@ country_event = {
 	title = "EVTNAME5074"
 	desc = "EVTDESC5074"
 	picture = LAND_MILITARY_eventPicture
-
+	goto = cantonments_province
 	is_triggered_only = yes
 
 	trigger = {
@@ -3595,6 +3607,18 @@ country_event = {
 		}
 	}
 
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					is_city = yes
+					culture_group = root
+				}
+				save_event_target_as = cantonments_province
+			}
+		}
+	}
+
 	option = {
 		name = "EVTOPTA5074"		# Draft citizens
 		ai_chance = {
@@ -3604,11 +3628,7 @@ country_event = {
 				NOT = { treasury = 200 }
 			}
 		}
-		random_owned_province = {
-			limit = {
-				is_city = yes
-				culture_group = root
-			}
+		event_target:cantonments_province = {
 			add_base_manpower = 1
 		}
 	}
@@ -3622,11 +3642,7 @@ country_event = {
 			}
 		}
 		add_treasury = -60
-		random_owned_province = {
-			limit = {
-				is_city = yes
-				culture_group = root
-			}
+		event_target:cantonments_province = {
 			add_base_manpower = 2
 		}
 	}
@@ -4516,7 +4532,7 @@ country_event = {
 		
 		modifier = {
 			factor = 2.0
-			has_idea_group = trade_ideas
+			has_idea = GT_trade3 #GT
 			has_government_attribute = is_merchant_republic
 		}
 		modifier = {
@@ -5426,7 +5442,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.66
-			has_idea_group = offensive_ideas
+			has_idea = GT_offense6 #GT
 		}
 	}
 
@@ -5561,6 +5577,17 @@ country_event = {
 		add_adm_power = -35
 		add_dip_power = -35
 		add_mil_power = -35
+	}
+	option = {
+		name = "personality_options.6003.a"		# Establish minor represantive institutions.
+		trigger = {
+			ruler_has_personality_ancestor = {
+				key = reformist
+			}
+		}
+		highlight = yes
+		ai_chance = { factor = 100 }
+		change_government_reform_progress = 15
 	}
 }
 
@@ -6226,6 +6253,20 @@ country_event = {
 		}
 		add_inflation = 3
 	}
+	option = {
+		name = "personality_options.712.a"
+		trigger = {
+			ruler_has_personality_ancestor = {
+				key = reformist
+			}
+		}
+		highlight = yes
+		ai_chance = {
+			factor = 100
+		}
+		add_inflation = -3
+		adm_power_cost = 50
+	}
 }
 
 # Decadence
@@ -6386,6 +6427,7 @@ country_event = {
 		NOT = { revolt_percentage = 0.1 }
 		NOT = { num_of_loans = 10 }
 		is_bankrupt = no
+		has_estate = estate_nobles
 	}
 
 	mean_time_to_happen = {
@@ -8812,7 +8854,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea = GT_explore1
+		has_idea = GT_explore1 #GT
 		capital_scope = { continent = europe }
 		any_owned_province = {
 			is_colony = yes
@@ -10090,7 +10132,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea = GT_explore1
+		has_idea = GT_explore1 #GT
 		num_of_ports = 1
 		num_of_merchants = 2
 		any_active_trade_node = {
@@ -10916,7 +10958,7 @@ country_event = {
 				OR = {
 					culture = cosmopolitan_french
 					culture = occitain
-					culture = norman
+					culture = normand
 					culture = gascon
 					culture = burgundian
 				}
@@ -10937,7 +10979,7 @@ country_event = {
 				OR = {
 					culture = cosmopolitan_french
 					culture = occitain
-					culture = norman
+					culture = normand
 					culture = gascon
 					culture = burgundian
 				}
@@ -11029,7 +11071,7 @@ country_event = {
 					OR = {
 						culture = cosmopolitan_french
 						culture = occitain
-						culture = norman
+						culture = normand
 						culture = gascon
 						culture = burgundian
 					}
@@ -11048,7 +11090,7 @@ country_event = {
 					OR = {
 						culture = cosmopolitan_french
 						culture = occitain
-						culture = norman
+						culture = normand
 						culture = gascon
 						culture = burgundian
 					}
@@ -11185,7 +11227,7 @@ country_event = {
 						OR = {
 							culture = cosmopolitan_french
 							culture = occitain
-							culture = norman
+							culture = normand
 							culture = gascon
 							culture = burgundian
 						}
@@ -11201,7 +11243,7 @@ country_event = {
 						OR = {
 							culture = cosmopolitan_french
 							culture = occitain
-							culture = norman
+							culture = normand
 							culture = gascon
 							culture = burgundian
 						}
@@ -11222,7 +11264,7 @@ country_event = {
 						OR = {
 							culture = cosmopolitan_french
 							culture = occitain
-							culture = norman
+							culture = normand
 							culture = gascon
 							culture = burgundian
 						}
@@ -11237,7 +11279,7 @@ country_event = {
 						OR = {
 							culture = cosmopolitan_french
 							culture = occitain
-							culture = norman
+							culture = normand
 							culture = gascon
 							culture = burgundian
 						}
@@ -11484,7 +11526,7 @@ country_event = {
 				OR = {
 					culture = cosmopolitan_french
 					culture = occitain
-					culture = norman
+					culture = normand
 					culture = gascon
 					culture = burgundian
 				}
@@ -11506,7 +11548,7 @@ country_event = {
 					OR = {
 						culture = cosmopolitan_french
 						culture = occitain
-						culture = norman
+						culture = normand
 						culture = gascon
 						culture = burgundian
 					}
@@ -11528,7 +11570,7 @@ country_event = {
 				OR = {
 					culture = cosmopolitan_french
 					culture = occitain
-					culture = norman
+					culture = normand
 					culture = gascon
 					culture = burgundian
 				}
@@ -11554,7 +11596,7 @@ country_event = {
 				OR = {
 					culture = cosmopolitan_french
 					culture = occitain
-					culture = norman
+					culture = normand
 					culture = gascon
 					culture = burgundian
 				}
@@ -11599,7 +11641,7 @@ country_event = {
 				OR = {
 					culture = cosmopolitan_french
 					culture = occitain
-					culture = norman
+					culture = normand
 					culture = gascon
 					culture = burgundian
 				}
@@ -12560,7 +12602,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 2
-			has_idea_group = naval_ideas
+			has_idea = GT_marit7 #GT
 		}
 	}
 	

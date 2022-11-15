@@ -51,6 +51,8 @@
 # obsessive_perfectionist_personality
 # malevolent_personality
 # immortal_personality
+# reformist_personality
+# legendary_pirate_personality
 
 ###############################################
 # Good
@@ -141,7 +143,10 @@ righteous_personality = {
 	}
 	
 	allow = {
-		government = monarchy
+		OR = {
+			government = republic
+			government = monarchy
+		}
 		NOT = { has_reform = celestial_empire }
 		NOT = { government = tribal }
 		NOT = { government = native }
@@ -153,8 +158,9 @@ righteous_personality = {
 	
 	easy_war_chance_multiplier = 0.75
 	
-	legitimacy = 1
-	monthly_heir_claim_increase = 0.05
+	legitimacy = 0.33 #GT
+	monthly_heir_claim_increase = 0.05 #GT
+	republican_tradition = 0.2 #GT
 
 	wants_ecumenical_council = yes
 
@@ -869,7 +875,7 @@ pious_personality = {
 	wants_excommunicate = yes
 	heretic_ally_acceptance = -30
 	
-	devotion = 1
+	devotion = 0.33 #GT
 	wants_ecumenical_council = yes
 
 	nation_designer_cost = 2
@@ -927,7 +933,7 @@ lawgiver_personality = {
 	
 	custom_ai_explanation = "AI_RULER_PICK_IDEA_GROUPS"
 	
-	global_autonomy = -0.05
+	global_autonomy = -0.03 #GT
 	nation_designer_cost = 5
 } #2 easier events
 
@@ -2234,7 +2240,7 @@ infertile_personality = {
 	
 	royal_marriage_acceptance = -20
 	
-	heir_chance = -0.25
+	heir_chance = -0.5
 	nation_designer_cost = -2
 }
 drunkard_personality = {
@@ -2332,7 +2338,7 @@ drunkard_personality = {
 	#random_troop_moves = yes Commenting out since often indistinguishable from a bug.
 	wants_loans = yes
 	
-	trade_efficiency = -0.10
+	governing_capacity = -50 #GT
 	nation_designer_cost = -2
 } #Scandal at court more likely
 sinner_personality = {
@@ -3159,6 +3165,26 @@ immortal_personality = {
 	static = yes # Makes nation_designer_cost not scale with age etc. 
 }
 
+legendary_pirate_personality = {
+	allow = {
+		has_government_attribute = is_pirate_republic_reform
+	}
+	
+	chance = {
+		modifier = {
+			factor = -2
+		}
+	}
+	privateer_efficiency = 0.25
+	leader_naval_shock = 2
+	navy_tradition_decay = -0.01
+	
+	random_insults = yes
+	different_religion_war_multiplier = 0.8
+	razing = yes
+	nation_designer_cost = 10
+}
+
 
 #Emperor of China Personalities
 
@@ -3358,4 +3384,53 @@ petty_personality = {
 	nation_designer_cost = -2
 }
 
+reformist_personality = {
+	ruler_allow = {
+		allow = {
+			ADM = 4
+		}
+	
+		chance = {
+			modifier = {
+				factor = 1
+				ADM = 6
+			}
+		}
+	}
+
+	heir_allow = {
+		allow = {
+			heir_ADM = 4
+		}
+	
+		chance = {
+			modifier = {
+				factor = 1
+				heir_ADM = 6
+			}
+		}
+	}
+	
+	consort_allow = {
+		allow = {
+			consort_ADM = 4
+		}
+
+		chance = {
+			modifier = {
+				factor = 1
+				consort_ADM = 6
+			}
+		}
+	}
+	
+	allow = { }
+	
+	chance = { }
+	
+	custom_ai_explanation = "AI_RULER_PICK_IDEA_GROUPS"
+	
+	reform_progress_growth = 0.25
+	nation_designer_cost = 5
+} #3 easier events
 

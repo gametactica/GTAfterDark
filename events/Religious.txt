@@ -37,6 +37,7 @@ country_event = {
 	trigger = {
 		has_country_modifier = "counter_reformation"
 		religion_years = { protestant = 150 }
+		NOT = { has_country_flag = can_always_embrace_the_counter_reformation }
 	}
 	
 	mean_time_to_happen = {
@@ -49,7 +50,7 @@ country_event = {
 	}
 }
 
-# The Counter-Reformation Ends (Libertï¿½, ï¿½galitï¿½, fraternitï¿½)
+# The Counter-Reformation Ends (Liberté, égalité, fraternité)
 country_event = {
 	id = 2052
 	title = "EVTNAME2050"
@@ -84,7 +85,7 @@ country_event = {
 	
 	trigger = {
 		has_country_modifier = "counter_reformation"
-		has_idea = GT_human3
+		has_idea = GT_human3 #GT
 	}
 	
 	mean_time_to_happen = {

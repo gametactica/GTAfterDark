@@ -1,14 +1,14 @@
 jesuit_order = {
     icon = GFX_holy_order_jesuits
     trigger = {
-		OR = {
+        OR = { #GT
         culture_group = iberian
 		has_idea = GT_relig6
 		ruler_has_personality = pious_personality
 		}
         religion = catholic
     }
-    cost = 80
+    cost = 75 #GT
     cost_type = adm_power
     per_province_effect = {
         add_base_tax = 1
@@ -16,7 +16,7 @@ jesuit_order = {
     per_province_abandon_effect = {
         add_base_tax = -1
     }
-    modifier = {
+    modifier = { #GT
         allowed_num_of_buildings = 1
         local_sailors_modifier = 0.2
     }
@@ -32,14 +32,14 @@ jesuit_order = {
 dominican_order = {
     icon = GFX_holy_order_dominicans
     trigger = {
-		OR = {
+        OR = { #GT
         culture_group = iberian
 		has_idea = GT_relig6
 		ruler_has_personality = righteous_personality
 		}
         religion = catholic
     }
-    cost = 80
+    cost = 75 #GT
     cost_type = dip_power
     per_province_effect = {
         add_base_production = 1
@@ -59,7 +59,7 @@ dominican_order = {
     per_province_abandon_effect = {
         add_base_production = -1
     }
-    modifier = {
+    modifier = { #GT
         local_missionary_strength = 0.01
 		local_monthly_devastation = -0.2
     }
@@ -79,14 +79,14 @@ dominican_order = {
 franciscan_order = {
     icon = GFX_holy_order_franciscans
     trigger = {
-		OR = {
+        OR = { #GT
         culture_group = iberian
 		has_idea = GT_relig6
 		ruler_has_personality = zealot_personality
 		}
         religion = catholic
     }
-    cost = 80
+    cost = 75 #GT
     cost_type = mil_power
     per_province_effect = {
         add_base_manpower = 1
@@ -94,7 +94,7 @@ franciscan_order = {
     per_province_abandon_effect = {
         add_base_manpower = -1
     }
-    modifier = {
+    modifier = { #GT
         local_religious_unity_contribution = 0.15
         local_religious_conversion_resistance = 0.3
     }
@@ -114,14 +114,14 @@ franciscan_order = {
 shadhili_order = {
     icon = GFX_holy_order_shadhili
     trigger = {
-		OR = {
+        OR = { #GT
         primary_culture = andalucian
 		has_idea = GT_relig6
 		ruler_has_personality = righteous_personality
 		}
         religion_group = muslim
     }
-    cost = 80
+    cost = 75 #GT
     cost_type = adm_power
     per_province_effect = {
         add_base_tax = 1
@@ -147,14 +147,14 @@ shadhili_order = {
 qadiri_order = {
     icon = GFX_holy_order_qadiri
     trigger = {
-		OR = {
+        OR = { #GT
         primary_culture = andalucian
 		has_idea = GT_relig6
 		ruler_has_personality = pious_personality
 		}
         religion_group = muslim
     }
-    cost = 80
+    cost = 75 #GT
     cost_type = dip_power
     per_province_effect = {
         add_base_production = 1
@@ -180,14 +180,14 @@ qadiri_order = {
 aissawa_order = {
     icon = GFX_holy_order_aissawa
     trigger = {
-		OR = {
+        OR = { #GT
         primary_culture = andalucian
 		has_idea = GT_relig6
 		ruler_has_personality = zealot_personality
 		}
         religion_group = muslim
     }
-    cost = 80
+    cost = 75 #GT
     cost_type = mil_power
     per_province_effect = {
         add_base_manpower = 1
