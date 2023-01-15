@@ -283,6 +283,9 @@ annexationaction = {
 					who = ROOT
 					value = 190
 				}
+				NOT = { #GT
+					has_country_flag = gt_was_player 
+				}
 			}
 		}
 	}
@@ -315,6 +318,9 @@ integrationaction = {
 				has_opinion = {
 					who = ROOT
 					value = 190
+				}
+				NOT = { #GT
+					has_country_flag = gt_was_player 
 				}
 			}
 		}
@@ -376,15 +382,20 @@ form_coalition = {
 		potential = {	
 		}
 		allow = {
-			has_opinion_modifier = {
-				modifier = aggressive_expansion
-				who = FROM
-			}		
-			NOT = {
-				has_opinion_modifier = {
-					modifier = aggressive_expansion
-					who = FROM
-					value = -50
+			OR = {  #GT
+				full_idea_group = diplomatic_ideas
+				AND = {
+					has_opinion_modifier = {
+						modifier = aggressive_expansion
+						who = FROM
+					}		
+					NOT = {
+						has_opinion_modifier = {
+							modifier = aggressive_expansion
+							who = FROM
+							value = -50
+						}
+					}
 				}
 			}
 		}
@@ -450,6 +461,7 @@ tributary_state_action = {
 			}
 			NOT = { FROM = { is_in_trade_league = yes } } #GT
 			NOT = { FROM = { is_great_power = yes } } #GT
+			NOT = { FROM = { is_emperor = yes } } #GT
 			ROOT = { is_neighbor_of = FROM } #GT
 		}
 	}
@@ -479,7 +491,27 @@ ask_for_tributary_state_action = {
 			}
 			NOT = { ROOT = { is_in_trade_league = yes } } #GT
 			NOT = { ROOT = { is_great_power = yes } } #GT
+			NOT = { ROOT = { is_emperor = yes } } #GT
 			ROOT = { is_neighbor_of = FROM } #GT
+		}
+	}
+}
+#GT
+influence_nation = {
+	condition = {
+		#tooltip = GT_pending
+		potential = {
+		}
+		allow = {
+			NOT = { war_with = FROM }
+		}
+	}
+	effect = { 
+		every_rival_country = {
+			reverse_add_opinion = {
+    			who = FROM
+    			modifier = GT_influence_action
+			}
 		}
 	}
 }

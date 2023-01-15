@@ -17,6 +17,7 @@ country_event =
     option =
     {
         name = event_gain_gp.1.a
+        add_prestige = 10
     }
     
 }

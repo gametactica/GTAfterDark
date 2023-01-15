@@ -4,7 +4,15 @@ estate_brahmins_land_rights = {
 	max_absolutism = -5
 	loyalty = 0.05
 	influence = 0.05
-	can_select = {
+	can_select = { #GT
+		AND = {
+			NOT = {
+				has_reform = merchants_reform
+				has_reform = venice_merchants_reform
+				has_reform = veche_republic
+				has_reform = great_veche_republic
+			}
+		}
 	}
 	on_granted = {
 	}
@@ -12,6 +20,9 @@ estate_brahmins_land_rights = {
 	}
 	benefits = {
 		governing_capacity = 100
+	}
+	mechanics = { #GT
+		exempt_from_seize_land
 	}
 	ai_will_do = {
 		factor = 5
@@ -191,7 +202,15 @@ estate_nobles_land_rights = {
 	max_absolutism = -5
 	loyalty = 0.05
 	influence = 0.05
-	can_select = {
+	can_select = { #GT
+		AND = {
+			NOT = {
+				has_reform = merchants_reform
+				has_reform = venice_merchants_reform
+				has_reform = veche_republic
+				has_reform = great_veche_republic
+			}
+		}
 	}
 	on_granted = {
 	}
@@ -199,6 +218,9 @@ estate_nobles_land_rights = {
 	}
 	benefits = {
 		governing_capacity = 100
+	}
+	mechanics = { #GT
+		exempt_from_seize_land
 	}
 	ai_will_do = {
 		factor = 5
@@ -378,7 +400,15 @@ estate_church_land_rights = {
 	max_absolutism = -5
 	loyalty = 0.05
 	influence = 0.05
-	can_select = {
+	can_select = { #GT
+		AND = {
+			NOT = {
+				has_reform = merchants_reform
+				has_reform = venice_merchants_reform
+				has_reform = veche_republic
+				has_reform = great_veche_republic
+			}
+		}
 	}
 	on_granted = {
 	}
@@ -386,6 +416,9 @@ estate_church_land_rights = {
 	}
 	benefits = {
 		governing_capacity = 100
+	}
+	mechanics = { #GT
+		exempt_from_seize_land
 	}
 	ai_will_do = {
 		factor = 5
@@ -565,7 +598,15 @@ estate_maratha_land_rights = {
 	max_absolutism = -5
 	loyalty = 0.05
 	influence = 0.05
-	can_select = {
+	can_select = { #GT
+		AND = {
+			NOT = {
+				has_reform = merchants_reform
+				has_reform = venice_merchants_reform
+				has_reform = veche_republic
+				has_reform = great_veche_republic
+			}
+		}
 	}
 	on_granted = {
 	}
@@ -573,6 +614,9 @@ estate_maratha_land_rights = {
 	}
 	benefits = {
 		governing_capacity = 100
+	}
+	mechanics = { #GT
+		exempt_from_seize_land
 	}
 	ai_will_do = {
 		factor = 5
@@ -752,7 +796,15 @@ estate_burghers_land_rights = {
 	max_absolutism = -5
 	loyalty = 0.05
 	influence = 0.05
-	can_select = {
+	can_select = { #GT
+		AND = {
+			NOT = {
+				has_reform = merchants_reform
+				has_reform = venice_merchants_reform
+				has_reform = veche_republic
+				has_reform = great_veche_republic
+			}
+		}
 	}
 	on_granted = {
 	}
@@ -760,6 +812,9 @@ estate_burghers_land_rights = {
 	}
 	benefits = {
 		governing_capacity = 100
+	}
+	mechanics = { #GT
+		exempt_from_seize_land
 	}
 	ai_will_do = {
 		factor = 5
@@ -939,7 +994,15 @@ estate_vaisyas_land_rights = {
 	max_absolutism = -5
 	loyalty = 0.05
 	influence = 0.05
-	can_select = {
+	can_select = { #GT
+		AND = {
+			NOT = {
+				has_reform = merchants_reform
+				has_reform = venice_merchants_reform
+				has_reform = veche_republic
+				has_reform = great_veche_republic
+			}
+		}
 	}
 	on_granted = {
 	}
@@ -947,6 +1010,9 @@ estate_vaisyas_land_rights = {
 	}
 	benefits = {
 		governing_capacity = 100
+	}
+	mechanics = { #GT
+		exempt_from_seize_land
 	}
 	ai_will_do = {
 		factor = 5
@@ -1124,9 +1190,16 @@ estate_cossacks_land_rights = {
 	icon = privilege_grant_autonomy
 	land_share = 5
 	max_absolutism = -5
-	loyalty = 0.05
 	influence = 0.1 #GT
-	can_select = {
+	can_select = { #GT
+		AND = {
+			NOT = {
+				has_reform = merchants_reform
+				has_reform = venice_merchants_reform
+				has_reform = veche_republic
+				has_reform = great_veche_republic
+			}
+		}
 	}
 	on_granted = {
 	}
@@ -1134,6 +1207,9 @@ estate_cossacks_land_rights = {
 	}
 	benefits = {
 		governing_capacity = 100
+	}
+	mechanics = { #GT
+		exempt_from_seize_land
 	}
 	ai_will_do = {
 		factor = 5
@@ -1313,7 +1389,15 @@ estate_nomadic_tribes_land_rights = {
 	max_absolutism = -5
 	loyalty = 0.05
 	influence = 0.05
-	can_select = {
+	can_select = { #GT
+		AND = {
+			NOT = {
+				has_reform = merchants_reform
+				has_reform = venice_merchants_reform
+				has_reform = veche_republic
+				has_reform = great_veche_republic
+			}
+		}
 	}
 	on_granted = {
 	}
@@ -1321,6 +1405,9 @@ estate_nomadic_tribes_land_rights = {
 	}
 	benefits = {
 		governing_capacity = 100
+	}
+	mechanics = { #GT
+		exempt_from_seize_land
 	}
 	ai_will_do = {
 		factor = 5
@@ -1500,7 +1587,15 @@ estate_dhimmi_land_rights = {
 	max_absolutism = -5
 	loyalty = 0.05
 	influence = 0.05
-	can_select = {
+	can_select = { #GT
+		AND = {
+			NOT = {
+				has_reform = merchants_reform
+				has_reform = venice_merchants_reform
+				has_reform = veche_republic
+				has_reform = great_veche_republic
+			}
+		}
 	}
 	on_granted = {
 	}
@@ -1508,6 +1603,9 @@ estate_dhimmi_land_rights = {
 	}
 	benefits = {
 		governing_capacity = 100
+	}
+	mechanics = { #GT
+		exempt_from_seize_land
 	}
 	ai_will_do = {
 		factor = 5
@@ -1687,7 +1785,15 @@ estate_jains_land_rights = {
 	max_absolutism = -5
 	loyalty = 0.05
 	influence = 0.05
-	can_select = {
+	can_select = { #GT
+		AND = {
+			NOT = {
+				has_reform = merchants_reform
+				has_reform = venice_merchants_reform
+				has_reform = veche_republic
+				has_reform = great_veche_republic
+			}
+		}
 	}
 	on_granted = {
 	}
@@ -1695,6 +1801,9 @@ estate_jains_land_rights = {
 	}
 	benefits = {
 		governing_capacity = 100
+	}
+	mechanics = { #GT
+		exempt_from_seize_land
 	}
 	ai_will_do = {
 		factor = 5
@@ -1874,7 +1983,15 @@ estate_rajput_land_rights = {
 	max_absolutism = -5
 	loyalty = 0.05
 	influence = 0.05
-	can_select = {
+	can_select = { #GT
+		AND = {
+			NOT = {
+				has_reform = merchants_reform
+				has_reform = venice_merchants_reform
+				has_reform = veche_republic
+				has_reform = great_veche_republic
+			}
+		}
 	}
 	on_granted = {
 	}
@@ -1882,6 +1999,9 @@ estate_rajput_land_rights = {
 	}
 	benefits = {
 		governing_capacity = 100
+	}
+	mechanics = { #GT
+		exempt_from_seize_land
 	}
 	ai_will_do = {
 		factor = 5
@@ -2143,7 +2263,8 @@ estate_nobles_officer_corp = {
 estate_nobles_levies = {
 	icon = privilege_demand_more_troops
 	max_absolutism = -5
-	influence = 0.1
+	influence = 0.05 #GT
+	loyalty = -0.05 #GT
 	is_valid = {
 		NOT = { has_estate_privilege = estate_nobles_golden_liberty }
 	}
@@ -2162,22 +2283,21 @@ estate_nobles_levies = {
 			NOT = { has_estate_privilege = estate_maratha_levies_for_muslims }
 		}
 	}
-	modifier_by_land_ownership = {
-		global_tax_modifier = -0.10
-		global_manpower_modifier = 0.5
+	modifier_by_land_ownership = { #GT
+		global_tax_modifier = 0.10
+		global_manpower_modifier = 0.33
 	}
 	penalties = {
 	}
-	mechanics = {
-		exempt_from_seize_land
-	}
+
 	conditional_modifier = {
 		trigger = {
 			has_government_attribute = free_noble_levies
 		}
 		modifier = {
 			max_absolutism = 5
-			nobles_influence_modifier = -0.1
+			nobles_influence_modifier = -0.05 #GT
+			nobles_loyalty_modifier = 0.05 #GT
 		}
 	}
 	ai_will_do = {
@@ -2244,7 +2364,7 @@ estate_nobles_levies = {
 estate_nobles_advisors = {
 	icon = privilege_recruit_minister
 	max_absolutism = -5
-	influence = 0.1
+	influence = 0.05 #GT
 	loyalty = 0.05
 	penalties = {
 		stability_cost_modifier = 0.1
@@ -2277,6 +2397,7 @@ estate_nobles_right_of_counsel = {
 	penalties = {
 	}
 	benefits = {
+		improve_relation_modifier = 0.10 #GT
 	}
 	ai_will_do = {
 		factor = 10
@@ -2287,10 +2408,9 @@ estate_nobles_right_of_counsel = {
 	}
 }
 
-estate_nobles_french_strong_duchies = {
+estate_nobles_french_strong_duchies = { #GT
 	icon = privilege_french_strong_duchies
 	max_absolutism = -10
-	loyalty = 0.1
 	influence = 0.1
 	is_valid = {
 		OR = {
@@ -2333,7 +2453,7 @@ estate_nobles_french_strong_duchies = {
 	}
 	benefits = {
 		diplomatic_upkeep = 3
-		reduced_liberty_desire_on_same_continent = 10
+		reduced_liberty_desire_on_same_continent = -5 #GT
 	}
 	ai_will_do = {
 		factor = 2
@@ -2420,7 +2540,7 @@ estate_church_religious_state = {
 estate_church_independent_inquisition = {
 	icon = privilege_empty_throne
 	max_absolutism = -5
-	influence = 0.1
+	influence = 0.05 #GT
 	loyalty = 0.05
 	penalties = {
 		stability_cost_modifier = 0.1
@@ -2447,15 +2567,22 @@ estate_church_new_world_mission = {
 	loyalty = 0.05
 	influence = 0.05
 	is_valid = {
+		num_of_missionaries = 0 #GT
 		OR = {
 			num_of_colonists = 1
 			num_of_colonies = 1
 		}
 	}
-	penalties = {
+	can_select = { #GT
+		num_of_missionaries = 1
 	}
-	benefits = {
+
+	penalties = { #GT
+		missionaries = -1
+	}
+	benefits = { #GT
 		native_assimilation = 0.5
+		can_colony_boost_development = yes
 	}
 	ai_will_do = {
 		factor = 0
@@ -2470,16 +2597,17 @@ estate_church_papal_emissary = {
 	is_valid = {
 		religion = catholic
 		NOT = { tag = PAP }
+		num_of_missionaries = 0 #GT
 	}
 	can_select = {
 		papal_influence = 20
-		num_of_cardinals = 1
+		num_of_missionaries = 1 #GT
 	}
 	on_granted = {
 		add_papal_influence = -5
 	}
 	penalties = {
-		curia_powers_cost = 0.05
+		missionaries = -1 #GT
 	}
 	benefits = {
 		papal_influence = 1
@@ -2569,7 +2697,7 @@ estate_church_clerical_ministers = {
 			NOT = { religion = anglican }
 		}
 		modifier = {
-			missionary_maintenance_cost = -0.2
+			stability_cost_modifier = -0.15 #GT
 		}
 	}
 	conditional_modifier = {
@@ -2664,6 +2792,12 @@ estate_church_clerical_ministers = {
 			technology_cost = -0.05
 		}
 	}
+	on_granted = {
+		add_stability = 1 #GT
+	}
+	on_revoked = {
+		add_stability = -1 #GT
+	}
 	penalties = {
 	}
 	benefits = {
@@ -2699,6 +2833,7 @@ estate_church_clerical_oversight = {
 	penalties = {
 	}
 	benefits = {
+		tolerance_own = 0.5 #GT
 	}
 	ai_will_do = {
 		factor = 10
@@ -2739,15 +2874,13 @@ estate_church_inwards_perfection = {
 	}
 	benefits = { #GT
 		tolerance_own = 2
-		war_exhaustion = -0.05
-		legitimacy = 0.50
-		devotion = 0.50
-		horde_unity = -0.50
-		republican_tradition = 0.25
+		war_exhaustion = -0.03
+		legitimacy = 0.33
+		devotion = 0.33
+		horde_unity = -0.33
+		republican_tradition = 0.15
 	}
-	mechanics = {
-		exempt_from_seize_land
-	}
+
 	cooldown_years = 25
 	ai_will_do = {
 		factor = 1
@@ -2776,6 +2909,7 @@ estate_burghers_enforced_interfaith_dialogue = {
 	can_select = {
 		NOT = { has_estate_privilege = estate_church_enforced_one_faith }
 	}
+
 	benefits = {
 		tolerance_heathen = 2
 		tolerance_heretic = 2
@@ -2797,10 +2931,38 @@ estate_burghers_enforced_interfaith_dialogue = {
 	}
 }
 
+estate_burghers_license_religious_commodities = { #GT
+	icon = privilege_grant_autonomy
+	max_absolutism = -5
+	influence = 0.05
+	on_granted = {
+		custom_tooltip = estate_burghers_license_religious_commodities_effect_tooltip
+	}
+	is_valid = {
+		num_of_missionaries = 0
+		num_of_merchants = 1
+	}
+	can_select = {
+		num_of_missionaries = 1
+	}
+	penalties = {
+		missionaries = -1
+		church_loyalty_modifier = -0.05
+	}
+	benefits = {
+		placed_merchant_power = 3
+		church_influence_modifier = 0.05
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+}
+
 estate_church_enforced_one_faith = {
 	icon = privilege_recruit_inouisitor
 	max_absolutism = -5
-	loyalty = 0.1
+	loyalty = 0.05 #GT
 	is_valid = {
 		any_owned_province = {
 			NOT = { religion = root }
@@ -2905,7 +3067,7 @@ estate_burghers_admirals = {
 estate_burghers_commercial_board_of_advice = {
 	icon = privilege_recruit_minister
 	max_absolutism = -5
-	influence = 0.1
+	influence = 0.05 #GT
 	loyalty = 0.05
 	penalties = {
 		stability_cost_modifier = 0.1
@@ -2965,10 +3127,9 @@ estate_burghers_new_world_charter = {
 	}
 }
 
-estate_burghers_indebted_to_burghers = {
+estate_burghers_indebted_to_burghers = { #GT
 	icon = privilege_give_money
 	max_absolutism = -5
-	loyalty = 0.05
 	influence = 0.05
 	on_granted = {
 		custom_tooltip = estate_burghers_indebted_to_burghers_effect_tooltip
@@ -3036,6 +3197,7 @@ estate_burghers_free_enterprise = {
 	penalties = {
 	}
 	benefits = {
+		trade_efficiency = 0.05 #GT
 	}
 	ai_will_do = {
 		factor = 10
@@ -3046,11 +3208,10 @@ estate_burghers_free_enterprise = {
 	}
 }
 
-estate_cossacks_exploration_expedition = {
+estate_cossacks_exploration_expedition = { #GT
 	icon = privilege_grant_new_world_charter
 	land_share = 5
 	max_absolutism = -5
-	loyalty = 0.05
 	influence = 0.05
 	
 	on_granted = {
@@ -3125,11 +3286,12 @@ estate_cossacks_exploration_expedition = {
 estate_cossacks_cossack_self_governance = {
 	icon = privilege_permit_self_governance
 	max_absolutism = -10
-	loyalty = 0.1
+	loyalty = 0.05 #GT
 	influence = 0.15 #GT
 	penalties = {
 	}
 	benefits = {
+		cavalry_flanking = 0.5 #GT
 	}
 	ai_will_do = {
 		factor = 10
@@ -3154,11 +3316,11 @@ estate_cossacks_establish_the_cossack_regiments = {
 	}
 	penalties = {
 	}
-	benefits = {
+	benefits = { #GT
+		cav_to_inf_ratio = 0.25
 	}
 	mechanics = {
 		enables_cossack_regiments
-		exempt_from_seize_land
 	}
 	ai_will_do = {
 		factor = 1
@@ -3186,7 +3348,7 @@ estate_cossacks_expand_the_cossack_regiments = {
 	icon = privilege_conscript_cossack_elite
 	land_share = 5
 	max_absolutism = -5
-	influence = 0.05
+	influence = 0.01 #GT
 	is_valid = {
 		has_estate_privilege = estate_cossacks_establish_the_cossack_regiments
 	}
@@ -3368,7 +3530,8 @@ estate_dhimmi_manpower = {
 estate_dhimmi_tolerance = {
 	icon = privilege_promoto_dhimmi_nobles
 	max_absolutism = -5
-	influence = 0.1
+	influence = 0.05 #GT
+	loyalty = 0.05 #GT
 	is_valid = {
 		any_owned_province = {
 			NOT = { religion = root }
@@ -3525,6 +3688,7 @@ estate_nomadic_tribes_chieftains_autonomy = {
 	penalties = {
 	}
 	benefits = {
+		horde_unity = 0.2 #GT
 	}
 	ai_will_do = {
 		factor = 10
@@ -3680,7 +3844,7 @@ estate_brahmins_legitimacy_to_rule = {
 estate_brahmins_brahmin_leadership = {
 	icon = privilege_seek_support_of_brahmins
 	max_absolutism = -5
-	influence = 0.1
+	influence = 0.05 #GT
 	is_valid = {
 		NOT = { religion_group = muslim }
 	}
@@ -4048,7 +4212,7 @@ estate_maratha_military = {
 estate_maratha_advisor = {
 	icon = privilege_limited_war_support
 	max_absolutism = -5
-	influence = 0.1
+	influence = 0.05 #GT
 	is_valid = {
 		NOT = { religion_group = muslim }
 	}
@@ -4084,6 +4248,7 @@ estate_maratha_loyalty_privilege = {
 	penalties = {
 	}
 	benefits = {
+		land_forcelimit = 3 #GT
 	}
 	ai_will_do = {
 		factor = 10
@@ -4097,7 +4262,8 @@ estate_maratha_loyalty_privilege = {
 estate_maratha_levies = {
 	icon = privilege_recruit_from_marathi
 	max_absolutism = -5
-	influence = 0.1
+	influence = 0.05 #GT
+	loyalty = -0.05 #GT
 	is_valid = {
 		NOT = { religion_group = muslim }
 	}
@@ -4110,22 +4276,21 @@ estate_maratha_levies = {
 		}
 		NOT = { has_estate_privilege = estate_maratha_levies_for_muslims }
 	}
-	modifier_by_land_ownership = {
-		global_tax_modifier = -0.10
-		global_manpower_modifier = 0.5
+	modifier_by_land_ownership = { #GT
+		global_tax_modifier = 0.10
+		global_manpower_modifier = 0.33
 	}
 	penalties = {
 	}
-	mechanics = {
-		exempt_from_seize_land
-	}
+
 	conditional_modifier = {
 		trigger = {
 			has_government_attribute = free_noble_levies
 		}
 		modifier = {
 			max_absolutism = 5
-			maratha_influence_modifier = -0.1
+			maratha_influence_modifier = -0.05 #GT
+			maratha_loyalty_modifier = 0.05 #GT
 		}
 	}
 	ai_will_do = {
@@ -4209,7 +4374,7 @@ estate_maratha_levies = {
 estate_maratha_levies_for_muslims = {
 	icon = privilege_recruit_from_marathi
 	max_absolutism = -5
-	influence = 0.1
+	influence = 0.05 #GT
 	is_valid = {
 		religion_group = muslim
 	}
@@ -4269,20 +4434,17 @@ estate_maratha_special_privilege = {
 	icon = privilege_promote_maratha_nobility
 	max_absolutism = -5
 	loyalty = 0.05
-	influence = 0.05
+	influence = 0.1 #GT
 	is_valid = {
 		has_reform = permanent_marathas_council_reform
 	}
-	modifier_by_land_ownership = {
+	modifier_by_land_ownership = { #GT
 		discipline = 0.1
-		global_tax_modifier = -0.15
+		global_tax_modifier = -0.1
 	}
 	penalties = {
 	}
 	benefits = {
-	}
-	mechanics = {
-		exempt_from_seize_land
 	}
 	ai_will_do = {
 		factor = 10
@@ -4312,7 +4474,6 @@ estate_rajput_rajput_regiments = {
 	}
 	mechanics = {
 		enables_rajput_regiments
-		exempt_from_seize_land
 	}
 	ai_will_do = {
 		factor = 10
@@ -4381,7 +4542,7 @@ estate_rajput_military = {
 estate_rajput_advisor = {
 	icon = privilege_recruit_minister
 	max_absolutism = -5
-	influence = 0.1
+	influence = 0.05 #GT
 	is_valid = {
 		NOT = { religion_group = muslim }
 	}
@@ -4417,6 +4578,7 @@ estate_rajput_loyalty_privilege = {
 	penalties = {
 	}
 	benefits = {
+		promote_culture_cost = -0.2 #GT
 	}
 	ai_will_do = {
 		factor = 10
@@ -4531,6 +4693,7 @@ estate_vaisyas_loyalty_privilege = {
 	penalties = {
 	}
 	benefits = {
+		production_efficiency = 0.05 #GT
 	}
 	ai_will_do = {
 		factor = 10
@@ -4544,7 +4707,7 @@ estate_vaisyas_loyalty_privilege = {
 estate_vaisyas_advisor = {
 	icon = privilege_recruit_minister
 	max_absolutism = -5
-	influence = 0.1
+	influence = 0.05 #GT
 	loyalty = 0.05
 	penalties = {
 		stability_cost_modifier = 0.1
@@ -4703,23 +4866,12 @@ estate_nobles_supremacy_over_crown = {
 	}
 	penalties = {
 	}
-	benefits = {
-		burghers_loyalty_modifier = 0.1
-		church_loyalty_modifier = 0.1
-		dhimmi_loyalty_modifier = 0.1
-		cossacks_loyalty_modifier = 0.1
-		rajput_loyalty_modifier = 0.1
-		brahmins_hindu_loyalty_modifier = 0.1
-		brahmins_muslim_loyalty_modifier = 0.1
-		brahmins_other_loyalty_modifier = 0.1
-		maratha_loyalty_modifier = 0.1
-		jains_loyalty_modifier = 0.1
-		vaisyas_loyalty_modifier = 0.1
-		nomadic_tribes_loyalty_modifier = 0.1
+	benefits = {  #GT
+		cossacks_loyalty_modifier = -0.1
 		burghers_influence_modifier = 0.1
 		church_influence_modifier = 0.1
 		dhimmi_influence_modifier = 0.1
-		cossacks_influence_modifier = 0.2 #GT
+		cossacks_influence_modifier = 0.2
 		rajput_influence_modifier = 0.1
 		brahmins_hindu_influence_modifier = 0.1
 		brahmins_muslim_influence_modifier = 0.1
@@ -4749,23 +4901,13 @@ estate_brahmins_supremacy_over_crown = {
 	}
 	penalties = {
 	}
-	benefits = {
-		burghers_loyalty_modifier = 0.1
-		church_loyalty_modifier = 0.1
-		dhimmi_loyalty_modifier = 0.1
-		cossacks_loyalty_modifier = 0.1
-		rajput_loyalty_modifier = 0.1
-		nobles_loyalty_modifier = 0.1
-		maratha_loyalty_modifier = 0.1
-		jains_loyalty_modifier = 0.1
-		vaisyas_loyalty_modifier = 0.1
-		nomadic_tribes_loyalty_modifier = 0.1
+	benefits = {  #GT
+		cossacks_loyalty_modifier = -0.1
 		burghers_influence_modifier = 0.1
 		church_influence_modifier = 0.1
 		dhimmi_influence_modifier = 0.1
-		cossacks_influence_modifier = 0.2 #GT
+		cossacks_influence_modifier = 0.2
 		rajput_influence_modifier = 0.1
-		nobles_influence_modifier = 0.1
 		maratha_influence_modifier = 0.1
 		jains_influence_modifier = 0.1
 		vaisyas_influence_modifier = 0.1
@@ -7664,7 +7806,7 @@ estate_nobles_strong_duchies = {
 	}
 	benefits = {
 		diplomatic_upkeep = 2
-		reduced_liberty_desire = 10
+		reduced_liberty_desire = -5 #GT
 	}
 	ai_will_do = {
 		factor = 2
@@ -7736,7 +7878,7 @@ estate_maratha_subject_rights = {
 	}
 	benefits = {
 		diplomatic_upkeep = 2
-		reduced_liberty_desire = 10
+		reduced_liberty_desire = -5 #GT
 	}
 	ai_will_do = {
 		factor = 2
@@ -7807,7 +7949,7 @@ estate_rajput_subject_rights = {
 	}
 	benefits = {
 		diplomatic_upkeep = 2
-		reduced_liberty_desire = 10
+		reduced_liberty_desire = -5 #GT
 	}
 	ai_will_do = {
 		factor = 2
@@ -7929,9 +8071,6 @@ estate_nobles_golden_liberty = {
 	}
 	benefits = {
 		global_manpower_modifier = 0.33
-	}
-	mechanics = {
-		exempt_from_seize_land
 	}
 	ai_will_do = {
 		factor = 0
@@ -9210,7 +9349,7 @@ estate_nobles_command_of_the_military = {
 	icon = privilege_promote_purbias
 	land_share = 10
 	max_absolutism = -10
-	influence = 0.2 #GT
+	influence = 0.1 #GT
 	is_valid = {
 	}
 	can_select = {
@@ -9223,6 +9362,7 @@ estate_nobles_command_of_the_military = {
 	}
 	benefits = {
 		army_tradition = 1
+		cav_to_inf_ratio = 0.15 #GT
 	}
 	ai_will_do = {
 		factor = 0
@@ -9257,7 +9397,7 @@ estate_burghers_orang_laut_alliances = {
 estate_nobles_better_integration = {
 	icon = privilege_better_integration
 	max_absolutism = -10
-	influence = 0.15
+	influence = 0.1 #GT
 	loyalty = 0.05
 	is_valid = {
 		any_subject_country = {
@@ -9281,10 +9421,10 @@ estate_nobles_better_integration = {
 		enable_annexation_penalty = yes
 	}
 	penalties = {
-		reduced_liberty_desire = -15
+		accept_vassalization_reasons = -5 #GT
 	}
 	benefits = {
-		diplomatic_annexation_cost = -0.05
+		diplomatic_annexation_cost = -0.15 #GT
 	}
 	cooldown_years = 10
 	ai_will_do = {
@@ -9295,7 +9435,7 @@ estate_nobles_better_integration = {
 estate_maratha_better_integration = {
 	icon = privilege_better_integration
 	max_absolutism = -10
-	influence = 0.15
+	influence = 0.1 #GT
 	loyalty = 0.05
 	is_valid = {
 		any_subject_country = {
@@ -9321,10 +9461,10 @@ estate_maratha_better_integration = {
 		enable_annexation_penalty = yes
 	}
 	penalties = {
-		reduced_liberty_desire = -15
+		accept_vassalization_reasons = -10 #GT
 	}
 	benefits = {
-		diplomatic_annexation_cost = -0.05
+		diplomatic_annexation_cost = -0.1 #GT
 	}
 	cooldown_years = 10
 	ai_will_do = {
@@ -9335,7 +9475,7 @@ estate_maratha_better_integration = {
 estate_rajput_better_integration = {
 	icon = privilege_better_integration
 	max_absolutism = -10
-	influence = 0.15
+	influence = 0.1 #GT
 	loyalty = 0.05
 	is_valid = {
 		any_subject_country = {
@@ -9360,10 +9500,10 @@ estate_rajput_better_integration = {
 		enable_annexation_penalty = yes
 	}
 	penalties = {
-		reduced_liberty_desire = -15
+		accept_vassalization_reasons = -10 #GT
 	}
 	benefits = {
-		diplomatic_annexation_cost = -0.05
+		diplomatic_annexation_cost = -0.1 #GT
 	}
 	cooldown_years = 10
 	ai_will_do = {
@@ -9374,11 +9514,13 @@ estate_rajput_better_integration = {
 estate_church_religious_diplomats = {
 	icon = privilege_religious_diplomats
 	max_absolutism = -10
-	influence = 0.15
+	influence = 0.1 #GT
 	loyalty = 0.05
 	is_valid = {
+		num_of_missionaries = 0 #GT
 	}
 	can_select = {
+		num_of_missionaries = 1 #GT
 	}
 	on_granted = {
 		add_increase_same_religion_opinion = yes
@@ -9390,6 +9532,7 @@ estate_church_religious_diplomats = {
 		remove_increase_same_religion_opinion = yes
 	}
 	penalties = {
+		missionaries = -1 #GT
 	}
 	benefits = {
 	}
@@ -9400,7 +9543,7 @@ estate_church_religious_diplomats = {
 		}
 		modifier = {
 			max_absolutism = 10
-			church_influence_modifier = -0.15
+			church_influence_modifier = -0.1 #GT
 		}
 	}
 	ai_will_do = {
@@ -9411,7 +9554,7 @@ estate_church_religious_diplomats = {
 estate_brahmins_religious_diplomats = {
 	icon = privilege_religious_diplomats
 	max_absolutism = -10
-	influence = 0.15
+	influence = 0.1 #GT
 	loyalty = 0.05
 	is_valid = {
 		NOT = { has_estate = estate_church }
@@ -9428,6 +9571,7 @@ estate_brahmins_religious_diplomats = {
 		remove_increase_same_religion_opinion = yes
 	}
 	penalties = {
+		missionaries = -1 #GT
 	}
 	benefits = {
 	}
@@ -10423,6 +10567,7 @@ estate_dhimmi_grant_liberties = {
 	penalties = {
 	}
 	benefits = {
+		global_spy_defence = 0.1 #GT
 	}
 	ai_will_do = {
 		factor = 1
@@ -11217,6 +11362,11 @@ estate_nobles_decentralized_tribe = {
 	influence = 0.1
 	land_share = 5
 	loyalty = 0.05
+
+	mechanics = {
+		exempt_from_seize_land
+	}
+
 	is_valid = {
 		has_government_attribute = has_internal_tribes
 		NOT = { has_country_flag = centralized_tribes_level_2 }
@@ -11237,9 +11387,7 @@ estate_nobles_decentralized_tribe = {
 		manpower_recovery_speed = 0.15
 		global_autonomy = 0.05
 	}
-	mechanics = {
-		exempt_from_seize_land
-	}
+
 	on_granted = {
 		add_estate_loyalty = {
 			estate = estate_nobles
@@ -11259,6 +11407,11 @@ estate_nobles_tribe_unification = {
 	max_absolutism = -10
 	influence = 0.05
 	loyalty = 0
+
+	mechanics = {
+		exempt_from_seize_land
+	}
+	
 	is_valid = {
 		has_government_attribute = has_internal_tribes
 		has_country_flag = centralized_tribes_level_1
@@ -11304,9 +11457,7 @@ estate_nobles_tribe_unification = {
 			has_estate_privilege = estate_nobles_tribe_centralization
 		}
 	}
-	mechanics = {
-		exempt_from_seize_land
-	}
+	
 	ai_will_do = {
 		factor = 1000
 	}
@@ -11363,7 +11514,6 @@ estate_nobles_danish_nobility = {
 	max_absolutism = -25
 	influence = 0.1
 	land_share = 5
-	loyalty = 0.05
 	is_valid = {
 		has_dlc = "Lions of the North"
 		has_estate_privilege = estate_nobles_danish_nobility
@@ -11388,9 +11538,7 @@ estate_nobles_danish_nobility = {
 	modifier_by_land_ownership = {
 		global_tax_modifier = -0.25
 	}
-	mechanics = {
-		exempt_from_seize_land
-	}
+
 	on_granted = {
 	}
 	ai_will_do = {
@@ -11427,9 +11575,7 @@ estate_nobles_nobles_instead_of_royal_court = {
 		monthly_heir_claim_increase = -0.05 #GT
 		stability_cost_modifier = 0.1 #GT
 	}
-	mechanics = {
-		exempt_from_seize_land
-	}
+
 	ai_will_do = {
 		factor = -1000
 	}

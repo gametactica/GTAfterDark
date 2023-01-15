@@ -509,13 +509,15 @@ crusader = {
 		}  
 		land_maintenance = 1.0
 	}
-
-	global_manpower_modifier = 0.3
-	global_tax_modifier = 0.1
-	land_morale = 0.10
+	#GT
+	extra_manpower_at_religious_war = yes
+	global_tax_income = 24
+	land_forcelimit = 5
+	morale_damage = 0.05
 	prestige = 1
 	papal_influence = 1
-	devotion = 0.25
+	devotion = 0.33
+	legitimacy = 0.5
 	#icon = 9
 }
 

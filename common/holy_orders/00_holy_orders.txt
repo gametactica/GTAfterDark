@@ -3,9 +3,10 @@ jesuit_order = {
     trigger = {
         OR = { #GT
         culture_group = iberian
-		has_idea = GT_relig6
-		ruler_has_personality = pious_personality
-		}
+        #has_idea = GT_relig6
+        #ruler_has_personality = architectural_visionary_personality
+        any_state = { has_state_edict = edict_religious_unity }
+        }
         religion = catholic
     }
     cost = 75 #GT
@@ -34,8 +35,9 @@ dominican_order = {
     trigger = {
         OR = { #GT
         culture_group = iberian
-		has_idea = GT_relig6
-		ruler_has_personality = righteous_personality
+		#has_idea = GT_relig6
+		#ruler_has_personality = zealot_personality
+        any_state = { has_state_edict = edict_religious_unity }
 		}
         religion = catholic
     }
@@ -81,8 +83,10 @@ franciscan_order = {
     trigger = {
         OR = { #GT
         culture_group = iberian
-		has_idea = GT_relig6
-		ruler_has_personality = zealot_personality
+		#has_idea = GT_relig6
+		#ruler_has_personality = righteous_personality
+        #ruler_has_personality = pious_personality
+        any_state = { has_state_edict = edict_religious_unity }
 		}
         religion = catholic
     }
@@ -116,8 +120,9 @@ shadhili_order = {
     trigger = {
         OR = { #GT
         primary_culture = andalucian
-		has_idea = GT_relig6
-		ruler_has_personality = righteous_personality
+		#has_idea = GT_relig6
+		#ruler_has_personality = zealot_personality
+        any_state = { has_state_edict = edict_religious_unity }
 		}
         religion_group = muslim
     }
@@ -149,8 +154,9 @@ qadiri_order = {
     trigger = {
         OR = { #GT
         primary_culture = andalucian
-		has_idea = GT_relig6
-		ruler_has_personality = pious_personality
+		#has_idea = GT_relig6
+		#ruler_has_personality = architectural_visionary_personality
+        any_state = { has_state_edict = edict_religious_unity }
 		}
         religion_group = muslim
     }
@@ -182,8 +188,10 @@ aissawa_order = {
     trigger = {
         OR = { #GT
         primary_culture = andalucian
-		has_idea = GT_relig6
-		ruler_has_personality = zealot_personality
+		#has_idea = GT_relig6
+		#ruler_has_personality = righteous_personality
+        #ruler_has_personality = pious_personality
+        any_state = { has_state_edict = edict_religious_unity }
 		}
         religion_group = muslim
     }

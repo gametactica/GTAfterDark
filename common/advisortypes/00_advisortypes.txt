@@ -214,7 +214,7 @@ treasurer = {
 	monarch_power = ADM
 	
 	# Bonus
-	global_prosperity_growth = 0.1 #GT
+	global_prosperity_growth = 0.2 #GT
 
 	skill_scaled_modifier = {
 		trigger = { 
@@ -277,7 +277,7 @@ theologian = {
 	monarch_power = ADM
 	
 	# Bonus
-	global_unrest = -2
+	religious_unity = 0.15 #GT
 
 	skill_scaled_modifier = {
 		trigger = { 
@@ -349,7 +349,7 @@ master_of_mint = {
 	monarch_power = ADM
 	
 	# Bonus
-	inflation_reduction = 0.10
+	inflation_reduction = 0.15
 
 	skill_scaled_modifier = {
 		trigger = { 
@@ -416,7 +416,7 @@ inquisitor = {
 	allow_only_owner_religion = yes
 	
 	# Bonus
-	global_missionary_strength = 0.02
+	global_missionary_strength = 0.015 #GT
 
 	skill_scaled_modifier = {
 		trigger = { 

@@ -2,7 +2,7 @@ united_cantons_reform = {
 	icon = "united_cantons_reform"
 	allow_normal_conversion = yes
 	modifiers = {
-		governing_capacity = -50
+		governing_capacity_modifier = -0.1 #GT
 		free_policy = 1
 		mercenary_manpower = 0.5
 	}
@@ -40,7 +40,7 @@ united_cantons_reform = {
 parliamentary_reform = {
 	icon = "judge"
 	modifiers = {
-		monthly_reform_progress_modifier = 0.1 #GT
+		global_unrest = -1
 	}
 	potential = {
 		is_revolutionary = no
@@ -215,7 +215,6 @@ council_of_the_indies_reform = {
 	modifiers = {
 		global_tariffs = 0.2
 		treasure_fleet_income = 0.2
-		naval_forcelimit = 5 #GT
 	}
 	ai = {
 		factor = 2
@@ -241,8 +240,9 @@ penal_colonies_reform = {
 	trigger = {
 		has_idea_group = exploration_ideas
 	}
-	modifiers = {
-		expel_minorities_cost = -1
+	modifiers = { #GT
+		expel_minorities_cost = -0.5
+		culture_conversion_cost = -0.15
 		colonist_placement_chance = 0.05
 	}
 	ai = {
@@ -364,7 +364,7 @@ i_am_the_church_reform = {
 		tag = PAP
 	}
 	modifiers = {
-		devotion = 0.5
+		devotion = 0.25 #GT
 		max_absolutism = 10
 		appoint_cardinal_cost = -0.1
 	}
