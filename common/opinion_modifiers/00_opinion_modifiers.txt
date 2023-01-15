@@ -5073,3 +5073,41 @@ hsa_moved_the_staple_port = {
 	opinion = -100
 	yearly_decay = 2
 }
+
+# GT Mod Additions
+
+GT_Superiority_Complex = {
+	opinion = -25
+	yearly_decay = 3
+}
+
+GT_Preferred_Another = {
+	opinion = -80
+	yearly_decay = 8
+}
+
+GT_Reputation_Sabotaged = {
+	opinion = -10
+	yearly_decay = 15
+	min = -30
+}
+
+GT_Magnanimous_Diplomacy = {
+	opinion = 100
+	yearly_decay = 10
+}
+
+GT_GP_Emperor = {
+	opinion = 50
+	yearly_decay = 50
+}
+
+GT_FIX = {
+	opinion = 200
+	yearly_decay = 3
+}
+
+GT_influence_action = {
+	opinion = -25
+	yearly_decay = 1
+}

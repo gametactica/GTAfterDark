@@ -69,6 +69,7 @@ country_event =
 			ruler_has_personality = petty_personality
 			ruler_has_personality = righteous_personality
 			ruler_has_personality = immortal_personality
+			ruler_has_personality = reformist_personality
 			}
 		}
 			add_stability = 0

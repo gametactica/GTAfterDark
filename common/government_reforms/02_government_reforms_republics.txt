@@ -38,7 +38,7 @@ oligarchy_reform = {
 		NOT = { culture_group = latin }
 	}
 	modifiers = { #GT
-		build_cost = -0.1
+		monarch_lifespan = 0.1
 		inflation_action_cost = -0.1
 		unjustified_demands = -0.1
 		max_absolutism = -25
@@ -306,6 +306,7 @@ venice_merchants_reform = {
 		max_absolutism = -40
 		governing_capacity_modifier = 0.15
 		num_accepted_cultures = 1
+		#diplomatic_upkeep = 1
 		transfer_trade_power_reasons = 10
 	}
 	valid_for_nation_designer = yes
@@ -1581,6 +1582,7 @@ republican_authoritarianism_reform = {
 	modifiers = { #GT
 		yearly_absolutism = 0.1
 		global_colonial_growth = 10
+		governing_capacity = 40
 	}
 	ai = {
 		factor = 1
@@ -1687,8 +1689,8 @@ aristocratic_values_reform = {
 			NOT = { has_dlc = "Emperor" }
 		}
 	}
-	modifiers = {
-		global_manpower_modifier = 0.1
+	modifiers = { #GT
+		diplomatic_upkeep = 1
 		nobles_influence_modifier = 0.1
 		maratha_exclusive_influence_modifier = 0.1
 		rajput_exclusive_influence_modifier = 0.1
@@ -2415,7 +2417,7 @@ presidential_reform = {
 	modifiers = { #GT
 		mercenary_manpower= 0.10
 		leader_cost = -0.10
-		free_leader_pool = 1
+		diplomatic_reputation = 1
 	}
 	ai = {
 		factor = 1
@@ -3444,7 +3446,7 @@ federal_senate_reform = {
 		NOT = { has_government_attribute = is_pirate_republic_reform }
 	}
 	modifiers = { #GT
-		expand_administration_cost = -0.25
+		expand_administration_cost = -0.15
 		candidate_random_bonus = 1
 	}
 

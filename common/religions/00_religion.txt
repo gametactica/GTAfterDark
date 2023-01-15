@@ -24,10 +24,7 @@ christian = {
 			protestant
 		}
 		country = { #GT
-			legitimacy = 0.50
-			republican_tradition = 0.15
-			devotion = 0.3
-			horde_unity = 0.2
+			tolerance_own = 1
 			yearly_corruption = 0.25
 		}
 		
@@ -330,10 +327,7 @@ christian = {
 		}
 		country = { #GT
 			heir_chance = 0.33
-			legitimacy = -0.25
-			horde_unity = -0.15
-			republican_tradition = -0.1
-			devotion = -0.3
+			monthly_heir_claim_increase_modifier = -0.1
 		}
 		
 		country_as_secondary = { #GT
@@ -418,7 +412,7 @@ christian = {
 		}
 		country = { #GT
 			yearly_corruption = -0.1
-			global_unrest = 1
+			global_unrest = 2
 		}
 		
 		country_as_secondary = { #GT
@@ -561,8 +555,8 @@ christian = {
 			catholic
 		}
 		country = { #GT
-			tolerance_heretic = 1
-			max_absolutism = -10
+			governing_capacity_modifier = 0.1
+			national_focus_years = 3
 		}
 		
 		country_as_secondary = { #GT
@@ -677,7 +671,7 @@ christian = {
 		color = { 178 127 0 }
 		icon = 4
 		country = { #GT
-			governing_capacity_modifier = 0.1
+			ae_impact = -0.1
 			yearly_patriarch_authority = -0.01
 		}
 		country_as_secondary = { #GT
@@ -1398,10 +1392,7 @@ muslim = {
 		color = { 0 153 0 }
 		icon = 5
 		country = { #GT
-			legitimacy = 0.25
-			republican_tradition = 0.1
-			devotion = 0.3
-			horde_unity = 0.2
+			accept_vassalization_reasons = 5
 			religious_unity = -0.15
 		}
 		country_as_secondary = { #GT
@@ -1422,10 +1413,7 @@ muslim = {
 		icon = 6
 		country = { #GT
 			religious_unity = 0.15
-			legitimacy = -0.25
-			republican_tradition = -0.1
-			devotion = -0.3
-			horde_unity = -0.2
+			accept_vassalization_reasons = -5
 		}
 		country_as_secondary = { #GT
 			vassal_income = 0.2
@@ -1520,10 +1508,7 @@ eastern = {
 			war_exhaustion_cost = 0.25
 		}
 		country_as_secondary = { #GT
-			horde_unity = 0.50
-			legitimacy = 0.25
-			republican_tradition = 0.15
-			devotion = 0.3
+			core_creation = -0.1
 			church_influence_modifier = 0.1
 			nomadic_tribes_influence_modifier = 0.2
 		}
@@ -1586,7 +1571,7 @@ eastern = {
 		color = { 214 229 140 }
 		icon = 9
 		country = { #GT
-			adm_tech_cost_modifier = -0.1
+			adm_tech_cost_modifier = -0.05
 			religious_unity = -0.15
 		}
 		country_as_secondary = { #GT
@@ -2309,7 +2294,7 @@ pagan = {
 		color = { 127 76 76 }
 		icon = 12
 		country = { #GT
-			monthly_heir_claim_increase = 0.15
+			monthly_heir_claim_increase = 0.1
 			religious_unity = -0.15
 		}
 		country_as_secondary = { #GT
@@ -2328,7 +2313,7 @@ pagan = {
 		color = { 127 115 115 }
 		icon = 13
 		country = { #GT
-			diplomatic_reputation = 2
+			diplomatic_reputation = 1
 			development_cost = 0.05
 		}
 		country_as_secondary = { #GT
@@ -2348,8 +2333,8 @@ pagan = {
 		color = { 64 115 115 }
 		icon = 18
 		country = { #GT
-			global_autonomy = -0.02
-			embracement_cost = 0.25
+			global_autonomy = -0.01
+			embracement_cost = 0.15
 		}
 
 		country_as_secondary = { #GT
@@ -2417,8 +2402,8 @@ pagan = {
 		icon = 21
 		color = { 191 191 191 }
 		country = { #GT
-			land_forcelimit_modifier = 0.10
 			naval_forcelimit_modifier = 0.10
+			land_forcelimit_modifier = -0.10
 		}
 		country_as_secondary = { #GT
 			galley_power = 0.2
@@ -2438,7 +2423,7 @@ pagan = {
 		color = { 25 76 217 }
 		country = { #GT
 			cavalry_cost = -0.2
-			naval_morale = -0.05
+			naval_morale = -0.1
 		}
 
 		#GT (no secondary because Tengri can't be seconadary)
@@ -2484,12 +2469,12 @@ jewish_group = {
 		icon = 20
 		color = { 0 156 231 }
 		country = { #GT
-			dip_tech_cost_modifier = -0.1
+			dip_tech_cost_modifier = -0.05
 			monthly_reform_progress_modifier = -0.1
 		}
 		country_as_secondary = { #GT
-			advisor_cost = -0.2
-			innovativeness_gain = -0.2
+			advisor_cost = -0.15
+			innovativeness_gain = -0.15
 		}
 		province = { #GT
 			trade_goods_size = 0.5

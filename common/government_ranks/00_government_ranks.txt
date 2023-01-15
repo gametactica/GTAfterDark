@@ -12,7 +12,7 @@
 }
 
 2 = { #GT
-	global_tax_income = 24
+	global_tax_income = 36
 	governing_capacity = 300
 	diplomats = 1
 	merchants = 1
@@ -21,7 +21,7 @@
 }
 
 3 = { #GT
-	global_tax_income = 36
+	global_tax_income = 60
 	governing_capacity = 1000
 	diplomats = 1
 	merchants = 1
