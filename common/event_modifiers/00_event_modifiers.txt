@@ -783,11 +783,12 @@ tribal_succession_crisis = {
 	global_unrest = 10
 }
 
-the_statue_in_restraint_of_appeals = {
-	stability_cost_modifier = -0.10
-	global_unrest = -1
+the_statue_in_restraint_of_appeals = { #GT
+	legitimacy = 0.25
+	monthly_reform_progress = 0.25
+	tolerance_heretic = 1
 	prestige = 0.5
-	papal_influence = -10
+	papal_influence_from_cardinals = -1.0
 	church_loyalty_modifier = 0.05
 	religion = yes
 }
@@ -822,12 +823,14 @@ hire_privateers = {
 	improve_relation_modifier = -0.10
 }
 
-counter_reformation = {
-	global_heretic_missionary_strength = 0.03
-	papal_influence = 0.5
-	missionaries = 2
+counter_reformation = { #GT
+	yearly_corruption = -0.25
+	global_heretic_missionary_strength = 0.01
+	papal_influence = 0.25
+	missionaries = 1
+	tolerance_own = 0.5
 	tolerance_heretic = -2
-	technology_cost = 0.05
+	church_influence_modifier = 0.1
 	idea_cost = 0.05
 	religion = yes
 }
@@ -1515,12 +1518,12 @@ papal_sanction_for_church_taxes = {
 	religion = yes
 }
 
-papal_indulgence = {
-	legitimacy = 1
-	horde_unity = 1
-	meritocracy = 1
-	devotion = 1
-	republican_tradition = 0.2
+papal_indulgence = { #GT
+	legitimacy = 0.25
+	horde_unity = 0.25
+	meritocracy = 0.25
+	devotion = 0.25
+	republican_tradition = 0.1
 	improve_relation_modifier = 0.1
 	religion = yes
 }
@@ -1528,7 +1531,7 @@ papal_indulgence = {
 usury_forgiven = {
 	interest = -0.25
 	inflation_reduction = 0.1
-	yearly_corruption = -0.04
+	yearly_corruption = -0.08 #GT
 	religion = yes
 }
 
@@ -1549,7 +1552,7 @@ papal_sanction_for_holy_war = {
 }
 
 papal_legate = {
-	diplomatic_reputation = 1
+	diplomatic_reputation = 1.5 #GT
 	diplomatic_annexation_cost = -0.1
 	religion = yes
 }
@@ -1666,10 +1669,10 @@ fort_in_disrepair = {
 }
 
 unlawful_territory = {
-	local_manpower_modifier = -0.5
-	local_unrest = 10
-	local_tax_modifier = -0.33
-	local_autonomy = 0.1
+	local_culture_conversion_cost = 0.25
+	local_years_of_nationalism = 10
+	local_missionary_strength = -0.01
+	local_autonomy = 0.03
 }
 
 # Braveheart timer
@@ -12602,4 +12605,11 @@ empowered_regency_modifier = {
 
 GT_AI_suzerain = {
 	diplomatic_upkeep = 3
+	diplomatic_annexation_cost = -0.2
+	reduced_liberty_desire_on_same_continent = 10
+}
+
+GT_1444_GC_FIX = {
+	governing_capacity_modifier = -0.1
+	governing_capacity = -250
 }

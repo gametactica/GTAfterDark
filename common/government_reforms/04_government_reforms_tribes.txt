@@ -213,7 +213,7 @@ siberian_tribe = {
 	modifiers = { #GT
 		monthly_splendor = 1
 		global_institution_spread = -0.2
-		land_attririon = -0.15
+		land_attrition = -0.15
 	}
 	ai = {
 		factor = 1

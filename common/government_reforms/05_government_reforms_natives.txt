@@ -232,7 +232,7 @@ native_seasonal_travel_reform = {
 		NOT = { num_of_cities = 2 }
 	}
 	modifiers = { #GT
-		migration_cooldown = -0.25
+		migration_cost = -0.25
 		tribal_development_growth = 0.02
 	}
 	conditional = {

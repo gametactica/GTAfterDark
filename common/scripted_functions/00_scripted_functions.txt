@@ -56,7 +56,7 @@ can_increase_stability = { #GT
 				NOT = {stability = -2}
 				has_any_disaster = yes
 				ruler_has_personality = calm_personality
-				innovativeness = 90
+				innovativeness = 80
 				AND = {
 					uses_church_aspects = yes
 					OR = {

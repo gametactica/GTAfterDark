@@ -324,7 +324,7 @@
  ab_warscore_vs_religion:0 "Religious Wars"
  ab_mercenary_discipline:0 "Mercenary Discipline"
  splendor:0 "Splendor"
- feudal_de_jure_law:1 "Allows State Edict '§YFeudal De Jure Law§!'\n (Unrest: §G-5§!)\n"
+ feudal_de_jure_law:1 "Allows State Edict '§YFeudal De Jure Law§!'\n (Unrest: §G-3§!)\n"
  religion_enforced_edict:2 "Allows State Edict '§YReligion Enforced§!'\n (Resistance to Reformation: §G+100%§!)\n"
  #GT
  edict_of_absolutism_tt:1 "Allows State Edict '§YEdict of Absolutism§!'\n (Culture Conversion Cost: §G-0.25§!)\n"
@@ -412,7 +412,7 @@
  NO_EDICT_IN_TERRITORY:0 "$NAME$ is a territory so cannot have an edict."
  CONFIRSTATEEDICT_TEXT_N:0 "Removing the current edict, are you sure?"
  MODIFIER_LOCAL_MONTHLY_DEVASTATION:0 "Monthly Devastation"
- edict_religious_unity:0 "Enforce Religious Unity"
+ edict_religious_unity:0 "Consecrate Grounds for Holy Order"
  edict_protect_trade:0 "Protect Trade"
  edict_promote_military_recruitment:1 "Increased Enlistment"
  edict_encourage_development:0 "Encourage Development"
@@ -5081,3 +5081,9 @@
  KICK_PLAYER_CONFIRM_DESC:0 "Are you sure you want to kick $PLAYER_NAME|Y$ (currently playing as $PLAYER_COUNTRY|Y$) from the game?"
  NO_UNPAUSE_PLAYERS_BEHIND_TOO_MUCH:0 "Before unpausing you need to wait for the following player(s) to catch up:\n$PLAYERS|Y$"
  NO_SPEEDUP_PLAYERS_BEHIND_TOO_MUCH:0 "Before increasing the game speed you need to wait for the following player(s) to catch up:\n$PLAYERS|Y$"
+ #GT
+ edict_restoration_edict:0 "Subsidize Reconstruction"
+ edict_concealment_edict:0 "Conceal Military Operations"
+ edict_infrastructure_edict:0 "Road Maintenance Initiative"
+ edict_coastal_edict:0 "Sanction Press Gangs"
+ edict_supply_edict:0 "Ensure Quartering of Troops"

@@ -7,7 +7,7 @@ bonus = {
     modifier = { #GT
         prestige = -2.5
 		min_autonomy = 50
-		all_power_cost = 0.1
+		all_power_cost = 0.05
         global_spy_defence = -0.25
     }
 }
@@ -19,7 +19,7 @@ bonus = {
     modifier = { #GT
         prestige = -2
 		min_autonomy = 40
-		all_power_cost = 0.08
+		all_power_cost = 0.04
         global_spy_defence = -0.2
     }
 }
@@ -31,7 +31,7 @@ bonus = {
     modifier = { #GT
         prestige = -1.5
 		min_autonomy = 30
-		all_power_cost = 0.06
+		all_power_cost = 0.03
         global_spy_defence = -0.15
     }
 }
@@ -43,7 +43,7 @@ bonus = {
     modifier = { #GT
         prestige = -1
 		min_autonomy = 20
-		all_power_cost = 0.04
+		all_power_cost = 0.02
         global_spy_defence = -0.1
     }
 }
@@ -55,7 +55,7 @@ bonus = {
     modifier = { #GT
         prestige = -0.5
 		min_autonomy = 10
-		all_power_cost = 0.02
+		all_power_cost = 0.01
 		global_spy_defence = -0.05
     }
 }

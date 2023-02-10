@@ -30,7 +30,13 @@ on_startup = {
 	}
 	events = {
 		muslim_school_events.20 #Pick School
+
+		#GT
 		event_01.1 #GT Protected Area
+		GT_Gov_Cap_1444.1 #Debug paternalistic G.C. calculation so starting army/navy/stated land is correct.
+		GT_Crownlands_1444.1 #Debug basegame issue where released subjects start with all CL and no army/navy
+		GT_emperor_iii_role_assign.1 #Assign role designation flags for age scoring
+
 		flavor_got.1 #Event for Gotland to select their mission tree
 	#flavor_fra.15000 #Make the French Revolution happen if starting in 1789
 	}
@@ -4813,13 +4819,13 @@ on_create_vassal = {
 		set_country_flag = released_in_1444
 	}
 	FROM = {     #GT Protected Area
-    every_province = {
-        limit = {
-            has_province_flag = gt_capital_province_@FROM
-        }
-            clr_province_flag = gt_capital_province_@ROOT
-            set_province_flag = gt_capital_province_@ROOT
-    }
+    	every_province = {
+        	limit = {
+            	has_province_flag = gt_capital_province_@FROM
+        		}
+        	clr_province_flag = gt_capital_province_@ROOT
+        	set_province_flag = gt_capital_province_@ROOT
+		}
     }
 }
 
