@@ -3967,9 +3967,9 @@ resisted_polish_interference = {
 	yearly_decay = 1
 }
 
-supported_prussian_confederation = {
-	opinion = 100
-	yearly_decay = 1
+supported_prussian_confederation = { #GT
+	opinion = 200
+	yearly_decay = 5
 }
 
 allowed_kalmyk_settlement = {

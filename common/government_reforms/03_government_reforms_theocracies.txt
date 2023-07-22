@@ -830,6 +830,7 @@ maintain_religious_head_reform = {
 	modifiers = {
 		yearly_absolutism = 1
 		max_absolutism = 10
+		prestige = 1
 	}
 }
 
@@ -839,6 +840,8 @@ partial_secularisation_reform = {
 	modifiers = {
 		tolerance_of_heathens_capacity = 1
 		tolerance_of_heretics_capacity = 1
+		idea_cost = -0.05
+		innovativeness_gain = 0.1
 	}
 }
 

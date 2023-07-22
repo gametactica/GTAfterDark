@@ -25,6 +25,13 @@ country_event =
 
         if = {
             limit = {
+                tag = C01
+            }
+            set_country_flag = gt_despot_iii
+        }
+
+        if = {
+            limit = {
                 OR = {
                     236 = { owned_by = ROOT }
                     12 = { owned_by = ROOT }
@@ -33,6 +40,9 @@ country_event =
                     248 = { owned_by = ROOT }
                     266 = { owned_by = ROOT }
                     168 = { owned_by = ROOT }
+					28 = { owned_by = ROOT }
+					192 = { owned_by = ROOT }
+                    172 = { owned_by = ROOT }
                 }
             }
             set_country_flag = gt_despot_iii   
@@ -41,12 +51,13 @@ country_event =
             limit = {
                 OR = {
                     310 = { owned_by = ROOT }
-                    43 = { owned_by = ROOT }
+                    233 = { owned_by = ROOT }
                     25 = { owned_by = ROOT }
                     17 = { owned_by = ROOT }
                     1931 = { owned_by = ROOT }
                     44 = { owned_by = ROOT }
                     90 = { owned_by = ROOT }
+                    376 = { owned_by = ROOT}
                 }
             }
             set_country_flag = gt_trader_iii
@@ -61,6 +72,7 @@ country_event =
                     66 = { owned_by = ROOT }
                     52 = { owned_by = ROOT }
                     37 = { owned_by = ROOT }
+					43 = { owned_by = ROOT }
                 }
             }
             set_country_flag = gt_bishop_iii

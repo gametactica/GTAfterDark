@@ -838,7 +838,7 @@ strengthen_clergy_reform = {
 	modifiers = {
 		church_influence_modifier = 0.1
 		church_loyalty_modifier = 0.1
-		global_heretic_missionary_strength = 0.01 #GT
+		global_heretic_missionary_strength = 0.015 #GT
 	}
 	
 	ai = {
@@ -858,7 +858,8 @@ curtail_clergy_power_reform = {
 	}
 	modifiers = {
 		adm_tech_cost_modifier = -0.05 #GT
-		church_influence_modifier = 0.05
+		church_loyalty_modifier = -0.1
+		church_influence_modifier = -0.1
 	}
 	custom_attributes = {
 		seizing_land_no_rebels_from_estate_church = yes

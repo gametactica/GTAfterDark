@@ -54,6 +54,7 @@ country_event =
 					limit = 
 					{
 						is_part_of_hre = no
+						government_rank = 2
 					}
 
 					reverse_add_opinion = 

@@ -1158,7 +1158,7 @@
  PROTECTORATEREQDESC:0 "$COUNTRY$ is asking us to become their protectorate. By accepting, we will be considered to be under their protection, and they will help our technological advancement. In return, we will have to give them 50% of our trade power and we can only ally with them."
  ASK_PROTECTORATEREQDESC:0 "$COUNTRY$ is asking us to become our protectorate. By accepting, they will be considered to be under our protection, and we will help them in technological advancement. In return, they will have to give us 50% of their trade power and they can only ally with us."
  VASSALREQTITLE:0 "Offer Vassalization"
- VASSALINVALID:0 "To offer Vassalization you must 1) have a Military Alliance 2) have a relation of at least +190 3) the target country must be at peace."
+ VASSALINVALID:0 "To offer Vassalization you must 1) guarantee the target 2) have a relation of at least +190 3) the target country must be at peace."
  CANCELVASSALDESC:0 "Cancel our Vassalization with them."
  CANCELPROTECTORATE:0 "Cancel Protectorate"
  CANCELPROTECTORATETITLE:0 "Cancel Protectorate"

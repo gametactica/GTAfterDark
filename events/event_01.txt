@@ -30,6 +30,7 @@ country_event =
             limit = 
             {
                 NOT = {tag = MNG}
+                NOT = {tag = DNZ}
             }
             capital_scope = 
             {
@@ -39,6 +40,25 @@ country_event =
                     set_province_flag = gt_capital_province_@ROOT
                 }
             }
+        }
+
+        if =
+        {    
+            limit = 
+            {
+                tag = DNZ
+            }
+
+            capital_scope = 
+            {
+                area =
+                {
+                    clr_province_flag = gt_capital_province_@ROOT
+                    set_province_flag = gt_capital_province_@ROOT
+                }
+                add_core = TEU
+            }
+
         }
          
 

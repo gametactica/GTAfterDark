@@ -70,7 +70,7 @@ in_state = {
 in_capital_state = { #GT
 	local_missionary_strength = 0.005
 	local_culture_conversion_cost = -0.15
-	local_governing_cost = -0.15
+	local_governing_cost = -0.2
 	local_build_cost = -0.05
 }
 
@@ -232,7 +232,7 @@ development = { #GT
 	local_sailors = 60			# special case, affected by autonomy & set to 0 by code if not port
 	province_trade_power_value = 0.2
 	local_unrest = 0.2 #GT life is pain
-	local_governing_cost = 0.075 #GT and torment
+	local_governing_cost = 0.07 #GT and torment
 	local_state_maintenance_modifier = 0.02 #GT ...misery
 	local_amount_of_banners = 0.066
 	local_amount_of_cawa = 0.125
@@ -247,8 +247,8 @@ development_scaled = {
 
 capital_city = { #GT
 	fort_level = 1
-	local_unrest = -2
-	local_governing_cost = -0.3
+	local_unrest = -3
+	local_governing_cost = -0.4
 	local_missionary_strength = 0.01
 }
 
@@ -419,11 +419,11 @@ devastation = {
 }
 
 prosperity = { #GT
-	local_unrest = -1
-	trade_goods_size_modifier = 0.25
+	local_unrest = -2
+	trade_goods_size_modifier = 0.2
 	local_culture_conversion_cost = -0.1
 	local_religious_unity_contribution = 0.1
-	local_tax_modifier = 0.1
+	local_tax_modifier = 0.2
 	local_governing_cost = -0.2
 	local_institution_spread = 0.33
 	local_missionary_strength = 0.01
@@ -572,7 +572,7 @@ base_values = { #GT BASE VALUES
 	global_manpower = 10.0
 	advisor_pool = 2
 	colonist_placement_chance = 0.03
-	free_leader_pool = 1
+	free_leader_pool = 0
 	republican_tradition = 1
 	monthly_fervor_increase = 0
 	vassal_income = 0.1
@@ -715,6 +715,10 @@ inflation = {
 	advisor_cost = 0.01						#1% for each inflation step
 	mercenary_cost = 0.01					#1% for each inflation step
 	fort_maintenance_modifier = 0.01		#1% for each inflation step
+	legitimacy = -0.01 #GT
+	devotion = -0.01 #GT
+	horde_unity = -0.01 #GT
+	reelection_cost = 0.01 #GT
 }
 
 bankruptcy = { #GT recovery
@@ -728,12 +732,12 @@ bankruptcy = { #GT recovery
 	sailors_recovery_speed = -1.0
 	advisor_cost = 0.5
 	global_colonial_growth = -200
-	global_autonomy = 0.05
+	min_autonomy = 25
 	global_institution_spread = -0.50
 	monthly_militarized_society = -0.5
 	yearly_absolutism = -2.0
-	technology_cost = 0.5
-	idea_cost = 0.5
+	technology_cost = 0.25
+	idea_cost = 0.25
 	imperial_mandate = -0.1
 	yearly_corruption = -2
 	inflation_action_cost = -0.75
@@ -746,8 +750,8 @@ war = { #GT end your wars before 100%
 	monthly_piety = -0.005
 	monthly_karma = 0.005
 	yearly_corruption = 0.5
-	global_colonial_growth = -15
-	country_military_power = -1
+	global_colonial_growth = -10
+	#country_military_power = -1
 	legitimacy = 1
 	reelection_cost = -0.25
 	devotion = 0.5
@@ -972,9 +976,14 @@ num_of_marriages = {
 	prestige = 0.10 #GT
 }
 
-num_of_provinces = {
+num_of_provinces = { #GT
 	culture_conversion_cost = -0.002 #GT
-	idea_cost = -0.001 #GT
+	idea_cost = -0.001
+	meritocracy = .01
+	legitimacy = 0.0075
+	devotion = 0.005
+	republican_tradition = 0.0025
+	horde_unity = 0.01
 }
 
 # Multiplied by the amount of papal influence
@@ -1173,7 +1182,7 @@ recovery_motivation = { #GT recovery
 	legitimacy = 3
 	republican_tradition = 1
 	devotion = 2
-	horde_unity = 10
+	horde_unity = 5
 	yearly_corruption = -5
 	stability_cost_modifier = -0.25
 	global_autonomy = -0.1
@@ -1424,9 +1433,9 @@ in_golden_era = { #GT
 }
 
 absolutism = { #GT
-	administrative_efficiency = 0.3
+	administrative_efficiency = 0.25
 	discipline = 0.05
-	governing_capacity_modifier = 0.2
+	governing_capacity_modifier = 0.5
 	core_decay_on_your_own = -0.5
 	monthly_heir_claim_increase = 0.1
 	legitimacy = 1
@@ -1683,12 +1692,12 @@ autonomy_decreased = { #GT
 
 revolution_target = {
 	global_manpower_modifier = 0.15 #GT
-	land_morale = 0.10
-	naval_morale = 0.1
+	land_morale = 0.15
+	naval_morale = 0.15
 	war_exhaustion = -0.2 #GT
 	unjustified_demands = -0.5
-	land_maintenance_modifier = -0.15
-	naval_maintenance_modifier = -0.15
+	land_maintenance_modifier = -0.2
+	naval_maintenance_modifier = -0.2
 	manpower_recovery_speed = 0.25
 	sailors_recovery_speed = 0.25
 	yearly_revolutionary_zeal = 1 #GT
@@ -2103,7 +2112,7 @@ innovativeness = { #GT
 	inflation_action_cost = -0.5
 	monthly_splendor = 3
 	range = 5
-	global_trade_goods_size_modifier = 1
+	global_trade_goods_size_modifier = 0.33
 	monarch_lifespan = 0.15
 	movement_speed = 0.15
 	special_unit_forcelimit = 0.5
@@ -2183,7 +2192,7 @@ expanded_infrastructure = {
 	allowed_num_of_manufactories = 1
 	local_manpower = 1.25
 	local_sailors = 300
-	local_unrest = -1.5
+	local_unrest = -2
 	trade_goods_size = 0.3
 	trade_value_modifier = 0.3
 	local_development_cost = -0.1
