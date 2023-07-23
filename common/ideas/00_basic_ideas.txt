@@ -1225,7 +1225,7 @@ administrative_ideas = {
 	}
 	GT_admin6 = {
 		expand_administration_cost = -0.25
-		governing_capacity = 100
+		governing_capacity = 150
 		administrative_efficiency = 0.01
 	}
 	GT_admin7 = {
@@ -1385,7 +1385,7 @@ naval_ideas = {
 		sailor_maintenance_modifer = -0.03
 	}
 	GT_naval5 = {
-		admiral_skill_gain_modifier = 0.25
+		admiral_skill_gain_modifier = 0.025
 		sunk_ship_morale_hit_recieved = -0.15
 		sailor_maintenance_modifer = -0.03
 	}

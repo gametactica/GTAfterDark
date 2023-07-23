@@ -4827,6 +4827,11 @@ on_create_vassal = {
         	set_province_flag = gt_capital_province_@ROOT
 		}
     }
+	ROOT = {
+		country_event = {
+			id = GT_Crownlands_1444.1
+		}
+	}
 }
 
 # ROOT = Country establishing it

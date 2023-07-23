@@ -80,7 +80,7 @@ natural_scientist = {
 	monarch_power = ADM
 	
 	# Bonus
-	production_efficiency = 0.10
+	production_efficiency = 0.15
 
 	skill_scaled_modifier = {
 		trigger = { 
@@ -214,7 +214,7 @@ treasurer = {
 	monarch_power = ADM
 	
 	# Bonus
-	global_prosperity_growth = 0.2 #GT
+	global_prosperity_growth = 0.5 #GT
 
 	skill_scaled_modifier = {
 		trigger = { 

@@ -8,9 +8,9 @@ pr_buccaneers = {
 
 	modifier = {
 		build_cost = -0.1
-		governing_capacity = 100
+		republican_tradition = 1
 		sailors_recovery_speed = 0.2
-		ae_impact = 0.1
+		ae_impact = 0.2
 	}
 }
 
@@ -20,9 +20,9 @@ pr_smugglers = {
 
 	modifier = {
 		global_trade_power = 0.1
-		republican_tradition = 1
+		governing_capacity = 100
 		trade_efficiency = 0.1
-		prestige = -0.25
+		prestige = -0.5
 	}
 }
 
@@ -34,6 +34,6 @@ pr_captains = {
 		leader_naval_fire = 1
 		navy_tradition = 1
 		naval_morale = 0.1
-		diplomatic_reputation = -1
+		diplomatic_reputation = -2
 	}
 }

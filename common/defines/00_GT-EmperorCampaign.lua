@@ -46,7 +46,7 @@ NDefines.NDiplomacy.INTEGRATE_VASSAL_MIN_YEARS = 15				-- Number of years before
 NDefines.NDiplomacy.ABANDON_UNION_PRESTIGE = -75					-- The change in prestige for the overlord when abandoning a personal union.
 NDefines.NDiplomacy.PAY_SUBJECT_DEBT_LIBERTY_DESIRE_REDUCTION = 2	-- Amount of liberty desire the subject loses per paid loan
 NDefines.NDiplomacy.LEAVING_GREAT_POWER_YEARS = 1					-- The number of years a Great Power can remain after being removed from the top (8).
-NDefines.NDiplomacy.GREAT_POWER_SUBJECT_CONTRIBUTION = 0.33
+NDefines.NDiplomacy.GREAT_POWER_SUBJECT_CONTRIBUTION = 0.5
 NDefines.NDiplomacy.FORCE_BREAK_ALLIANCE_TRUCE_YEARS = 5			-- Length of truce imposed by Break Alliance.
 NDefines.NDiplomacy.GOOD_RELATIONS = 30
 NDefines.NDiplomacy.GREAT_RELATIONS = 60
@@ -111,7 +111,7 @@ NDefines.NCountry.MIN_HARSH_TREATMENT_COST = 10 -- Minimum harsh treatment cost
 --NEconomy
 --NDefines.NEconomy.
 
-NDefines.NEconomy.EDICTS_COST_INCREASE = 0.33				-- % increase on state maintenance.
+NDefines.NEconomy.EDICTS_COST_INCREASE = 0.2				-- % increase on state maintenance.
 NDefines.NEconomy.EDICTS_DURATION_MONTHS = 60				-- months lastin at least.
 NDefines.NEconomy.INCREASE_AUTONOMY_MAX = 85
 NDefines.NEconomy.MISSIONARY_MAINTENANCE_FACTOR = 0.5
@@ -125,16 +125,15 @@ NDefines.NEconomy.MISSIONARY_MAINTENANCE_DEVELOPMENT_CAP = 50		-- Where dev will
 NDefines.NMilitary.SLACKEN_AP_DROP = 0.10
 NDefines.NMilitary.SLACKEN_MANPOWER_INCREASE = 1.33
 NDefines.NMilitary.FORT_DEVASTATION_IMPACT = -1					-- multiplied by fortlevel/max fortlevel in area per year.
-NDefines.NMilitary.MOVE_LOCK_PERCENTAGE = 0.25						-- Unit movement is locked after this percentage of progress
+NDefines.NMilitary.MOVE_LOCK_PERCENTAGE = 0.33						-- Unit movement is locked after this percentage of progress
 NDefines.NMilitary.SIEGE_DISEASE_IMPACT = 0.15						-- Fraction of besieging soldiers lost in a disease outbraek
 NDefines.NMilitary.INFANTRY_SPEED = 0.6							-- _MDEF_INFANTRY_SPEED = 10,
 NDefines.NMilitary.CAVALRY_SPEED = 0.9							-- _MDEF_CAVALRY_SPEED = 10,
 NDefines.NMilitary.ARTILLERY_SPEED = 0.4
 NDefines.NMilitary.CAVALRY_COST = 20.0
-NDefines.NMilitary.FORTRESS_COST = 1
 NDefines.NMilitary.DEFAULT_WARGOAL_TICKINGWARSCORE_BONUS = 1		-- Amount of warscore per month since attacker/defender started getting the bonus for completing war goal
 NDefines.NMilitary.WARGOAL_MAX_BONUS = 30
-NDefines.NMilitary.COMBAT_DICE_SIDE = 16
+NDefines.NMilitary.COMBAT_DICE_SIDE = 12
 NDefines.NMilitary.CANNOT_RETREAT_DAYS = 9
 NDefines.NMilitary.RIVER_CROSSING_PENALTY = -2					-- Dice roll penalty from river crossing
 NDefines.NMilitary.STRAIT_CROSSING_PENALTY = -3						-- Dice roll penalty from strait crossing
@@ -142,8 +141,8 @@ NDefines.NMilitary.SEA_LANDING_PENALTY = -3
 NDefines.NMilitary.INF_SUPPRESSION = 0.10
 NDefines.NMilitary.CAV_SUPPRESSION = 0.30						
 NDefines.NMilitary.ART_SUPPRESSION = 0.05
-NDefines.NMilitary.FORT_FLIPPING_TIME = 60					
-
+NDefines.NMilitary.FORT_FLIPPING_TIME = 90					
+NDefines.NMilitary.FLAGSHIP_REQUIRED_NAVY_SIZE_IN_SAILORS = 500
 
 --NAI
 --NDefines.NAI.

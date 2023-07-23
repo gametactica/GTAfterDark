@@ -1592,6 +1592,7 @@ cb_force_migration = {
 		OR = {
 			is_native_tribe = yes
 			is_migratory_tribe = yes
+			native_policy = native_policy_hostile #GT
 		}
 		FROM = {
 			is_migratory_tribe = yes
@@ -1603,6 +1604,7 @@ cb_force_migration = {
 					}
 				}
 				is_native_tribe = no
+				tribal_development = 20
 			}
 		}
 	}

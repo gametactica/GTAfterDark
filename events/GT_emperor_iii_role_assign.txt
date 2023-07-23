@@ -35,6 +35,11 @@ country_event =
             TAG = GOT
             TAG = HAM
             TAG = GLG
+			TAG = BUR
+			TAG = FIN
+			TAG = CRN
+            TAG = BRI
+            TAG = CNN
         }
     }
 
@@ -50,6 +55,9 @@ country_event =
                     TAG = SCO
                     TAG = BOH
                     TAG = NRM
+					TAG = BUR
+					TAG = FIN
+                    TAG = BRI
                 }
             }
             set_country_flag = gt_despot_iii   
@@ -58,12 +66,13 @@ country_event =
             limit = {
                 OR = {
                     TAG = NOV
-                    TAG = DNZ
+                    TAG = CRN
                     TAG = EFR
                     TAG = FLA
                     TAG = GOT
                     TAG = HAM
                     TAG = GLG
+                    TAG = CNN
                 }
             }
             set_country_flag = gt_trader_iii
@@ -78,6 +87,7 @@ country_event =
                     TAG = TRY
                     TAG = MAG
                     TAG = LIV
+					TAG = DNZ
                 }
             }
             set_country_flag = gt_bishop_iii

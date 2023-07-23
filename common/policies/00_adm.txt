@@ -227,7 +227,7 @@ the_royal_commission_act = {
 	}
 
 	yearly_corruption = -0.1
-	global_spy_defence = 0.2
+	global_unrest = -1
 	
 	ai_will_do = {
 		factor = 0.6

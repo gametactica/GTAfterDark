@@ -3205,7 +3205,7 @@ decentralize_reform = {
 	modifiers = { #GT
 		min_autonomy_in_territories = -0.1
 		num_accepted_cultures = 2
-		yearly_corruption = -0.05
+		yearly_corruption = -0.1
 		all_estate_loyalty_equilibrium = 0.05
 	}
 	ai = {

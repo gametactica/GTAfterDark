@@ -68,9 +68,9 @@
  getting_trade_power:0 "Getting trade power from"
  broke_transfer_trade_power:0 "Broke Transfer Trade Power relation"
  #GT
- NOALL_WE_DISLIKE:0 "We cannot ask $WHO$ for this as we need to have a SPLENDID (+75) opinion of them, currently at $VAL$."
+ NOALL_WE_DISLIKE:0 "We cannot ask $WHO$ for this as we need to have a SPLENDID (+75) opinion of them for an §Yalliance§!, currently at $VAL$.  §YSupport Independence§! requires positive mutual relations."
  #GT
- NOALL_THEY_DISLIKE:0 "$WHO$ dislikes us, so we cannot ask them. They need to have a SPLENDID (+75) opinion of us, and it is currently $VAL$."
+ NOALL_THEY_DISLIKE:0 "$WHO$ dislikes us, so we cannot ask them. They need to have a SPLENDID (+75) opinion of us for an §Yalliance§!, and it is currently $VAL$.  §YSupport Independence§! requires positive mutual relations."
  ENFORCEPEACE_TRUCE:0 "You cannot enforce peace on someone you have a truce with."
  CANNOT_ENFORCEPEACE_OWN_SUBJECT:0 "You cannot enforce peace on your own Subjects."
  ENFORCEPEACE_NOT_IN_WAR_YOUR_SUBJECT:1 "They are not at war with any of your Subjects."

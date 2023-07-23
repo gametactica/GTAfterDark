@@ -12,9 +12,20 @@ country_event = {
     is_triggered_only = yes
 
     trigger = {
-        NOT = { is_year = 1445 }
-        ROOT = {
-            crown_land_share = 100 #Campaign playable released subjects
+        OR = {
+            AND = {
+                NOT = { is_year = 1445 }
+                ROOT = {
+                    crown_land_share = 100 #Campaign playable released subjects
+                }
+            }
+            AND - {
+                is_subject = yes
+                ai = yes
+                ROOT = {
+                    crown_land_share = 100 #Campaign playable released subjects
+                }
+            }
         }
     }
 
