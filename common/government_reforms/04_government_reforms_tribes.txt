@@ -1003,7 +1003,7 @@ tribe_tribal_unity = {
 		has_dlc = "Cradle of Civilization"
 	}
 	modifiers = {
-		yearly_tribal_allegiance = 1
+		yearly_government_power = 1
 		church_loyalty_modifier = 0.05
 		nobles_loyalty_modifier = 0.05
 		dhimmi_loyalty_modifier = 0.05
