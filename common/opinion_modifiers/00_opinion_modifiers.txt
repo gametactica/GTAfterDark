@@ -147,6 +147,9 @@ is_vassal = {
 in_union = {
 	opinion = 10
 }
+is_eyalet = {
+	opinion = 25
+}
 
 colonial_relation = {
 	opinion = 20 #GT
@@ -3673,6 +3676,14 @@ fra_gave_up_on_maine = {
 }
 is_tributary = {
 	opinion = 15
+}
+
+is_trade_protectorate = {
+	opinion = 20
+}
+
+is_trade_company = {
+	opinion = 50
 }
 
 they_forced_tributary = {
