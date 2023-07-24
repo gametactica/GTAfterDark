@@ -304,6 +304,7 @@ core = {
 non_core = { #GT
 	local_missionary_strength = -0.02
 	local_culture_conversion_cost = 0.5
+}
 
 colonial_core = { #GT
 	local_tax_modifier = 0.75				#90% more in a core
@@ -979,7 +980,7 @@ num_of_marriages = {
 num_of_provinces = { #GT
 	culture_conversion_cost = -0.002 #GT
 	idea_cost = -0.001
-	meritocracy = .01
+	meritocracy = 0.01
 	legitimacy = 0.0075
 	devotion = 0.005
 	republican_tradition = 0.0025
@@ -1022,7 +1023,7 @@ negative_karma = {
 # Multiplied by Development/COUNTRY_DEVELOPMENT_SCALE
 country_development = {
 	horde_unity = -3
-	yearly_tribal_allegiance = -3
+	yearly_government_power = -3
 	mercenary_manpower = 1
 	prestige = 1
 	yearly_corruption = 0.2
@@ -1472,6 +1473,36 @@ high_army_professionalism = { #GT
 
 streltsy_modifier = {
 	stability_cost_modifier = 1.0
+}
+
+cossacks_modifier = {
+}
+
+tercio_modifier = {
+}
+
+musketeers_modifier = {
+}
+
+samurai_modifier = {
+}
+
+geobukseon_modifier = {
+}
+
+man_of_war_modifier = {
+}
+
+galleon_modifier = {
+}
+
+galleass_modifier = {
+}
+
+caravel_modifier = {
+}
+
+voc_indiamen_modifier = {
 }
 
 power_projection = { #GT
@@ -2090,6 +2121,53 @@ streltsy_regiment = {
     fire_damage = 0.1
 }
 
+tercio_regiment = {
+	shock_damage_received = -0.3
+}
+
+musketeer_regiment = {
+	fire_damage = 0.15
+}
+
+samurai_regiment = {
+	discipline = 0.05
+	morale_damage_received = -0.1
+	reinforce_cost_modifier = 0.5
+}
+
+geobukseon_ship = {
+	ship_durability = 0.1
+	galley_power = 0.1
+}
+
+man_of_war_ship = {
+	#engagement_cost = -1
+	#naval_maintenance_modifier = 0.5
+	naval_morale_damage = 0.15
+}
+
+galleon_ship = {
+	hull_size_modifier = 0.1
+	heavy_ship_power = 0.1
+}
+
+galleass_ship = {
+	galley_power = 0.2
+}
+
+caravel_ship = {
+	movement_speed_in_fleet_modifier = 1 
+	naval_attrition = -0.25
+	ship_trade_power_modifier = 0.33
+}
+
+voc_indiamen_ship = {
+	number_of_cannons_modifier = 0.33
+	ship_trade_power_modifier = 0.2
+	can_transport_units = yes
+}
+
+
 cossacks_regiment = {
     shock_damage = 0.1
 }
@@ -2178,6 +2256,8 @@ over_governing_capacity_modifier = { #GT
 	rajput_influence_modifier = 0.25
 }
 
+under_governing_capacity_modifier = {
+}
 
 lost_hegemony = {
 	all_power_cost	= 0.10
@@ -2254,4 +2334,73 @@ consort_dip = {
 }
 
 consort_mil = {
+}
+
+mandate = {
+
+}
+
+imperial_authority_emperor = {
+
+}
+
+imperial_authority_member = {
+
+}
+
+positive_imperial_authority_emperor = {
+	
+}
+
+positive_imperial_authority_member = {
+	
+}
+
+negative_imperial_authority_emperor = {
+	
+}
+
+negative_imperial_authority_member = {
+	
+}
+
+slackening_modifier = {
+    yearly_army_professionalism = -0.05
+    manpower_recovery_speed = 1
+}
+
+royal_council_meeting_mod = {
+	country_admin_power = 1
+}
+
+state_council_meeting_mod = {
+	country_diplomatic_power = 1
+}
+
+war_council_meeting_mod = {
+	country_military_power = 1
+}
+
+average_overseas_subject_liberty_desire = { #only counts subjects with capitals on different continents than yours, 100% LD => 100% modifier
+
+}
+
+reverse_average_overseas_subject_liberty_desire = { #only counts subjects with capitals on different continents than yours, 100% LD => 0% modifier
+	monthly_council_consensus = 0.2
+}
+
+average_subject_liberty_desire = { #100% LD => 100% modifier
+	monthly_ottoman_decadence = 0.125
+}
+
+reverse_average_subject_liberty_desire = { #100% LD => 0% modifier
+
+}
+
+average_global_autonomy = { #100% autonomy => 100% modifier
+	monthly_ottoman_decadence = 0.25
+}
+
+reverse_average_global_autonomy = { #100% autonomy => 0% modifier
+	monthly_council_consensus = 0.2
 }
