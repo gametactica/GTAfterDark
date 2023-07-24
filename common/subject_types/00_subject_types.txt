@@ -784,6 +784,17 @@ tributary_state = {
 					religion_group = eastern
 					technology_group = chinese
 					technology_group = polynesian_tech
+					AND = { #GT
+						government_rank = 3
+						is_part_of_hre = no
+						ai = no
+					}
+					AND = { #GT
+						has_idea = GT_influ7
+						government_rank = 2
+						is_part_of_hre = no
+						ai = no
+					}
 				}
 			}
 			has_country_flag = forced_tributary_state	#A special flag for the Ottomans so they can get Crimea without allowing them to make tributaries by default
