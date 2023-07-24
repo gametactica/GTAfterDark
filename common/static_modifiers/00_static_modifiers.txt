@@ -362,6 +362,15 @@ pu_overlord_bonus = {
 	global_sailors_modifier = 0.05
 }
 
+gbr_emperor_of_india_subject_bonus = {
+	global_trade_goods_size_modifier = 0.15
+}
+
+gbr_emperor_of_india_overlord_bonus = {
+	trade_efficiency = 0.1
+	reduced_trade_penalty_on_non_main_tradenode = 0.25
+}
+
 same_culture_group = { #GT
 	min_local_autonomy = 10
 	local_missionary_strength = -0.01
@@ -1397,6 +1406,21 @@ tributary_state_behind_overlord_tech_mil = {
 	mil_tech_cost_modifier = -0.05
 }
 
+trade_protectorate_subject_modifier = {
+	global_institution_spread = 0.25
+	production_efficiency = 0.2
+	diplomatic_upkeep = -1
+}
+
+trade_protectorate_low_development_subject_modifier = {
+	technology_cost = -0.2
+}
+
+trade_protectorate_overlord_modifier = {
+	global_trade_power = 0.05
+	global_trade_goods_size_modifier = 0.02
+}
+
 liberty_desire = { #GT
 	legitimacy = -0.005
 	republican_tradition = -0.0025
@@ -1566,6 +1590,11 @@ new_world_exploitation_modifier = {
 	global_trade_goods_size_modifier = 0.1
 }
 
+gbr_colonial_investment = {
+	production_efficiency = 0.5
+	trade_efficiency = 0.5
+}
+
 crown_colony_overlord = {
 	merchants = 1
 	global_trade_power = 0.05
@@ -1616,6 +1645,13 @@ daimyo_subject = { #GT
 	reduced_liberty_desire = 0.5
 }
 
+appanage_subject = {
+}
+
+appanage_overlord = {
+	nobles_loyalty_modifier = 0.02
+}
+
 union_subject = { #GT
 	legitimacy = 0.25
 	diplomatic_upkeep = 1
@@ -1661,6 +1697,17 @@ pirate_subject = {
 
 subject_tax_modifier = {
 	global_tax_modifier = 0.25
+}
+
+same_religion_subject_bonus_mod = {
+	manpower_in_true_faith_provinces = 0.25
+	global_sailors_modifier = 0.25
+	production_efficiency = 0.15
+}
+
+eyalet_modifier = {
+	global_manpower = -5
+	land_forcelimit	= -5
 }
 
 #scales to amount of up-to-date forts compared to total development
