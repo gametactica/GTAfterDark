@@ -244,7 +244,7 @@ penal_colonies_reform = {
 		expel_minorities_cost = -0.5
 		culture_conversion_cost = -0.15
 		colonist_placement_chance = 0.1
-		can_colony_boost_development = yes
+		colony_development_boost = yes
 	}
 	ai = {
 		factor = 0.1
