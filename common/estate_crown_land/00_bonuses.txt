@@ -99,9 +99,9 @@ bonus = {
 }
 
 bonus = {
-    key = crown_land_level_9
+    key = crown_land_level_8_1
     range_from = 80.0
-    range_to = 100.0
+    range_to = 90.0
     modifier = { #GT
         land_forcelimit = 8
         max_absolutism = 20
@@ -111,13 +111,25 @@ bonus = {
 }
 
 bonus = {
-    key = crown_land_level_10
-    range_from = 100.0
-    range_to = 9001.0
+    key = crown_land_level_9
+    range_from = 80.0
+    range_to = 100.0
     modifier = { #GT
         land_forcelimit = 10
         max_absolutism = 25
         prestige = 1.25
         global_autonomy = -0.025
+    }
+}
+
+bonus = {
+    key = crown_land_level_10
+    range_from = 100.0
+    range_to = 9001.0
+    modifier = { #GT
+        land_forcelimit = 12
+        max_absolutism = 30
+        prestige = 1.5
+        global_autonomy = -0.03
     }
 }
