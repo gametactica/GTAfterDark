@@ -566,10 +566,7 @@ invite_to_trade_league = {
 tributary_state_action = {
 	condition = {
 		potential = { #GT
-			OR= {
-			ai = no
-			ai = yes
-			}
+			always = yes
 		}
 		allow = {
 			OR = {
@@ -596,10 +593,7 @@ tributary_state_action = {
 ask_for_tributary_state_action = {
 	condition = {
 		potential = { #GT
-			OR= {
-			ai = no
-			ai = yes
-			}
+			always = yes
 		}
 		allow = {
 			OR = {
