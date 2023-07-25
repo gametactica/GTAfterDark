@@ -2435,6 +2435,8 @@ tsardom = {
 		yearly_absolutism = 0.5
 		global_autonomy = -0.02
 		governing_capacity = 150
+		has_streltsy = yes
+		allowed_streltsy_fraction = 0.2
 	}
 
 	conditional = {
@@ -4099,7 +4101,6 @@ livonian_admiral_monarchy = {
 		global_sailors_modifier = 0.25
 		ship_durability = 0.05
 	}
-
 
 	custom_attributes = {
 		admirals_become_rulers = yes
