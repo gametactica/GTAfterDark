@@ -1876,6 +1876,7 @@ ottoman_government_legacy = {
 		allow = { has_dlc = "Cradle of Civilization" }
 		has_harem = yes
 		has_pashas = yes
+		has_janissaries = yes
 	}
 
 	ai = {
@@ -2046,6 +2047,13 @@ shogunate_legacy = {
 		technology_group = chinese
 		capital_scope = { region = japan_region }
 		owns = 1020
+	}
+
+	conditional = {
+		allow = { has_dlc = "Mandate of Heaven" }
+		government_abilities = {
+			shogunate_mechanic
+		}
 	}
 
     fixed_rank = 2
@@ -2249,7 +2257,10 @@ veche_republic_legacy = {
 	nation_designer_cost = 40
 
 	nation_designer_trigger = {
-		culture_group = east_slavic
+		OR = {
+			culture_group = east_slavic
+			culture_group = slavic
+		}
 	}
 
 	factions = {
@@ -2360,7 +2371,10 @@ principality_legacy = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 5
 	nation_designer_trigger = {
-		culture_group = east_slavic
+		OR = {
+			culture_group = east_slavic
+			culture_group = slavic
+		}
 		religion = orthodox
 	}
 
@@ -2397,7 +2411,10 @@ tsardom_legacy = {
 	nation_designer_cost = 40
 
 	nation_designer_trigger = {
-		culture_group = east_slavic
+		OR = {
+			culture_group = east_slavic
+			culture_group = slavic
+		}
 		religion = orthodox
 	}
 
