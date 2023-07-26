@@ -1,7 +1,6 @@
 namespace = GT_Free_Trade_City
 
-country_event =
-{
+country_event = {
     id = GT_Free_Trade_City.1
     title = GT_Free_Trade_City.1.t
     desc = GT_Free_Trade_City.1.d
@@ -9,40 +8,43 @@ country_event =
 
     hidden = yes
 
-    mean_time_to_happen = {months = 16} 
+    mean_time_to_happen = { months = 16 } 
 
-    trigger =
-    {
+    trigger = {
         ai = yes
         is_part_of_hre = yes
         is_in_trade_league = yes
         government = republic
-        NOT = { has_reform = free_city}
-        OR = { 
+        NOT = { has_reform = free_city }
+        OR = {
             AND = {
-                calc_true_if = {
-	                all_country = {
-                        limit = { is_part_of_hre = yes }
-		                has_reform = free_city
-	                }
-                    NOT = { amount = 12 }
+                NOT = {
+                    calc_true_if = {
+                        all_country = {
+                            is_part_of_hre = yes
+                            has_reform = free_city
+                        }
+                        amount = 12
+                    }
                 }
                 NOT = { hre_reform_passed = emperor_reichstag_collegia }
             }
             AND = {
-                calc_true_if = {
-	                all_country = {
-                        limit = { is_part_of_hre = yes }
-		                has_reform = free_city
-	                }
-	                NOT = { amount = 15 }
+                NOT = {
+                    calc_true_if = {
+                        all_country = {
+                            is_part_of_hre = yes
+                            has_reform = free_city
+                        }
+                        amount = 15
+                    }
                 }
                 hre_reform_passed = emperor_reichstag_collegia
             }
         }
+    }
 
-    option =
-    {
+    option = {
 		add_government_reform = free_city
         capital_scope = {
             add_base_tax = 2
