@@ -2526,7 +2526,7 @@ province_is_or_accepts_religion_group = {
 				has_owner_religion = yes
 			}
 			AND = {
-				owner = { secondary_religion_group = { $religion_group$ = yes } }
+				owner = { secondary_religion_group = $religion_group$ }
 				OR = {
 					religion_group = $religion_group$
 					has_owner_religion = yes
