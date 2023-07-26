@@ -441,6 +441,7 @@ christian = {
 			justified_religious_war_aspect
 			war_preaches_aspect
 			head_of_the_church_aspect
+			anglican_aspect
 		}
 		aspects_name = PROTESTANT_ASPECTS
 		
@@ -1600,7 +1601,6 @@ eastern = {
 		province = { #GT
 			local_monthly_devastation = -0.1
 		}
-		
 		heretic = { SHUGENDO }
 		uses_isolationism = yes
 		
