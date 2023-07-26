@@ -108,7 +108,7 @@ country_event = {
 	}
 }
 
-#Johann Friedrich Böttger
+#Johann Friedrich Bï¿½ttger
 country_event = {
 	id = prices.3
 	title = prices.3.t
@@ -1212,6 +1212,8 @@ country_event = {
 	major = yes
 
 	trigger = {
+		OR = {
+			AND = {
 		capital_scope = { continent = europe }
 		dip_tech = 18
 		OR = {
@@ -1257,6 +1259,12 @@ country_event = {
 			}
 		}
 		NOT = { has_global_flag = popular_silk_happened }
+	}
+			AND = {
+				tag = MNG 
+				mission_completed = mng_restore_royal_road
+			}
+		}
 	}
 	mean_time_to_happen = {
 		months = 1
@@ -2633,7 +2641,7 @@ country_event = {
 
 	trigger = {
 		#has_dlc = "Rule Britannia"
-		NOT = { has_global_flag = steam_engine_happened }
+		#NOT = { has_global_flag = steam_engine_happened }
 		has_country_flag = watt_steam_engine_flag #Set by Industrialization Events
 		has_country_flag = coke_blast_furnaces_flag #Set by Industrialization Events.
 		has_institution = enlightenment
