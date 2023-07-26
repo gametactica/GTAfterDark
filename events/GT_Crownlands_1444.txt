@@ -19,7 +19,7 @@ country_event = {
                     crown_land_share = 100 #Campaign playable released subjects
                 }
             }
-            AND - {
+            AND = {
                 is_subject = yes
                 ai = yes
                 ROOT = {
