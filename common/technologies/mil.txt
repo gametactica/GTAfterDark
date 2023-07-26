@@ -1,11 +1,11 @@
 monarch_power = MIL
+#GT - No changes made thus far (11-13-2022)
 
 # applied when a country is ahead of time in this technology
 # no bonus for MIL currently
-# ahead_of_time = {
-# }
-
-#GT - No changes made thus far (11-13-2022)
+ahead_of_time = {
+	monthly_russian_modernization = 0.05
+}
 
 # Pre-era techs
 technology = {
@@ -451,6 +451,7 @@ technology = {
 	combat_width = 1
 	
 	enable = chambered_demi_cannon
+	enable = demi_culverin
 }
 
 technology = {
@@ -494,6 +495,7 @@ technology = {
 	enable = mamluk_musket_charge 
 	enable = afsharid_reformed	
 	enable = leather_cannon	
+	enable = chambered_cannon	
 	enable = steppe_mounted_raiders
 	enable = ha_xoloti
 	enable = aboriginal_swarm_cav
@@ -556,6 +558,7 @@ technology = {
 	infantry_fire		= 	0.5
 		
 	enable = swivel_cannon		
+	enable = howitzer
 
 	combat_width = 2
 }
@@ -604,6 +607,7 @@ technology = {
 	enable = polish_winged_hussar	
 	enable = muscovite_cossack	
 
+	enable = horse_artillery_unit
 	enable = coehorn_mortar		
 }
 
@@ -692,6 +696,7 @@ technology = {
 	artillery_fire		=	2.0
 	
 	enable = royal_mortar	
+	enable = licorne
 }
 
 technology = {
@@ -817,6 +822,7 @@ technology = {
 	#Defense in Depth
 		
 	enable = flying_battery  
+	enable = grand_battery
 }
 
 technology = {

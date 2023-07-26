@@ -3,8 +3,7 @@ monarch_power = DIP
 # applied when a country is ahead of time in this technology
 ahead_of_time = {
 	trade_efficiency = 0.2
-
-
+	monthly_russian_modernization = 0.05
 	yearly_corruption = -0.05
 }
 
@@ -31,7 +30,7 @@ technology = { #Merchants & Trade
 	
 	merchants = yes
 	trade_range				=	100
-	global_colonial_growth	= 	5
+	global_colonial_growth	= 	5 #GT
 }
 
 technology = { #The Barque
@@ -553,6 +552,7 @@ technology = { #Insurance Companies
 	
 	trade_efficiency 		= 	0.02
 	trade_range				=	20
+	may_infiltrate_administration = yes
 }
 
 technology = { #Superior Ship Design
