@@ -561,6 +561,7 @@ cloth_quality_edict = {
 			full_idea_group = trade_ideas
 			full_idea_group = GT_pirate0 
 		}
+	}
 	trade_efficiency = 0.15
 		
 	effect = {}
