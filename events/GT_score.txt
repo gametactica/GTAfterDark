@@ -1,0 +1,1025 @@
+namespace = GT_score
+
+#Trigger event
+country_event = {
+    id = GT_score.1
+
+    is_triggered_only = yes
+
+    trigger =
+    {
+        always = yes
+    }
+
+    hidden = yes
+
+    immediate = {
+        every_country = {
+            limit = {
+                has_country_flag = gt_campaign_nation
+            }
+            if = {
+                limit = {
+                    has_country_flag = gt_bishop
+                }
+                country_event = {
+                    id = GT_score.2
+                }
+            }
+            if = {
+                limit = {
+                    has_country_flag = gt_prince
+                }
+                country_event = {
+                    id = GT_score.3
+                }
+            }
+            if = {
+                limit = {
+                    has_country_flag = gt_magnate
+                }
+                country_event = {
+                    id = GT_score.4
+                }
+            }
+            if = {
+                limit = {
+                    has_country_flag = gt_despot
+                }
+                country_event = {
+                    id = GT_score.5
+                }
+            }
+        }
+    }
+    option = {
+        name = GT_score.1.a
+    }
+}
+
+#Bishop score
+country_event = {
+    id = GT_score.2
+    title = GT_score.2.t
+    desc = GT_score.2.d
+    is_triggered_only = yes
+
+    trigger =
+    {
+        always = yes
+    }
+
+    immediate = {
+        set_variable = {            
+            which = gt_temp_score
+            value = 0
+        }
+        #20 points for each Conqueror Objective or Imperial Objective province that is Catholic (cooperative objective).
+        #Hamburg
+        every_province = {
+            limit = {
+                OR = {
+                    has_province_flag = gt_imperial_objective
+                    has_province_flag = gt_conqueror_objective
+                }
+                religion = catholic
+            }
+            ROOT = {
+                change_variable = {
+                    which = gt_temp_score
+                    value = 20
+                }
+            }
+        }
+        #100 points for holding the Curia.
+        if = {
+            limit = {
+                is_papal_controller = yes
+            }
+            change_variable = {            
+                which = gt_temp_score
+                value = 100
+            }
+        }
+        #30 points for each alliance with an Elector, the Holy Roman Emperor, or the Catholic Defender of the Faith, as long as that nation is not a member of the Bishop group.
+        every_ally = {
+            limit = {
+                AND = {
+                    NOT = { has_country_flag = gt_bishop }
+                    OR = {
+                        is_elector = yes
+                        is_emperor = yes
+                        AND = {
+                            religion = catholic
+                            is_defender_of_faith = yes
+                        }
+                    }
+                }
+            }
+            ROOT = {
+                change_variable = {            
+                    which = gt_temp_score
+                    value = 30
+                }
+            }
+        }
+        #20 x (DotF Rank) pts for holding a Defender of the Faith title.
+        if = {
+            limit = {
+                is_defender_of_faith_of_tier = 5
+            }
+            change_variable = {            
+                which = gt_temp_score
+                value = 100
+            }
+        }
+        else_if = {
+            limit = {
+                is_defender_of_faith_of_tier = 4
+            }
+            change_variable = {            
+                which = gt_temp_score
+                value = 80
+            }
+        }
+        else_if = {
+            limit = {
+                is_defender_of_faith_of_tier = 3
+            }
+            change_variable = {            
+                which = gt_temp_score
+                value = 60
+            }
+        }
+        else_if = {
+            limit = {
+                is_defender_of_faith_of_tier = 2
+            }
+            change_variable = {            
+                which = gt_temp_score
+                value = 40
+            }
+        }
+        else_if = {
+            limit = {
+                is_defender_of_faith_of_tier = 1
+            }
+            change_variable = {            
+                which = gt_temp_score
+                value = 20
+            }
+        }
+        #Age multiplication
+        if = {
+            limit = {
+                current_age = age_of_revolutions
+            }
+            multiply_variable = {
+                which = gt_temp_score
+                value = 4
+            }
+        }
+        else_if = {
+            limit = {
+                current_age = age_of_absolutism
+            }
+            multiply_variable = {
+                which = gt_temp_score
+                value = 3
+            }
+        }
+        else_if = {
+            limit = {
+                current_age = age_of_reformation
+            }
+            multiply_variable = {
+                which = gt_temp_score
+                value = 2
+            }
+        }
+        #Add to total score
+        change_variable = {
+            which = gt_score
+            which = gt_temp_score
+        }
+    }
+
+    option = {
+        name = GT_score.2.a
+    }
+}
+
+#Prince score
+country_event = {
+    id = GT_score.3
+    title = GT_score.3.t
+    desc = GT_score.3.d
+    is_triggered_only = yes
+
+    trigger =
+    {
+        always = yes
+    }
+
+    immediate = {
+        set_variable = {            
+            which = gt_temp_score
+            value = 0
+        }
+        #Imperial legitimacy
+        set_variable = {
+            which = gt_imperial_legitimacy
+            value = 0
+        }
+        every_country = {
+            limit = {
+                is_part_of_hre = yes
+            }
+            ROOT = {
+                change_variable = {
+                    which = gt_imperial_legitimacy
+                    value = 2
+                }
+            }
+        }
+        #50 points for each Conqueror Objective that is an Imperial Province or is held by the Holy Roman Emperor (cooperative objective).
+        every_province = {
+            limit = {
+                has_province_flag = gt_conqueror_objective
+                OR = {
+                    is_part_of_hre = yes
+                    owner = { is_emperor = yes }
+                }
+            }
+            ROOT = {
+                change_variable = {            
+                    which = gt_temp_score
+                    value = 50
+                }
+            }
+        }
+        #X points for each Imperial Objective owned, where X is equal to Imperial Legitimacy.
+        every_province = {
+            limit = {
+                has_province_flag = gt_imperial_objective
+                owned_by = ROOT
+            }
+            ROOT = {
+                change_variable = {            
+                    which = gt_temp_score
+                    which = gt_imperial_legitimacy
+                }
+            }
+        }
+        #X points for holding the position of Holy Roman Emperor where X is equal to Imperial Legitimacy.
+        if = {
+            limit = { is_emperor = yes }
+            change_variable = {            
+                which = gt_temp_score
+                which = gt_imperial_legitimacy
+            }
+        }
+        #20 x (DotF Rank) pts for holding a Defender of the Faith title.
+        if = {
+            limit = {
+                is_defender_of_faith_of_tier = 5
+            }
+            change_variable = {            
+                which = gt_temp_score
+                value = 100
+            }
+        }
+        else_if = {
+            limit = {
+                is_defender_of_faith_of_tier = 4
+            }
+            change_variable = {            
+                which = gt_temp_score
+                value = 80
+            }
+        }
+        else_if = {
+            limit = {
+                is_defender_of_faith_of_tier = 3
+            }
+            change_variable = {            
+                which = gt_temp_score
+                value = 60
+            }
+        }
+        else_if = {
+            limit = {
+                is_defender_of_faith_of_tier = 2
+            }
+            change_variable = {            
+                which = gt_temp_score
+                value = 40
+            }
+        }
+        else_if = {
+            limit = {
+                is_defender_of_faith_of_tier = 1
+            }
+            change_variable = {            
+                which = gt_temp_score
+                value = 20
+            }
+        }
+        #Age multiplication
+        if = {
+            limit = {
+                current_age = age_of_revolutions
+            }
+            multiply_variable = {
+                which = gt_temp_score
+                value = 4
+            }
+        }
+        else_if = {
+            limit = {
+                current_age = age_of_absolutism
+            }
+            multiply_variable = {
+                which = gt_temp_score
+                value = 3
+            }
+        }
+        else_if = {
+            limit = {
+                current_age = age_of_reformation
+            }
+            multiply_variable = {
+                which = gt_temp_score
+                value = 2
+            }
+        }
+        #Add to total score
+        change_variable = {
+            which = gt_score
+            which = gt_temp_score
+        }
+    }
+
+    option = {
+        name = GT_score.3.a
+    }
+}
+
+#Magnate score
+country_event = {
+    id = GT_score.4
+    title = GT_score.4.t
+    desc = GT_score.4.d
+    is_triggered_only = yes
+
+    trigger =
+    {
+        always = yes
+    }
+
+    immediate = {
+        set_variable = {            
+            which = gt_temp_score
+            value = 0
+        }
+        #20 points for each Conqueror or Imperial Objective that is held by either a Free City or a Trade City (cooperative objective).
+        every_province = {
+            limit = {
+                OR = {
+                    has_province_flag = gt_imperial_objective
+                    has_province_flag = gt_conqueror_objective
+                }
+                owner = {
+                    OR = {
+                        has_reform = free_city
+                        has_reform = trading_city
+                    }
+                }
+            }
+            ROOT = {
+                change_variable = {
+                    which = gt_temp_score
+                    value = 20
+                }
+            }
+        }
+        #30 points each for holding sufficient trade power in the Wien, Saxony, Rhineland, or Champagne trade node to rank among the top 3 nations in that node. This is increased to 100 points if the nation is the top trade power in the node.
+        every_province = {
+            limit = {
+                has_province_flag = gt_trade_node_objective
+            }
+            if = {
+                limit = { is_strongest_trade_power = ROOT }
+                change_variable = {
+                    which = gt_temp_score
+                    value = 100
+                }
+            }
+        }
+        #50 points for holding the trade leader bonus for any trade good. This is increased to 100 points if holding more than one trade leader bonus.
+        if = {
+            limit = {
+                num_of_trading_bonuses = 2
+            }
+            change_variable = {
+                which = gt_temp_score
+                value = 100
+            }
+        }
+        else_if = {
+            limit = {
+                num_of_trading_bonuses = 1
+            }
+            change_variable = {
+                which = gt_temp_score
+                value = 50
+            }
+        }
+        #20 x (DotF Rank) pts for holding a Defender of the Faith title.
+        if = {
+            limit = {
+                is_defender_of_faith_of_tier = 5
+            }
+            change_variable = {            
+                which = gt_temp_score
+                value = 100
+            }
+        }
+        else_if = {
+            limit = {
+                is_defender_of_faith_of_tier = 4
+            }
+            change_variable = {            
+                which = gt_temp_score
+                value = 80
+            }
+        }
+        else_if = {
+            limit = {
+                is_defender_of_faith_of_tier = 3
+            }
+            change_variable = {            
+                which = gt_temp_score
+                value = 60
+            }
+        }
+        else_if = {
+            limit = {
+                is_defender_of_faith_of_tier = 2
+            }
+            change_variable = {            
+                which = gt_temp_score
+                value = 40
+            }
+        }
+        else_if = {
+            limit = {
+                is_defender_of_faith_of_tier = 1
+            }
+            change_variable = {            
+                which = gt_temp_score
+                value = 20
+            }
+        }
+        #Age multiplication
+        if = {
+            limit = {
+                current_age = age_of_revolutions
+            }
+            multiply_variable = {
+                which = gt_temp_score
+                value = 4
+            }
+        }
+        else_if = {
+            limit = {
+                current_age = age_of_absolutism
+            }
+            multiply_variable = {
+                which = gt_temp_score
+                value = 3
+            }
+        }
+        else_if = {
+            limit = {
+                current_age = age_of_reformation
+            }
+            multiply_variable = {
+                which = gt_temp_score
+                value = 2
+            }
+        }
+        #Add to total score
+        change_variable = {
+            which = gt_score
+            which = gt_temp_score
+        }
+    }
+
+    option = {
+        name = GT_score.4.a
+    }
+}
+
+#Despot score
+country_event = {
+    id = GT_score.5
+    title = GT_score.5.t
+    desc = GT_score.5.d
+    is_triggered_only = yes
+
+    trigger =
+    {
+        always = yes
+    }
+
+    immediate = {
+        set_variable = {            
+            which = gt_temp_score
+            value = 0
+        }
+        #100 points for owning at least one of the objectives from a Conqueror Objective pair. Owning both objectives in a pair does not provide additional points, but if another Despot owns the other Conqueror Objective from that pair, the value of both objectives becomes 0 pts for Despots as long as two separate despots each own one objective of the pair..
+        #Danzig - Novgorod
+        if = {
+            limit = {
+                OR = {
+                    owns = 43
+                    owns = 310
+                }
+                NOT = {
+                    any_country = {
+                        OR = {
+                            owns = 43
+                            owns = 310
+                        }
+                        has_country_flag = gt_despot
+                    }
+                }
+            }
+            change_variable = {
+                which = gt_temp_score
+                value = 100
+            }
+        }
+        #London - Amsterdam
+        if = {
+            limit = {
+                OR = {
+                    owns = 236
+                    owns = 97
+                }
+                NOT = {
+                    any_country = {
+                        OR = {
+                            owns = 236
+                            owns = 97
+                        }
+                        has_country_flag = gt_despot
+                    }
+                }
+            }
+            change_variable = {
+                which = gt_temp_score
+                value = 100
+            }
+        }
+        #​Pest - Cafa
+        if = {
+            limit = {
+                OR = {
+                    owns = 153
+                    owns = 285
+                }
+                NOT = {
+                    any_country = {
+                        OR = {
+                            owns = 153
+                            owns = 285
+                        }
+                        has_country_flag = gt_despot
+                    }
+                }
+            }
+            change_variable = {
+                which = gt_temp_score
+                value = 100
+            }
+        }
+        #Naples - Tunis
+        if = {
+            limit = {
+                OR = {
+                    owns = 121
+                    owns = 341
+                }
+                NOT = {
+                    any_country = {
+                        OR = {
+                            owns = 121
+                            owns = 341
+                        }
+                        has_country_flag = gt_despot
+                    }
+                }
+            }
+            change_variable = {
+                which = gt_temp_score
+                value = 100
+            }
+        }
+        #100 points for owning at least one Imperial Objective. Owning further Imperial Objectives will not yield any further points, but if two or more different Despots own any Imperial Objectives, all Imperial Objectives are worth 0 points for Despots as long as this is true.
+        set_variable = {
+            which = gt_despots_owning_imperial_objectives
+            value = 0
+        }
+        every_country = {
+            limit = {
+                has_country_flag = gt_despot
+                any_owned_province = {
+                    has_province_flag = gt_imperial_objective
+                }
+            }
+            ROOT = {
+                change_variable = {
+                    which = gt_despots_owning_imperial_objectives
+                    value = 1
+                }
+            }
+        }
+        if = {
+            limit = {
+                NOT = {
+                    check_variable = {
+                        which = gt_despots_owning_imperial_objectives
+                        value = 3
+                    }
+                }
+                any_owned_province = {
+                    has_province_flag = gt_imperial_objective
+                }
+            }
+            change_variable = {
+                which = gt_temp_score
+                value = 100
+            }
+        }
+        #Imperial legitimacy
+        set_variable = {
+            which = gt_imperial_legitimacy
+            value = 0
+        }
+        every_country = {
+            limit = {
+                is_part_of_hre = yes
+            }
+            ROOT = {
+                change_variable = {
+                    which = gt_imperial_legitimacy
+                    value = 2
+                }
+            }
+        }   
+        #X points for holding the position of Holy Roman Emperor where X is equal to Imperial Legitimacy.
+        if = {
+            limit = { is_emperor = yes }
+            change_variable = {
+                which = gt_temp_score
+                which = gt_imperial_legitimacy
+            }
+        }
+        #10 points for each Imperial province owned if the player is not the Emperor or a member of the HRE. These provinces must be owned directly and not through subjects.
+        if = {
+            limit = { is_part_of_hre = no }
+            every_owned_province = {
+                limit = {
+                    is_part_of_hre = yes
+                }
+                ROOT = {
+                    change_variable = {
+                        which = gt_temp_score
+                        value = 10
+                    }
+                }
+            }
+        }
+        #20 x (DotF Rank) pts for holding a Defender of the Faith title.
+        if = {
+            limit = {
+                is_defender_of_faith_of_tier = 5
+            }
+            change_variable = {            
+                which = gt_temp_score
+                value = 100
+            }
+        }
+        else_if = {
+            limit = {
+                is_defender_of_faith_of_tier = 4
+            }
+            change_variable = {            
+                which = gt_temp_score
+                value = 80
+            }
+        }
+        else_if = {
+            limit = {
+                is_defender_of_faith_of_tier = 3
+            }
+            change_variable = {            
+                which = gt_temp_score
+                value = 60
+            }
+        }
+        else_if = {
+            limit = {
+                is_defender_of_faith_of_tier = 2
+            }
+            change_variable = {            
+                which = gt_temp_score
+                value = 40
+            }
+        }
+        else_if = {
+            limit = {
+                is_defender_of_faith_of_tier = 1
+            }
+            change_variable = {            
+                which = gt_temp_score
+                value = 20
+            }
+        }
+        #Age multiplication
+        if = {
+            limit = {
+                current_age = age_of_revolutions
+            }
+            multiply_variable = {
+                which = gt_temp_score
+                value = 4
+            }
+        }
+        else_if = {
+            limit = {
+                current_age = age_of_absolutism
+            }
+            multiply_variable = {
+                which = gt_temp_score
+                value = 3
+            }
+        }
+        else_if = {
+            limit = {
+                current_age = age_of_reformation
+            }
+            multiply_variable = {
+                which = gt_temp_score
+                value = 2
+            }
+        }
+        #Add to total score
+        change_variable = {
+            which = gt_score
+            which = gt_temp_score
+        }
+    }
+
+    option = {
+        name = GT_score.5.a
+    }
+}
+
+#Score display
+country_event = {
+    id = GT_score.6
+    title = GT_score.6.t
+    desc = GT_score.6.d
+    picture = GOOD_WITH_MONARCH_eventPicture
+    is_triggered_only = yes
+
+    trigger =
+    {
+        always = yes
+    }
+
+    option = {
+        name = GT_score.6.a
+    }
+}
+
+#Score setup
+country_event = {
+    id = GT_score.7
+    is_triggered_only = yes
+    hidden = yes
+    fire_only_once = yes
+
+    trigger =
+    {
+        always = yes
+    }
+
+    immediate = {
+        #Bishops
+        PAP = {
+            set_country_flag = gt_campaign_nation
+            set_country_flag = gt_bishop
+            set_variable = {
+                which = gt_score
+                value = 0
+            }
+        }
+        TRI = {
+            set_country_flag = gt_campaign_nation
+            set_country_flag = gt_bishop
+            set_variable = {
+                which = gt_score
+                value = 0
+            }
+        }
+        VER = {
+            set_country_flag = gt_campaign_nation
+            set_country_flag = gt_bishop
+            set_variable = {
+                which = gt_score
+                value = 0
+            }
+        }
+        WBG = {
+            set_country_flag = gt_campaign_nation
+            set_country_flag = gt_bishop
+            set_variable = {
+                which = gt_score
+                value = 0
+            }
+        }
+        #Princes
+        SAX = {
+            set_country_flag = gt_campaign_nation
+            set_country_flag = gt_prince
+            set_variable = {
+                which = gt_score
+                value = 0
+            }
+        }
+        PAL = {
+            set_country_flag = gt_campaign_nation
+            set_country_flag = gt_prince
+            set_variable = {
+                which = gt_score
+                value = 0
+            }
+        }
+        GEL = {
+            set_country_flag = gt_campaign_nation
+            set_country_flag = gt_prince
+            set_variable = {
+                which = gt_score
+                value = 0
+            }
+        }
+        UBV = {
+            set_country_flag = gt_campaign_nation
+            set_country_flag = gt_prince
+            set_variable = {
+                which = gt_score
+                value = 0
+            }
+        }
+        #Magnates
+        VEN = {
+            set_country_flag = gt_campaign_nation
+            set_country_flag = gt_magnate
+            set_variable = {
+                which = gt_score
+                value = 0
+            }
+        }
+        GEN = {
+            set_country_flag = gt_campaign_nation
+            set_country_flag = gt_magnate
+            set_variable = {
+                which = gt_score
+                value = 0
+            }
+        }
+        HSA = {
+            set_country_flag = gt_campaign_nation
+            set_country_flag = gt_magnate
+            set_variable = {
+                which = gt_score
+                value = 0
+            }
+        }
+        #Despots
+        TUR = {
+            set_country_flag = gt_campaign_nation
+            set_country_flag = gt_despot
+            set_variable = {
+                which = gt_score
+                value = 0
+            }
+        }
+        FRA = {
+            set_country_flag = gt_campaign_nation
+            set_country_flag = gt_despot
+            set_variable = {
+                which = gt_score
+                value = 0
+            }
+        }
+        DAN = {
+            set_country_flag = gt_campaign_nation
+            set_country_flag = gt_despot
+            set_variable = {
+                which = gt_score
+                value = 0
+            }
+        }
+        POL = {
+            set_country_flag = gt_campaign_nation
+            set_country_flag = gt_despot
+            set_variable = {
+                which = gt_score
+                value = 0
+            }
+        }
+        #Imperial objectives
+        #Hamburg
+        44 = {
+            set_province_flag = gt_imperial_objective
+        }
+        #Berlin
+        50 = {
+            set_province_flag = gt_imperial_objective
+        }
+        #Koln
+        85 = {
+            set_province_flag = gt_imperial_objective
+        }
+        #Nurnberg
+        67 = {
+            set_province_flag = gt_imperial_objective
+        }
+        #Ulm
+        1872 = {
+            set_province_flag = gt_imperial_objective
+        }
+        #Lucca
+        2980 = {
+            set_province_flag = gt_imperial_objective
+        }
+        #Conqueror Objectives
+        #Danzig
+        43 = {
+            set_province_flag = gt_conqueror_objective
+        }
+        #Novgorod
+        310 = {
+            set_province_flag = gt_conqueror_objective
+        }
+        #London
+        236 = {
+            set_province_flag = gt_conqueror_objective
+        }
+        #Amsterdam
+        97 = {
+            set_province_flag = gt_conqueror_objective
+        }
+        #​Pest
+        153 = {
+            set_province_flag = gt_conqueror_objective
+        }
+        #Caffa
+        285 = {
+            set_province_flag = gt_conqueror_objective
+        }
+        #Napoli
+        121 = {
+            set_province_flag = gt_conqueror_objective
+        }
+        #Tunis
+        341 = {
+            set_province_flag = gt_conqueror_objective
+        }
+        #Trade node objectives
+        #Wien
+        134 = {
+            set_province_flag = gt_trade_node_objective
+        }
+        #Saxony
+        61 = {
+            set_province_flag = gt_trade_node_objective
+        }
+        #Rheinland
+        1876 = {
+            set_province_flag = gt_trade_node_objective
+        }
+        #Champagne
+        186 = {
+            set_province_flag = gt_trade_node_objective
+        }
+    }
+    option = {
+        name = GT_score.7.a
+    }
+}
