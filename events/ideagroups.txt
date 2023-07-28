@@ -1939,7 +1939,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea = GT_relig3 #GT
+		has_idea = divine_supremacy
 	}
 	
 	mean_time_to_happen = {
@@ -4806,7 +4806,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea = efficient_mining
+		has_idea = smithian_economics
 		NOT = { has_country_modifier = "production_improvements" }
 		NOT = { has_country_modifier = "production_stifled" }
 	}
