@@ -986,7 +986,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		has_idea = GT_explore1 #GT
+		has_any_exploration_idea = yes
 		num_of_ports = 1
 		NOT =  { has_country_modifier = monetary_benefits }
 		NOT =  { has_country_modifier = colonial_enthusiasm }
@@ -8180,7 +8180,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea = GT_explore1 #GT
+		has_idea = quest_for_the_new_world
 		capital_scope = { continent = europe }
 		any_owned_province = {
 			is_colony = yes
@@ -9457,7 +9457,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea = GT_explore1 #GT
+		has_idea = quest_for_the_new_world
 		num_of_ports = 1
 		num_of_merchants = 2
 		any_active_trade_node = {

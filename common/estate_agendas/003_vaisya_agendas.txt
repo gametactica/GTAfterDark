@@ -1140,7 +1140,7 @@ estate_vaisyas_get_cash = {
 
 
 #Discover X in America
-estate_vaisyas_discover_X_in_america = {
+estate_vaisyas_discover_X_in_america = { #GT
 	can_select = {
 		OR = {
 			num_of_conquistadors = 1
@@ -1248,7 +1248,7 @@ estate_vaisyas_discover_X_in_america = {
 	fail_if = {
 		OR = {
 			NOT = { num_of_ports = 1 }
-			NOT = { has_idea = GT_explore1 } #GT
+			NOT = { has_idea = quest_for_the_new_world }
 		}
 	}
     failing_effect = {
