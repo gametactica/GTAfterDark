@@ -790,7 +790,7 @@ tributary_state = {
 						ai = no
 					}
 					AND = { #GT
-						has_idea = GT_influ7
+						has_idea = tribute_system
 						government_rank = 2
 						is_part_of_hre = no
 						ai = no
