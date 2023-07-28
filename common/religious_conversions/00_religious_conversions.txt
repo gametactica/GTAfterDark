@@ -29,7 +29,7 @@ propagate_religion_policy = {
 			owner = {
 				OR = { #GT
 					has_country_flag = immunity_against_propogate_religion
-					has_idea = GT_relig4
+					has_idea = divine_supremacy
 					}
 				}
 			has_owner_religion = yes #GT
@@ -64,7 +64,7 @@ propagate_religion_policy = {
 			}
 			FROM = {
 				NOT = { has_country_flag = can_propagate_religion_in_abrahamic_provinces }
-				NOT = { has_idea = GT_trade4 } #GT
+				NOT = { has_idea = merchant_adventures } #GT
 			}
 		}
 		modifier = {
@@ -73,7 +73,7 @@ propagate_religion_policy = {
 			FROM = {
 				NOT = { has_country_flag = can_propagate_religion_in_abrahamic_provinces }
 				#NOT = { has_government_attribute = can_spread_the_reformation }
-				NOT = { has_idea = GT_trade4 } #GT
+				NOT = { has_idea = merchant_adventures } #GT
 				NOT = { has_reform = reformer_state_reform }
 			}
 		}
