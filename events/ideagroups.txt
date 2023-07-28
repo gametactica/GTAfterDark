@@ -4806,7 +4806,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea = GT_econ7 #GT
+		has_idea = efficient_mining
 		NOT = { has_country_modifier = "production_improvements" }
 		NOT = { has_country_modifier = "production_stifled" }
 	}
