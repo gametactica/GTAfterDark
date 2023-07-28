@@ -14,7 +14,7 @@ edict_religious_unity = { #GT
 	
 	allow = {
 		OR = {
-			has_idea = GT_relig6
+			has_idea = religious_tradition
 			ruler_has_personality = pious_personality
 			ruler_has_personality = zealot_personality
 			ruler_has_personality = righteous_personality
