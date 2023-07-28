@@ -1276,7 +1276,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea = GT_innov3 #GT
+		has_idea = scientific_revolution
 		NOT = {	has_country_modifier =  "mil_boost" }
 		NOT = {	has_country_modifier =  "adm_boost" }
 		NOT = {	has_country_modifier =  "dip_boost" }
