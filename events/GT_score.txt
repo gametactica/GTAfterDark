@@ -403,16 +403,33 @@ country_event = {
                 }
             }
         }
-        #30 points each for holding sufficient trade power in the Wien, Saxony, Rhineland, or Champagne trade node to rank among the top 3 nations in that node. This is increased to 100 points if the nation is the top trade power in the node.
+        #30 points each for having at lesat 20% share in the Wien, Saxony, Rhineland, or Champagne trade node to rank among the top 3 nations in that node. This is increased to 100 points if the share is at least 50%.
         every_province = {
             limit = {
                 has_province_flag = gt_trade_node_objective
             }
             if = {
-                limit = { is_strongest_trade_power = ROOT }
+                limit = {
+                    trade_share = {
+                        country = ROOT
+                        share = 50
+                    }
+                }
                 change_variable = {
                     which = gt_temp_score
                     value = 100
+                }
+            }
+            else_if = {
+                limit = {
+                    trade_share = {
+                        country = ROOT
+                        share = 20
+                    }
+                }
+                change_variable = {
+                    which = gt_temp_score
+                    value = 30
                 }
             }
         }
@@ -788,7 +805,7 @@ country_event = {
     }
 }
 
-#Score display
+#Individual score display
 country_event = {
     id = GT_score.6
     title = GT_score.6.t
