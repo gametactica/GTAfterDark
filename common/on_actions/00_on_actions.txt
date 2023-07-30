@@ -5,7 +5,7 @@ on_startup = {
 	#GT
 	TUR = {
 		country_event = {
-			id = GT_score.7
+			id = GT_score.1
 		}
 	}
 	if = {
@@ -41,7 +41,6 @@ on_startup = {
 		event_01.1 #GT Protected Area
 		GT_Gov_Cap_1444.1 #Debug paternalistic G.C. calculation so starting army/navy/stated land is correct.
 		GT_Crownlands_1444.1 #Debug basegame issue where released subjects start with all CL and no army/navy
-		GT_emperor_iii_role_assign.1 #Assign role designation flags for age scoring
 
 		flavor_got.1 #Event for Gotland to select their mission tree
 		flavor_mng.42 #Event for the starting situation of the Ming 
@@ -1536,7 +1535,7 @@ on_successive_emperor = {
 on_emperor_elected = {
 	#GT
 	events = {
-		GT_score.1
+		GT_score.2
 	}
 
 	every_elector = {

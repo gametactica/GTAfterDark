@@ -1,13 +1,292 @@
 namespace = GT_score
 
-#Trigger event
+#Score setup
 country_event = {
     id = GT_score.1
+    title = GT_score.1.t
+    is_triggered_only = yes
+    hidden = yes
+    fire_only_once = yes
 
+    trigger = {
+        always = yes
+    }
+
+    immediate = {
+        #Bishops
+        PAP = {
+            set_country_flag = gt_campaign_nation
+            set_country_flag = gt_bishop
+            set_variable = {
+                which = gt_score
+                value = 0
+            }
+            set_variable = {
+                which = gt_campaign_nation_order
+                value = 0
+            }
+        }
+        TRI = {
+            set_country_flag = gt_campaign_nation
+            set_country_flag = gt_bishop
+            set_variable = {
+                which = gt_score
+                value = 0
+            }
+            set_variable = {
+                which = gt_campaign_nation_order
+                value = 1
+            }
+        }
+        VER = {
+            set_country_flag = gt_campaign_nation
+            set_country_flag = gt_bishop
+            set_variable = {
+                which = gt_score
+                value = 0
+            }
+            set_variable = {
+                which = gt_campaign_nation_order
+                value = 2
+            }
+        }
+        WBG = {
+            set_country_flag = gt_campaign_nation
+            set_country_flag = gt_bishop
+            set_variable = {
+                which = gt_score
+                value = 0
+            }
+            set_variable = {
+                which = gt_campaign_nation_order
+                value = 3
+            }
+        }
+        #Princes
+        SAX = {
+            set_country_flag = gt_campaign_nation
+            set_country_flag = gt_prince
+            set_variable = {
+                which = gt_score
+                value = 0
+            }
+            set_variable = {
+                which = gt_campaign_nation_order
+                value = 4
+            }
+        }
+        PAL = {
+            set_country_flag = gt_campaign_nation
+            set_country_flag = gt_prince
+            set_variable = {
+                which = gt_score
+                value = 0
+            }
+            set_variable = {
+                which = gt_campaign_nation_order
+                value = 5
+            }
+        }
+        GEL = {
+            set_country_flag = gt_campaign_nation
+            set_country_flag = gt_prince
+            set_variable = {
+                which = gt_score
+                value = 0
+            }
+            set_variable = {
+                which = gt_campaign_nation_order
+                value = 6
+            }
+        }
+        UBV = {
+            set_country_flag = gt_campaign_nation
+            set_country_flag = gt_prince
+            set_variable = {
+                which = gt_score
+                value = 0
+            }
+
+            set_variable = {
+                which = gt_campaign_nation_order
+                value = 7
+            }
+        }
+        #Magnates
+        VEN = {
+            set_country_flag = gt_campaign_nation
+            set_country_flag = gt_magnate
+            set_variable = {
+                which = gt_score
+                value = 0
+            }
+            set_variable = {
+                which = gt_campaign_nation_order
+                value = 8
+            }
+        }
+        GEN = {
+            set_country_flag = gt_campaign_nation
+            set_country_flag = gt_magnate
+            set_variable = {
+                which = gt_score
+                value = 0
+            }
+            set_variable = {
+                which = gt_campaign_nation_order
+                value = 9
+            }
+        }
+        HSA = {
+            set_country_flag = gt_campaign_nation
+            set_country_flag = gt_magnate
+            set_variable = {
+                which = gt_score
+                value = 0
+            }
+            set_variable = {
+                which = gt_campaign_nation_order
+                value = 10
+            }
+        }
+        #Despots
+        TUR = {
+            set_country_flag = gt_campaign_nation
+            set_country_flag = gt_despot
+            set_variable = {
+                which = gt_score
+                value = 0
+            }
+            set_variable = {
+                which = gt_campaign_nation_order
+                value = 11
+            }
+        }
+        FRA = {
+            set_country_flag = gt_campaign_nation
+            set_country_flag = gt_despot
+            set_variable = {
+                which = gt_score
+                value = 0
+            }
+            set_variable = {
+                which = gt_campaign_nation_order
+                value = 12
+            }
+        }
+        DAN = {
+            set_country_flag = gt_campaign_nation
+            set_country_flag = gt_despot
+            set_variable = {
+                which = gt_score
+                value = 0
+            }
+
+            set_variable = {
+                which = gt_campaign_nation_order
+                value = 13
+            }
+        }
+        POL = {
+            set_country_flag = gt_campaign_nation
+            set_country_flag = gt_despot
+            set_variable = {
+                which = gt_score
+                value = 0
+            }
+            set_variable = {
+                which = gt_campaign_nation_order
+                value = 14
+            }
+        }
+        #Imperial objectives
+        #Hamburg
+        44 = {
+            set_province_flag = gt_imperial_objective
+        }
+        #Berlin
+        50 = {
+            set_province_flag = gt_imperial_objective
+        }
+        #Koln
+        85 = {
+            set_province_flag = gt_imperial_objective
+        }
+        #Nurnberg
+        67 = {
+            set_province_flag = gt_imperial_objective
+        }
+        #Ulm
+        1872 = {
+            set_province_flag = gt_imperial_objective
+        }
+        #Lucca
+        2980 = {
+            set_province_flag = gt_imperial_objective
+        }
+        #Conqueror Objectives
+        #Danzig
+        43 = {
+            set_province_flag = gt_conqueror_objective
+        }
+        #Novgorod
+        310 = {
+            set_province_flag = gt_conqueror_objective
+        }
+        #London
+        236 = {
+            set_province_flag = gt_conqueror_objective
+        }
+        #Amsterdam
+        97 = {
+            set_province_flag = gt_conqueror_objective
+        }
+        #​Pest
+        153 = {
+            set_province_flag = gt_conqueror_objective
+        }
+        #Caffa
+        285 = {
+            set_province_flag = gt_conqueror_objective
+        }
+        #Napoli
+        121 = {
+            set_province_flag = gt_conqueror_objective
+        }
+        #Tunis
+        341 = {
+            set_province_flag = gt_conqueror_objective
+        }
+        #Trade node objectives
+        #Wien
+        134 = {
+            set_province_flag = gt_trade_node_objective
+        }
+        #Saxony
+        61 = {
+            set_province_flag = gt_trade_node_objective
+        }
+        #Rheinland
+        1876 = {
+            set_province_flag = gt_trade_node_objective
+        }
+        #Champagne
+        186 = {
+            set_province_flag = gt_trade_node_objective
+        }
+    }
+    option = {
+        name = GT_score.1.a
+    }
+}
+
+#Trigger event
+country_event = {
+    id = GT_score.2
+    title = GT_score.2.t
     is_triggered_only = yes
 
-    trigger =
-    {
+    trigger = {
         always = yes
     }
 
@@ -23,7 +302,7 @@ country_event = {
                     has_country_flag = gt_bishop
                 }
                 country_event = {
-                    id = GT_score.2
+                    id = GT_score.3
                 }
             }
             if = {
@@ -31,7 +310,7 @@ country_event = {
                     has_country_flag = gt_prince
                 }
                 country_event = {
-                    id = GT_score.3
+                    id = GT_score.4
                 }
             }
             if = {
@@ -39,7 +318,7 @@ country_event = {
                     has_country_flag = gt_magnate
                 }
                 country_event = {
-                    id = GT_score.4
+                    id = GT_score.5
                 }
             }
             if = {
@@ -47,25 +326,24 @@ country_event = {
                     has_country_flag = gt_despot
                 }
                 country_event = {
-                    id = GT_score.5
+                    id = GT_score.6
                 }
             }
         }
     }
     option = {
-        name = GT_score.1.a
+        name = GT_score.2.a
     }
 }
 
 #Bishop score
 country_event = {
-    id = GT_score.2
-    title = GT_score.2.t
-    desc = GT_score.2.d
+    id = GT_score.3
+    title = GT_score.3.t
+    desc = GT_score.3.d
     is_triggered_only = yes
 
-    trigger =
-    {
+    trigger = {
         always = yes
     }
 
@@ -205,19 +483,18 @@ country_event = {
     }
 
     option = {
-        name = GT_score.2.a
+        name = GT_score.3.a
     }
 }
 
 #Prince score
 country_event = {
-    id = GT_score.3
-    title = GT_score.3.t
-    desc = GT_score.3.d
+    id = GT_score.4
+    title = GT_score.4.t
+    desc = GT_score.4.d
     is_triggered_only = yes
 
-    trigger =
-    {
+    trigger = {
         always = yes
     }
 
@@ -361,19 +638,18 @@ country_event = {
     }
 
     option = {
-        name = GT_score.3.a
+        name = GT_score.4.a
     }
 }
 
 #Magnate score
 country_event = {
-    id = GT_score.4
-    title = GT_score.4.t
-    desc = GT_score.4.d
+    id = GT_score.5
+    title = GT_score.5.t
+    desc = GT_score.5.d
     is_triggered_only = yes
 
-    trigger =
-    {
+    trigger = {
         always = yes
     }
 
@@ -403,7 +679,7 @@ country_event = {
                 }
             }
         }
-        #30 points each for having at lesat 20% share in the Wien, Saxony, Rhineland, or Champagne trade node to rank among the top 3 nations in that node. This is increased to 100 points if the share is at least 50%.
+        #30 points each for having at least 20% share in the Wien, Saxony, Rhineland, or Champagne trade node to rank among the top 3 nations in that node. This is increased to 100 points if the share is at least 50%.
         every_province = {
             limit = {
                 has_province_flag = gt_trade_node_objective
@@ -415,9 +691,11 @@ country_event = {
                         share = 50
                     }
                 }
-                change_variable = {
-                    which = gt_temp_score
-                    value = 100
+                ROOT = {
+                    change_variable = {
+                        which = gt_temp_score
+                        value = 100
+                    }
                 }
             }
             else_if = {
@@ -427,9 +705,11 @@ country_event = {
                         share = 20
                     }
                 }
-                change_variable = {
-                    which = gt_temp_score
-                    value = 30
+                ROOT = {
+                    change_variable = {
+                        which = gt_temp_score
+                        value = 30
+                    }
                 }
             }
         }
@@ -534,19 +814,18 @@ country_event = {
     }
 
     option = {
-        name = GT_score.4.a
+        name = GT_score.5.a
     }
 }
 
 #Despot score
 country_event = {
-    id = GT_score.5
-    title = GT_score.5.t
-    desc = GT_score.5.d
+    id = GT_score.6
+    title = GT_score.6.t
+    desc = GT_score.6.d
     is_triggered_only = yes
 
-    trigger =
-    {
+    trigger = {
         always = yes
     }
 
@@ -801,242 +1080,6 @@ country_event = {
     }
 
     option = {
-        name = GT_score.5.a
-    }
-}
-
-#Individual score display
-country_event = {
-    id = GT_score.6
-    title = GT_score.6.t
-    desc = GT_score.6.d
-    picture = GOOD_WITH_MONARCH_eventPicture
-    is_triggered_only = yes
-
-    trigger =
-    {
-        always = yes
-    }
-
-    option = {
         name = GT_score.6.a
-    }
-}
-
-#Score setup
-country_event = {
-    id = GT_score.7
-    is_triggered_only = yes
-    hidden = yes
-    fire_only_once = yes
-
-    trigger =
-    {
-        always = yes
-    }
-
-    immediate = {
-        #Bishops
-        PAP = {
-            set_country_flag = gt_campaign_nation
-            set_country_flag = gt_bishop
-            set_variable = {
-                which = gt_score
-                value = 0
-            }
-        }
-        TRI = {
-            set_country_flag = gt_campaign_nation
-            set_country_flag = gt_bishop
-            set_variable = {
-                which = gt_score
-                value = 0
-            }
-        }
-        VER = {
-            set_country_flag = gt_campaign_nation
-            set_country_flag = gt_bishop
-            set_variable = {
-                which = gt_score
-                value = 0
-            }
-        }
-        WBG = {
-            set_country_flag = gt_campaign_nation
-            set_country_flag = gt_bishop
-            set_variable = {
-                which = gt_score
-                value = 0
-            }
-        }
-        #Princes
-        SAX = {
-            set_country_flag = gt_campaign_nation
-            set_country_flag = gt_prince
-            set_variable = {
-                which = gt_score
-                value = 0
-            }
-        }
-        PAL = {
-            set_country_flag = gt_campaign_nation
-            set_country_flag = gt_prince
-            set_variable = {
-                which = gt_score
-                value = 0
-            }
-        }
-        GEL = {
-            set_country_flag = gt_campaign_nation
-            set_country_flag = gt_prince
-            set_variable = {
-                which = gt_score
-                value = 0
-            }
-        }
-        UBV = {
-            set_country_flag = gt_campaign_nation
-            set_country_flag = gt_prince
-            set_variable = {
-                which = gt_score
-                value = 0
-            }
-        }
-        #Magnates
-        VEN = {
-            set_country_flag = gt_campaign_nation
-            set_country_flag = gt_magnate
-            set_variable = {
-                which = gt_score
-                value = 0
-            }
-        }
-        GEN = {
-            set_country_flag = gt_campaign_nation
-            set_country_flag = gt_magnate
-            set_variable = {
-                which = gt_score
-                value = 0
-            }
-        }
-        HSA = {
-            set_country_flag = gt_campaign_nation
-            set_country_flag = gt_magnate
-            set_variable = {
-                which = gt_score
-                value = 0
-            }
-        }
-        #Despots
-        TUR = {
-            set_country_flag = gt_campaign_nation
-            set_country_flag = gt_despot
-            set_variable = {
-                which = gt_score
-                value = 0
-            }
-        }
-        FRA = {
-            set_country_flag = gt_campaign_nation
-            set_country_flag = gt_despot
-            set_variable = {
-                which = gt_score
-                value = 0
-            }
-        }
-        DAN = {
-            set_country_flag = gt_campaign_nation
-            set_country_flag = gt_despot
-            set_variable = {
-                which = gt_score
-                value = 0
-            }
-        }
-        POL = {
-            set_country_flag = gt_campaign_nation
-            set_country_flag = gt_despot
-            set_variable = {
-                which = gt_score
-                value = 0
-            }
-        }
-        #Imperial objectives
-        #Hamburg
-        44 = {
-            set_province_flag = gt_imperial_objective
-        }
-        #Berlin
-        50 = {
-            set_province_flag = gt_imperial_objective
-        }
-        #Koln
-        85 = {
-            set_province_flag = gt_imperial_objective
-        }
-        #Nurnberg
-        67 = {
-            set_province_flag = gt_imperial_objective
-        }
-        #Ulm
-        1872 = {
-            set_province_flag = gt_imperial_objective
-        }
-        #Lucca
-        2980 = {
-            set_province_flag = gt_imperial_objective
-        }
-        #Conqueror Objectives
-        #Danzig
-        43 = {
-            set_province_flag = gt_conqueror_objective
-        }
-        #Novgorod
-        310 = {
-            set_province_flag = gt_conqueror_objective
-        }
-        #London
-        236 = {
-            set_province_flag = gt_conqueror_objective
-        }
-        #Amsterdam
-        97 = {
-            set_province_flag = gt_conqueror_objective
-        }
-        #​Pest
-        153 = {
-            set_province_flag = gt_conqueror_objective
-        }
-        #Caffa
-        285 = {
-            set_province_flag = gt_conqueror_objective
-        }
-        #Napoli
-        121 = {
-            set_province_flag = gt_conqueror_objective
-        }
-        #Tunis
-        341 = {
-            set_province_flag = gt_conqueror_objective
-        }
-        #Trade node objectives
-        #Wien
-        134 = {
-            set_province_flag = gt_trade_node_objective
-        }
-        #Saxony
-        61 = {
-            set_province_flag = gt_trade_node_objective
-        }
-        #Rheinland
-        1876 = {
-            set_province_flag = gt_trade_node_objective
-        }
-        #Champagne
-        186 = {
-            set_province_flag = gt_trade_node_objective
-        }
-    }
-    option = {
-        name = GT_score.7.a
     }
 }

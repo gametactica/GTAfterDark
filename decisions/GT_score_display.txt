@@ -10,7 +10,7 @@ country_decisions = {
 
 		effect = {
 			country_event = {
-				id = GT_score.6
+				id = GT_score_display.1
 			}
 		}
 		
