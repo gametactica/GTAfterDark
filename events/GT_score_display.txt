@@ -36,7 +36,7 @@ country_event = {
 
     immediate = {
         set_country_flag = gt_all_score_display
-        random_country = {
+        if = {
             limit = {
                 has_country_flag = gt_campaign_nation
                 is_variable_equal = {
@@ -46,6 +46,20 @@ country_event = {
             }
             country_event = {
                 id = GT_score_display.3
+            }
+        }
+        else = {
+            random_country = {
+                limit = {
+                    has_country_flag = gt_campaign_nation
+                    is_variable_equal = {
+                        which = gt_campaign_nation_order
+                        value = 0
+                    }
+                }
+                country_event = {
+                    id = GT_score_display.3
+                }
             }
         }
     }
