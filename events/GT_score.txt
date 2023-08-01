@@ -342,14 +342,14 @@ country_event = {
     title = GT_score.3.t
     desc = GT_score.3.d
     is_triggered_only = yes
-
+    hidden = yes
     trigger = {
         always = yes
     }
 
     immediate = {
         set_variable = {            
-            which = gt_temp_score
+            which = gt_gained_score
             value = 0
         }
         #20 points for each Conqueror Objective or Imperial Objective province that is Catholic (cooperative objective).
@@ -364,7 +364,7 @@ country_event = {
             }
             ROOT = {
                 change_variable = {
-                    which = gt_temp_score
+                    which = gt_gained_score
                     value = 20
                 }
             }
@@ -375,7 +375,7 @@ country_event = {
                 is_papal_controller = yes
             }
             change_variable = {            
-                which = gt_temp_score
+                which = gt_gained_score
                 value = 100
             }
         }
@@ -396,7 +396,7 @@ country_event = {
             }
             ROOT = {
                 change_variable = {            
-                    which = gt_temp_score
+                    which = gt_gained_score
                     value = 30
                 }
             }
@@ -407,7 +407,7 @@ country_event = {
                 is_defender_of_faith_of_tier = 5
             }
             change_variable = {            
-                which = gt_temp_score
+                which = gt_gained_score
                 value = 100
             }
         }
@@ -416,7 +416,7 @@ country_event = {
                 is_defender_of_faith_of_tier = 4
             }
             change_variable = {            
-                which = gt_temp_score
+                which = gt_gained_score
                 value = 80
             }
         }
@@ -425,7 +425,7 @@ country_event = {
                 is_defender_of_faith_of_tier = 3
             }
             change_variable = {            
-                which = gt_temp_score
+                which = gt_gained_score
                 value = 60
             }
         }
@@ -434,7 +434,7 @@ country_event = {
                 is_defender_of_faith_of_tier = 2
             }
             change_variable = {            
-                which = gt_temp_score
+                which = gt_gained_score
                 value = 40
             }
         }
@@ -443,7 +443,7 @@ country_event = {
                 is_defender_of_faith_of_tier = 1
             }
             change_variable = {            
-                which = gt_temp_score
+                which = gt_gained_score
                 value = 20
             }
         }
@@ -453,7 +453,7 @@ country_event = {
                 current_age = age_of_revolutions
             }
             multiply_variable = {
-                which = gt_temp_score
+                which = gt_gained_score
                 value = 4
             }
         }
@@ -462,7 +462,7 @@ country_event = {
                 current_age = age_of_absolutism
             }
             multiply_variable = {
-                which = gt_temp_score
+                which = gt_gained_score
                 value = 3
             }
         }
@@ -471,14 +471,78 @@ country_event = {
                 current_age = age_of_reformation
             }
             multiply_variable = {
-                which = gt_temp_score
+                which = gt_gained_score
                 value = 2
+            }
+        }
+        #Transfer score to overlord
+        if = {
+            limit = {
+                is_subject = yes
+            }
+            export_to_variable = {
+                which = gt_liberty_desire
+                value = trigger_value:liberty_desire
+                who = ROOT
+            }
+            if = {
+                limit = {
+                    NOT = {
+                        check_variable = {
+                            which = gt_liberty_desire
+                            value = 50
+                        }
+                    }
+                }
+                set_variable = {
+                    which = gt_liberty_desire
+                    value = 50
+                }
+            }
+            set_variable = {
+                which = gt_score_transfer
+                which = gt_gained_score
+            }
+            multiply_variable = {
+                which = gt_gained_score
+                which = gt_liberty_desire
+            }
+            divide_variable = {
+                which = gt_gained_score
+                value = 100
+            }
+            #round down
+            divide_variable = {
+                which = gt_gained_score
+                value = 1000
+            }
+            multiply_variable = {
+                which = gt_gained_score
+                value = 1000
+            }
+            subtract_variable = {
+                which = gt_score_transfer
+                which = gt_gained_score
+            }
+            overlord = {
+                set_variable = {
+                    which = gt_score_transfer
+                    value = 0
+                }
+                change_variable = {
+                    which = gt_score_transfer
+                    which = ROOT
+                }
+                change_variable = {
+                    which = gt_score
+                    which = gt_score_transfer
+                }
             }
         }
         #Add to total score
         change_variable = {
             which = gt_score
-            which = gt_temp_score
+            which = gt_gained_score
         }
     }
 
@@ -493,14 +557,14 @@ country_event = {
     title = GT_score.4.t
     desc = GT_score.4.d
     is_triggered_only = yes
-
+    hidden = yes
     trigger = {
         always = yes
     }
 
     immediate = {
         set_variable = {            
-            which = gt_temp_score
+            which = gt_gained_score
             value = 0
         }
         #Imperial legitimacy
@@ -530,7 +594,7 @@ country_event = {
             }
             ROOT = {
                 change_variable = {            
-                    which = gt_temp_score
+                    which = gt_gained_score
                     value = 50
                 }
             }
@@ -543,7 +607,7 @@ country_event = {
             }
             ROOT = {
                 change_variable = {            
-                    which = gt_temp_score
+                    which = gt_gained_score
                     which = gt_imperial_legitimacy
                 }
             }
@@ -552,7 +616,7 @@ country_event = {
         if = {
             limit = { is_emperor = yes }
             change_variable = {            
-                which = gt_temp_score
+                which = gt_gained_score
                 which = gt_imperial_legitimacy
             }
         }
@@ -562,7 +626,7 @@ country_event = {
                 is_defender_of_faith_of_tier = 5
             }
             change_variable = {            
-                which = gt_temp_score
+                which = gt_gained_score
                 value = 100
             }
         }
@@ -571,7 +635,7 @@ country_event = {
                 is_defender_of_faith_of_tier = 4
             }
             change_variable = {            
-                which = gt_temp_score
+                which = gt_gained_score
                 value = 80
             }
         }
@@ -580,7 +644,7 @@ country_event = {
                 is_defender_of_faith_of_tier = 3
             }
             change_variable = {            
-                which = gt_temp_score
+                which = gt_gained_score
                 value = 60
             }
         }
@@ -589,7 +653,7 @@ country_event = {
                 is_defender_of_faith_of_tier = 2
             }
             change_variable = {            
-                which = gt_temp_score
+                which = gt_gained_score
                 value = 40
             }
         }
@@ -598,7 +662,7 @@ country_event = {
                 is_defender_of_faith_of_tier = 1
             }
             change_variable = {            
-                which = gt_temp_score
+                which = gt_gained_score
                 value = 20
             }
         }
@@ -608,7 +672,7 @@ country_event = {
                 current_age = age_of_revolutions
             }
             multiply_variable = {
-                which = gt_temp_score
+                which = gt_gained_score
                 value = 4
             }
         }
@@ -617,7 +681,7 @@ country_event = {
                 current_age = age_of_absolutism
             }
             multiply_variable = {
-                which = gt_temp_score
+                which = gt_gained_score
                 value = 3
             }
         }
@@ -626,14 +690,78 @@ country_event = {
                 current_age = age_of_reformation
             }
             multiply_variable = {
-                which = gt_temp_score
+                which = gt_gained_score
                 value = 2
+            }
+        }
+        #Transfer score to overlord
+        if = {
+            limit = {
+                is_subject = yes
+            }
+            export_to_variable = {
+                which = gt_liberty_desire
+                value = trigger_value:liberty_desire
+                who = ROOT
+            }
+            if = {
+                limit = {
+                    NOT = {
+                        check_variable = {
+                            which = gt_liberty_desire
+                            value = 50
+                        }
+                    }
+                }
+                set_variable = {
+                    which = gt_liberty_desire
+                    value = 50
+                }
+            }
+            set_variable = {
+                which = gt_score_transfer
+                which = gt_gained_score
+            }
+            multiply_variable = {
+                which = gt_gained_score
+                which = gt_liberty_desire
+            }
+            divide_variable = {
+                which = gt_gained_score
+                value = 100
+            }
+            #round down
+            divide_variable = {
+                which = gt_gained_score
+                value = 1000
+            }
+            multiply_variable = {
+                which = gt_gained_score
+                value = 1000
+            }
+            subtract_variable = {
+                which = gt_score_transfer
+                which = gt_gained_score
+            }
+            overlord = {
+                set_variable = {
+                    which = gt_score_transfer
+                    value = 0
+                }
+                change_variable = {
+                    which = gt_score_transfer
+                    which = ROOT
+                }
+                change_variable = {
+                    which = gt_score
+                    which = gt_score_transfer
+                }
             }
         }
         #Add to total score
         change_variable = {
             which = gt_score
-            which = gt_temp_score
+            which = gt_gained_score
         }
     }
 
@@ -648,14 +776,14 @@ country_event = {
     title = GT_score.5.t
     desc = GT_score.5.d
     is_triggered_only = yes
-
+    hidden = yes
     trigger = {
         always = yes
     }
 
     immediate = {
         set_variable = {            
-            which = gt_temp_score
+            which = gt_gained_score
             value = 0
         }
         #20 points for each Conqueror or Imperial Objective that is held by either a Free City or a Trade City (cooperative objective).
@@ -674,7 +802,7 @@ country_event = {
             }
             ROOT = {
                 change_variable = {
-                    which = gt_temp_score
+                    which = gt_gained_score
                     value = 20
                 }
             }
@@ -693,7 +821,7 @@ country_event = {
                 }
                 ROOT = {
                     change_variable = {
-                        which = gt_temp_score
+                        which = gt_gained_score
                         value = 100
                     }
                 }
@@ -707,7 +835,7 @@ country_event = {
                 }
                 ROOT = {
                     change_variable = {
-                        which = gt_temp_score
+                        which = gt_gained_score
                         value = 30
                     }
                 }
@@ -719,7 +847,7 @@ country_event = {
                 num_of_trading_bonuses = 2
             }
             change_variable = {
-                which = gt_temp_score
+                which = gt_gained_score
                 value = 100
             }
         }
@@ -728,7 +856,7 @@ country_event = {
                 num_of_trading_bonuses = 1
             }
             change_variable = {
-                which = gt_temp_score
+                which = gt_gained_score
                 value = 50
             }
         }
@@ -738,7 +866,7 @@ country_event = {
                 is_defender_of_faith_of_tier = 5
             }
             change_variable = {            
-                which = gt_temp_score
+                which = gt_gained_score
                 value = 100
             }
         }
@@ -747,7 +875,7 @@ country_event = {
                 is_defender_of_faith_of_tier = 4
             }
             change_variable = {            
-                which = gt_temp_score
+                which = gt_gained_score
                 value = 80
             }
         }
@@ -756,7 +884,7 @@ country_event = {
                 is_defender_of_faith_of_tier = 3
             }
             change_variable = {            
-                which = gt_temp_score
+                which = gt_gained_score
                 value = 60
             }
         }
@@ -765,7 +893,7 @@ country_event = {
                 is_defender_of_faith_of_tier = 2
             }
             change_variable = {            
-                which = gt_temp_score
+                which = gt_gained_score
                 value = 40
             }
         }
@@ -774,7 +902,7 @@ country_event = {
                 is_defender_of_faith_of_tier = 1
             }
             change_variable = {            
-                which = gt_temp_score
+                which = gt_gained_score
                 value = 20
             }
         }
@@ -784,7 +912,7 @@ country_event = {
                 current_age = age_of_revolutions
             }
             multiply_variable = {
-                which = gt_temp_score
+                which = gt_gained_score
                 value = 4
             }
         }
@@ -793,7 +921,7 @@ country_event = {
                 current_age = age_of_absolutism
             }
             multiply_variable = {
-                which = gt_temp_score
+                which = gt_gained_score
                 value = 3
             }
         }
@@ -802,14 +930,78 @@ country_event = {
                 current_age = age_of_reformation
             }
             multiply_variable = {
-                which = gt_temp_score
+                which = gt_gained_score
                 value = 2
+            }
+        }
+        #Transfer score to overlord
+        if = {
+            limit = {
+                is_subject = yes
+            }
+            export_to_variable = {
+                which = gt_liberty_desire
+                value = trigger_value:liberty_desire
+                who = ROOT
+            }
+            if = {
+                limit = {
+                    NOT = {
+                        check_variable = {
+                            which = gt_liberty_desire
+                            value = 50
+                        }
+                    }
+                }
+                set_variable = {
+                    which = gt_liberty_desire
+                    value = 50
+                }
+            }
+            set_variable = {
+                which = gt_score_transfer
+                which = gt_gained_score
+            }
+            multiply_variable = {
+                which = gt_gained_score
+                which = gt_liberty_desire
+            }
+            divide_variable = {
+                which = gt_gained_score
+                value = 100
+            }
+            #round down
+            divide_variable = {
+                which = gt_gained_score
+                value = 1000
+            }
+            multiply_variable = {
+                which = gt_gained_score
+                value = 1000
+            }
+            subtract_variable = {
+                which = gt_score_transfer
+                which = gt_gained_score
+            }
+            overlord = {
+                set_variable = {
+                    which = gt_score_transfer
+                    value = 0
+                }
+                change_variable = {
+                    which = gt_score_transfer
+                    which = ROOT
+                }
+                change_variable = {
+                    which = gt_score
+                    which = gt_score_transfer
+                }
             }
         }
         #Add to total score
         change_variable = {
             which = gt_score
-            which = gt_temp_score
+            which = gt_gained_score
         }
     }
 
@@ -824,14 +1016,14 @@ country_event = {
     title = GT_score.6.t
     desc = GT_score.6.d
     is_triggered_only = yes
-
+    hidden = yes
     trigger = {
         always = yes
     }
 
     immediate = {
         set_variable = {            
-            which = gt_temp_score
+            which = gt_gained_score
             value = 0
         }
         #100 points for owning at least one of the objectives from a Conqueror Objective pair. Owning both objectives in a pair does not provide additional points, but if another Despot owns the other Conqueror Objective from that pair, the value of both objectives becomes 0 pts for Despots as long as two separate despots each own one objective of the pair..
@@ -853,7 +1045,7 @@ country_event = {
                 }
             }
             change_variable = {
-                which = gt_temp_score
+                which = gt_gained_score
                 value = 100
             }
         }
@@ -875,7 +1067,7 @@ country_event = {
                 }
             }
             change_variable = {
-                which = gt_temp_score
+                which = gt_gained_score
                 value = 100
             }
         }
@@ -897,7 +1089,7 @@ country_event = {
                 }
             }
             change_variable = {
-                which = gt_temp_score
+                which = gt_gained_score
                 value = 100
             }
         }
@@ -919,7 +1111,7 @@ country_event = {
                 }
             }
             change_variable = {
-                which = gt_temp_score
+                which = gt_gained_score
                 value = 100
             }
         }
@@ -951,7 +1143,7 @@ country_event = {
                 any_owned_or_ai_subject_province_has_flag = { FLAG = gt_imperial_objective }
             }
             change_variable = {
-                which = gt_temp_score
+                which = gt_gained_score
                 value = 100
             }
         }
@@ -975,7 +1167,7 @@ country_event = {
         if = {
             limit = { is_emperor = yes }
             change_variable = {
-                which = gt_temp_score
+                which = gt_gained_score
                 which = gt_imperial_legitimacy
             }
         }
@@ -988,7 +1180,7 @@ country_event = {
                 }
                 ROOT = {
                     change_variable = {
-                        which = gt_temp_score
+                        which = gt_gained_score
                         value = 10
                     }
                 }
@@ -1000,7 +1192,7 @@ country_event = {
                 is_defender_of_faith_of_tier = 5
             }
             change_variable = {            
-                which = gt_temp_score
+                which = gt_gained_score
                 value = 100
             }
         }
@@ -1009,7 +1201,7 @@ country_event = {
                 is_defender_of_faith_of_tier = 4
             }
             change_variable = {            
-                which = gt_temp_score
+                which = gt_gained_score
                 value = 80
             }
         }
@@ -1018,7 +1210,7 @@ country_event = {
                 is_defender_of_faith_of_tier = 3
             }
             change_variable = {            
-                which = gt_temp_score
+                which = gt_gained_score
                 value = 60
             }
         }
@@ -1027,7 +1219,7 @@ country_event = {
                 is_defender_of_faith_of_tier = 2
             }
             change_variable = {            
-                which = gt_temp_score
+                which = gt_gained_score
                 value = 40
             }
         }
@@ -1036,7 +1228,7 @@ country_event = {
                 is_defender_of_faith_of_tier = 1
             }
             change_variable = {            
-                which = gt_temp_score
+                which = gt_gained_score
                 value = 20
             }
         }
@@ -1046,7 +1238,7 @@ country_event = {
                 current_age = age_of_revolutions
             }
             multiply_variable = {
-                which = gt_temp_score
+                which = gt_gained_score
                 value = 4
             }
         }
@@ -1055,7 +1247,7 @@ country_event = {
                 current_age = age_of_absolutism
             }
             multiply_variable = {
-                which = gt_temp_score
+                which = gt_gained_score
                 value = 3
             }
         }
@@ -1064,14 +1256,78 @@ country_event = {
                 current_age = age_of_reformation
             }
             multiply_variable = {
-                which = gt_temp_score
+                which = gt_gained_score
                 value = 2
+            }
+        }
+        #Transfer score to overlord
+        if = {
+            limit = {
+                is_subject = yes
+            }
+            export_to_variable = {
+                which = gt_liberty_desire
+                value = trigger_value:liberty_desire
+                who = ROOT
+            }
+            if = {
+                limit = {
+                    NOT = {
+                        check_variable = {
+                            which = gt_liberty_desire
+                            value = 50
+                        }
+                    }
+                }
+                set_variable = {
+                    which = gt_liberty_desire
+                    value = 50
+                }
+            }
+            set_variable = {
+                which = gt_score_transfer
+                which = gt_gained_score
+            }
+            multiply_variable = {
+                which = gt_gained_score
+                which = gt_liberty_desire
+            }
+            divide_variable = {
+                which = gt_gained_score
+                value = 100
+            }
+            #round down
+            divide_variable = {
+                which = gt_gained_score
+                value = 1000
+            }
+            multiply_variable = {
+                which = gt_gained_score
+                value = 1000
+            }
+            subtract_variable = {
+                which = gt_score_transfer
+                which = gt_gained_score
+            }
+            overlord = {
+                set_variable = {
+                    which = gt_score_transfer
+                    value = 0
+                }
+                change_variable = {
+                    which = gt_score_transfer
+                    which = ROOT
+                }
+                change_variable = {
+                    which = gt_score
+                    which = gt_score_transfer
+                }
             }
         }
         #Add to total score
         change_variable = {
             which = gt_score
-            which = gt_temp_score
+            which = gt_gained_score
         }
     }
 
