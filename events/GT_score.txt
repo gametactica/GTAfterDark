@@ -525,7 +525,7 @@ country_event = {
                 has_province_flag = gt_conqueror_objective
                 OR = {
                     is_part_of_hre = yes
-                    owner = { is_emperor = yes }
+                    owned_by_or_ai_subject_of = { TAG = emperor }
                 }
             }
             ROOT = {
@@ -539,7 +539,7 @@ country_event = {
         every_province = {
             limit = {
                 has_province_flag = gt_imperial_objective
-                owned_by = ROOT
+                owned_by_or_ai_subject_of = { TAG = ROOT }
             }
             ROOT = {
                 change_variable = {            
@@ -839,14 +839,14 @@ country_event = {
         if = {
             limit = {
                 OR = {
-                    owns = 43
-                    owns = 310
+                    owns_or_ai_subject = { PROVINCE = 43 }
+                    owns_or_ai_subject = { PROVINCE = 310 }
                 }
                 NOT = {
                     any_country = {
                         OR = {
-                            owns = 43
-                            owns = 310
+                            owns_or_ai_subject = { PROVINCE = 43 }
+                            owns_or_ai_subject = { PROVINCE = 310 }
                         }
                         has_country_flag = gt_despot
                     }
@@ -861,14 +861,14 @@ country_event = {
         if = {
             limit = {
                 OR = {
-                    owns = 236
-                    owns = 97
+                    owns_or_ai_subject = { PROVINCE = 236 }
+                    owns_or_ai_subject = { PROVINCE = 97 }
                 }
                 NOT = {
                     any_country = {
                         OR = {
-                            owns = 236
-                            owns = 97
+                            owns_or_ai_subject = { PROVINCE = 236 }
+                            owns_or_ai_subject = { PROVINCE = 97 }
                         }
                         has_country_flag = gt_despot
                     }
@@ -879,18 +879,18 @@ country_event = {
                 value = 100
             }
         }
-        #​Pest - Cafa
+        #​Pest - Caffa
         if = {
             limit = {
                 OR = {
-                    owns = 153
-                    owns = 285
+                    owns_or_ai_subject = { PROVINCE = 153 }
+                    owns_or_ai_subject = { PROVINCE = 285 }
                 }
                 NOT = {
                     any_country = {
                         OR = {
-                            owns = 153
-                            owns = 285
+                            owns_or_ai_subject = { PROVINCE = 153 }
+                            owns_or_ai_subject = { PROVINCE = 285 }
                         }
                         has_country_flag = gt_despot
                     }
@@ -905,14 +905,14 @@ country_event = {
         if = {
             limit = {
                 OR = {
-                    owns = 121
-                    owns = 341
+                    owns_or_ai_subject = { PROVINCE = 121 }
+                    owns_or_ai_subject = { PROVINCE = 341 }
                 }
                 NOT = {
                     any_country = {
                         OR = {
-                            owns = 121
-                            owns = 341
+                            owns_or_ai_subject = { PROVINCE = 121 }
+                            owns_or_ai_subject = { PROVINCE = 341 }
                         }
                         has_country_flag = gt_despot
                     }
@@ -931,9 +931,7 @@ country_event = {
         every_country = {
             limit = {
                 has_country_flag = gt_despot
-                any_owned_province = {
-                    has_province_flag = gt_imperial_objective
-                }
+                any_owned_or_ai_subject_province_has_flag = { FLAG = gt_imperial_objective }
             }
             ROOT = {
                 change_variable = {
@@ -950,9 +948,7 @@ country_event = {
                         value = 3
                     }
                 }
-                any_owned_province = {
-                    has_province_flag = gt_imperial_objective
-                }
+                any_owned_or_ai_subject_province_has_flag = { FLAG = gt_imperial_objective }
             }
             change_variable = {
                 which = gt_temp_score
