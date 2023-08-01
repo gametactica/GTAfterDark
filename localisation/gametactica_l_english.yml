@@ -245,6 +245,7 @@
  GT_score.1.t:0 "Score setup event"
  GT_score.1.a:0 ""
  GT_score.2.t:0 "Score gain trigger event"
+ GT_score.2.a:0 ""
  GT_score.3.t:0 "Bishop score gain"
  GT_score.3.d:0 "You gained [Root.gt_temp_score.GetValue] score\nYour current score is [Root.gt_score.GetValue]"
  GT_score.3.a:0 "Fantastic"
