@@ -1335,3 +1335,63 @@ country_event = {
         name = GT_score.6.a
     }
 }
+
+#Carry over flags
+country_event = {
+    id = GT_score.7
+    title = GT_score.7.t
+    is_triggered_only = yes
+    hidden = yes
+    trigger = {
+        always = yes
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                has_switched_nation = yes
+            }
+            set_country_flag = gt_campaign_nation
+            if = {
+                limit = {
+                    overlord = { has_country_flag = gt_bishop }
+                }
+                set_country_flag = gt_bishop
+            }
+            else_if = {
+                limit = {
+                    overlord = { has_country_flag = gt_prince }
+                }
+                set_country_flag = gt_prince
+            }
+            else_if = {
+                limit = {
+                    overlord = { has_country_flag = gt_magnate }
+                }
+                set_country_flag = gt_magnate
+            }
+            else = {
+                set_country_flag = gt_despot
+            }
+            set_variable = {
+                which = gt_score
+                which = overlord
+            }
+            set_variable = {
+                which = gt_campaign_nation_order
+                which = overlord
+            }
+            overlord = {
+                clr_country_flag = gt_campaign_nation
+                clr_country_flag = gt_bishop
+                clr_country_flag = gt_prince
+                clr_country_flag = gt_magnate
+                clr_country_flag = gt_despot
+            }
+        }
+    }
+
+    option = {
+        name = GT_score.7.a
+    }
+}

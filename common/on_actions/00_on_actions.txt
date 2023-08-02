@@ -5210,7 +5210,8 @@ on_create_vassal = {
 		limit = { NOT = { is_year = 1445 } }
 		set_country_flag = released_in_1444
 	}
-	FROM = {     #GT Protected Area
+	#GT Protected Area
+	FROM = {
     	every_province = {
         	limit = {
             	has_province_flag = gt_capital_province_@FROM
@@ -5223,6 +5224,11 @@ on_create_vassal = {
 		country_event = {
 			id = GT_Crownlands_1444.1
 		}
+	}
+	#GT score
+	country_event = {
+		id = GT_score.7
+		days = 1
 	}
 }
 
