@@ -17,7 +17,7 @@ country_event = {
 		REB = {
 			set_variable = {
 				which = gt_campaign_nation_order
-				value = 0
+				value = -1
 			}
 		}
         #Bishops
@@ -266,16 +266,20 @@ country_event = {
 			value = 0
 		}
 		REB = {
+			change_variable = {
+				which = gt_campaign_nation_order
+				value = 1
+			}
 			ROOT = {
 				set_variable = {
 					which = gt_campaign_nation_order
 					which = PREV
 				}
 			}
-			change_variable = {
-				which = gt_campaign_nation_order
-				value = 1
-			}
+		}
+		set_variable = {
+			which = gt_campaign_nation_order_sorted
+			which = gt_campaign_nation_order
 		}
 	}
 
@@ -310,16 +314,20 @@ country_event = {
 			value = 0
 		}
 		REB = {
+			change_variable = {
+				which = gt_campaign_nation_order
+				value = 1
+			}
 			ROOT = {
 				set_variable = {
 					which = gt_campaign_nation_order
 					which = PREV
 				}
 			}
-			change_variable = {
-				which = gt_campaign_nation_order
-				value = 1
-			}
+		}
+		set_variable = {
+			which = gt_campaign_nation_order_sorted
+			which = gt_campaign_nation_order
 		}
 	}
 
@@ -354,16 +362,20 @@ country_event = {
 			value = 0
 		}
 		REB = {
+			change_variable = {
+				which = gt_campaign_nation_order
+				value = 1
+			}
 			ROOT = {
 				set_variable = {
 					which = gt_campaign_nation_order
 					which = PREV
 				}
 			}
-			change_variable = {
-				which = gt_campaign_nation_order
-				value = 1
-			}
+		}
+		set_variable = {
+			which = gt_campaign_nation_order_sorted
+			which = gt_campaign_nation_order
 		}
 	}
 
@@ -399,16 +411,20 @@ country_event = {
 			value = 0
 		}
 		REB = {
+			change_variable = {
+				which = gt_campaign_nation_order
+				value = 1
+			}
 			ROOT = {
 				set_variable = {
 					which = gt_campaign_nation_order
 					which = PREV
 				}
 			}
-			change_variable = {
-				which = gt_campaign_nation_order
-				value = 1
-			}
+		}
+		set_variable = {
+			which = gt_campaign_nation_order_sorted
+			which = gt_campaign_nation_order
 		}
 	}
 

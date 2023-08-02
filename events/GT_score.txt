@@ -17,6 +17,9 @@ country_event = {
             limit = {
                 has_country_flag = gt_campaign_nation
             }
+            country_event = {
+                id = GT_score_display.2
+            }
             if = {
                 limit = {
                     has_country_flag = gt_bishop
@@ -49,6 +52,20 @@ country_event = {
                     id = GT_score.6
                 }
             }
+        }
+        every_country = {
+            limit = {
+                has_country_flag = gt_campaign_nation
+            }
+            country_event = {
+                id = GT_score_display.3
+            }
+            country_event = {
+                id = GT_score_display.1
+            }
+        }
+        country_event = {
+            id = GT_score_display.4
         }
     }
     option = {
