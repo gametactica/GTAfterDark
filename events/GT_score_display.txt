@@ -17,9 +17,15 @@ country_event = {
         country_event = {
             id = GT_score_display.2
         }
+        ai_chance = {
+            factor = 0
+        }
     }
     option = {
         name = GT_score_display.1.b
+        ai_chance = {
+            factor = 1
+        }
     }
     
 }
