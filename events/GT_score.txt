@@ -110,6 +110,7 @@ country_event = {
         if = {
             limit = {
                 is_papal_controller = yes
+                NOT = { tag = PAP }
             }
             change_variable = {            
                 which = gt_objective_score
