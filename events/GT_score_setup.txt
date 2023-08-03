@@ -19,6 +19,7 @@ country_event = {
 				which = gt_campaign_nation_order
 				value = -1
 			}
+			
 		}
         #Bishops
         PAP = {
@@ -174,6 +175,9 @@ country_event = {
         186 = {
             set_province_flag = gt_trade_node_objective
         }
+		country_event = {
+			id = GT_score_display.4
+		}
     }
     option = {
         name = GT_score_setup.1.a
@@ -277,10 +281,6 @@ country_event = {
 				}
 			}
 		}
-		set_variable = {
-			which = gt_campaign_nation_order_sorted
-			which = gt_campaign_nation_order
-		}
 	}
 
 	option = {
@@ -324,10 +324,6 @@ country_event = {
 					which = PREV
 				}
 			}
-		}
-		set_variable = {
-			which = gt_campaign_nation_order_sorted
-			which = gt_campaign_nation_order
 		}
 	}
 
@@ -373,10 +369,6 @@ country_event = {
 				}
 			}
 		}
-		set_variable = {
-			which = gt_campaign_nation_order_sorted
-			which = gt_campaign_nation_order
-		}
 	}
 
 	option = {
@@ -421,10 +413,6 @@ country_event = {
 					which = PREV
 				}
 			}
-		}
-		set_variable = {
-			which = gt_campaign_nation_order_sorted
-			which = gt_campaign_nation_order
 		}
 	}
 

@@ -14,9 +14,8 @@ country_event = {
 
     option = {
         name = GT_score_display.1.a
-        save_event_target_as = display_root
         country_event = {
-            id = GT_score_display.6
+            id = GT_score_display.5
         }
         ai_chance = {
             factor = 0
@@ -78,7 +77,7 @@ country_event = {
     }
 }
 
-#Sorting by score initiation event
+#Sorting by score
 country_event = {
     id = GT_score_display.4
     title = GT_score_display.4.t
@@ -93,18 +92,55 @@ country_event = {
             limit = {
                 has_country_flag = gt_campaign_nation
             }
-            set_variable = {
-                which = gt_campaign_nation_order_sorted
-                value = -1
-            }
+            clr_country_flag = gt_campaign_nation_sorted
         }
         REB = {
+            #Rank 1
             random_country = {
                 limit = {
                     has_country_flag = gt_campaign_nation
                     all_country = {
                         OR = {
                             NOT = { has_country_flag = gt_campaign_nation }
+                            NOT = {
+                                check_variable = {
+                                    which = gt_score
+                                    which = PREV
+                                }
+                            }
+                            AND = {
+                                #Equal gt_score
+                                check_variable = {
+                                    which = gt_score
+                                    which = PREV
+                                }
+                                PREV = {
+                                    check_variable = {
+                                        which = gt_score
+                                        which = PREV
+                                    }
+                                }
+
+                                check_variable = {
+                                    which = gt_campaign_nation_order
+                                    which = PREV
+                                }
+                            }
+                        }
+                    }
+                }
+                set_country_flag = gt_campaign_nation_sorted
+                save_global_event_target_as = gt_rank_1
+            }
+            #Rank 2
+            random_country = {
+                limit = {
+                    has_country_flag = gt_campaign_nation
+                    NOT = { has_country_flag = gt_campaign_nation_sorted }
+                    all_country = {
+                        OR = {
+                            NOT = { has_country_flag = gt_campaign_nation }
+                            has_country_flag = gt_campaign_nation_sorted
                             NOT = {
                                 check_variable = {
                                     which = gt_score
@@ -131,13 +167,502 @@ country_event = {
                         }
                     }
                 }
-                set_variable = {
-                    which = gt_campaign_nation_order_sorted
-                    value = 0
+                set_country_flag = gt_campaign_nation_sorted
+                save_global_event_target_as = gt_rank_2
+            }
+            #Rank 3
+            random_country = {
+                limit = {
+                    has_country_flag = gt_campaign_nation
+                    NOT = { has_country_flag = gt_campaign_nation_sorted }
+                    all_country = {
+                        OR = {
+                            NOT = { has_country_flag = gt_campaign_nation }
+                            has_country_flag = gt_campaign_nation_sorted
+                            NOT = {
+                                check_variable = {
+                                    which = gt_score
+                                    which = PREV
+                                }
+                            }
+                            AND = {
+                                #Equal gt_score
+                                check_variable = {
+                                    which = gt_score
+                                    which = PREV
+                                }
+                                PREV = {
+                                    check_variable = {
+                                        which = gt_score
+                                        which = PREV
+                                    }
+                                }
+                                check_variable = {
+                                    which = gt_campaign_nation_order
+                                    which = PREV
+                                }
+                            }
+                        }
+                    }
                 }
-                country_event = {
-                    id = GT_score_display.5
+                set_country_flag = gt_campaign_nation_sorted
+                save_global_event_target_as = gt_rank_3
+            }
+            #Rank 4
+            random_country = {
+                limit = {
+                    has_country_flag = gt_campaign_nation
+                    NOT = { has_country_flag = gt_campaign_nation_sorted }
+                    all_country = {
+                        OR = {
+                            NOT = { has_country_flag = gt_campaign_nation }
+                            has_country_flag = gt_campaign_nation_sorted
+                            NOT = {
+                                check_variable = {
+                                    which = gt_score
+                                    which = PREV
+                                }
+                            }
+                            AND = {
+                                #Equal gt_score
+                                check_variable = {
+                                    which = gt_score
+                                    which = PREV
+                                }
+                                PREV = {
+                                    check_variable = {
+                                        which = gt_score
+                                        which = PREV
+                                    }
+                                }
+                                check_variable = {
+                                    which = gt_campaign_nation_order
+                                    which = PREV
+                                }
+                            }
+                        }
+                    }
                 }
+                set_country_flag = gt_campaign_nation_sorted
+                save_global_event_target_as = gt_rank_4
+            }
+            #Rank 5
+            random_country = {
+                limit = {
+                    has_country_flag = gt_campaign_nation
+                    NOT = { has_country_flag = gt_campaign_nation_sorted }
+                    all_country = {
+                        OR = {
+                            NOT = { has_country_flag = gt_campaign_nation }
+                            has_country_flag = gt_campaign_nation_sorted
+                            NOT = {
+                                check_variable = {
+                                    which = gt_score
+                                    which = PREV
+                                }
+                            }
+                            AND = {
+                                #Equal gt_score
+                                check_variable = {
+                                    which = gt_score
+                                    which = PREV
+                                }
+                                PREV = {
+                                    check_variable = {
+                                        which = gt_score
+                                        which = PREV
+                                    }
+                                }
+                                check_variable = {
+                                    which = gt_campaign_nation_order
+                                    which = PREV
+                                }
+                            }
+                        }
+                    }
+                }
+                set_country_flag = gt_campaign_nation_sorted
+                save_global_event_target_as = gt_rank_5
+            }
+            #Rank 6
+            random_country = {
+                limit = {
+                    has_country_flag = gt_campaign_nation
+                    NOT = { has_country_flag = gt_campaign_nation_sorted }
+                    all_country = {
+                        OR = {
+                            NOT = { has_country_flag = gt_campaign_nation }
+                            has_country_flag = gt_campaign_nation_sorted
+                            NOT = {
+                                check_variable = {
+                                    which = gt_score
+                                    which = PREV
+                                }
+                            }
+                            AND = {
+                                #Equal gt_score
+                                check_variable = {
+                                    which = gt_score
+                                    which = PREV
+                                }
+                                PREV = {
+                                    check_variable = {
+                                        which = gt_score
+                                        which = PREV
+                                    }
+                                }
+                                check_variable = {
+                                    which = gt_campaign_nation_order
+                                    which = PREV
+                                }
+                            }
+                        }
+                    }
+                }
+                set_country_flag = gt_campaign_nation_sorted
+                save_global_event_target_as = gt_rank_6
+            }
+            #Rank 7
+            random_country = {
+                limit = {
+                    has_country_flag = gt_campaign_nation
+                    NOT = { has_country_flag = gt_campaign_nation_sorted }
+                    all_country = {
+                        OR = {
+                            NOT = { has_country_flag = gt_campaign_nation }
+                            has_country_flag = gt_campaign_nation_sorted
+                            NOT = {
+                                check_variable = {
+                                    which = gt_score
+                                    which = PREV
+                                }
+                            }
+                            AND = {
+                                #Equal gt_score
+                                check_variable = {
+                                    which = gt_score
+                                    which = PREV
+                                }
+                                PREV = {
+                                    check_variable = {
+                                        which = gt_score
+                                        which = PREV
+                                    }
+                                }
+                                check_variable = {
+                                    which = gt_campaign_nation_order
+                                    which = PREV
+                                }
+                            }
+                        }
+                    }
+                }
+                set_country_flag = gt_campaign_nation_sorted
+                save_global_event_target_as = gt_rank_7
+            }
+            #Rank 8
+            random_country = {
+                limit = {
+                    has_country_flag = gt_campaign_nation
+                    NOT = { has_country_flag = gt_campaign_nation_sorted }
+                    all_country = {
+                        OR = {
+                            NOT = { has_country_flag = gt_campaign_nation }
+                            has_country_flag = gt_campaign_nation_sorted
+                            NOT = {
+                                check_variable = {
+                                    which = gt_score
+                                    which = PREV
+                                }
+                            }
+                            AND = {
+                                #Equal gt_score
+                                check_variable = {
+                                    which = gt_score
+                                    which = PREV
+                                }
+                                PREV = {
+                                    check_variable = {
+                                        which = gt_score
+                                        which = PREV
+                                    }
+                                }
+                                check_variable = {
+                                    which = gt_campaign_nation_order
+                                    which = PREV
+                                }
+                            }
+                        }
+                    }
+                }
+                set_country_flag = gt_campaign_nation_sorted
+                save_global_event_target_as = gt_rank_8
+            }
+            #Rank 9
+            random_country = {
+                limit = {
+                    has_country_flag = gt_campaign_nation
+                    NOT = { has_country_flag = gt_campaign_nation_sorted }
+                    all_country = {
+                        OR = {
+                            NOT = { has_country_flag = gt_campaign_nation }
+                            has_country_flag = gt_campaign_nation_sorted
+                            NOT = {
+                                check_variable = {
+                                    which = gt_score
+                                    which = PREV
+                                }
+                            }
+                            AND = {
+                                #Equal gt_score
+                                check_variable = {
+                                    which = gt_score
+                                    which = PREV
+                                }
+                                PREV = {
+                                    check_variable = {
+                                        which = gt_score
+                                        which = PREV
+                                    }
+                                }
+                                check_variable = {
+                                    which = gt_campaign_nation_order
+                                    which = PREV
+                                }
+                            }
+                        }
+                    }
+                }
+                set_country_flag = gt_campaign_nation_sorted
+                save_global_event_target_as = gt_rank_9
+            }
+            #Rank 10
+            random_country = {
+                limit = {
+                    has_country_flag = gt_campaign_nation
+                    NOT = { has_country_flag = gt_campaign_nation_sorted }
+                    all_country = {
+                        OR = {
+                            NOT = { has_country_flag = gt_campaign_nation }
+                            has_country_flag = gt_campaign_nation_sorted
+                            NOT = {
+                                check_variable = {
+                                    which = gt_score
+                                    which = PREV
+                                }
+                            }
+                            AND = {
+                                #Equal gt_score
+                                check_variable = {
+                                    which = gt_score
+                                    which = PREV
+                                }
+                                PREV = {
+                                    check_variable = {
+                                        which = gt_score
+                                        which = PREV
+                                    }
+                                }
+                                check_variable = {
+                                    which = gt_campaign_nation_order
+                                    which = PREV
+                                }
+                            }
+                        }
+                    }
+                }
+                set_country_flag = gt_campaign_nation_sorted
+                save_global_event_target_as = gt_rank_10
+            }
+            #Rank 11
+            random_country = {
+                limit = {
+                    has_country_flag = gt_campaign_nation
+                    NOT = { has_country_flag = gt_campaign_nation_sorted }
+                    all_country = {
+                        OR = {
+                            NOT = { has_country_flag = gt_campaign_nation }
+                            has_country_flag = gt_campaign_nation_sorted
+                            NOT = {
+                                check_variable = {
+                                    which = gt_score
+                                    which = PREV
+                                }
+                            }
+                            AND = {
+                                #Equal gt_score
+                                check_variable = {
+                                    which = gt_score
+                                    which = PREV
+                                }
+                                PREV = {
+                                    check_variable = {
+                                        which = gt_score
+                                        which = PREV
+                                    }
+                                }
+                                check_variable = {
+                                    which = gt_campaign_nation_order
+                                    which = PREV
+                                }
+                            }
+                        }
+                    }
+                }
+                set_country_flag = gt_campaign_nation_sorted
+                save_global_event_target_as = gt_rank_11
+            }
+            #Rank 12
+            random_country = {
+                limit = {
+                    has_country_flag = gt_campaign_nation
+                    NOT = { has_country_flag = gt_campaign_nation_sorted }
+                    all_country = {
+                        OR = {
+                            NOT = { has_country_flag = gt_campaign_nation }
+                            has_country_flag = gt_campaign_nation_sorted
+                            NOT = {
+                                check_variable = {
+                                    which = gt_score
+                                    which = PREV
+                                }
+                            }
+                            AND = {
+                                #Equal gt_score
+                                check_variable = {
+                                    which = gt_score
+                                    which = PREV
+                                }
+                                PREV = {
+                                    check_variable = {
+                                        which = gt_score
+                                        which = PREV
+                                    }
+                                }
+                                check_variable = {
+                                    which = gt_campaign_nation_order
+                                    which = PREV
+                                }
+                            }
+                        }
+                    }
+                }
+                set_country_flag = gt_campaign_nation_sorted
+                save_global_event_target_as = gt_rank_12
+            }
+            #Rank 13
+            random_country = {
+                limit = {
+                    has_country_flag = gt_campaign_nation
+                    NOT = { has_country_flag = gt_campaign_nation_sorted }
+                    all_country = {
+                        OR = {
+                            NOT = { has_country_flag = gt_campaign_nation }
+                            has_country_flag = gt_campaign_nation_sorted
+                            NOT = {
+                                check_variable = {
+                                    which = gt_score
+                                    which = PREV
+                                }
+                            }
+                            AND = {
+                                #Equal gt_score
+                                check_variable = {
+                                    which = gt_score
+                                    which = PREV
+                                }
+                                PREV = {
+                                    check_variable = {
+                                        which = gt_score
+                                        which = PREV
+                                    }
+                                }
+                                check_variable = {
+                                    which = gt_campaign_nation_order
+                                    which = PREV
+                                }
+                            }
+                        }
+                    }
+                }
+                set_country_flag = gt_campaign_nation_sorted
+                save_global_event_target_as = gt_rank_13
+            }
+            #Rank 14
+            random_country = {
+                limit = {
+                    has_country_flag = gt_campaign_nation
+                    NOT = { has_country_flag = gt_campaign_nation_sorted }
+                    all_country = {
+                        OR = {
+                            NOT = { has_country_flag = gt_campaign_nation }
+                            has_country_flag = gt_campaign_nation_sorted
+                            NOT = {
+                                check_variable = {
+                                    which = gt_score
+                                    which = PREV
+                                }
+                            }
+                            AND = {
+                                #Equal gt_score
+                                check_variable = {
+                                    which = gt_score
+                                    which = PREV
+                                }
+                                PREV = {
+                                    check_variable = {
+                                        which = gt_score
+                                        which = PREV
+                                    }
+                                }
+                                check_variable = {
+                                    which = gt_campaign_nation_order
+                                    which = PREV
+                                }
+                            }
+                        }
+                    }
+                }
+                set_country_flag = gt_campaign_nation_sorted
+                save_global_event_target_as = gt_rank_14
+            }
+            #Rank 15
+            random_country = {
+                limit = {
+                    has_country_flag = gt_campaign_nation
+                    NOT = { has_country_flag = gt_campaign_nation_sorted }
+                    all_country = {
+                        OR = {
+                            NOT = { has_country_flag = gt_campaign_nation }
+                            has_country_flag = gt_campaign_nation_sorted
+                            NOT = {
+                                check_variable = {
+                                    which = gt_score
+                                    which = PREV
+                                }
+                            }
+                            AND = {
+                                #Equal gt_score
+                                check_variable = {
+                                    which = gt_score
+                                    which = PREV
+                                }
+                                PREV = {
+                                    check_variable = {
+                                        which = gt_score
+                                        which = PREV
+                                    }
+                                }
+                                check_variable = {
+                                    which = gt_campaign_nation_order
+                                    which = PREV
+                                }
+                            }
+                        }
+                    }
+                }
+                set_country_flag = gt_campaign_nation_sorted
+                save_global_event_target_as = gt_rank_15
             }
         }
     }
@@ -147,195 +672,11 @@ country_event = {
     }
 }
 
-
-#Sorting by score recursive event
+#All score display
 country_event = {
     id = GT_score_display.5
     title = GT_score_display.5.t
-    is_triggered_only = yes
-    hidden = yes
-    trigger = {
-        always = yes
-    }
-
-    immediate = {
-        random_country = {
-            limit = {
-                has_country_flag = gt_campaign_nation
-                is_variable_equal = {
-                    which = gt_campaign_nation_order_sorted
-                    value = -1
-                }
-                all_country = {
-                    OR = {
-                        NOT = { has_country_flag = gt_campaign_nation }
-                        NOT = {
-                            is_variable_equal = {
-                                which = gt_campaign_nation_order_sorted
-                                value = -1
-                            }
-                        }
-                        NOT = {
-                            check_variable = {
-                                which = gt_score
-                                which = PREV
-                            }
-                        }
-                        AND = {
-                            #Equal gt_score
-                            check_variable = {
-                                which = gt_score
-                                which = PREV
-                            }
-                            PREV = {
-                                check_variable = {
-                                    which = gt_score
-                                    which = PREV
-                                }
-                            }
-                            check_variable = {
-                                which = gt_campaign_nation_order
-                                which = PREV
-                            }
-                        }
-                    }
-                }
-            }
-            set_variable = {
-                which = gt_campaign_nation_order_sorted
-                which = ROOT
-            }
-            change_variable = {
-                which = gt_campaign_nation_order_sorted
-                value = 1
-            }
-            country_event = {
-                id = GT_score_display.5
-            }
-        }
-    }
-
-    option = {
-        name = GT_score_display.5.a
-    }
-}
-
-#All score display initiation
-country_event = {
-    id = GT_score_display.6
-    title = GT_score_display.6.t
-    is_triggered_only = yes
-    hidden = yes
-    trigger = {
-        always = yes
-    }
-
-    immediate = {
-        REB = {
-            random_country = {
-                limit = {
-                    has_country_flag = gt_campaign_nation
-                    is_variable_equal = {
-                        which = gt_campaign_nation_order_sorted
-                        value = 0
-                    }
-                }
-                country_event = {
-                    id = GT_score_display.7
-                }
-            }
-        }
-    }
-
-    option = {
-        name = GT_score_display.6.a
-    }
-}
-
-#All score display recursive event
-country_event = {
-    id = GT_score_display.7
-	title = GT_score_display.7.t
-    is_triggered_only = yes
-    hidden = yes
-    trigger = {
-        always = yes
-    }
-
-    immediate = {
-        REB = {
-            set_variable = {
-                which = gt_transfer
-                which = gt_campaign_nation_order
-            }
-            ROOT = {
-                set_variable = {
-                    which = gt_transfer
-                    which = PREV
-                }
-            }
-        }
-        if = {
-            limit = {
-                check_variable = {
-                    which = gt_campaign_nation_order_sorted
-                    which = gt_transfer
-                }
-                check_variable = {
-                    which = gt_transfer
-                    which = gt_campaign_nation_order_sorted
-                }
-            }
-            event_target:display_root = {
-                country_event = {
-                    id = GT_score_display.8
-                }
-            }
-        }
-        else = {
-            set_variable = {
-                which = gt_transfer
-                which = gt_campaign_nation_order_sorted
-            }
-            change_variable = {
-                which = gt_transfer
-                value = 1
-            }
-            every_country = {
-                set_variable = {
-                    which = gt_transfer
-                    which = ROOT
-                }
-                if = {
-                    limit = {
-                        has_country_flag = gt_campaign_nation
-                        check_variable = {
-                            which = gt_campaign_nation_order_sorted
-                            which = gt_transfer
-                        }
-                        check_variable = {
-                            which = gt_transfer
-                            which = gt_campaign_nation_order_sorted
-                        }
-                    }
-                    country_event = {
-                        id = GT_score_display.7
-                    }
-                }
-            }
-        }
-    }
-
-    option = {
-        name = GT_score_display.7.a
-    }
-}
-
-#Actual all score display
-country_event = {
-    id = GT_score_display.8
-    title = GT_score_display.8.t
-    desc = GT_score_display.8.d
+    desc = GT_score_display.5.d
     picture = GOOD_WITH_MONARCH_eventPicture
     is_triggered_only = yes
     trigger = {
@@ -343,6 +684,6 @@ country_event = {
     }
 
     option = {
-        name = GT_score_display.8.a
+        name = GT_score_display.5.a
     }
 }
