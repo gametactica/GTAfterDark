@@ -225,6 +225,14 @@ country_event = {
                 which = gt_score
                 which = overlord
             }
+			set_variable = {
+				which = gt_previous_score
+				value = overlord
+			}
+			set_variable = {
+				which = gt_gained_score
+				value = overlord
+			}
             set_variable = {
                 which = gt_campaign_nation_order
                 which = overlord
